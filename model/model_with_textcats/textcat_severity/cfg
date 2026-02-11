@@ -1,0 +1,9 @@
+{
+  "labels":[
+    "mild",
+    "moderate",
+    "severe"
+  ],
+  "threshold":0.0,
+  "positive_label":null
+}

@@ -1,0 +1,11 @@
+{
+  "labels":[
+    "new",
+    "worsening",
+    "improving",
+    "unchanged",
+    "resolved"
+  ],
+  "threshold":0.0,
+  "positive_label":null
+}
