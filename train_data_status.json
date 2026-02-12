@@ -1,6 +1,6 @@
 [
   [
-    "pain in my neck and back.",
+    "a lot of pain in my neck and back.",
     {
       "cats": {
         "new": 0,
@@ -24,7 +24,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing a lot",
     {
       "cats": {
         "new": 0,
@@ -48,19 +48,7 @@
     }
   ],
   [
-    "rash on my face",
-    {
-      "cats": {
-        "new": 0,
-        "worsening": 0,
-        "improving": 0,
-        "unchanged": 1,
-        "resolved": 0
-      }
-    }
-  ],
-  [
-    "red, inflamed, and has blisters",
+    "rash on my face that is getting worse.",
     {
       "cats": {
         "new": 0,
@@ -72,13 +60,13 @@
     }
   ],
   [
-    "bleeding clear pus.",
+    "red, inflamed, and has blisters that are bleeding clear pus.",
     {
       "cats": {
         "new": 0,
-        "worsening": 0,
+        "worsening": 1,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -192,7 +180,7 @@
     }
   ],
   [
-    "uncomfortable to walk",
+    "really uncomfortable to walk",
     {
       "cats": {
         "new": 0,
@@ -216,7 +204,7 @@
     }
   ],
   [
-    "body hurts",
+    "body hurts a lot",
     {
       "cats": {
         "new": 0,
@@ -288,7 +276,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing a lot.",
     {
       "cats": {
         "new": 0,
@@ -324,7 +312,7 @@
     }
   ],
   [
-    "high fever",
+    "also have a high fever",
     {
       "cats": {
         "new": 1,
@@ -432,7 +420,7 @@
     }
   ],
   [
-    "feel very weak and tired",
+    "also feel very weak and tired",
     {
       "cats": {
         "new": 0,
@@ -493,6 +481,18 @@
   ],
   [
     "and it itches.",
+    {
+      "cats": {
+        "new": 1,
+        "worsening": 0,
+        "improving": 0,
+        "unchanged": 0,
+        "resolved": 0
+      }
+    }
+  ],
+  [
+    "also have",
     {
       "cats": {
         "new": 1,
@@ -576,7 +576,7 @@
     }
   ],
   [
-    "pain in my back and neck.",
+    "a lot of pain in my back and neck.",
     {
       "cats": {
         "new": 1,
@@ -756,31 +756,7 @@
     }
   ],
   [
-    "rash",
-    {
-      "cats": {
-        "new": 0,
-        "worsening": 0,
-        "improving": 0,
-        "unchanged": 1,
-        "resolved": 0
-      }
-    }
-  ],
-  [
-    "itchy",
-    {
-      "cats": {
-        "new": 0,
-        "worsening": 0,
-        "improving": 0,
-        "unchanged": 1,
-        "resolved": 0
-      }
-    }
-  ],
-  [
-    "different color than the rest of my skin.",
+    "rash on my skin that is itchy and has a different color than the rest of my skin.",
     {
       "cats": {
         "new": 1,
@@ -816,7 +792,7 @@
     }
   ],
   [
-    "itchy",
+    "really itchy",
     {
       "cats": {
         "new": 0,
@@ -864,13 +840,13 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot.",
     {
       "cats": {
-        "new": 0,
+        "new": 1,
         "worsening": 0,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -912,7 +888,7 @@
     }
   ],
   [
-    "tired",
+    "always tired",
     {
       "cats": {
         "new": 0,
@@ -1008,7 +984,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing a lot",
     {
       "cats": {
         "new": 0,
@@ -1080,7 +1056,7 @@
     }
   ],
   [
-    "tired",
+    "really tired",
     {
       "cats": {
         "new": 0,
@@ -1128,7 +1104,7 @@
     }
   ],
   [
-    "sinus pressure.",
+    "a lot of sinus pressure.",
     {
       "cats": {
         "new": 0,
@@ -1140,7 +1116,7 @@
     }
   ],
   [
-    "run down",
+    "feel really run down",
     {
       "cats": {
         "new": 0,
@@ -1176,7 +1152,7 @@
     }
   ],
   [
-    "itchy.",
+    "really itchy.",
     {
       "cats": {
         "new": 1,
@@ -1248,19 +1224,7 @@
     }
   ],
   [
-    "very painful",
-    {
-      "cats": {
-        "new": 0,
-        "worsening": 0,
-        "improving": 0,
-        "unchanged": 1,
-        "resolved": 0
-      }
-    }
-  ],
-  [
-    "last for a long time.",
+    "very painful and last for a long time.",
     {
       "cats": {
         "new": 0,
@@ -1464,7 +1428,7 @@
     }
   ],
   [
-    "weak",
+    "feel really weak",
     {
       "cats": {
         "new": 0,
@@ -1512,7 +1476,7 @@
     }
   ],
   [
-    "cough",
+    "cough up a lot of mucus",
     {
       "cats": {
         "new": 0,
@@ -1524,19 +1488,7 @@
     }
   ],
   [
-    "mucus",
-    {
-      "cats": {
-        "new": 0,
-        "worsening": 0,
-        "improving": 0,
-        "unchanged": 1,
-        "resolved": 0
-      }
-    }
-  ],
-  [
-    "trouble urinating.",
+    "a lot of trouble urinating.",
     {
       "cats": {
         "new": 0,
@@ -1560,7 +1512,7 @@
     }
   ],
   [
-    "urine is also cloudy",
+    "urine is also cloudy and has a strong smell",
     {
       "cats": {
         "new": 0,
@@ -1572,19 +1524,7 @@
     }
   ],
   [
-    "strong smell",
-    {
-      "cats": {
-        "new": 0,
-        "worsening": 0,
-        "improving": 0,
-        "unchanged": 1,
-        "resolved": 0
-      }
-    }
-  ],
-  [
-    "varicose veins on my legs",
+    "a lot of varicose veins on my legs",
     {
       "cats": {
         "new": 0,
@@ -1608,7 +1548,7 @@
     }
   ],
   [
-    "cramps in my legs",
+    "cramps in my legs a lot",
     {
       "cats": {
         "new": 0,
@@ -1776,19 +1716,7 @@
     }
   ],
   [
-    "urine is cloudy",
-    {
-      "cats": {
-        "new": 0,
-        "worsening": 0,
-        "improving": 0,
-        "unchanged": 1,
-        "resolved": 0
-      }
-    }
-  ],
-  [
-    "strong odor.",
+    "urine is cloudy and has a strong odor.",
     {
       "cats": {
         "new": 1,
@@ -1836,7 +1764,7 @@
     }
   ],
   [
-    "sores on my face",
+    "sores on my face that are",
     {
       "cats": {
         "new": 0,
@@ -1908,7 +1836,7 @@
     }
   ],
   [
-    "tired.",
+    "always tired.",
     {
       "cats": {
         "new": 0,
@@ -1920,7 +1848,7 @@
     }
   ],
   [
-    "cough",
+    "cough that just won't go away.",
     {
       "cats": {
         "new": 0,
@@ -2220,7 +2148,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot",
     {
       "cats": {
         "new": 0,
@@ -2232,7 +2160,7 @@
     }
   ],
   [
-    "tired",
+    "feel really tired",
     {
       "cats": {
         "new": 0,
@@ -2340,7 +2268,7 @@
     }
   ],
   [
-    "thirsty",
+    "really thirsty",
     {
       "cats": {
         "new": 0,
@@ -2412,7 +2340,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing up a lot",
     {
       "cats": {
         "new": 0,
@@ -2520,7 +2448,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot",
     {
       "cats": {
         "new": 0,
@@ -2664,7 +2592,7 @@
     }
   ],
   [
-    "and sneezing",
+    "sneezing for days.",
     {
       "cats": {
         "new": 0,
@@ -3012,7 +2940,7 @@
     }
   ],
   [
-    "joints are sore",
+    "joints are sore every day",
     {
       "cats": {
         "new": 0,
@@ -3072,7 +3000,7 @@
     }
   ],
   [
-    "sick",
+    "really sick",
     {
       "cats": {
         "new": 0,
@@ -3168,7 +3096,7 @@
     }
   ],
   [
-    "hungry",
+    "hungry more often.",
     {
       "cats": {
         "new": 0,
@@ -3192,7 +3120,7 @@
     }
   ],
   [
-    "headaches",
+    "frequent headaches",
     {
       "cats": {
         "new": 0,
@@ -3324,7 +3252,7 @@
     }
   ],
   [
-    "pee",
+    "pee all the time.",
     {
       "cats": {
         "new": 0,
@@ -3408,7 +3336,7 @@
     }
   ],
   [
-    "itchy",
+    "really itchy",
     {
       "cats": {
         "new": 0,
@@ -3432,7 +3360,7 @@
     }
   ],
   [
-    "tired",
+    "really tired",
     {
       "cats": {
         "new": 0,
@@ -3456,7 +3384,7 @@
     }
   ],
   [
-    "sour taste",
+    "sour taste in my mouth all the time",
     {
       "cats": {
         "new": 0,
@@ -3540,7 +3468,7 @@
     }
   ],
   [
-    "itches",
+    "itches really bad",
     {
       "cats": {
         "new": 0,
@@ -3744,7 +3672,7 @@
     }
   ],
   [
-    "cuts and bruises don't heal",
+    "cuts and bruises don't heal very quickly",
     {
       "cats": {
         "new": 0,
@@ -4008,7 +3936,7 @@
     }
   ],
   [
-    "sneezing",
+    "sneezing a lot.",
     {
       "cats": {
         "new": 0,
@@ -4176,30 +4104,6 @@
     }
   ],
   [
-    "difficult",
-    {
-      "cats": {
-        "new": 0,
-        "worsening": 0,
-        "improving": 0,
-        "unchanged": 1,
-        "resolved": 0
-      }
-    }
-  ],
-  [
-    "distress",
-    {
-      "cats": {
-        "new": 0,
-        "worsening": 0,
-        "improving": 0,
-        "unchanged": 1,
-        "resolved": 0
-      }
-    }
-  ],
-  [
     "genitals are red and irritated.",
     {
       "cats": {
@@ -4272,7 +4176,7 @@
     }
   ],
   [
-    "itching",
+    "itching a lot",
     {
       "cats": {
         "new": 0,
@@ -4284,13 +4188,13 @@
     }
   ],
   [
-    "rash",
+    "rash that looks to be getting worse",
     {
       "cats": {
         "new": 0,
-        "worsening": 0,
+        "worsening": 1,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -4488,7 +4392,7 @@
     }
   ],
   [
-    "tired",
+    "really tired",
     {
       "cats": {
         "new": 0,
@@ -4536,7 +4440,7 @@
     }
   ],
   [
-    "stuffy",
+    "nose is really stuffy",
     {
       "cats": {
         "new": 0,
@@ -4560,7 +4464,7 @@
     }
   ],
   [
-    "miserable",
+    "really miserable",
     {
       "cats": {
         "new": 0,
@@ -4584,7 +4488,7 @@
     }
   ],
   [
-    "itchy all over my body",
+    "really itchy all over my body",
     {
       "cats": {
         "new": 0,
@@ -4692,7 +4596,7 @@
     }
   ],
   [
-    "feverish.",
+    "get feverish.",
     {
       "cats": {
         "new": 0,
@@ -4716,19 +4620,7 @@
     }
   ],
   [
-    "pain is almost constant",
-    {
-      "cats": {
-        "new": 0,
-        "worsening": 0,
-        "improving": 0,
-        "unchanged": 1,
-        "resolved": 0
-      }
-    }
-  ],
-  [
-    "increases at night time.",
+    "pain is almost constant, and often increases at night time.",
     {
       "cats": {
         "new": 0,
@@ -4896,7 +4788,7 @@
     }
   ],
   [
-    "tired",
+    "tired all the time.",
     {
       "cats": {
         "new": 0,
@@ -5064,19 +4956,7 @@
     }
   ],
   [
-    "cramps in my calves",
-    {
-      "cats": {
-        "new": 0,
-        "worsening": 0,
-        "improving": 0,
-        "unchanged": 1,
-        "resolved": 0
-      }
-    }
-  ],
-  [
-    "frequent and intense.",
+    "cramps in my calves are becoming more frequent and intense.",
     {
       "cats": {
         "new": 0,
@@ -5184,7 +5064,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot.",
     {
       "cats": {
         "new": 0,
@@ -5196,7 +5076,7 @@
     }
   ],
   [
-    "sick",
+    "really sick",
     {
       "cats": {
         "new": 0,
@@ -5244,19 +5124,7 @@
     }
   ],
   [
-    "coughing",
-    {
-      "cats": {
-        "new": 0,
-        "worsening": 0,
-        "improving": 0,
-        "unchanged": 1,
-        "resolved": 0
-      }
-    }
-  ],
-  [
-    "mucus that's brown and stringy",
+    "coughing up a lot of mucus that's brown and stringy",
     {
       "cats": {
         "new": 0,
@@ -5364,7 +5232,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot.",
     {
       "cats": {
         "new": 0,
@@ -5400,7 +5268,7 @@
     }
   ],
   [
-    "achy",
+    "achy all over",
     {
       "cats": {
         "new": 0,
@@ -5496,7 +5364,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing up a lot",
     {
       "cats": {
         "new": 0,
@@ -5520,7 +5388,7 @@
     }
   ],
   [
-    "tired",
+    "feeling really tired",
     {
       "cats": {
         "new": 0,
@@ -5544,7 +5412,7 @@
     }
   ],
   [
-    "back pain",
+    "a lot of back pain",
     {
       "cats": {
         "new": 0,
@@ -5640,18 +5508,6 @@
     }
   ],
   [
-    "fluid",
-    {
-      "cats": {
-        "new": 0,
-        "worsening": 0,
-        "improving": 0,
-        "unchanged": 1,
-        "resolved": 0
-      }
-    }
-  ],
-  [
     "painful to touch.",
     {
       "cats": {
@@ -5688,31 +5544,19 @@
     }
   ],
   [
-    "indigestion",
+    "indigestion a lot.",
     {
       "cats": {
         "new": 0,
-        "worsening": 0,
+        "worsening": 1,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
   ],
   [
-    "chest pain",
-    {
-      "cats": {
-        "new": 0,
-        "worsening": 0,
-        "improving": 0,
-        "unchanged": 1,
-        "resolved": 0
-      }
-    }
-  ],
-  [
-    "worse when I lie down or bend over",
+    "chest pain that gets worse when I lie down or bend over",
     {
       "cats": {
         "new": 0,
@@ -5796,7 +5640,7 @@
     }
   ],
   [
-    "coughing.",
+    "can't stop coughing.",
     {
       "cats": {
         "new": 0,
@@ -5832,7 +5676,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing up a lot",
     {
       "cats": {
         "new": 0,
@@ -5868,7 +5712,7 @@
     }
   ],
   [
-    "blood in my urine",
+    "blood in my urine for the past three days.",
     {
       "cats": {
         "new": 0,
@@ -6000,7 +5844,7 @@
     }
   ],
   [
-    "bad rash",
+    "really bad rash",
     {
       "cats": {
         "new": 0,
@@ -6012,7 +5856,7 @@
     }
   ],
   [
-    "itchy",
+    "really itchy",
     {
       "cats": {
         "new": 0,
@@ -6084,7 +5928,7 @@
     }
   ],
   [
-    "overweight",
+    "a bit overweight",
     {
       "cats": {
         "new": 0,
@@ -6204,19 +6048,7 @@
     }
   ],
   [
-    "worse at night",
-    {
-      "cats": {
-        "new": 0,
-        "worsening": 1,
-        "improving": 0,
-        "unchanged": 0,
-        "resolved": 0
-      }
-    }
-  ],
-  [
-    "headaches",
+    "having a lot of headaches",
     {
       "cats": {
         "new": 0,
@@ -6324,7 +6156,7 @@
     }
   ],
   [
-    "yeast infections",
+    "yeast infections a lot",
     {
       "cats": {
         "new": 0,
@@ -6336,7 +6168,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing a lot",
     {
       "cats": {
         "new": 0,
@@ -6360,7 +6192,7 @@
     }
   ],
   [
-    "coughing up",
+    "coughing up a lot",
     {
       "cats": {
         "new": 0,
@@ -6384,7 +6216,7 @@
     }
   ],
   [
-    "tired",
+    "really tired",
     {
       "cats": {
         "new": 0,
@@ -6516,7 +6348,7 @@
     }
   ],
   [
-    "trouble breathing",
+    "trouble breathing for a few days.",
     {
       "cats": {
         "new": 0,
@@ -6552,7 +6384,7 @@
     }
   ],
   [
-    "dry cough",
+    "dry cough for a week",
     {
       "cats": {
         "new": 0,
@@ -6600,7 +6432,7 @@
     }
   ],
   [
-    "pain in my joints",
+    "a lot of pain in my joints",
     {
       "cats": {
         "new": 0,
@@ -6648,7 +6480,7 @@
     }
   ],
   [
-    "pain",
+    "a lot of pain",
     {
       "cats": {
         "new": 0,
@@ -6816,7 +6648,7 @@
     }
   ],
   [
-    "headaches",
+    "headaches that are so bad",
     {
       "cats": {
         "new": 0,
@@ -6948,7 +6780,7 @@
     }
   ],
   [
-    "tired",
+    "very tired",
     {
       "cats": {
         "new": 0,
@@ -6984,7 +6816,7 @@
     }
   ],
   [
-    "tired",
+    "tired all the time.",
     {
       "cats": {
         "new": 0,
@@ -7032,7 +6864,7 @@
     }
   ],
   [
-    "urinate",
+    "have to urinate a lot",
     {
       "cats": {
         "new": 0,
@@ -7800,7 +7632,7 @@
     }
   ],
   [
-    "pain in my joints",
+    "a lot of pain in my joints",
     {
       "cats": {
         "new": 0,
@@ -7836,7 +7668,7 @@
     }
   ],
   [
-    "feeling stiff.",
+    "always feeling stiff.",
     {
       "cats": {
         "new": 0,
@@ -7872,7 +7704,7 @@
     }
   ],
   [
-    "pain in my stomach",
+    "a lot of pain in my stomach",
     {
       "cats": {
         "new": 0,
@@ -7968,7 +7800,7 @@
     }
   ],
   [
-    "feeling sick",
+    "feeling sick for a few days.",
     {
       "cats": {
         "new": 0,
@@ -8052,7 +7884,7 @@
     }
   ],
   [
-    "painful",
+    "it has gotten very painful",
     {
       "cats": {
         "new": 0,
@@ -8364,7 +8196,7 @@
     }
   ],
   [
-    "yellow-rust colored fluid",
+    "used to leak a yellow-rust colored fluid",
     {
       "cats": {
         "new": 0,
@@ -8376,7 +8208,7 @@
     }
   ],
   [
-    "loose, watery stools",
+    "loose, watery stools many times",
     {
       "cats": {
         "new": 0,
@@ -8400,7 +8232,7 @@
     }
   ],
   [
-    "sick.",
+    "always sick.",
     {
       "cats": {
         "new": 0,
@@ -8412,7 +8244,7 @@
     }
   ],
   [
-    "mild fever.",
+    "developing a mild fever.",
     {
       "cats": {
         "new": 0,
@@ -8425,6 +8257,18 @@
   ],
   [
     "abdominal part pains",
+    {
+      "cats": {
+        "new": 0,
+        "worsening": 0,
+        "improving": 0,
+        "unchanged": 1,
+        "resolved": 0
+      }
+    }
+  ],
+  [
+    "really",
     {
       "cats": {
         "new": 0,
@@ -8496,6 +8340,18 @@
     }
   ],
   [
+    "forget things a lot.",
+    {
+      "cats": {
+        "new": 0,
+        "worsening": 0,
+        "improving": 0,
+        "unchanged": 1,
+        "resolved": 0
+      }
+    }
+  ],
+  [
     "low mental clarity",
     {
       "cats": {
@@ -8520,7 +8376,7 @@
     }
   ],
   [
-    "sick",
+    "really sick",
     {
       "cats": {
         "new": 0,
@@ -8592,7 +8448,7 @@
     }
   ],
   [
-    "sick.",
+    "really sick.",
     {
       "cats": {
         "new": 0,
@@ -8652,7 +8508,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing a lot.",
     {
       "cats": {
         "new": 0,
@@ -8700,7 +8556,7 @@
     }
   ],
   [
-    "stomach pain",
+    "a lot of stomach pain",
     {
       "cats": {
         "new": 0,
@@ -8712,7 +8568,7 @@
     }
   ],
   [
-    "lost a lot of",
+    "lost a lot of weight",
     {
       "cats": {
         "new": 0,
@@ -8796,7 +8652,7 @@
     }
   ],
   [
-    "cold",
+    "really cold",
     {
       "cats": {
         "new": 0,
@@ -8820,7 +8676,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing a lot",
     {
       "cats": {
         "new": 0,
@@ -8928,7 +8784,7 @@
     }
   ],
   [
-    "belly pain",
+    "a lot of belly pain",
     {
       "cats": {
         "new": 0,
@@ -9108,7 +8964,7 @@
     }
   ],
   [
-    "sneezing.",
+    "a lot of sneezing.",
     {
       "cats": {
         "new": 0,
@@ -9192,7 +9048,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot.",
     {
       "cats": {
         "new": 0,
@@ -9216,13 +9072,13 @@
     }
   ],
   [
-    "rash on my legs",
+    "rash on my legs that is getting worse.",
     {
       "cats": {
         "new": 0,
-        "worsening": 0,
+        "worsening": 1,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -9264,7 +9120,7 @@
     }
   ],
   [
-    "belch",
+    "belch a lot.",
     {
       "cats": {
         "new": 0,
@@ -9348,7 +9204,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot.",
     {
       "cats": {
         "new": 0,
@@ -9600,13 +9456,13 @@
     }
   ],
   [
-    "vision is blurry",
+    "vision is blurry and seems to be getting worse.",
     {
       "cats": {
         "new": 0,
-        "worsening": 0,
+        "worsening": 1,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -9840,7 +9696,7 @@
     }
   ],
   [
-    "muscles, joints and back hurt",
+    "muscles, joints and back hurt all the time.",
     {
       "cats": {
         "new": 0,
@@ -9852,7 +9708,7 @@
     }
   ],
   [
-    "fever",
+    "starting to have a fever",
     {
       "cats": {
         "new": 0,
@@ -9876,7 +9732,7 @@
     }
   ],
   [
-    "itching",
+    "itching a lot",
     {
       "cats": {
         "new": 0,
@@ -9900,7 +9756,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot",
     {
       "cats": {
         "new": 0,
@@ -9984,7 +9840,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot",
     {
       "cats": {
         "new": 0,
@@ -10080,7 +9936,7 @@
     }
   ],
   [
-    "sneezing",
+    "sneezing a lot",
     {
       "cats": {
         "new": 0,
@@ -10260,7 +10116,7 @@
     }
   ],
   [
-    "yeast infections",
+    "yeast infections a lot",
     {
       "cats": {
         "new": 0,
@@ -10356,7 +10212,7 @@
     }
   ],
   [
-    "rash on my face",
+    "rash on my face and it's really painful.",
     {
       "cats": {
         "new": 0,
@@ -10560,7 +10416,7 @@
     }
   ],
   [
-    "pain in my legs",
+    "a lot of pain in my legs",
     {
       "cats": {
         "new": 0,
@@ -10596,31 +10452,31 @@
     }
   ],
   [
-    "nodular eruptions",
+    "a lot of nodular eruptions",
     {
       "cats": {
-        "new": 0,
+        "new": 1,
         "worsening": 0,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
   ],
   [
-    "really bad itching.",
+    "really bad itching. It has gotten worse",
     {
       "cats": {
         "new": 0,
-        "worsening": 0,
+        "worsening": 1,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
   ],
   [
-    "skin problems",
+    "a lot of skin problems",
     {
       "cats": {
         "new": 0,
@@ -10668,7 +10524,7 @@
     }
   ],
   [
-    "pain in my legs",
+    "a lot of pain in my legs",
     {
       "cats": {
         "new": 0,
@@ -10704,7 +10560,7 @@
     }
   ],
   [
-    "stomach pain",
+    "a lot of stomach pain",
     {
       "cats": {
         "new": 0,
@@ -10728,7 +10584,7 @@
     }
   ],
   [
-    "anxious",
+    "feel really anxious",
     {
       "cats": {
         "new": 0,
@@ -10752,7 +10608,7 @@
     }
   ],
   [
-    "belching",
+    "a lot of belching",
     {
       "cats": {
         "new": 0,
@@ -10800,7 +10656,7 @@
     }
   ],
   [
-    "sneezing",
+    "sneezing a lot",
     {
       "cats": {
         "new": 0,
@@ -10836,7 +10692,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing a lot.",
     {
       "cats": {
         "new": 0,
@@ -11052,7 +10908,7 @@
     }
   ],
   [
-    "uneasy",
+    "uneasy for a while now.",
     {
       "cats": {
         "new": 0,
@@ -11184,7 +11040,7 @@
     }
   ],
   [
-    "throwing up",
+    "throwing up a lot.",
     {
       "cats": {
         "new": 0,
@@ -11292,19 +11148,7 @@
     }
   ],
   [
-    "red",
-    {
-      "cats": {
-        "new": 0,
-        "worsening": 0,
-        "improving": 0,
-        "unchanged": 1,
-        "resolved": 0
-      }
-    }
-  ],
-  [
-    "watery eyes",
+    "red, watery eyes",
     {
       "cats": {
         "new": 0,
@@ -11748,7 +11592,7 @@
     }
   ],
   [
-    "belly pain",
+    "belly pain for a few days now.",
     {
       "cats": {
         "new": 0,
@@ -11760,13 +11604,13 @@
     }
   ],
   [
-    "belly pain",
+    "belly pain has been getting worse",
     {
       "cats": {
         "new": 0,
-        "worsening": 0,
+        "worsening": 1,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -12144,7 +11988,7 @@
     }
   ],
   [
-    "high fever",
+    "really high fever",
     {
       "cats": {
         "new": 0,
@@ -12204,7 +12048,7 @@
     }
   ],
   [
-    "queasy",
+    "really queasy",
     {
       "cats": {
         "new": 0,
@@ -12240,7 +12084,7 @@
     }
   ],
   [
-    "itching",
+    "a lot of itching",
     {
       "cats": {
         "new": 0,
@@ -12432,7 +12276,7 @@
     }
   ],
   [
-    "cough.",
+    "can't seem to shake this cough.",
     {
       "cats": {
         "new": 0,
@@ -12612,7 +12456,7 @@
     }
   ],
   [
-    "sneeze",
+    "sneeze a lot.",
     {
       "cats": {
         "new": 0,
@@ -12732,13 +12576,13 @@
     }
   ],
   [
-    "cramps in my calves",
+    "cramps in my calves that are getting worse.",
     {
       "cats": {
         "new": 0,
-        "worsening": 0,
+        "worsening": 1,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -12768,7 +12612,7 @@
     }
   ],
   [
-    "belching",
+    "frequent belching",
     {
       "cats": {
         "new": 0,
@@ -12816,7 +12660,7 @@
     }
   ],
   [
-    "stomach pain",
+    "a lot of stomach pain",
     {
       "cats": {
         "new": 0,
@@ -12876,7 +12720,7 @@
     }
   ],
   [
-    "have to clear my throat.",
+    "often feel like I have to clear my throat.",
     {
       "cats": {
         "new": 1,
@@ -12948,19 +12792,7 @@
     }
   ],
   [
-    "red",
-    {
-      "cats": {
-        "new": 0,
-        "worsening": 0,
-        "improving": 0,
-        "unchanged": 1,
-        "resolved": 0
-      }
-    }
-  ],
-  [
-    "itchy.",
+    "red and itchy.",
     {
       "cats": {
         "new": 0,
@@ -13152,7 +12984,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing a lot",
     {
       "cats": {
         "new": 0,
@@ -13284,7 +13116,7 @@
     }
   ],
   [
-    "really tired",
+    "feeling really tired",
     {
       "cats": {
         "new": 0,
@@ -13452,7 +13284,7 @@
     }
   ],
   [
-    "tired",
+    "tired all the time",
     {
       "cats": {
         "new": 0,
@@ -13632,7 +13464,7 @@
     }
   ],
   [
-    "sour taste in my mouth",
+    "sour taste in my mouth all the time",
     {
       "cats": {
         "new": 0,
@@ -13644,7 +13476,7 @@
     }
   ],
   [
-    "hiccups",
+    "hiccups a lot",
     {
       "cats": {
         "new": 0,
@@ -13668,7 +13500,7 @@
     }
   ],
   [
-    "sneezing",
+    "sneezing a lot",
     {
       "cats": {
         "new": 0,
@@ -13680,7 +13512,7 @@
     }
   ],
   [
-    "tired.",
+    "feel really tired.",
     {
       "cats": {
         "new": 0,
@@ -13764,7 +13596,7 @@
     }
   ],
   [
-    "pain in my lower abdomen",
+    "a lot of pain in my lower abdomen",
     {
       "cats": {
         "new": 0,
@@ -13824,7 +13656,7 @@
     }
   ],
   [
-    "cough",
+    "cough that won't go away",
     {
       "cats": {
         "new": 0,
@@ -13992,7 +13824,7 @@
     }
   ],
   [
-    "cough",
+    "cough that just won't go away.",
     {
       "cats": {
         "new": 0,
@@ -14136,7 +13968,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot.",
     {
       "cats": {
         "new": 0,
@@ -14208,7 +14040,7 @@
     }
   ],
   [
-    "dark mucus that looks like rust",
+    "a lot of dark mucus that looks like rust",
     {
       "cats": {
         "new": 0,
@@ -14220,7 +14052,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing a lot",
     {
       "cats": {
         "new": 0,
@@ -14280,7 +14112,7 @@
     }
   ],
   [
-    "thick, mucusy stuff.",
+    "a lot of thick, mucusy stuff.",
     {
       "cats": {
         "new": 0,
@@ -14340,7 +14172,7 @@
     }
   ],
   [
-    "heartburn",
+    "frequently have heartburn",
     {
       "cats": {
         "new": 0,
@@ -14388,7 +14220,7 @@
     }
   ],
   [
-    "joints are hurting",
+    "joints are hurting a lot.",
     {
       "cats": {
         "new": 0,
@@ -14436,7 +14268,7 @@
     }
   ],
   [
-    "belch",
+    "belch a lot.",
     {
       "cats": {
         "new": 0,
@@ -14556,7 +14388,7 @@
     }
   ],
   [
-    "shiver",
+    "often shiver a lot",
     {
       "cats": {
         "new": 0,
@@ -14772,7 +14604,7 @@
     }
   ],
   [
-    "belching",
+    "belching a lot.",
     {
       "cats": {
         "new": 0,
@@ -14808,7 +14640,7 @@
     }
   ],
   [
-    "sneezing",
+    "sneezing a lot",
     {
       "cats": {
         "new": 0,
@@ -14832,13 +14664,13 @@
     }
   ],
   [
-    "mucus in my nose and throat.",
+    "a lot of mucus in my nose and throat.",
     {
       "cats": {
-        "new": 0,
+        "new": 1,
         "worsening": 0,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -15048,7 +14880,7 @@
     }
   ],
   [
-    "discomforts.",
+    "a lot of discomforts.",
     {
       "cats": {
         "new": 0,
@@ -15096,13 +14928,13 @@
     }
   ],
   [
-    "headaches",
+    "headaches for the past few days.",
     {
       "cats": {
-        "new": 0,
+        "new": 1,
         "worsening": 0,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -15288,7 +15120,7 @@
     }
   ],
   [
-    "burp",
+    "burp a lot.",
     {
       "cats": {
         "new": 0,
@@ -15300,19 +15132,7 @@
     }
   ],
   [
-    "chest pain",
-    {
-      "cats": {
-        "new": 0,
-        "worsening": 0,
-        "improving": 0,
-        "unchanged": 1,
-        "resolved": 0
-      }
-    }
-  ],
-  [
-    "my arm, jaw, and back of my neck.",
+    "chest pain that goes to my arm, jaw, and back of my neck.",
     {
       "cats": {
         "new": 0,
@@ -15336,7 +15156,7 @@
     }
   ],
   [
-    "sick.",
+    "really sick.",
     {
       "cats": {
         "new": 0,
@@ -15444,7 +15264,7 @@
     }
   ],
   [
-    "cough",
+    "cough that won't go away",
     {
       "cats": {
         "new": 0,
@@ -15456,7 +15276,7 @@
     }
   ],
   [
-    "sneezing.",
+    "always sneezing.",
     {
       "cats": {
         "new": 1,
@@ -15504,7 +15324,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing a lot",
     {
       "cats": {
         "new": 0,
@@ -15564,7 +15384,7 @@
     }
   ],
   [
-    "phlegm",
+    "a lot of phlegm",
     {
       "cats": {
         "new": 0,
@@ -15732,19 +15552,7 @@
     }
   ],
   [
-    "red",
-    {
-      "cats": {
-        "new": 0,
-        "worsening": 0,
-        "improving": 0,
-        "unchanged": 1,
-        "resolved": 0
-      }
-    }
-  ],
-  [
-    "swollen.",
+    "red and swollen.",
     {
       "cats": {
         "new": 1,
@@ -15780,7 +15588,7 @@
     }
   ],
   [
-    "pain in my joints, especially my knees and hips.",
+    "a lot of pain in my joints, especially my knees and hips.",
     {
       "cats": {
         "new": 0,
@@ -15804,7 +15612,7 @@
     }
   ],
   [
-    "feeling stiff.",
+    "always feeling stiff.",
     {
       "cats": {
         "new": 0,
@@ -15888,19 +15696,7 @@
     }
   ],
   [
-    "red",
-    {
-      "cats": {
-        "new": 0,
-        "worsening": 0,
-        "improving": 0,
-        "unchanged": 1,
-        "resolved": 0
-      }
-    }
-  ],
-  [
-    "inflamed",
+    "red and inflamed",
     {
       "cats": {
         "new": 0,
@@ -15936,7 +15732,7 @@
     }
   ],
   [
-    "tired",
+    "tired all the time",
     {
       "cats": {
         "new": 0,
@@ -16032,13 +15828,13 @@
     }
   ],
   [
-    "throat mucus",
+    "a lot of throat mucus",
     {
       "cats": {
-        "new": 0,
+        "new": 1,
         "worsening": 0,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -16152,7 +15948,7 @@
     }
   ],
   [
-    "cold",
+    "cold for days.",
     {
       "cats": {
         "new": 0,
@@ -16272,7 +16068,7 @@
     }
   ],
   [
-    "tired",
+    "always tired",
     {
       "cats": {
         "new": 0,
@@ -16320,7 +16116,7 @@
     }
   ],
   [
-    "pain in my joints, especially my knees and hips.",
+    "a lot of pain in my joints, especially my knees and hips.",
     {
       "cats": {
         "new": 0,
@@ -16404,7 +16200,7 @@
     }
   ],
   [
-    "cramps",
+    "cramps every day",
     {
       "cats": {
         "new": 0,
@@ -16428,7 +16224,7 @@
     }
   ],
   [
-    "diarrhea",
+    "diarrhea for a few days.",
     {
       "cats": {
         "new": 0,
@@ -16548,7 +16344,7 @@
     }
   ],
   [
-    "thick, mucusy sputum.",
+    "a lot of thick, mucusy sputum.",
     {
       "cats": {
         "new": 0,
@@ -16644,7 +16440,7 @@
     }
   ],
   [
-    "weak",
+    "feel incredibly weak",
     {
       "cats": {
         "new": 0,
@@ -16836,7 +16632,7 @@
     }
   ],
   [
-    "arms and legs hurt",
+    "arms and legs hurt a lot.",
     {
       "cats": {
         "new": 0,
@@ -16896,7 +16692,7 @@
     }
   ],
   [
-    "pain in my back and neck.",
+    "a lot of pain in my back and neck.",
     {
       "cats": {
         "new": 0,
@@ -16908,7 +16704,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing a lot",
     {
       "cats": {
         "new": 0,
@@ -17028,7 +16824,7 @@
     }
   ],
   [
-    "itching",
+    "a lot of itching",
     {
       "cats": {
         "new": 0,
@@ -17148,7 +16944,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot.",
     {
       "cats": {
         "new": 0,
@@ -17172,7 +16968,7 @@
     }
   ],
   [
-    "mucus.",
+    "a lot of mucus.",
     {
       "cats": {
         "new": 0,
@@ -17280,7 +17076,7 @@
     }
   ],
   [
-    "scratching",
+    "scratching myself a lot",
     {
       "cats": {
         "new": 0,
@@ -17724,13 +17520,13 @@
     }
   ],
   [
-    "stiffness in my neck and shoulders.",
+    "a lot of stiffness in my neck and shoulders.",
     {
       "cats": {
-        "new": 0,
+        "new": 1,
         "worsening": 0,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -17748,7 +17544,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing a lot",
     {
       "cats": {
         "new": 0,
@@ -17760,7 +17556,7 @@
     }
   ],
   [
-    "tired.",
+    "really tired.",
     {
       "cats": {
         "new": 0,
@@ -17808,7 +17604,7 @@
     }
   ],
   [
-    "trouble breathing",
+    "a lot of trouble breathing",
     {
       "cats": {
         "new": 0,
@@ -17904,7 +17700,7 @@
     }
   ],
   [
-    "sneezing",
+    "a lot of sneezing",
     {
       "cats": {
         "new": 0,
@@ -18000,7 +17796,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing a lot.",
     {
       "cats": {
         "new": 0,
@@ -18096,7 +17892,7 @@
     }
   ],
   [
-    "nose is running",
+    "nose is running like crazy",
     {
       "cats": {
         "new": 0,
@@ -18360,7 +18156,7 @@
     }
   ],
   [
-    "back pain",
+    "a lot of back pain",
     {
       "cats": {
         "new": 0,
@@ -18552,7 +18348,7 @@
     }
   ],
   [
-    "stomach ache",
+    "stomach ache for a few days now.",
     {
       "cats": {
         "new": 0,
@@ -18636,7 +18432,7 @@
     }
   ],
   [
-    "lightheaded",
+    "really lightheaded",
     {
       "cats": {
         "new": 0,
@@ -19068,7 +18864,7 @@
     }
   ],
   [
-    "uncomfortable.",
+    "really uncomfortable.",
     {
       "cats": {
         "new": 0,
@@ -19260,7 +19056,7 @@
     }
   ],
   [
-    "stomach hurts",
+    "stomach hurts a lot",
     {
       "cats": {
         "new": 0,
@@ -19476,7 +19272,7 @@
     }
   ],
   [
-    "pain in my neck and back.",
+    "a lot of pain in my neck and back.",
     {
       "cats": {
         "new": 0,
@@ -19500,7 +19296,7 @@
     }
   ],
   [
-    "dry cough",
+    "dry cough that won't go away.",
     {
       "cats": {
         "new": 0,
@@ -19512,7 +19308,7 @@
     }
   ],
   [
-    "infections",
+    "infections that don't seem to heal",
     {
       "cats": {
         "new": 0,
@@ -19608,7 +19404,7 @@
     }
   ],
   [
-    "stomach pain",
+    "a lot of stomach pain",
     {
       "cats": {
         "new": 0,
@@ -19656,7 +19452,7 @@
     }
   ],
   [
-    "feeling really sick",
+    "feeling really sick for the past week.",
     {
       "cats": {
         "new": 0,
@@ -19788,19 +19584,19 @@
     }
   ],
   [
-    "trouble seeing things",
+    "trouble seeing things clearly, and it seems to be getting worse.",
     {
       "cats": {
         "new": 0,
-        "worsening": 0,
+        "worsening": 1,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
   ],
   [
-    "tired",
+    "always tired",
     {
       "cats": {
         "new": 0,
@@ -19836,7 +19632,7 @@
     }
   ],
   [
-    "lightheaded",
+    "lightheaded a lot.",
     {
       "cats": {
         "new": 0,
@@ -19908,7 +19704,7 @@
     }
   ],
   [
-    "uneasiness",
+    "great deal of uneasiness",
     {
       "cats": {
         "new": 0,
@@ -20076,13 +19872,13 @@
     }
   ],
   [
-    "blurry vision",
+    "blurry vision and it's getting worse.",
     {
       "cats": {
         "new": 0,
-        "worsening": 0,
+        "worsening": 1,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -20412,7 +20208,7 @@
     }
   ],
   [
-    "pain in my joints",
+    "a lot of pain in my joints",
     {
       "cats": {
         "new": 0,
@@ -20436,7 +20232,7 @@
     }
   ],
   [
-    "for me to move it around.",
+    "hard for me to move it around.",
     {
       "cats": {
         "new": 0,
@@ -20592,7 +20388,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing a lot.",
     {
       "cats": {
         "new": 0,
@@ -20616,7 +20412,7 @@
     }
   ],
   [
-    "thick, mucoid sputum",
+    "a lot of thick, mucoid sputum",
     {
       "cats": {
         "new": 0,
@@ -20904,7 +20700,7 @@
     }
   ],
   [
-    "pain in my neck and back.",
+    "a lot of pain in my neck and back.",
     {
       "cats": {
         "new": 1,
@@ -20988,7 +20784,7 @@
     }
   ],
   [
-    "pain in my neck and back.",
+    "a lot of pain in my neck and back.",
     {
       "cats": {
         "new": 0,
@@ -21108,7 +20904,7 @@
     }
   ],
   [
-    "scratching",
+    "scratching a lot",
     {
       "cats": {
         "new": 0,
@@ -21264,7 +21060,7 @@
     }
   ],
   [
-    "nausea",
+    "a lot of nausea",
     {
       "cats": {
         "new": 0,
@@ -21312,7 +21108,7 @@
     }
   ],
   [
-    "feel exhausted",
+    "feel exhausted every day",
     {
       "cats": {
         "new": 0,
@@ -21588,7 +21384,7 @@
     }
   ],
   [
-    "tired",
+    "tired all the time",
     {
       "cats": {
         "new": 0,
@@ -21720,7 +21516,7 @@
     }
   ],
   [
-    "feeling really",
+    "feeling really sick",
     {
       "cats": {
         "new": 0,
@@ -21828,7 +21624,7 @@
     }
   ],
   [
-    "severe muscle pain",
+    "severe muscle pain for the past few days.",
     {
       "cats": {
         "new": 0,
@@ -21996,7 +21792,7 @@
     }
   ],
   [
-    "headaches",
+    "headaches more frequently.",
     {
       "cats": {
         "new": 0,
@@ -22080,7 +21876,7 @@
     }
   ],
   [
-    "scratchy",
+    "really scratchy",
     {
       "cats": {
         "new": 0,
@@ -22188,7 +21984,7 @@
     }
   ],
   [
-    "painful",
+    "very painful",
     {
       "cats": {
         "new": 0,
@@ -22464,7 +22260,7 @@
     }
   ],
   [
-    "cough",
+    "cough for a few days.",
     {
       "cats": {
         "new": 0,
@@ -22572,13 +22368,13 @@
     }
   ],
   [
-    "nose is running",
+    "nose is running a lot.",
     {
       "cats": {
-        "new": 0,
+        "new": 1,
         "worsening": 0,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -22632,7 +22428,7 @@
     }
   ],
   [
-    "bloody stools",
+    "bloody stools for a while now",
     {
       "cats": {
         "new": 0,
@@ -22704,7 +22500,7 @@
     }
   ],
   [
-    "cough",
+    "cough that won't go away",
     {
       "cats": {
         "new": 0,
@@ -22764,7 +22560,7 @@
     }
   ],
   [
-    "angry",
+    "really angry",
     {
       "cats": {
         "new": 0,
@@ -22848,7 +22644,7 @@
     }
   ],
   [
-    "headaches",
+    "headaches for a while now.",
     {
       "cats": {
         "new": 0,
@@ -23016,7 +22812,7 @@
     }
   ],
   [
-    "high fever",
+    "high fever since past few days",
     {
       "cats": {
         "new": 0,
@@ -23328,7 +23124,7 @@
     }
   ],
   [
-    "heartburn",
+    "a lot of heartburn",
     {
       "cats": {
         "new": 0,
@@ -23460,7 +23256,7 @@
     }
   ],
   [
-    "exhausted",
+    "always exhausted",
     {
       "cats": {
         "new": 0,
@@ -23700,7 +23496,7 @@
     }
   ],
   [
-    "unpleasant",
+    "really unpleasant",
     {
       "cats": {
         "new": 0,
@@ -23712,7 +23508,7 @@
     }
   ],
   [
-    "sour taste in my mouth",
+    "sour taste in my mouth all the time",
     {
       "cats": {
         "new": 0,
@@ -23736,7 +23532,7 @@
     }
   ],
   [
-    "hiccups",
+    "hiccups a lot",
     {
       "cats": {
         "new": 0,
@@ -23880,7 +23676,7 @@
     }
   ],
   [
-    "hair's texture has changed",
+    "hair's texture has changed a lot.",
     {
       "cats": {
         "new": 0,
@@ -24480,7 +24276,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing a lot",
     {
       "cats": {
         "new": 0,
@@ -24780,7 +24576,7 @@
     }
   ],
   [
-    "bleeds",
+    "bleeds frequently.",
     {
       "cats": {
         "new": 0,
@@ -24816,7 +24612,7 @@
     }
   ],
   [
-    "bloody stools",
+    "bloody stools for a while",
     {
       "cats": {
         "new": 0,
@@ -25140,7 +24936,7 @@
     }
   ],
   [
-    "perspiring",
+    "perspiring a lot.",
     {
       "cats": {
         "new": 0,
@@ -25176,7 +24972,7 @@
     }
   ],
   [
-    "stomach ache",
+    "stomach ache for the past week.",
     {
       "cats": {
         "new": 0,
@@ -25308,13 +25104,13 @@
     }
   ],
   [
-    "fever",
+    "fever for a few days, and it's been getting worse.",
     {
       "cats": {
         "new": 0,
-        "worsening": 0,
+        "worsening": 1,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -25344,7 +25140,7 @@
     }
   ],
   [
-    "tired",
+    "feeling really tired",
     {
       "cats": {
         "new": 0,
@@ -25644,13 +25440,13 @@
     }
   ],
   [
-    "fever",
+    "fever for a few days now, and it's been getting worse.",
     {
       "cats": {
         "new": 0,
-        "worsening": 0,
+        "worsening": 1,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -25680,7 +25476,7 @@
     }
   ],
   [
-    "weak",
+    "feel really weak",
     {
       "cats": {
         "new": 0,
@@ -25740,7 +25536,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing a lot",
     {
       "cats": {
         "new": 0,
@@ -25764,7 +25560,7 @@
     }
   ],
   [
-    "thick, sticky mucus.",
+    "a lot of thick, sticky mucus.",
     {
       "cats": {
         "new": 0,
@@ -25848,7 +25644,7 @@
     }
   ],
   [
-    "heartburn",
+    "a lot of heartburn",
     {
       "cats": {
         "new": 0,
@@ -25920,7 +25716,7 @@
     }
   ],
   [
-    "headache",
+    "headache all day",
     {
       "cats": {
         "new": 0,
@@ -26796,7 +26592,7 @@
     }
   ],
   [
-    "n't think straight",
+    "can't think straight",
     {
       "cats": {
         "new": 0,
@@ -26988,7 +26784,7 @@
     }
   ],
   [
-    "pain in my back and neck.",
+    "a lot of pain in my back and neck.",
     {
       "cats": {
         "new": 1,
@@ -27132,13 +26928,13 @@
     }
   ],
   [
-    "chills",
+    "chills every night.",
     {
       "cats": {
-        "new": 0,
+        "new": 1,
         "worsening": 0,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -27156,7 +26952,7 @@
     }
   ],
   [
-    "heartburn",
+    "a lot of heartburn",
     {
       "cats": {
         "new": 0,
@@ -27180,7 +26976,7 @@
     }
   ],
   [
-    "chest discomfort",
+    "chest discomfort gets worse.",
     {
       "cats": {
         "new": 0,
@@ -27192,7 +26988,7 @@
     }
   ],
   [
-    "chest hurts",
+    "chest hurts a lot",
     {
       "cats": {
         "new": 0,
@@ -27276,7 +27072,7 @@
     }
   ],
   [
-    "itchy",
+    "often itchy",
     {
       "cats": {
         "new": 0,
@@ -27300,7 +27096,7 @@
     }
   ],
   [
-    "feeling really sick",
+    "feeling really sick for the past few days.",
     {
       "cats": {
         "new": 0,
@@ -27384,7 +27180,7 @@
     }
   ],
   [
-    "itching and redness on my skin.",
+    "a lot of itching and redness on my skin.",
     {
       "cats": {
         "new": 0,
@@ -27408,7 +27204,7 @@
     }
   ],
   [
-    "feeling unwell",
+    "feeling unwell for a while now.",
     {
       "cats": {
         "new": 0,
@@ -27504,7 +27300,7 @@
     }
   ],
   [
-    "coughing.",
+    "always coughing.",
     {
       "cats": {
         "new": 0,
@@ -27540,7 +27336,7 @@
     }
   ],
   [
-    "bloody stools",
+    "bloody stools for a while now",
     {
       "cats": {
         "new": 0,
@@ -27552,7 +27348,7 @@
     }
   ],
   [
-    "weak",
+    "feel very weak",
     {
       "cats": {
         "new": 0,
@@ -27696,7 +27492,7 @@
     }
   ],
   [
-    "red, itchy, scaly rash on my arms, legs, and torso",
+    "red, itchy, scaly rash on my arms, legs, and torso for the past few weeks",
     {
       "cats": {
         "new": 0,
@@ -27708,7 +27504,7 @@
     }
   ],
   [
-    "diarrhea",
+    "diarrhea for a few days now.",
     {
       "cats": {
         "new": 0,
@@ -27852,7 +27648,7 @@
     }
   ],
   [
-    "itching",
+    "a lot of itching",
     {
       "cats": {
         "new": 0,
@@ -28008,7 +27804,7 @@
     }
   ],
   [
-    "itching",
+    "itching a lot recently",
     {
       "cats": {
         "new": 0,
@@ -28056,7 +27852,7 @@
     }
   ],
   [
-    "pain in my neck and back",
+    "a lot of pain in my neck and back",
     {
       "cats": {
         "new": 0,
@@ -28128,7 +27924,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot.",
     {
       "cats": {
         "new": 0,
@@ -28140,7 +27936,7 @@
     }
   ],
   [
-    "mucous in my throat",
+    "a lot of mucous in my throat",
     {
       "cats": {
         "new": 0,
@@ -28452,7 +28248,7 @@
     }
   ],
   [
-    "chest pain",
+    "chest pain for a few days now",
     {
       "cats": {
         "new": 0,
@@ -28536,7 +28332,7 @@
     }
   ],
   [
-    "high fever",
+    "high fever for the past few days.",
     {
       "cats": {
         "new": 0,
@@ -28692,7 +28488,7 @@
     }
   ],
   [
-    "fever",
+    "fever for a few days",
     {
       "cats": {
         "new": 0,
@@ -28956,7 +28752,7 @@
     }
   ],
   [
-    "tiny red spots all over my face and neck",
+    "a lot of tiny red spots all over my face and neck",
     {
       "cats": {
         "new": 0,
@@ -29088,7 +28884,7 @@
     }
   ],
   [
-    "weak",
+    "really weak",
     {
       "cats": {
         "new": 0,
@@ -29124,19 +28920,19 @@
     }
   ],
   [
-    "back pain",
+    "back pain for a while now. It's been getting worse lately.",
     {
       "cats": {
         "new": 0,
-        "worsening": 0,
+        "worsening": 1,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
   ],
   [
-    "cough",
+    "cough that won't go away.",
     {
       "cats": {
         "new": 1,
@@ -29232,7 +29028,7 @@
     }
   ],
   [
-    "headaches",
+    "a lot of headaches",
     {
       "cats": {
         "new": 0,
@@ -29280,7 +29076,7 @@
     }
   ],
   [
-    "skin irritations",
+    "a lot of skin irritations",
     {
       "cats": {
         "new": 0,
@@ -29448,7 +29244,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing for a few days",
     {
       "cats": {
         "new": 0,
@@ -29616,7 +29412,7 @@
     }
   ],
   [
-    "bad stomach ache",
+    "really bad stomach ache",
     {
       "cats": {
         "new": 0,
@@ -29724,7 +29520,7 @@
     }
   ],
   [
-    "tired",
+    "so tired",
     {
       "cats": {
         "new": 0,
@@ -29844,13 +29640,13 @@
     }
   ],
   [
-    "chest pain",
+    "chest pain for a while now, and it's been getting worse.",
     {
       "cats": {
         "new": 0,
-        "worsening": 0,
+        "worsening": 1,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -30180,7 +29976,7 @@
     }
   ],
   [
-    "itchy bumps on my skin that sometimes turn red or rough.",
+    "a lot of itchy bumps on my skin that sometimes turn red or rough.",
     {
       "cats": {
         "new": 1,
@@ -30372,7 +30168,7 @@
     }
   ],
   [
-    "fever",
+    "fever for a few days",
     {
       "cats": {
         "new": 0,
@@ -30564,7 +30360,7 @@
     }
   ],
   [
-    "sneezing",
+    "sneezing for a few days.",
     {
       "cats": {
         "new": 0,
@@ -30588,7 +30384,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing a lot",
     {
       "cats": {
         "new": 0,
@@ -30684,7 +30480,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot",
     {
       "cats": {
         "new": 0,
@@ -30720,7 +30516,7 @@
     }
   ],
   [
-    "constipation",
+    "constipation for the last few days.",
     {
       "cats": {
         "new": 0,
@@ -30816,7 +30612,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot.",
     {
       "cats": {
         "new": 0,
@@ -30864,13 +30660,13 @@
     }
   ],
   [
-    "constipation",
+    "constipation for the past few days.",
     {
       "cats": {
-        "new": 0,
+        "new": 1,
         "worsening": 0,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -30900,19 +30696,7 @@
     }
   ],
   [
-    "headaches",
-    {
-      "cats": {
-        "new": 0,
-        "worsening": 0,
-        "improving": 0,
-        "unchanged": 1,
-        "resolved": 0
-      }
-    }
-  ],
-  [
-    "uncomfortable",
+    "headaches every night.",
     {
       "cats": {
         "new": 0,
@@ -30936,7 +30720,7 @@
     }
   ],
   [
-    "vomiting",
+    "vomiting a lot",
     {
       "cats": {
         "new": 0,
@@ -30948,7 +30732,7 @@
     }
   ],
   [
-    "nauseous",
+    "feel very nauseous",
     {
       "cats": {
         "new": 0,
@@ -31128,7 +30912,7 @@
     }
   ],
   [
-    "sneeze",
+    "sneeze a lot.",
     {
       "cats": {
         "new": 0,
@@ -31164,7 +30948,7 @@
     }
   ],
   [
-    "head hurts",
+    "head hurts all the time",
     {
       "cats": {
         "new": 0,
@@ -31236,7 +31020,7 @@
     }
   ],
   [
-    "obese.",
+    "very obese.",
     {
       "cats": {
         "new": 0,
@@ -31284,7 +31068,7 @@
     }
   ],
   [
-    "skin peeling",
+    "a lot of skin peeling",
     {
       "cats": {
         "new": 0,
@@ -31728,7 +31512,7 @@
     }
   ],
   [
-    "sore throat",
+    "sore throat for a few days now.",
     {
       "cats": {
         "new": 0,
@@ -31776,7 +31560,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing a lot",
     {
       "cats": {
         "new": 0,
@@ -31812,7 +31596,7 @@
     }
   ],
   [
-    "thick, sticky mucus",
+    "a lot of thick, sticky mucus",
     {
       "cats": {
         "new": 0,
@@ -31860,7 +31644,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing a lot",
     {
       "cats": {
         "new": 0,
@@ -31920,7 +31704,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot",
     {
       "cats": {
         "new": 0,
@@ -31968,7 +31752,7 @@
     }
   ],
   [
-    "feeling really sick",
+    "feeling really sick for the past few days.",
     {
       "cats": {
         "new": 0,
@@ -32172,7 +31956,7 @@
     }
   ],
   [
-    "trouble breathing",
+    "trouble breathing for a few weeks",
     {
       "cats": {
         "new": 0,
@@ -32244,7 +32028,7 @@
     }
   ],
   [
-    "belly pain",
+    "belly pain for a few days now.",
     {
       "cats": {
         "new": 0,
@@ -32292,7 +32076,7 @@
     }
   ],
   [
-    "bloody stools",
+    "bloody stools for a while now",
     {
       "cats": {
         "new": 0,
@@ -32340,7 +32124,7 @@
     }
   ],
   [
-    "pain in my legs",
+    "pain in my legs that is worse",
     {
       "cats": {
         "new": 0,
@@ -32520,7 +32304,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot",
     {
       "cats": {
         "new": 0,
@@ -32592,7 +32376,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot",
     {
       "cats": {
         "new": 0,
@@ -32940,7 +32724,7 @@
     }
   ],
   [
-    "pain in my neck",
+    "a lot of pain in my neck",
     {
       "cats": {
         "new": 0,
@@ -32976,7 +32760,7 @@
     }
   ],
   [
-    "stiffness when I walk.",
+    "a lot of stiffness when I walk.",
     {
       "cats": {
         "new": 0,
@@ -32988,13 +32772,13 @@
     }
   ],
   [
-    "fever",
+    "a fever for a few days now and it's starting to get worse.",
     {
       "cats": {
         "new": 0,
-        "worsening": 0,
+        "worsening": 1,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -33036,7 +32820,7 @@
     }
   ],
   [
-    "diarrhea",
+    "diarrhea for a few days",
     {
       "cats": {
         "new": 0,
@@ -33084,7 +32868,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing for days.",
     {
       "cats": {
         "new": 0,
@@ -33180,7 +32964,7 @@
     }
   ],
   [
-    "itchy.",
+    "really itchy.",
     {
       "cats": {
         "new": 1,
@@ -33300,19 +33084,7 @@
     }
   ],
   [
-    "abdominal pain",
-    {
-      "cats": {
-        "new": 0,
-        "worsening": 0,
-        "improving": 0,
-        "unchanged": 1,
-        "resolved": 0
-      }
-    }
-  ],
-  [
-    "discomfort",
+    "abdominal pain or discomfort that is worse when I eat or drink.",
     {
       "cats": {
         "new": 0,
@@ -33348,7 +33120,7 @@
     }
   ],
   [
-    "very tired",
+    "very tired all the time",
     {
       "cats": {
         "new": 0,
@@ -33408,7 +33180,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot.",
     {
       "cats": {
         "new": 0,
@@ -33624,7 +33396,7 @@
     }
   ],
   [
-    "pain in my chest",
+    "a lot of pain in my chest",
     {
       "cats": {
         "new": 0,
@@ -33636,7 +33408,7 @@
     }
   ],
   [
-    "sick to my stomach.",
+    "feel really sick to my stomach.",
     {
       "cats": {
         "new": 0,
@@ -33660,7 +33432,7 @@
     }
   ],
   [
-    "shaky",
+    "really shaky",
     {
       "cats": {
         "new": 0,
@@ -33744,7 +33516,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot.",
     {
       "cats": {
         "new": 0,
@@ -33792,7 +33564,7 @@
     }
   ],
   [
-    "cough",
+    "cough for a few days.",
     {
       "cats": {
         "new": 0,
@@ -33804,7 +33576,7 @@
     }
   ],
   [
-    "harder to breathe",
+    "getting harder to breathe",
     {
       "cats": {
         "new": 0,
@@ -33840,7 +33612,7 @@
     }
   ],
   [
-    "itching",
+    "a lot of itching",
     {
       "cats": {
         "new": 0,
@@ -33900,7 +33672,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot.",
     {
       "cats": {
         "new": 0,
@@ -33984,7 +33756,7 @@
     }
   ],
   [
-    "stomach pain",
+    "a lot of stomach pain",
     {
       "cats": {
         "new": 0,
@@ -34176,7 +33948,7 @@
     }
   ],
   [
-    "pressure in my sinuses",
+    "a lot of pressure in my sinuses",
     {
       "cats": {
         "new": 0,
@@ -34284,7 +34056,7 @@
     }
   ],
   [
-    "trouble breathing",
+    "a lot of trouble breathing",
     {
       "cats": {
         "new": 0,
@@ -34392,7 +34164,7 @@
     }
   ],
   [
-    "itchy rash",
+    "really itchy rash",
     {
       "cats": {
         "new": 0,
@@ -34572,7 +34344,7 @@
     }
   ],
   [
-    "itchy spots",
+    "a lot of itchy spots",
     {
       "cats": {
         "new": 0,
@@ -34752,7 +34524,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot",
     {
       "cats": {
         "new": 0,
@@ -34860,7 +34632,7 @@
     }
   ],
   [
-    "stomach pain",
+    "a lot of stomach pain",
     {
       "cats": {
         "new": 0,
@@ -34884,7 +34656,7 @@
     }
   ],
   [
-    "vomiting",
+    "vomiting a lot.",
     {
       "cats": {
         "new": 0,
@@ -34944,7 +34716,7 @@
     }
   ],
   [
-    "belch",
+    "belch a lot.",
     {
       "cats": {
         "new": 0,
@@ -34968,7 +34740,7 @@
     }
   ],
   [
-    "itchy",
+    "really itchy",
     {
       "cats": {
         "new": 0,
@@ -35052,7 +34824,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing a lot.",
     {
       "cats": {
         "new": 0,
@@ -35280,13 +35052,13 @@
     }
   ],
   [
-    "swelling",
+    "swelling seems to be getting worse",
     {
       "cats": {
         "new": 0,
-        "worsening": 0,
+        "worsening": 1,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -35316,7 +35088,7 @@
     }
   ],
   [
-    "mucus.",
+    "a lot of mucus.",
     {
       "cats": {
         "new": 0,
@@ -35340,7 +35112,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot.",
     {
       "cats": {
         "new": 0,
@@ -35364,7 +35136,7 @@
     }
   ],
   [
-    "itching",
+    "a lot of itching",
     {
       "cats": {
         "new": 0,
@@ -35616,7 +35388,7 @@
     }
   ],
   [
-    "feeling really sick",
+    "feeling really sick for the past few days.",
     {
       "cats": {
         "new": 0,
@@ -35928,7 +35700,7 @@
     }
   ],
   [
-    "fatigued",
+    "fatigued all the time",
     {
       "cats": {
         "new": 0,
@@ -35940,7 +35712,7 @@
     }
   ],
   [
-    "diarrhea",
+    "diarrhea for a few days now.",
     {
       "cats": {
         "new": 0,
@@ -35988,7 +35760,7 @@
     }
   ],
   [
-    "nauseous",
+    "frequently get nauseous",
     {
       "cats": {
         "new": 0,
@@ -36336,13 +36108,13 @@
     }
   ],
   [
-    "gas",
+    "a lot of gas",
     {
       "cats": {
-        "new": 0,
+        "new": 1,
         "worsening": 0,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -36372,7 +36144,7 @@
     }
   ],
   [
-    "n't feel like eating.",
+    "don't feel like eating.",
     {
       "cats": {
         "new": 0,
@@ -36444,7 +36216,7 @@
     }
   ],
   [
-    "red spots on my skin",
+    "a lot of red spots on my skin",
     {
       "cats": {
         "new": 0,
@@ -36516,7 +36288,7 @@
     }
   ],
   [
-    "feeling really sick",
+    "feeling really sick for the past few days.",
     {
       "cats": {
         "new": 0,
@@ -36576,7 +36348,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot.",
     {
       "cats": {
         "new": 0,
@@ -36624,7 +36396,7 @@
     }
   ],
   [
-    "feeling very sick",
+    "feeling very sick for the past few days.",
     {
       "cats": {
         "new": 0,
@@ -37020,7 +36792,7 @@
     }
   ],
   [
-    "heartburn",
+    "a lot of heartburn",
     {
       "cats": {
         "new": 0,
@@ -37068,7 +36840,7 @@
     }
   ],
   [
-    "vomiting",
+    "vomiting for the past few days",
     {
       "cats": {
         "new": 0,
@@ -37140,7 +36912,7 @@
     }
   ],
   [
-    "diarrhea",
+    "diarrhea for the past week.",
     {
       "cats": {
         "new": 0,
@@ -37308,7 +37080,7 @@
     }
   ],
   [
-    "little lumps that look like nodules",
+    "frequently get little lumps that look like nodules",
     {
       "cats": {
         "new": 0,
@@ -37368,19 +37140,7 @@
     }
   ],
   [
-    "rash on my legs that is red, inflamed, and itchy.",
-    {
-      "cats": {
-        "new": 0,
-        "worsening": 0,
-        "improving": 0,
-        "unchanged": 1,
-        "resolved": 0
-      }
-    }
-  ],
-  [
-    "discomfort",
+    "rash on my legs that is red, inflamed, and itchy. It is spreading",
     {
       "cats": {
         "new": 0,
@@ -37524,13 +37284,13 @@
     }
   ],
   [
-    "headache",
+    "headache all day, and it's been getting worse.",
     {
       "cats": {
         "new": 0,
-        "worsening": 0,
+        "worsening": 1,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -37572,7 +37332,7 @@
     }
   ],
   [
-    "cramps in my legs",
+    "cramps in my legs for a few days now.",
     {
       "cats": {
         "new": 0,
@@ -37620,7 +37380,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot",
     {
       "cats": {
         "new": 0,
@@ -37680,13 +37440,13 @@
     }
   ],
   [
-    "back pain",
+    "back pain for a few days now.",
     {
       "cats": {
         "new": 0,
-        "worsening": 0,
+        "worsening": 1,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -37776,7 +37536,7 @@
     }
   ],
   [
-    "fevers",
+    "fevers a lot.",
     {
       "cats": {
         "new": 0,
@@ -37800,7 +37560,7 @@
     }
   ],
   [
-    "diarrhea",
+    "diarrhea for a few days",
     {
       "cats": {
         "new": 0,
@@ -37824,7 +37584,7 @@
     }
   ],
   [
-    "go to the bathroom",
+    "go to the bathroom a lot.",
     {
       "cats": {
         "new": 0,
@@ -37932,7 +37692,7 @@
     }
   ],
   [
-    "feeling very sick",
+    "feeling very sick for the past few days.",
     {
       "cats": {
         "new": 0,
@@ -37992,7 +37752,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing a lot",
     {
       "cats": {
         "new": 0,
@@ -38124,7 +37884,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot.",
     {
       "cats": {
         "new": 0,
@@ -38424,7 +38184,7 @@
     }
   ],
   [
-    "vomiting",
+    "vomiting frequently",
     {
       "cats": {
         "new": 0,
@@ -38616,7 +38376,7 @@
     }
   ],
   [
-    "vomit",
+    "frequently vomit",
     {
       "cats": {
         "new": 0,
@@ -38784,7 +38544,7 @@
     }
   ],
   [
-    "nausea",
+    "a lot of nausea",
     {
       "cats": {
         "new": 0,
@@ -39192,7 +38952,7 @@
     }
   ],
   [
-    "heartburn",
+    "a lot of heartburn",
     {
       "cats": {
         "new": 0,
@@ -39240,7 +39000,7 @@
     }
   ],
   [
-    "throw up",
+    "throw up a lot",
     {
       "cats": {
         "new": 0,
@@ -39420,19 +39180,19 @@
     }
   ],
   [
-    "trouble seeing things clearly",
+    "trouble seeing things clearly, and it seems to be getting worse.",
     {
       "cats": {
         "new": 0,
-        "worsening": 0,
+        "worsening": 1,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
   ],
   [
-    "really tired",
+    "really tired all the time",
     {
       "cats": {
         "new": 0,
@@ -39720,7 +39480,7 @@
     }
   ],
   [
-    "itchy.",
+    "really itchy.",
     {
       "cats": {
         "new": 0,
@@ -39852,13 +39612,13 @@
     }
   ],
   [
-    "feverish",
+    "feverish for a few days now.",
     {
       "cats": {
-        "new": 0,
+        "new": 1,
         "worsening": 0,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -39888,13 +39648,13 @@
     }
   ],
   [
-    "fever",
+    "fever for a few days, and it's been getting worse.",
     {
       "cats": {
         "new": 0,
-        "worsening": 0,
+        "worsening": 1,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -39936,7 +39696,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot.",
     {
       "cats": {
         "new": 0,
@@ -39984,7 +39744,7 @@
     }
   ],
   [
-    "urinating a lot",
+    "urinating a lot more than usual.",
     {
       "cats": {
         "new": 0,
@@ -40020,7 +39780,7 @@
     }
   ],
   [
-    "eating a lot more",
+    "eating a lot more than usual",
     {
       "cats": {
         "new": 0,
@@ -40140,7 +39900,7 @@
     }
   ],
   [
-    "rashes",
+    "rashes on my skin for a while now.",
     {
       "cats": {
         "new": 0,
@@ -40200,7 +39960,7 @@
     }
   ],
   [
-    "n't sprint or stand",
+    "can't sprint or stand",
     {
       "cats": {
         "new": 0,
@@ -40224,7 +39984,7 @@
     }
   ],
   [
-    "pain in my legs",
+    "a lot of pain in my legs",
     {
       "cats": {
         "new": 0,
@@ -40416,7 +40176,7 @@
     }
   ],
   [
-    "cough",
+    "cough that won't go away",
     {
       "cats": {
         "new": 0,
@@ -40512,13 +40272,13 @@
     }
   ],
   [
-    "rash on my face",
+    "rash on my face that is getting worse.",
     {
       "cats": {
         "new": 0,
-        "worsening": 0,
+        "worsening": 1,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -40608,7 +40368,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot.",
     {
       "cats": {
         "new": 0,
@@ -40632,7 +40392,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing a lot",
     {
       "cats": {
         "new": 0,
@@ -40668,7 +40428,7 @@
     }
   ],
   [
-    "thick",
+    "a lot of thick mucus",
     {
       "cats": {
         "new": 0,
@@ -40752,13 +40512,13 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot.",
     {
       "cats": {
-        "new": 0,
+        "new": 1,
         "worsening": 0,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -40788,7 +40548,7 @@
     }
   ],
   [
-    "acid reflux",
+    "a lot of acid reflux",
     {
       "cats": {
         "new": 0,
@@ -40812,7 +40572,7 @@
     }
   ],
   [
-    "throw up",
+    "throw up a lot",
     {
       "cats": {
         "new": 0,
@@ -40836,7 +40596,7 @@
     }
   ],
   [
-    "itchy",
+    "really itchy",
     {
       "cats": {
         "new": 0,
@@ -40848,7 +40608,7 @@
     }
   ],
   [
-    "sick",
+    "really sick",
     {
       "cats": {
         "new": 0,
@@ -40860,7 +40620,7 @@
     }
   ],
   [
-    "sneezing",
+    "sneezing a lot",
     {
       "cats": {
         "new": 0,
@@ -40908,7 +40668,7 @@
     }
   ],
   [
-    "tired",
+    "tired all the time",
     {
       "cats": {
         "new": 0,
@@ -40920,7 +40680,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing up",
     {
       "cats": {
         "new": 0,
@@ -40932,7 +40692,7 @@
     }
   ],
   [
-    "phlegm.",
+    "a lot of phlegm.",
     {
       "cats": {
         "new": 0,
@@ -41040,7 +40800,7 @@
     }
   ],
   [
-    "thick, mucusy stuff",
+    "a lot of thick, mucusy stuff",
     {
       "cats": {
         "new": 0,
@@ -41316,7 +41076,7 @@
     }
   ],
   [
-    "pressure in my sinuses",
+    "pressure in my sinuses that won't go away.",
     {
       "cats": {
         "new": 0,
@@ -41328,7 +41088,7 @@
     }
   ],
   [
-    "feeling tired",
+    "always feeling tired",
     {
       "cats": {
         "new": 0,
@@ -41340,7 +41100,7 @@
     }
   ],
   [
-    "trouble breathing.",
+    "a lot of trouble breathing.",
     {
       "cats": {
         "new": 0,
@@ -41352,7 +41112,7 @@
     }
   ],
   [
-    "gunk in my throat",
+    "a lot of gunk in my throat",
     {
       "cats": {
         "new": 0,
@@ -41460,13 +41220,13 @@
     }
   ],
   [
-    "dry cough",
+    "dry cough that won't go away.",
     {
       "cats": {
-        "new": 0,
+        "new": 1,
         "worsening": 0,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -41484,25 +41244,25 @@
     }
   ],
   [
-    "infections",
+    "infections don't seem to be getting better.",
     {
       "cats": {
         "new": 0,
         "worsening": 0,
-        "improving": 0,
-        "unchanged": 1,
+        "improving": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
   ],
   [
-    "throat hurts",
+    "throat hurts, but it seems to get better",
     {
       "cats": {
         "new": 0,
         "worsening": 0,
-        "improving": 0,
-        "unchanged": 1,
+        "improving": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -41592,7 +41352,7 @@
     }
   ],
   [
-    "high fever",
+    "really high fever",
     {
       "cats": {
         "new": 0,
@@ -41604,7 +41364,7 @@
     }
   ],
   [
-    "perspiring",
+    "perspiring a lot.",
     {
       "cats": {
         "new": 0,
@@ -41736,7 +41496,7 @@
     }
   ],
   [
-    "cough",
+    "cough for days",
     {
       "cats": {
         "new": 0,
@@ -41748,7 +41508,7 @@
     }
   ],
   [
-    "hard to breathe.",
+    "really hard to breathe.",
     {
       "cats": {
         "new": 0,
@@ -41796,7 +41556,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing up",
     {
       "cats": {
         "new": 0,
@@ -41808,7 +41568,7 @@
     }
   ],
   [
-    "mucus",
+    "a lot of mucus",
     {
       "cats": {
         "new": 0,
@@ -41880,7 +41640,7 @@
     }
   ],
   [
-    "rash on my skin",
+    "rash on my skin that is spreading rapidly.",
     {
       "cats": {
         "new": 0,
@@ -42072,7 +41832,7 @@
     }
   ],
   [
-    "temperature changes",
+    "temperature changes very regularly",
     {
       "cats": {
         "new": 0,
@@ -42096,7 +41856,7 @@
     }
   ],
   [
-    "scratching",
+    "scratching a lot.",
     {
       "cats": {
         "new": 0,
@@ -42156,7 +41916,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot",
     {
       "cats": {
         "new": 0,
@@ -42240,7 +42000,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot",
     {
       "cats": {
         "new": 0,
@@ -42264,7 +42024,7 @@
     }
   ],
   [
-    "pain in my joints",
+    "a lot of pain in my joints",
     {
       "cats": {
         "new": 0,
@@ -42312,7 +42072,7 @@
     }
   ],
   [
-    "legs hurt",
+    "legs hurt a lot",
     {
       "cats": {
         "new": 0,
@@ -42384,7 +42144,7 @@
     }
   ],
   [
-    "thirsty and hungry",
+    "very thirsty and hungry",
     {
       "cats": {
         "new": 0,
@@ -42480,7 +42240,7 @@
     }
   ],
   [
-    "irritates",
+    "really irritates",
     {
       "cats": {
         "new": 0,
@@ -42540,7 +42300,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing a lot",
     {
       "cats": {
         "new": 0,
@@ -42576,7 +42336,7 @@
     }
   ],
   [
-    "tired",
+    "really tired",
     {
       "cats": {
         "new": 0,
@@ -42612,7 +42372,7 @@
     }
   ],
   [
-    "sneeze",
+    "sneeze a lot.",
     {
       "cats": {
         "new": 0,
@@ -42648,7 +42408,7 @@
     }
   ],
   [
-    "head hurts",
+    "head hurts all the time",
     {
       "cats": {
         "new": 0,
@@ -42744,7 +42504,7 @@
     }
   ],
   [
-    "cough",
+    "cough that won't go away.",
     {
       "cats": {
         "new": 0,
@@ -42792,7 +42552,7 @@
     }
   ],
   [
-    "mucus",
+    "a lot of mucus",
     {
       "cats": {
         "new": 0,
@@ -43020,7 +42780,7 @@
     }
   ],
   [
-    "chest pain",
+    "chest pain for a few days",
     {
       "cats": {
         "new": 0,
@@ -43092,7 +42852,7 @@
     }
   ],
   [
-    "headache",
+    "headache that won't go away",
     {
       "cats": {
         "new": 0,
@@ -43164,13 +42924,13 @@
     }
   ],
   [
-    "headache",
+    "headache for the past week. It's been getting worse.",
     {
       "cats": {
         "new": 0,
-        "worsening": 0,
+        "worsening": 1,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -43272,7 +43032,7 @@
     }
   ],
   [
-    "belch",
+    "belch a lot.",
     {
       "cats": {
         "new": 0,
@@ -43356,7 +43116,7 @@
     }
   ],
   [
-    "fever",
+    "fever for the past four days",
     {
       "cats": {
         "new": 0,
@@ -43380,7 +43140,7 @@
     }
   ],
   [
-    "head hurts",
+    "head hurts a lot",
     {
       "cats": {
         "new": 0,
@@ -43416,7 +43176,7 @@
     }
   ],
   [
-    "trouble with my neck.",
+    "a lot of trouble with my neck.",
     {
       "cats": {
         "new": 0,
@@ -43500,7 +43260,7 @@
     }
   ],
   [
-    "abdominal pain",
+    "abdominal pain for a few days",
     {
       "cats": {
         "new": 0,
@@ -43656,7 +43416,7 @@
     }
   ],
   [
-    "high fever",
+    "high fever for the past few days.",
     {
       "cats": {
         "new": 0,
@@ -43764,7 +43524,7 @@
     }
   ],
   [
-    "belch",
+    "belch regularly.",
     {
       "cats": {
         "new": 0,
@@ -43944,7 +43704,7 @@
     }
   ],
   [
-    "cough",
+    "cough won't go away.",
     {
       "cats": {
         "new": 0,
@@ -44136,7 +43896,7 @@
     }
   ],
   [
-    "sneezing",
+    "sneezing a lot",
     {
       "cats": {
         "new": 0,
@@ -44352,7 +44112,7 @@
     }
   ],
   [
-    "headaches",
+    "a lot of headaches",
     {
       "cats": {
         "new": 0,
@@ -44376,7 +44136,7 @@
     }
   ],
   [
-    "sick to my stomach",
+    "really sick to my stomach",
     {
       "cats": {
         "new": 0,
@@ -44604,7 +44364,7 @@
     }
   ],
   [
-    "headaches",
+    "a lot of headaches",
     {
       "cats": {
         "new": 0,
@@ -44676,7 +44436,7 @@
     }
   ],
   [
-    "abdominal pain",
+    "abdominal pain for a few days now.",
     {
       "cats": {
         "new": 0,
@@ -44688,7 +44448,7 @@
     }
   ],
   [
-    "unpleasant.",
+    "really unpleasant.",
     {
       "cats": {
         "new": 0,
@@ -44892,7 +44652,7 @@
     }
   ],
   [
-    "sweat",
+    "sweat and get flushed",
     {
       "cats": {
         "new": 0,
@@ -44916,7 +44676,19 @@
     }
   ],
   [
-    "urinary tract infections",
+    "urinary tract infections a lot",
+    {
+      "cats": {
+        "new": 0,
+        "worsening": 0,
+        "improving": 0,
+        "unchanged": 1,
+        "resolved": 0
+      }
+    }
+  ],
+  [
+    "feeling really sick.",
     {
       "cats": {
         "new": 0,
@@ -44952,7 +44724,7 @@
     }
   ],
   [
-    "stomach hurts",
+    "stomach hurts really bad.",
     {
       "cats": {
         "new": 0,
@@ -44988,7 +44760,7 @@
     }
   ],
   [
-    "bad stomachache",
+    "really bad stomachache",
     {
       "cats": {
         "new": 0,
@@ -45024,7 +44796,7 @@
     }
   ],
   [
-    "headaches",
+    "headaches for a long time.",
     {
       "cats": {
         "new": 0,
@@ -45096,13 +44868,13 @@
     }
   ],
   [
-    "burning ache in my legs",
+    "burning ache in my legs that gets worse",
     {
       "cats": {
         "new": 0,
-        "worsening": 0,
+        "worsening": 1,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -45516,7 +45288,7 @@
     }
   ],
   [
-    "red spots all over my body.",
+    "a lot of red spots all over my body.",
     {
       "cats": {
         "new": 0,
@@ -45576,7 +45348,7 @@
     }
   ],
   [
-    "pain in my joints, especially my knees and ankles.",
+    "a lot of pain in my joints, especially my knees and ankles.",
     {
       "cats": {
         "new": 0,
@@ -45636,7 +45408,7 @@
     }
   ],
   [
-    "joints have been hurting",
+    "joints have been hurting a lot",
     {
       "cats": {
         "new": 0,
@@ -45648,7 +45420,7 @@
     }
   ],
   [
-    "trouble moving",
+    "a lot of trouble moving",
     {
       "cats": {
         "new": 0,
@@ -45732,7 +45504,7 @@
     }
   ],
   [
-    "exhausted",
+    "feel exhausted all the time",
     {
       "cats": {
         "new": 0,
@@ -45864,7 +45636,7 @@
     }
   ],
   [
-    "anxious",
+    "anxious all the time",
     {
       "cats": {
         "new": 0,
@@ -46032,7 +45804,7 @@
     }
   ],
   [
-    "joint pain",
+    "a lot of joint pain",
     {
       "cats": {
         "new": 0,
@@ -46104,7 +45876,7 @@
     }
   ],
   [
-    "miserable",
+    "really miserable",
     {
       "cats": {
         "new": 0,
@@ -46140,7 +45912,7 @@
     }
   ],
   [
-    "joint pain in my fingers, wrists, and knees",
+    "joint pain in my fingers, wrists, and knees for a few weeks",
     {
       "cats": {
         "new": 0,
@@ -46152,13 +45924,13 @@
     }
   ],
   [
-    "pain is usually aching and throbbing",
+    "pain is usually aching and throbbing, and it gets worse",
     {
       "cats": {
         "new": 0,
-        "worsening": 0,
+        "worsening": 1,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -46284,19 +46056,7 @@
     }
   ],
   [
-    "rash on my skin that is red, itchy, and scaly.",
-    {
-      "cats": {
-        "new": 0,
-        "worsening": 1,
-        "improving": 0,
-        "unchanged": 0,
-        "resolved": 0
-      }
-    }
-  ],
-  [
-    "worse in the winter months",
+    "rash on my skin that is red, itchy, and scaly. It is worse in the winter months",
     {
       "cats": {
         "new": 0,
@@ -46500,7 +46260,7 @@
     }
   ],
   [
-    "n't catch my breath.",
+    "can't catch my breath.",
     {
       "cats": {
         "new": 0,
@@ -46644,7 +46404,7 @@
     }
   ],
   [
-    "bad gas",
+    "really bad gas",
     {
       "cats": {
         "new": 0,
@@ -46668,7 +46428,7 @@
     }
   ],
   [
-    "fatigue",
+    "a lot of fatigue",
     {
       "cats": {
         "new": 0,
@@ -46728,7 +46488,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing a lot",
     {
       "cats": {
         "new": 0,
@@ -46908,7 +46668,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot.",
     {
       "cats": {
         "new": 0,
@@ -47016,7 +46776,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot.",
     {
       "cats": {
         "new": 0,
@@ -47088,7 +46848,7 @@
     }
   ],
   [
-    "pain in my joints",
+    "a lot of pain in my joints",
     {
       "cats": {
         "new": 0,
@@ -47148,7 +46908,7 @@
     }
   ],
   [
-    "cough",
+    "cough that won't go away.",
     {
       "cats": {
         "new": 0,
@@ -47292,7 +47052,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing a lot",
     {
       "cats": {
         "new": 0,
@@ -47484,7 +47244,7 @@
     }
   ],
   [
-    "high fever",
+    "really high fever",
     {
       "cats": {
         "new": 0,
@@ -47544,7 +47304,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot.",
     {
       "cats": {
         "new": 0,
@@ -47736,7 +47496,7 @@
     }
   ],
   [
-    "head hurts",
+    "head hurts really bad",
     {
       "cats": {
         "new": 0,
@@ -47820,13 +47580,13 @@
     }
   ],
   [
-    "pain",
+    "pain is always there, and it gets worse at night.",
     {
       "cats": {
         "new": 0,
-        "worsening": 0,
+        "worsening": 1,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -47844,13 +47604,13 @@
     }
   ],
   [
-    "dry cough",
+    "dry cough that just won't go away.",
     {
       "cats": {
-        "new": 0,
+        "new": 1,
         "worsening": 0,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -47904,6 +47664,18 @@
     }
   ],
   [
+    "a lot of congestion.",
+    {
+      "cats": {
+        "new": 0,
+        "worsening": 0,
+        "improving": 0,
+        "unchanged": 1,
+        "resolved": 0
+      }
+    }
+  ],
+  [
     "coughing",
     {
       "cats": {
@@ -47916,7 +47688,7 @@
     }
   ],
   [
-    "chest pain.",
+    "a lot of chest pain.",
     {
       "cats": {
         "new": 0,
@@ -48000,7 +47772,7 @@
     }
   ],
   [
-    "urinary tract infections",
+    "urinary tract infections a lot",
     {
       "cats": {
         "new": 0,
@@ -48060,7 +47832,7 @@
     }
   ],
   [
-    "shivering",
+    "shivering all over.",
     {
       "cats": {
         "new": 0,
@@ -48300,7 +48072,7 @@
     }
   ],
   [
-    "coughing",
+    "coughing a lot",
     {
       "cats": {
         "new": 0,
@@ -48384,7 +48156,7 @@
     }
   ],
   [
-    "nausea",
+    "a lot of nausea",
     {
       "cats": {
         "new": 0,
@@ -48420,7 +48192,7 @@
     }
   ],
   [
-    "shiver",
+    "shiver a lot",
     {
       "cats": {
         "new": 0,
@@ -48516,7 +48288,7 @@
     }
   ],
   [
-    "itching on my skin",
+    "a lot of itching on my skin",
     {
       "cats": {
         "new": 0,
@@ -48588,7 +48360,7 @@
     }
   ],
   [
-    "pain when I urinate and it burns.",
+    "a lot of pain when I urinate and it burns.",
     {
       "cats": {
         "new": 1,
@@ -48744,7 +48516,7 @@
     }
   ],
   [
-    "heart pounds",
+    "heart pounds really fast.",
     {
       "cats": {
         "new": 0,
@@ -48864,7 +48636,7 @@
     }
   ],
   [
-    "cough",
+    "cough that just won't go away",
     {
       "cats": {
         "new": 0,
@@ -48924,7 +48696,7 @@
     }
   ],
   [
-    "rash on my arms, legs, and chest",
+    "rash on my arms, legs, and chest for a few weeks.",
     {
       "cats": {
         "new": 0,
@@ -49044,7 +48816,7 @@
     }
   ],
   [
-    "pain in my joints, and they're all swollen.",
+    "a lot of pain in my joints, and they're all swollen.",
     {
       "cats": {
         "new": 0,
@@ -49104,7 +48876,7 @@
     }
   ],
   [
-    "headaches",
+    "headaches for a while now.",
     {
       "cats": {
         "new": 0,
@@ -49188,13 +48960,13 @@
     }
   ],
   [
-    "sores are weeping clear fluid",
+    "sores are weeping clear fluid and it is getting worse",
     {
       "cats": {
         "new": 0,
-        "worsening": 0,
+        "worsening": 1,
         "improving": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "resolved": 0
       }
     }
@@ -49320,7 +49092,7 @@
     }
   ],
   [
-    "sweating",
+    "sweating a lot",
     {
       "cats": {
         "new": 0,

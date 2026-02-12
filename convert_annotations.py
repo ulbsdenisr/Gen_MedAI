@@ -9,7 +9,7 @@ from spacy.tokens import DocBin
 nlp_blank = spacy.blank("en")
 db = DocBin()
 
-with open("annotations_final2.json", "r", encoding="utf8") as f:
+with open("annotations_final4.json", "r", encoding="utf8") as f:
     data = json.load(f)
 
 for text, annot in data["annotations"]:

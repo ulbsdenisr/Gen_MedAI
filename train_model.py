@@ -24,7 +24,7 @@ docs = list(docbin.get_docs(nlp.vocab))
 optimizer = nlp.initialize()
 
 # 6. Training loop
-EPOCHS = 20
+EPOCHS = 100
 
 for epoch in range(EPOCHS):
     random.shuffle(docs)

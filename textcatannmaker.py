@@ -3,7 +3,7 @@ import json
 
 # Severity regex rules
 SEVERITY_RULES = {
-    "severe": re.compile(r"\b(severe|intense|extreme|unbearable|terrible|awful|really painful)\b", re.I),
+    "severe": re.compile(r"\b(severe|intense|extreme|unbearable|terrible|awful|really|a lot)\b", re.I),
     "moderate": re.compile(r"\b(moderate|noticeable|considerable|significant)\b", re.I),
     "mild": re.compile(r"\b(mild|slight|minor|a bit|light)\b", re.I),
 }
@@ -61,7 +61,7 @@ def rule_label_regex(span_text, full_text=None, window=15):
 
 
 
-with open("annotations_final2.json", "r") as f:
+with open("annotations_final4.json", "r") as f:
     data = json.load(f)
 
 train_data_severity = []

@@ -54,9 +54,9 @@ if __name__ == "__main__":
     for label in ["new", "worsening", "improving", "unchanged", "resolved"]:
         textcat_status.add_label(label)
 
-    with open("train_data_severity.json", "r", encoding="utf-8") as f:
+    with open("clean_train_data_severity.json", "r", encoding="utf-8") as f:
         train_data_severity = json.load(f)
-    with open("train_data_status.json", "r", encoding="utf-8") as f:
+    with open("clean_train_data_status.json", "r", encoding="utf-8") as f:
         train_data_status = json.load(f)
 
     with nlp.select_pipes(enable=["textcat_severity"]):

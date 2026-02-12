@@ -13,9 +13,17 @@ for entry in predict_attributes(nlp2,doc):
 
 print()
 
-text="I have a bad stomach ache and it's not getting better."
+text="I have a really bad stomach ache that is getting worse."
 doc = nlp2(text)
 print(text)
 for entry in predict_attributes(nlp2,doc):
     print(entry)
+
+text = "I feel pain in my stomach that gets worse by the day."
+doc = nlp2(text)
+print(text)
+for entry in predict_attributes(nlp2, doc):
+    print(entry)
+
+
 
