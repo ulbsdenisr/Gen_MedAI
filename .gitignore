@@ -1,0 +1,11 @@
+Disease and symptoms dataset.csv
+rag_index/
+*.faiss
+model/
+__pycache__/
+.idea/
+.mypy_cache/
+*.pt
+*.bin
+.env
+venv/
