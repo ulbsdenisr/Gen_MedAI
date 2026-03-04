@@ -1,5 +1,7 @@
-spacy==3.7.2
+spacy==3.8.11
 sentence-transformers
-numpy<2
+numpy
 pandas
 faiss-cpu
+flask==3.0.0
+flask-cors==4.0.0
