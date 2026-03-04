@@ -78,11 +78,37 @@ def chat():
                 print(f"Error retrieving documents: {e}")
                 retrieved = []
 
+        # Format retrieved diseases
+        diseases = []
+        if retrieved:
+            for doc in retrieved[:3]:  # Top 3 results
+                try:
+                    # Handle the tuple format: (score1, score2, score3, score4, disease_data)
+                    if isinstance(doc, tuple) and len(doc) >= 5:
+                        disease_data = doc[4]  # The 5th element contains the disease info
+                        if isinstance(disease_data, dict) and 'disease' in disease_data:
+                            diseases.append(disease_data['disease'])
+                    # Handle dict format as fallback
+                    elif isinstance(doc, dict) and 'disease' in doc:
+                        diseases.append(doc['disease'])
+                    # Handle string format as fallback
+                    elif isinstance(doc, str):
+                        try:
+                            import json
+                            doc_data = json.loads(doc)
+                            if isinstance(doc_data, dict) and 'disease' in doc_data:
+                                diseases.append(doc_data['disease'])
+                        except:
+                            pass
+                except Exception as e:
+                    print(f"Error parsing document: {e}")
+                    continue
+
         # Format response
         response = {
             'user_message': user_message,
             'extracted_symptoms': symptoms,
-            'retrieved_documents': retrieved[:3],  # Top 3 results
+            'possible_diseases': diseases,
             'status': 'success'
         }
 

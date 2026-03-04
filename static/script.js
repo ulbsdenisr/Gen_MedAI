@@ -150,18 +150,16 @@ function displayAIResponse(data) {
         html += '<p><em>No specific symptoms detected. Please provide more details about your symptoms.</em></p>';
     }
     
-    // Display retrieved documents
-    if (data.retrieved_documents && data.retrieved_documents.length > 0) {
+    // Display possible diseases
+    if (data.possible_diseases && data.possible_diseases.length > 0) {
         html += '<div class="retrieved-docs">';
-        html += '<div class="retrieved-docs-title">📚 Relevant Information:</div>';
-        data.retrieved_documents.forEach((doc, index) => {
-            // Handle both string and object formats
-            const docText = typeof doc === 'string' ? doc : JSON.stringify(doc);
-            html += `<div class="doc-item">📄 ${escapeHtml(docText.substring(0, 150))}${docText.length > 150 ? '...' : ''}</div>`;
+        html += '<div class="retrieved-docs-title">🔍 Possible Conditions:</div>';
+        data.possible_diseases.forEach((disease, index) => {
+            html += `<div class="doc-item">🏥 ${escapeHtml(disease)}</div>`;
         });
         html += '</div>';
     } else {
-        html += '<p><em>No additional medical references found for these symptoms.</em></p>';
+        html += '<p><em>No matching medical conditions found for these symptoms.</em></p>';
     }
     
     content.innerHTML = html;
