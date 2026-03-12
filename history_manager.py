@@ -73,7 +73,7 @@ class HistoryManager:
                 })
 
         # Check concerns BEFORE appending
-        self._check_recent_concerns(data, processed_entries)
+        warnings=self.check_all_concerns(data, processed_entries)
 
         # Append visit
         data["history"].append({
@@ -82,6 +82,7 @@ class HistoryManager:
         })
 
         self._save_history(data)
+        return warnings
 
     def export_to_pdf(self, output_path="history.pdf"):
         """
@@ -136,7 +137,7 @@ class HistoryManager:
     # Concern Logic
     # -----------------------------
 
-    def _check_recent_concerns(self, history_data, current_entries):
+    def _check_recent_concernss(self, history_data, current_entries):
         """
         Triggers warning if:
         - Current symptom is severe or worsening
@@ -187,9 +188,175 @@ class HistoryManager:
                 second_last_entry["severity"].lower() == "severe" or
                 second_last_entry["status"].lower() == "worsening"
             )
-
+            warning="None"
             if last_concerning and second_last_concerning:
-                print(
-                    f"\n⚠ THE {symptom.upper()} SYMPTOM RAISES CONCERNS.\n"
-                    "PLEASE CHECK IN WITH A PROFESSIONAL.\n"
+                warning=f"\n THE {symptom.upper()} SYMPTOM RAISES CONCERNS.\n PLEASE CHECK IN WITH A PROFESSIONAL.\n"
+
+            return warning
+
+    def check_all_concerns(self, history_data, current_entries):
+
+        warnings = []
+
+        checks = [
+            self._check_persistent_severe,
+            self._check_worsening_trend,
+            self._check_new_severe_symptom,
+            self._check_many_simultaneous_symptoms,
+            self._check_reappearing_symptom
+        ]
+
+        for check in checks:
+            result = check(history_data, current_entries)
+            if result:
+                if isinstance(result, list):
+                    warnings.extend(result)
+                else:
+                    warnings.append(result)
+        if len(warnings)>0:
+            warnings.append("Please consider checking in with a professional!")
+        warning_message = "\n".join(warnings)
+        return warning_message
+
+    def _check_persistent_severe(self, history_data, current_entries):
+
+        history = history_data.get("history", [])
+
+        if len(history) < 2:
+            return None
+
+        last = history[-1]
+        second_last = history[-2]
+
+        def lookup(visit):
+            return {e["symptom"]: e for e in visit.get("entries", [])}
+
+        last_lookup = lookup(last)
+        second_lookup = lookup(second_last)
+
+        warnings = []
+
+        for current in current_entries:
+
+            symptom = current["symptom"]
+            severity = current["severity"].lower()
+            status = current["status"].lower()
+
+            if severity != "severe" and status != "worsening":
+                continue
+
+            prev1 = last_lookup.get(symptom)
+            prev2 = second_lookup.get(symptom)
+
+            if not prev1 or not prev2:
+                continue
+
+            if (
+                    prev1["severity"].lower() == "severe"
+                    or prev1["status"].lower() == "worsening"
+            ) and (
+                    prev2["severity"].lower() == "severe"
+                    or prev2["status"].lower() == "worsening"
+            ):
+                warnings.append(
+                    f"The '{symptom}' symptom has been severe or worsening."
                 )
+
+        return warnings
+
+    def _check_worsening_trend(self, history_data, current_entries):
+
+        severity_rank = {
+            "mild": 1,
+            "moderate": 2,
+            "severe": 3
+        }
+
+        history = history_data.get("history", [])
+
+        if len(history) < 2:
+            return None
+
+        last = history[-1]
+        warnings = []
+
+        last_lookup = {e["symptom"]: e for e in last.get("entries", [])}
+
+        for current in current_entries:
+
+            symptom = current["symptom"]
+
+            prev = last_lookup.get(symptom)
+
+            if not prev:
+                continue
+
+            current_rank = severity_rank.get(current["severity"].lower(), 0)
+            prev_rank = severity_rank.get(prev["severity"].lower(), 0)
+
+            if current_rank > prev_rank:
+                warnings.append(
+                    f"The severity of '{symptom}' appears to be worsening."
+                )
+
+        return warnings
+
+    def _check_new_severe_symptom(self, history_data, current_entries):
+
+        history = history_data.get("history", [])
+
+        seen = set()
+
+        for visit in history:
+            for entry in visit.get("entries", []):
+                seen.add(entry["symptom"])
+
+        warnings = []
+
+        for current in current_entries:
+
+            if (
+                    current["symptom"] not in seen
+                    and current["severity"].lower() == "severe"
+            ):
+                warnings.append(
+                    f"A new severe symptom was reported: '{current['symptom']}'."
+                )
+
+        return warnings
+
+    def _check_many_simultaneous_symptoms(self, history_data, current_entries):
+
+        if len(current_entries) >= 4:
+            return "Multiple symptoms reported simultaneously."
+
+        return None
+
+    def _check_reappearing_symptom(self, history_data, current_entries):
+
+        history = history_data.get("history", [])
+
+        warnings = []
+
+        past_symptoms = set()
+
+        for visit in history[:-1]:
+            for entry in visit.get("entries", []):
+                past_symptoms.add(entry["symptom"])
+
+        last_symptoms = {
+            e["symptom"]
+            for e in history[-1].get("entries", [])
+        } if history else set()
+
+        for current in current_entries:
+
+            symptom = current["symptom"]
+
+            if symptom in past_symptoms and symptom not in last_symptoms:
+                warnings.append(
+                    f"The symptom '{symptom}' has reappeared after being absent."
+                )
+
+        return warnings
+

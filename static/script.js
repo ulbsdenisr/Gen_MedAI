@@ -161,6 +161,13 @@ function displayAIResponse(data) {
     } else {
         html += '<p><em>No matching medical conditions found for these symptoms.</em></p>';
     }
+    // Display medical warnings
+    if (data.warnings) {
+        html += '<div class="retrieved-docs" style="border-left:4px solid #e74c3c;">';
+        html += '<div class="retrieved-docs-title">Warnings: </div>';
+        html += `<div class="doc-item">${escapeHtml(data.warnings)}</div>`;
+        html += '</div>';
+    }
     
     content.innerHTML = html;
     

@@ -23,13 +23,13 @@ def write_to_history(nlp,text):
     doc=nlp(text)
     history_list=predict_attributes(nlp,doc)
     history_manager = HistoryManager()
-    history_manager.append_to_history(history_list)
+    warnings=history_manager.append_to_history(history_list)
     history_manager.export_to_pdf()
     symptom_nor = SymptomNormalizer()
     symptom_list = []
     for result in history_list:
         symptom_list.append(symptom_nor.normalize_if_certain(result['symptom'])['normalized'])
-    return symptom_list
+    return symptom_list,warnings
 
 def load_models():
     """Load models on demand"""
@@ -79,8 +79,9 @@ def chat():
             from rag_ner_pipeline import extract_symptoms_ner
             ####THIS IS WHERE EVERYTHING GOES####
             #symptoms = extract_symptoms_ner(nlp, user_message) #extracts and normalizes them
-            symptoms=write_to_history(nlp,user_message)
+            symptoms,warnings=write_to_history(nlp,user_message)
             print(symptoms)
+            print(warnings)
             #I have a severe fever and a pounding headache
             #['severe fever', 'pounding headache']
 
@@ -123,12 +124,12 @@ def chat():
                 except Exception as e:
                     print(f"Error parsing document: {e}")
                     continue
-
         # Format response
         response = {
             'user_message': user_message,
             'extracted_symptoms': symptoms,
             'possible_diseases': diseases,
+            'warnings':warnings or [],
             'status': 'success'
         }
 
