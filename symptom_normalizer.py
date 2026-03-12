@@ -1,5 +1,6 @@
 from sentence_transformers import SentenceTransformer, util
 import torch
+import pandas as pd
 
 
 class SymptomNormalizer:
@@ -57,3 +58,25 @@ class SymptomNormalizer:
             }
 
         return None
+    def find_diseases(self, symptom_list):
+        df = pd.read_csv(
+            "disease dataset.csv",
+            low_memory=False
+        )
+        df["match_score"] = df[symptom_list].sum(axis=1)
+        disease_scores = (
+            df.groupby(df.columns[0])["match_score"]
+            .max()
+            .reset_index()
+        )
+        disease_scores.columns = ["disease", "score"]
+        ranked_diseases = disease_scores.sort_values(
+            by="score",
+            ascending=False
+        )
+        MIN_MATCHES = 2
+        ranked_diseases = ranked_diseases[
+            ranked_diseases["score"] >= MIN_MATCHES
+            ]
+        print(ranked_diseases.head(5))
+        return ranked_diseases.head(5)
