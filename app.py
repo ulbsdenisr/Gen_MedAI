@@ -1,8 +1,12 @@
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
+from head_training import predict_attributes
 import json
 from pathlib import Path
 import sys
+
+from history_manager import HistoryManager
+from symptom_normalizer import SymptomNormalizer
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
 CORS(app)
@@ -15,6 +19,18 @@ embedder = None
 idf = None
 rag_loaded = False
 
+def write_to_history(nlp,text):
+    doc=nlp(text)
+    history_list=predict_attributes(nlp,doc)
+    history_manager = HistoryManager()
+    history_manager.append_to_history(history_list)
+    history_manager.export_to_pdf()
+    symptom_nor = SymptomNormalizer()
+    symptom_list = []
+    for result in history_list:
+        symptom_list.append(symptom_nor.normalize_if_certain(result['symptom'])['normalized'])
+    return symptom_list
+
 def load_models():
     """Load models on demand"""
     global nlp, index, meta, embedder, idf, rag_loaded
@@ -22,7 +38,7 @@ def load_models():
     if nlp is None:
         try:
             import spacy
-            nlp = spacy.load("model/model-best")
+            nlp = spacy.load("model/model_with_textcats")
             print("✓ spaCy NER model loaded")
         except Exception as e:
             print(f"✗ Error loading NER model: {e}")
@@ -38,11 +54,9 @@ def load_models():
             print(f"✗ Error loading RAG index: {e}")
             index, meta, embedder, idf = None, None, None, None
 
-
 @app.route('/')
 def index():
     return render_template('index.html')
-
 
 @app.route('/api/chat', methods=['POST'])
 def chat():
@@ -63,7 +77,13 @@ def chat():
         # Extract symptoms using NER
         try:
             from rag_ner_pipeline import extract_symptoms_ner
-            symptoms = extract_symptoms_ner(nlp, user_message)
+            ####THIS IS WHERE EVERYTHING GOES####
+            #symptoms = extract_symptoms_ner(nlp, user_message) #extracts and normalizes them
+            symptoms=write_to_history(nlp,user_message)
+            print(symptoms)
+            #I have a severe fever and a pounding headache
+            #['severe fever', 'pounding headache']
+
         except Exception as e:
             print(f"Error extracting symptoms: {e}")
             symptoms = []

@@ -1,0 +1,49 @@
+{
+    "history": [
+        {
+            "timestamp": "2026-03-12T15:22:00.178808",
+            "entries": [
+                {
+                    "symptom": "fever",
+                    "severity": "severe",
+                    "status": "unchanged"
+                },
+                {
+                    "symptom": "headache",
+                    "severity": "moderate",
+                    "status": "unchanged"
+                }
+            ]
+        },
+        {
+            "timestamp": "2026-03-12T15:27:56.712167",
+            "entries": [
+                {
+                    "symptom": "fever",
+                    "severity": "severe",
+                    "status": "unchanged"
+                },
+                {
+                    "symptom": "headache",
+                    "severity": "moderate",
+                    "status": "unchanged"
+                }
+            ]
+        },
+        {
+            "timestamp": "2026-03-12T15:34:49.417818",
+            "entries": [
+                {
+                    "symptom": "fever",
+                    "severity": "severe",
+                    "status": "unchanged"
+                },
+                {
+                    "symptom": "headache",
+                    "severity": "moderate",
+                    "status": "unchanged"
+                }
+            ]
+        }
+    ]
+}
