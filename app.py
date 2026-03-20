@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 from head_training import predict_attributes
+from chat_manager import ChatManager
 import json
 from pathlib import Path
 import sys
@@ -18,6 +19,7 @@ meta = None
 embedder = None
 idf = None
 rag_loaded = False
+chat_manager=ChatManager()
 
 def write_to_history(nlp,text):
     doc=nlp(text)
@@ -64,6 +66,10 @@ def chat():
     try:
         data = request.json
         user_message = data.get('message', '').strip()
+        try:
+            chat_manager.save_message("user", user_message)
+        except Exception as e:
+            print("Chat save failed:", e)
 
         if not user_message:
             return jsonify({'error': 'Empty message'}), 400
@@ -82,6 +88,8 @@ def chat():
             symptoms,warnings=write_to_history(nlp,user_message)
             print(symptoms)
             print(warnings)
+            # warnings could be list of strings or other types
+            warnings_str = ", ".join(str(w) for w in warnings) if warnings else ""
             #I have a severe fever and a pounding headache
             #['severe fever', 'pounding headache']
 
@@ -115,7 +123,6 @@ def chat():
                     # Handle string format as fallback
                     elif isinstance(doc, str):
                         try:
-                            import json
                             doc_data = json.loads(doc)
                             if isinstance(doc_data, dict) and 'disease' in doc_data:
                                 diseases.append(doc_data['disease'])
@@ -129,9 +136,11 @@ def chat():
             'user_message': user_message,
             'extracted_symptoms': symptoms,
             'possible_diseases': diseases,
-            'warnings':warnings or [],
+            'warnings':warnings_str,
             'status': 'success'
         }
+
+        chat_manager.save_message("assistant", json.dumps(response))
 
         return jsonify(response)
 
@@ -149,9 +158,14 @@ def health():
         'rag_index': rag_loaded,
         'ready': nlp is not None
     })
-
+@app.route('/api/new_chat', methods=['POST'])
+def new_chat():
+    conversation_id = chat_manager.start_new_chat()
+    return jsonify({"conversation_id": conversation_id})
 
 if __name__ == '__main__':
     print("\n🚀 Starting Medical AI Chat Interface...")
     print("📍 Open http://localhost:5000 in your browser")
     app.run(debug=True, host='0.0.0.0', port=5000)
+
+##My head hurts, I'm feeling nauseous and I have a congested nose

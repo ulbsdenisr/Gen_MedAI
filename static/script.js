@@ -25,7 +25,10 @@ userInput.addEventListener('keydown', function(event) {
 sendBtn.addEventListener('click', sendMessage);
 
 // Check connection status on load
-document.addEventListener('DOMContentLoaded', checkHealth);
+document.addEventListener('DOMContentLoaded', async () => {
+    await startNewChat();
+    checkHealth();
+});
 
 // Periodically check health
 setInterval(checkHealth, 30000);
@@ -33,6 +36,15 @@ setInterval(checkHealth, 30000);
 /**
  * Check if backend is ready
  */
+async function startNewChat() {
+    try {
+        await fetch('/api/new_chat', {
+            method: 'POST'
+        });
+    } catch (error) {
+        console.error('Failed to start new chat:', error);
+    }
+}
 async function checkHealth() {
     try {
         const response = await fetch('/api/health');
