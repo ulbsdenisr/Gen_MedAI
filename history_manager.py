@@ -215,8 +215,7 @@ class HistoryManager:
                     warnings.append(result)
         if len(warnings)>0:
             warnings.append("Please consider checking in with a professional!")
-        warning_message = "\n".join(warnings)
-        return warning_message
+        return warnings if isinstance(warnings, list) else [warnings]
 
     def _check_persistent_severe(self, history_data, current_entries):
 

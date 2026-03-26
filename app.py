@@ -89,7 +89,11 @@ def chat():
             print(symptoms)
             print(warnings)
             # warnings could be list of strings or other types
-            warnings_str = ", ".join(str(w) for w in warnings) if warnings else ""
+            warnings_str = (
+                ", ".join(warnings) if isinstance(warnings, list)
+                else str(warnings) if warnings
+                else ""
+            )
             #I have a severe fever and a pounding headache
             #['severe fever', 'pounding headache']
 
@@ -139,15 +143,12 @@ def chat():
             'warnings':warnings_str,
             'status': 'success'
         }
-
         chat_manager.save_message("assistant", json.dumps(response))
-
         return jsonify(response)
 
     except Exception as e:
         print(f"Error in chat endpoint: {e}")
         return jsonify({'error': str(e)}), 500
-
 
 @app.route('/api/health', methods=['GET'])
 def health():
@@ -158,14 +159,29 @@ def health():
         'rag_index': rag_loaded,
         'ready': nlp is not None
     })
+
 @app.route('/api/new_chat', methods=['POST'])
 def new_chat():
+    ##to be called when doing the new chat button
+    chat_manager.export_current_conversation()  # save previous chat
     conversation_id = chat_manager.start_new_chat()
     return jsonify({"conversation_id": conversation_id})
+
+@app.route('/api/load_chat', methods=['POST'])
+def load_chat():
+    #loads id of "current chat" when user
+    #wants to converse in an older chat
+    #needed to save messages to the older chat
+    data = request.json
+    new_id = data.get("conversation_id")
+    chat_manager.export_current_conversation()#exports current conversation before switching
+    chat_manager.set_current_conversation(new_id)
+    return jsonify({"status": "loaded"})
 
 if __name__ == '__main__':
     print("\n🚀 Starting Medical AI Chat Interface...")
     print("📍 Open http://localhost:5000 in your browser")
+    chat_manager.export_all_conversations_to_json()
     app.run(debug=True, host='0.0.0.0', port=5000)
 
 ##My head hurts, I'm feeling nauseous and I have a congested nose

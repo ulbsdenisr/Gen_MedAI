@@ -1,6 +1,7 @@
 import sqlite3
 from datetime import datetime
-
+import json
+import os
 class ChatManager:
     def __init__(self, db_path="chat_history.db"):
         self.db_path = db_path
@@ -26,6 +27,9 @@ class ChatManager:
 
         conn.commit()
         conn.close()
+
+    def set_current_conversation(self, conversation_id):
+        self.current_conversation_id = conversation_id
 
     # 🆕 Start a new chat
     def start_new_chat(self):
@@ -90,3 +94,89 @@ class ChatManager:
         conn.close()
 
         return [r[0] for r in rows]
+
+
+    def export_all_conversations_to_json(self, output_dir="chats"):
+        os.makedirs(output_dir, exist_ok=True)
+
+        conn = self._connect()
+        cursor = conn.cursor()
+
+        # Get all unique conversation IDs
+        cursor.execute("""
+        SELECT DISTINCT conversation_id
+        FROM chat_history
+        ORDER BY conversation_id ASC
+        """)
+        conversations = [row[0] for row in cursor.fetchall()]
+
+        for convo_id in conversations:
+            # Get messages for this conversation
+            cursor.execute("""
+            SELECT timestamp, role, message
+            FROM chat_history
+            WHERE conversation_id = ?
+            ORDER BY id ASC
+            """, (convo_id,))
+
+            rows = cursor.fetchall()
+
+            messages = []
+            for row in rows:
+                messages.append({
+                    "timestamp": row[0],
+                    "role": row[1],
+                    "message": row[2]
+                })
+
+            # Structure final JSON
+            convo_data = {
+                "conversation_id": convo_id,
+                "messages": messages
+            }
+
+            # Write to file
+            file_path = os.path.join(output_dir, f"{convo_id}.json")
+            with open(file_path, "w", encoding="utf-8") as f:
+                json.dump(convo_data, f, indent=2, ensure_ascii=False)
+
+        conn.close()
+    def export_current_conversation(self, output_dir="chat_exports"):
+        if self.current_conversation_id is None:
+            return  # nothing to export
+
+        os.makedirs(output_dir, exist_ok=True)
+
+        conn = self._connect()
+        cursor = conn.cursor()
+
+        cursor.execute("""
+        SELECT timestamp, role, message
+        FROM chat_history
+        WHERE conversation_id = ?
+        ORDER BY id ASC
+        """, (self.current_conversation_id,))
+
+        rows = cursor.fetchall()
+        conn.close()
+
+        if not rows:
+            return
+
+        messages = []
+        for row in rows:
+            messages.append({
+                "timestamp": row[0],
+                "role": row[1],
+                "message": row[2]
+            })
+
+        convo_data = {
+            "conversation_id": self.current_conversation_id,
+            "messages": messages
+        }
+
+        file_path = os.path.join(output_dir, f"{self.current_conversation_id}.json")
+
+        with open(file_path, "w", encoding="utf-8") as f:
+            json.dump(convo_data, f, indent=2, ensure_ascii=False)
