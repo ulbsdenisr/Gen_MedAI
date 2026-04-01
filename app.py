@@ -40,7 +40,7 @@ def load_models():
     if nlp is None:
         try:
             import spacy
-            nlp = spacy.load("model/model_with_textcats")
+            nlp = spacy.load("model/model-best")
             print("✓ spaCy NER model loaded")
         except Exception as e:
             print(f"✗ Error loading NER model: {e}")
@@ -177,6 +177,73 @@ def load_chat():
     chat_manager.export_current_conversation()#exports current conversation before switching
     chat_manager.set_current_conversation(new_id)
     return jsonify({"status": "loaded"})
+
+@app.route('/api/get_chat/<conversation_id>', methods=['GET'])
+def get_chat(conversation_id):
+    """Get messages from a specific conversation"""
+    try:
+        from pathlib import Path
+        chat_file = Path('chats') / f"{conversation_id}.json"
+        
+        if not chat_file.exists():
+            return jsonify({"error": "Chat not found"}), 404
+        
+        with open(chat_file, 'r') as f:
+            chat_data = json.load(f)
+        
+        # Handle both formats: list of messages and dict with messages key
+        if isinstance(chat_data, dict) and 'messages' in chat_data:
+            messages = chat_data['messages']
+        elif isinstance(chat_data, list):
+            messages = chat_data
+        else:
+            messages = []
+        
+        return jsonify({"messages": messages})
+    except Exception as e:
+        print(f"Error retrieving chat: {e}")
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/api/chat_history', methods=['GET'])
+def chat_history():
+    """Get list of all available chats"""
+    try:
+        from pathlib import Path
+        import os
+        chat_dir = Path('chats')
+        if not chat_dir.exists():
+            return jsonify({"chats": []})
+        
+        # Get all JSON files in chats directory
+        chat_files = sorted(chat_dir.glob('*.json'), key=os.path.getmtime, reverse=True)
+        chats = []
+        
+        for chat_file in chat_files:
+            try:
+                with open(chat_file, 'r') as f:
+                    chat_data = json.load(f)
+                    # Extract the conversation ID (filename without extension)
+                    conv_id = chat_file.stem
+                    # Get first message as preview
+                    preview = ""
+                    if isinstance(chat_data, list) and len(chat_data) > 0:
+                        first_msg = chat_data[0]
+                        if isinstance(first_msg, dict) and 'content' in first_msg:
+                            preview = first_msg['content'][:100]
+                    
+                    chats.append({
+                        "id": conv_id,
+                        "timestamp": chat_file.stat().st_mtime,
+                        "preview": preview
+                    })
+            except Exception as e:
+                print(f"Error reading chat file {chat_file}: {e}")
+                continue
+        
+        return jsonify({"chats": chats})
+    except Exception as e:
+        print(f"Error fetching chat history: {e}")
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
     print("\n🚀 Starting Medical AI Chat Interface...")

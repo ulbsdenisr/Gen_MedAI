@@ -1,0 +1,25 @@
+{
+  "conversation_id": "20260320110501",
+  "messages": [
+    {
+      "timestamp": "2026-03-20 11:05:04",
+      "role": "user",
+      "message": "My head hurts, I'm feeling nauseous and I have a congested nose"
+    },
+    {
+      "timestamp": "2026-03-20 11:05:11",
+      "role": "assistant",
+      "message": "{\"user_message\": \"My head hurts, I'm feeling nauseous and I have a congested nose\", \"extracted_symptoms\": [\"headache\", \"nausea\", \"nasal congestion\"], \"possible_diseases\": [\"deviated nasal septum\", \"nasal polyp\", \"nose disorder\"], \"warnings\": [], \"status\": \"success\"}"
+    },
+    {
+      "timestamp": "2026-03-20 11:09:36",
+      "role": "user",
+      "message": "My head hurts a lot"
+    },
+    {
+      "timestamp": "2026-03-20 11:09:42",
+      "role": "assistant",
+      "message": "{\"user_message\": \"My head hurts a lot\", \"extracted_symptoms\": [\"headache\"], \"possible_diseases\": [\"tension headache\", \"migraine\", \"high blood pressure\"], \"warnings\": \"The severity of 'headache' appears to be worsening.\\nPlease consider checking in with a professional!\", \"status\": \"success\"}"
+    }
+  ]
+}

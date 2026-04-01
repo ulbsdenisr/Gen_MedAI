@@ -7,6 +7,16 @@ const statusIndicator = document.getElementById('statusIndicator');
 const statusText = document.getElementById('statusText');
 const statusDot = statusIndicator.querySelector('.status-dot');
 
+// Chat History Elements
+const chatHistorySidebar = document.getElementById('chatHistorySidebar');
+const chatHistoryList = document.getElementById('chatHistoryList');
+const historyToggleBtn = document.getElementById('historyToggleBtn');
+const closeSidebarBtn = document.getElementById('closeSidebarBtn');
+const newChatActionBtn = document.getElementById('newChatActionBtn');
+
+// Current conversation ID
+let currentConversationId = null;
+
 // Auto-resize textarea
 userInput.addEventListener('input', function() {
     this.style.height = 'auto';
@@ -24,9 +34,26 @@ userInput.addEventListener('keydown', function(event) {
 // Send button click
 sendBtn.addEventListener('click', sendMessage);
 
+// Chat history events
+historyToggleBtn.addEventListener('click', () => {
+    chatHistorySidebar.classList.toggle('hidden');
+});
+
+closeSidebarBtn.addEventListener('click', () => {
+    chatHistorySidebar.classList.add('hidden');
+});
+
+newChatActionBtn.addEventListener('click', startNewChat);
+
 // Check connection status on load
 document.addEventListener('DOMContentLoaded', async () => {
+    // Sidebar is now visible by default
+    // if (window.innerWidth <= 768) {
+    //     chatHistorySidebar.classList.add('hidden');
+    // }
+    
     await startNewChat();
+    await loadChatHistory();
     checkHealth();
 });
 
@@ -34,17 +61,151 @@ document.addEventListener('DOMContentLoaded', async () => {
 setInterval(checkHealth, 30000);
 
 /**
- * Check if backend is ready
+ * Start a new chat
  */
 async function startNewChat() {
     try {
-        await fetch('/api/new_chat', {
+        const response = await fetch('/api/new_chat', {
             method: 'POST'
         });
+        const data = await response.json();
+        currentConversationId = data.conversation_id;
+        
+        // Clear chat messages
+        chatMessages.innerHTML = '';
+        chatMessages.innerHTML = `
+            <div class="message bot-message welcome-message">
+                <div class="message-avatar">🏥</div>
+                <div class="message-content">
+                    <p><strong>Welcome to MedAI Assistant!</strong></p>
+                    <p>I'm an AI-powered medical assistant trained to help identify symptoms and provide relevant medical information.</p>
+                    <p class="info-text">📝 Type your symptoms or medical concerns below, and I'll analyze them to provide relevant information.</p>
+                </div>
+            </div>
+        `;
+        
+        // Reload chat history
+        await loadChatHistory();
+        closeSidebarBtn.click();
     } catch (error) {
         console.error('Failed to start new chat:', error);
     }
 }
+
+/**
+ * Load and display chat history
+ */
+async function loadChatHistory() {
+    try {
+        const response = await fetch('/api/chat_history');
+        const data = await response.json();
+        
+        if (data.error) {
+            chatHistoryList.innerHTML = '<p style="padding: 16px; color: #999;">Error loading chat history</p>';
+            return;
+        }
+        
+        const chats = data.chats || [];
+        
+        if (chats.length === 0) {
+            chatHistoryList.innerHTML = '<p style="padding: 16px; color: #999; text-align: center;">No previous chats</p>';
+            return;
+        }
+        
+        chatHistoryList.innerHTML = '';
+        
+        chats.forEach(chat => {
+            const chatItem = document.createElement('div');
+            chatItem.className = 'chat-item';
+            
+            // Format timestamp
+            const date = new Date(chat.timestamp * 1000);
+            const timeStr = date.toLocaleDateString() + ' ' + date.toLocaleTimeString([], {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+            
+            chatItem.innerHTML = `
+                <div class="chat-item-time">${timeStr}</div>
+                <div class="chat-item-preview">${escapeHtml(chat.preview || 'No messages')}</div>
+            `;
+            
+            // Mark current chat as active
+            if (chat.id === currentConversationId) {
+                chatItem.classList.add('active');
+            }
+            
+            chatItem.addEventListener('click', () => loadExistingChat(chat.id));
+            chatHistoryList.appendChild(chatItem);
+        });
+    } catch (error) {
+        console.error('Error loading chat history:', error);
+        chatHistoryList.innerHTML = '<p style="padding: 16px; color: #999;">Error loading chats</p>';
+    }
+}
+
+/**
+ * Load an existing chat
+ */
+async function loadExistingChat(conversationId) {
+    try {
+        // First, set the current conversation on the backend
+        const response = await fetch('/api/load_chat', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ conversation_id: conversationId })
+        });
+        
+        if (response.ok) {
+            currentConversationId = conversationId;
+            
+            // Now fetch and display the messages
+            const messagesResponse = await fetch(`/api/get_chat/${conversationId}`);
+            const messagesData = await messagesResponse.json();
+            
+            if (messagesResponse.ok && messagesData.messages) {
+                // Clear and display messages
+                chatMessages.innerHTML = '';
+                
+                messagesData.messages.forEach(msg => {
+                    // msg can be format: {timestamp, role, message} or other formats
+                    const role = msg.role || 'bot';
+                    const content = msg.message || msg.content || '';
+                    
+                    // Parse if it's a JSON string response from AI
+                    let displayText = content;
+                    if (role === 'assistant' && typeof content === 'string') {
+                        try {
+                            const parsed = JSON.parse(content);
+                            displayAIResponse(parsed);
+                            return; // Skip the standard addMessage
+                        } catch (e) {
+                            // Not JSON, display as is
+                        }
+                    }
+                    
+                    addMessage(displayText, role);
+                });
+                
+                await loadChatHistory();
+                closeSidebarBtn.click();
+            } else {
+                alert('Failed to load chat messages');
+            }
+        } else {
+            alert('Failed to load chat');
+        }
+    } catch (error) {
+        console.error('Error loading chat:', error);
+        alert('Error loading chat: ' + error.message);
+    }
+}
+
+/**
+ * Check if backend is ready
+ */
 async function checkHealth() {
     try {
         const response = await fetch('/api/health');

@@ -4,48 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MedAI - Medical Assistant Chat</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?v=3">
 </head>
 <body>
-    <div class="chat-container">
-        <!-- Header -->
-        <div class="chat-header">
-            <div class="header-content">
-                <h1>🏥 MedAI Assistant</h1>
-                <p>AI-Powered Medical Symptom Analysis</p>
+    <div class="app-container">
+        <!-- Chat History Sidebar -->
+        <div class="chat-history-sidebar" id="chatHistorySidebar">
+            <div class="sidebar-header">
+                <h3>📋 Chat History</h3>
+                <button class="close-sidebar-btn" id="closeSidebarBtn" title="Close sidebar">✕</button>
             </div>
-            <div class="status-indicator" id="statusIndicator">
-                <span class="status-dot"></span>
-                <span id="statusText">Checking connection...</span>
+            <div class="chat-history-list" id="chatHistoryList">
+                <div class="loading-spinner"></div>
             </div>
+            <button class="new-chat-action-btn" id="newChatActionBtn">+ New Chat</button>
         </div>
 
-        <!-- Welcome Message -->
-        <div class="chat-messages" id="chatMessages">
-            <div class="message bot-message welcome-message">
-                <div class="message-avatar">🏥</div>
-                <div class="message-content">
-                    <p><strong>Welcome to MedAI Assistant!</strong></p>
-                    <p>I'm an AI-powered medical assistant trained to help identify symptoms and provide relevant medical information.</p>
-                    <p class="info-text">📝 Type your symptoms or medical concerns below, and I'll analyze them to provide relevant information.</p>
+        <!-- Main Chat Container -->
+        <div class="chat-container">
+            <!-- Header -->
+            <div class="chat-header">
+                <button class="history-toggle-btn" id="historyToggleBtn" title="Toggle chat history">
+                    <span>☰ History</span>
+                </button>
+                <div class="header-content">
+                    <h1>🏥 MedAI Assistant</h1>
+                    <p>AI-Powered Medical Symptom Analysis</p>
+                </div>
+                <div class="status-indicator" id="statusIndicator">
+                    <span class="status-dot"></span>
+                    <span id="statusText">Checking connection...</span>
                 </div>
             </div>
-        </div>
 
-        <!-- Chat Input Area -->
-        <div class="chat-input-area">
-            <div class="input-wrapper">
-                <textarea 
-                    id="userInput" 
-                    class="chat-input" 
-                    placeholder="Describe your symptoms... (e.g., 'I have a severe headache and fever')"
-                    rows="1"
-                ></textarea>
-                <button id="sendBtn" class="send-btn" title="Send message">
-                    <span class="send-icon">➤</span>
-                </button>
+            <!-- Welcome Message -->
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message welcome-message">
+                    <div class="message-avatar">🏥</div>
+                    <div class="message-content">
+                        <p><strong>Welcome to MedAI Assistant!</strong></p>
+                        <p>I'm an AI-powered medical assistant trained to help identify symptoms and provide relevant medical information.</p>
+                        <p class="info-text">📝 Type your symptoms or medical concerns below, and I'll analyze them to provide relevant information.</p>
+                    </div>
+                </div>
             </div>
-            <p class="input-hint">Press Shift+Enter for new line, or Enter to send</p>
+
+            <!-- Chat Input Area -->
+            <div class="chat-input-area">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="userInput" 
+                        class="chat-input" 
+                        placeholder="Describe your symptoms... (e.g., 'I have a severe headache and fever')"
+                        rows="1"
+                    ></textarea>
+                    <button id="sendBtn" class="send-btn" title="Send message">
+                        <span class="send-icon">➤</span>
+                    </button>
+                </div>
+                <p class="input-hint">Press Shift+Enter for new line, or Enter to send</p>
+            </div>
         </div>
     </div>
 
@@ -55,6 +73,6 @@
         <p>Analyzing symptoms...</p>
     </div>
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="{{ url_for('static', filename='script.js') }}?v=3"></script>
 </body>
 </html>
