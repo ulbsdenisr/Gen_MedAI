@@ -16,6 +16,8 @@ const newChatActionBtn = document.getElementById('newChatActionBtn');
 
 // Current conversation ID
 let currentConversationId = null;
+let authMode = "login"; // or "signup"
+let currentUser = null;
 
 // Auto-resize textarea
 userInput.addEventListener('input', function() {
@@ -55,10 +57,85 @@ document.addEventListener('DOMContentLoaded', async () => {
     await startNewChat();
     await loadChatHistory();
     checkHealth();
+    document.getElementById('loginBtn').addEventListener('click', () => openAuthModal("login"));
+    document.getElementById('signupBtn').addEventListener('click', () => openAuthModal("signup"));
+    document.getElementById('logoutBtn').addEventListener('click', logout);
+    document.getElementById('authSubmitBtn').addEventListener('click', submitAuth);
 });
+
+
 
 // Periodically check health
 setInterval(checkHealth, 30000);
+
+function openAuthModal(mode) {
+    authMode = mode;
+    document.getElementById('authTitle').textContent = mode === "login" ? "Login" : "Sign Up";
+    document.getElementById('authModal').classList.remove('hidden');
+}
+
+function closeAuthModal() {
+    document.getElementById('authModal').classList.add('hidden');
+}
+async function submitAuth() {
+    const username = document.getElementById('authUsername').value;
+    const password = document.getElementById('authPassword').value;
+
+    const endpoint = authMode === "login" ? "/api/login" : "/api/signup";
+
+    try {
+        const response = await fetch(endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username, password })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            currentUser = username;
+            updateAuthUI();
+            closeAuthModal();
+            await loadChatHistory(); // reload chats for user
+        } else {
+            alert(data.error || "Auth failed");
+        }
+
+    } catch (err) {
+        console.error(err);
+        alert("Error connecting to server");
+    }
+}
+async function logout() {
+    await fetch('/api/logout', { method: 'POST' });
+
+    currentUser = null;
+    currentConversationId = null;
+
+    updateAuthUI();
+    chatMessages.innerHTML = '';
+}
+function updateAuthUI() {
+    const loginBtn = document.getElementById('loginBtn');
+    const signupBtn = document.getElementById('signupBtn');
+    const logoutBtn = document.getElementById('logoutBtn');
+    const userDisplay = document.getElementById('userDisplay');
+
+    if (currentUser) {
+        loginBtn.style.display = 'none';
+        signupBtn.style.display = 'none';
+        logoutBtn.style.display = 'inline-block';
+
+        userDisplay.style.display = 'inline-block';
+        userDisplay.textContent = `👤 ${currentUser}`;
+    } else {
+        loginBtn.style.display = 'inline-block';
+        signupBtn.style.display = 'inline-block';
+        logoutBtn.style.display = 'none';
+
+        userDisplay.style.display = 'none';
+    }
+}
 
 /**
  * Start a new chat

@@ -469,6 +469,21 @@
                     "status": "unchanged"
                 }
             ]
+        },
+        {
+            "timestamp": "2026-04-02T21:27:22.861031",
+            "entries": [
+                {
+                    "symptom": "headache",
+                    "severity": "moderate",
+                    "status": "unchanged"
+                },
+                {
+                    "symptom": "nasal congestion",
+                    "severity": "moderate",
+                    "status": "unchanged"
+                }
+            ]
         }
     ]
 }

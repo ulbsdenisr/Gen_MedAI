@@ -3,6 +3,7 @@ from flask_cors import CORS
 from head_training import predict_attributes
 from chat_manager import ChatManager
 import json
+from user_manager import UserManager
 from pathlib import Path
 import sys
 
@@ -19,7 +20,9 @@ meta = None
 embedder = None
 idf = None
 rag_loaded = False
+current_user_id = None
 chat_manager=ChatManager()
+user_manager = UserManager()
 
 def write_to_history(nlp,text):
     doc=nlp(text)
@@ -40,7 +43,7 @@ def load_models():
     if nlp is None:
         try:
             import spacy
-            nlp = spacy.load("model/model-best")
+            nlp = spacy.load("model/model_with_textcats")
             print("✓ spaCy NER model loaded")
         except Exception as e:
             print(f"✗ Error loading NER model: {e}")
@@ -66,10 +69,11 @@ def chat():
     try:
         data = request.json
         user_message = data.get('message', '').strip()
-        try:
-            chat_manager.save_message("user", user_message)
-        except Exception as e:
-            print("Chat save failed:", e)
+        if current_user_id is not None:
+            try:
+                chat_manager.save_message("user", user_message,current_user_id)
+            except Exception as e:
+                print("Chat save failed:", e)
 
         if not user_message:
             return jsonify({'error': 'Empty message'}), 400
@@ -143,7 +147,8 @@ def chat():
             'warnings':warnings_str,
             'status': 'success'
         }
-        chat_manager.save_message("assistant", json.dumps(response))
+        if current_user_id is not None:
+            chat_manager.save_message("assistant", json.dumps(response))
         return jsonify(response)
 
     except Exception as e:
@@ -162,8 +167,15 @@ def health():
 
 @app.route('/api/new_chat', methods=['POST'])
 def new_chat():
-    ##to be called when doing the new chat button
-    chat_manager.export_current_conversation()  # save previous chat
+    global current_user_id
+    if current_user_id is None:
+        chat_manager.current_conversation_id = None
+        return jsonify({"conversation_id": None})
+    try:
+        chat_manager.export_current_conversation()
+    except Exception as e:
+        print("Export failed:", e)
+
     conversation_id = chat_manager.start_new_chat()
     return jsonify({"conversation_id": conversation_id})
 
@@ -207,6 +219,8 @@ def get_chat(conversation_id):
 @app.route('/api/chat_history', methods=['GET'])
 def chat_history():
     """Get list of all available chats"""
+    if current_user_id is None:
+        return jsonify({"chats": []})
     try:
         from pathlib import Path
         import os
@@ -244,6 +258,37 @@ def chat_history():
     except Exception as e:
         print(f"Error fetching chat history: {e}")
         return jsonify({"error": str(e)}), 500
+
+@app.route('/api/signup', methods=['POST'])
+def signup():
+    data = request.json
+    username = data.get("username")
+    password = data.get("password")
+
+    user_id = user_manager.create_user(username, password)
+
+    if user_id:
+        return jsonify({"status": "success", "user_id": user_id})
+    else:
+        return jsonify({"error": "Username already exists"}), 400
+
+@app.route('/api/login', methods=['POST'])
+def login():
+    data = request.json
+    username = data.get("username")
+    password = data.get("password")
+
+    user_id = user_manager.login_user(username, password)
+
+    if user_id:
+        return jsonify({"status": "success", "user_id": user_id})
+    else:
+        return jsonify({"error": "Invalid credentials"}), 401
+
+@app.route('/api/logout', methods=['POST'])
+def logout():
+    user_manager.logout_user()
+    return jsonify({"status": "logged_out"})
 
 if __name__ == '__main__':
     print("\n🚀 Starting Medical AI Chat Interface...")

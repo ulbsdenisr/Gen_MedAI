@@ -19,6 +19,7 @@ class ChatManager:
         CREATE TABLE IF NOT EXISTS chat_history (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             conversation_id TEXT,
+            user_id INTEGER,
             role TEXT,
             message TEXT,
             timestamp TEXT
@@ -37,14 +38,14 @@ class ChatManager:
         return self.current_conversation_id
 
     # 🔹 Ensure we always have a conversation
-    def ensure_conversation(self):
-        if self.current_conversation_id is None:
+    def ensure_conversation(self, user_id=None):
+        if self.current_conversation_id is None and user_id is not None:
             self.start_new_chat()
         return self.current_conversation_id
 
     # 💾 Save message
-    def save_message(self, role, message):
-        self.ensure_conversation()
+    def save_message(self, role, message,user_id=None):
+        self.ensure_conversation(user_id)
 
         conn = self._connect()
         cursor = conn.cursor()
@@ -52,12 +53,35 @@ class ChatManager:
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
         cursor.execute("""
-        INSERT INTO chat_history (conversation_id, role, message, timestamp)
-        VALUES (?, ?, ?, ?)
-        """, (self.current_conversation_id, role, message, timestamp))
+           INSERT INTO chat_history (conversation_id, role, message, timestamp, user_id)
+           VALUES (?, ?, ?, ?, ?)
+           """, (self.current_conversation_id, role, message, timestamp, user_id))
 
         conn.commit()
         conn.close()
+
+    def get_chat_by_conversation(self, conversation_id, user_id):
+        conn = self._connect()
+        cursor = conn.cursor()
+
+        cursor.execute("""
+        SELECT role, message, timestamp
+        FROM chat_history
+        WHERE conversation_id = ? AND user_id = ?
+        ORDER BY id ASC
+        """, (conversation_id, user_id))
+
+        rows = cursor.fetchall()
+        conn.close()
+
+        return [
+            {
+                "role": r[0],
+                "message": r[1],
+                "timestamp": r[2]
+            }
+            for r in rows
+        ]
 
     # 📖 Get current chat
     def get_current_chat(self):
@@ -79,7 +103,33 @@ class ChatManager:
 
         return rows
 
-    # 📚 Get all conversations (useful later)
+    def get_user_conversations(self, user_id):
+        conn = self._connect()
+        cursor = conn.cursor()
+
+        cursor.execute("""
+        SELECT conversation_id, MIN(timestamp)
+        FROM chat_history
+        WHERE user_id = ?
+        GROUP BY conversation_id
+        ORDER BY MIN(timestamp) DESC
+        """, (user_id,))
+
+        rows = cursor.fetchall()
+        conn.close()
+
+        conversations = []
+
+        for convo_id, timestamp in rows:
+            conversations.append({
+                "id": convo_id,
+                "timestamp": int(datetime.strptime(timestamp, "%Y-%m-%d %H:%M:%S").timestamp()),
+                "preview": f"Chat {convo_id}"
+            })
+
+        return conversations
+
+    # 📚 Get all conversations (useful later)///can be replaced by the get_user_conversations
     def get_all_conversations(self):
         conn = self._connect()
         cursor = conn.cursor()
@@ -93,7 +143,8 @@ class ChatManager:
         rows = cursor.fetchall()
         conn.close()
 
-        return [r[0] for r in rows]
+        return [r[0] for r in rows] #
+
 
 
     def export_all_conversations_to_json(self, output_dir="chats"):
@@ -180,3 +231,6 @@ class ChatManager:
 
         with open(file_path, "w", encoding="utf-8") as f:
             json.dump(convo_data, f, indent=2, ensure_ascii=False)
+
+
+
