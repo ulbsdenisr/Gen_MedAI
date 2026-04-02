@@ -1,0 +1,15 @@
+{
+  "conversation_id": "20260402223028",
+  "messages": [
+    {
+      "timestamp": "2026-04-02 22:30:41",
+      "role": "user",
+      "message": "My leg hurts a lot, especially in the knee area"
+    },
+    {
+      "timestamp": "2026-04-02 22:30:53",
+      "role": "assistant",
+      "message": "{\"user_message\": \"My leg hurts a lot, especially in the knee area\", \"extracted_symptoms\": [\"leg pain\", \"knee pain\"], \"possible_diseases\": [\"injury to the knee\", \"chronic knee pain\", \"injury to the leg\"], \"warnings\": \"A new severe symptom was reported: 'leg pain'., Please consider checking in with a professional!\", \"status\": \"success\"}"
+    }
+  ]
+}

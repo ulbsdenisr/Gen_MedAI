@@ -1,0 +1,15 @@
+{
+  "conversation_id": "20260402223241",
+  "messages": [
+    {
+      "timestamp": "2026-04-02 22:32:41",
+      "role": "user",
+      "message": "I have a bad pain in my chest and shortness of breath"
+    },
+    {
+      "timestamp": "2026-04-02 22:32:48",
+      "role": "assistant",
+      "message": "{\"user_message\": \"I have a bad pain in my chest and shortness of breath\", \"extracted_symptoms\": [\"sharp chest pain\", \"shortness of breath\"], \"possible_diseases\": [\"coronary atherosclerosis\", \"lung contusion\", \"cardiomyopathy\"], \"warnings\": \"A new severe symptom was reported: 'sharp chest pain'., Please consider checking in with a professional!\", \"status\": \"success\"}"
+    }
+  ]
+}

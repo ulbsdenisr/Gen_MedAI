@@ -63,8 +63,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.getElementById('authSubmitBtn').addEventListener('click', submitAuth);
 });
 
-
-
 // Periodically check health
 setInterval(checkHealth, 30000);
 
@@ -96,6 +94,11 @@ async function submitAuth() {
             currentUser = username;
             updateAuthUI();
             closeAuthModal();
+            // Clear guest chat & sidebar
+            resetChatUI();
+            chatHistoryList.innerHTML = '<p style="padding:16px;color:#999;text-align:center;">Loading chats...</p>';
+            // Start a new conversation for this user
+            await startNewChat();
             await loadChatHistory(); // reload chats for user
         } else {
             alert(data.error || "Auth failed");
@@ -106,14 +109,69 @@ async function submitAuth() {
         alert("Error connecting to server");
     }
 }
+
 async function logout() {
+    try {
+        await fetch('/api/logout', { method: 'POST' });
+        currentUser = null;
+        currentConversationId = null;
+
+        // Reset chat UI to welcome message
+        resetChatUI();
+
+        // Clear sidebar completely
+        chatHistoryList.innerHTML = `
+            <p style="padding: 16px; color: #999; text-align: center;">
+                No chats (logged out)
+            </p>
+        `;
+
+        // Hide sidebar completely if you want
+        chatHistorySidebar.classList.add('hidden');
+
+        // Update auth buttons
+        updateAuthUI();
+    } catch (err) {
+        console.error('Logout failed:', err);
+    }
+}
+async function handleAuthSuccess() {
+    // 1. Clear chat UI
+    resetChatUI();
+
+    // 2. Start fresh chat
+    await startNewChat();
+
+    // 3. Reload sidebar history
+    await loadChatHistory();
+}
+async function handleLogout() {
     await fetch('/api/logout', { method: 'POST' });
 
-    currentUser = null;
-    currentConversationId = null;
+    // Reset chat UI
+    resetChatUI();
 
-    updateAuthUI();
-    chatMessages.innerHTML = '';
+    // Clear sidebar
+    chatHistoryList.innerHTML = `
+        <p style="padding: 16px; color: #999; text-align: center;">
+            No chats (logged out)
+        </p>
+    `;
+
+    // Reset current conversation
+    currentConversationId = null;
+}
+function resetChatUI() {
+    chatMessages.innerHTML = `
+        <div class="message bot-message welcome-message">
+            <div class="message-avatar">🏥</div>
+            <div class="message-content">
+                <p><strong>Welcome to MedAI Assistant!</strong></p>
+                <p>I'm an AI-powered medical assistant trained to help identify symptoms and provide relevant medical information.</p>
+                <p class="info-text">📝 Type your symptoms or medical concerns below.</p>
+            </div>
+        </div>
+    `;
 }
 function updateAuthUI() {
     const loginBtn = document.getElementById('loginBtn');

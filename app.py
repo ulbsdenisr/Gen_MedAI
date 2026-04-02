@@ -6,7 +6,7 @@ import json
 from user_manager import UserManager
 from pathlib import Path
 import sys
-
+import os
 from history_manager import HistoryManager
 from symptom_normalizer import SymptomNormalizer
 
@@ -148,7 +148,7 @@ def chat():
             'status': 'success'
         }
         if current_user_id is not None:
-            chat_manager.save_message("assistant", json.dumps(response))
+            chat_manager.save_message("assistant", json.dumps(response),current_user_id)
         return jsonify(response)
 
     except Exception as e:
@@ -172,7 +172,7 @@ def new_chat():
         chat_manager.current_conversation_id = None
         return jsonify({"conversation_id": None})
     try:
-        chat_manager.export_current_conversation()
+        chat_manager.export_current_conversation(current_user_id)
     except Exception as e:
         print("Export failed:", e)
 
@@ -186,7 +186,7 @@ def load_chat():
     #needed to save messages to the older chat
     data = request.json
     new_id = data.get("conversation_id")
-    chat_manager.export_current_conversation()#exports current conversation before switching
+    chat_manager.export_current_conversation(current_user_id)#exports current conversation before switching
     chat_manager.set_current_conversation(new_id)
     return jsonify({"status": "loaded"})
 
@@ -195,7 +195,7 @@ def get_chat(conversation_id):
     """Get messages from a specific conversation"""
     try:
         from pathlib import Path
-        chat_file = Path('chats') / f"{conversation_id}.json"
+        chat_file = Path('chats') / str(current_user_id) / f"{conversation_id}.json"
         
         if not chat_file.exists():
             return jsonify({"error": "Chat not found"}), 404
@@ -222,9 +222,7 @@ def chat_history():
     if current_user_id is None:
         return jsonify({"chats": []})
     try:
-        from pathlib import Path
-        import os
-        chat_dir = Path('chats')
+        chat_dir = Path('chats') / str(current_user_id)
         if not chat_dir.exists():
             return jsonify({"chats": []})
         
@@ -261,6 +259,7 @@ def chat_history():
 
 @app.route('/api/signup', methods=['POST'])
 def signup():
+    global current_user_id
     data = request.json
     username = data.get("username")
     password = data.get("password")
@@ -268,12 +267,14 @@ def signup():
     user_id = user_manager.create_user(username, password)
 
     if user_id:
+        current_user_id = user_id
         return jsonify({"status": "success", "user_id": user_id})
     else:
         return jsonify({"error": "Username already exists"}), 400
 
 @app.route('/api/login', methods=['POST'])
 def login():
+    global current_user_id
     data = request.json
     username = data.get("username")
     password = data.get("password")
@@ -281,13 +282,16 @@ def login():
     user_id = user_manager.login_user(username, password)
 
     if user_id:
+        current_user_id = user_id
         return jsonify({"status": "success", "user_id": user_id})
     else:
         return jsonify({"error": "Invalid credentials"}), 401
 
 @app.route('/api/logout', methods=['POST'])
 def logout():
-    user_manager.logout_user()
+    global current_user_id
+    current_user_id = None
+    chat_manager.current_conversation_id = None
     return jsonify({"status": "logged_out"})
 
 if __name__ == '__main__':

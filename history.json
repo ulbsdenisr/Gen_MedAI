@@ -484,6 +484,191 @@
                     "status": "unchanged"
                 }
             ]
+        },
+        {
+            "timestamp": "2026-04-02T22:15:52.736362",
+            "entries": [
+                {
+                    "symptom": "headache",
+                    "severity": "severe",
+                    "status": "unchanged"
+                }
+            ]
+        },
+        {
+            "timestamp": "2026-04-02T22:17:11.022516",
+            "entries": [
+                {
+                    "symptom": "headache",
+                    "severity": "severe",
+                    "status": "unchanged"
+                },
+                {
+                    "symptom": "fever",
+                    "severity": "moderate",
+                    "status": "unchanged"
+                }
+            ]
+        },
+        {
+            "timestamp": "2026-04-02T22:18:12.733841",
+            "entries": [
+                {
+                    "symptom": "fatigue",
+                    "severity": "severe",
+                    "status": "unchanged"
+                },
+                {
+                    "symptom": "nasal congestion",
+                    "severity": "moderate",
+                    "status": "unchanged"
+                }
+            ]
+        },
+        {
+            "timestamp": "2026-04-02T22:18:44.564339",
+            "entries": [
+                {
+                    "symptom": "mouth dryness",
+                    "severity": "moderate",
+                    "status": "unchanged"
+                },
+                {
+                    "symptom": "nausea",
+                    "severity": "moderate",
+                    "status": "unchanged"
+                }
+            ]
+        },
+        {
+            "timestamp": "2026-04-02T22:27:17.977260",
+            "entries": [
+                {
+                    "symptom": "headache",
+                    "severity": "severe",
+                    "status": "unchanged"
+                },
+                {
+                    "symptom": "fever",
+                    "severity": "moderate",
+                    "status": "unchanged"
+                }
+            ]
+        },
+        {
+            "timestamp": "2026-04-02T22:29:57.294943",
+            "entries": [
+                {
+                    "symptom": "headache",
+                    "severity": "severe",
+                    "status": "unchanged"
+                },
+                {
+                    "symptom": "nasal congestion",
+                    "severity": "moderate",
+                    "status": "unchanged"
+                }
+            ]
+        },
+        {
+            "timestamp": "2026-04-02T22:30:45.156012",
+            "entries": [
+                {
+                    "symptom": "leg pain",
+                    "severity": "severe",
+                    "status": "unchanged"
+                },
+                {
+                    "symptom": "knee pain",
+                    "severity": "moderate",
+                    "status": "unchanged"
+                }
+            ]
+        },
+        {
+            "timestamp": "2026-04-02T22:32:44.871354",
+            "entries": [
+                {
+                    "symptom": "sharp chest pain",
+                    "severity": "severe",
+                    "status": "unchanged"
+                },
+                {
+                    "symptom": "shortness of breath",
+                    "severity": "moderate",
+                    "status": "unchanged"
+                }
+            ]
+        },
+        {
+            "timestamp": "2026-04-02T22:33:27.105720",
+            "entries": [
+                {
+                    "symptom": "ankle pain",
+                    "severity": "severe",
+                    "status": "unchanged"
+                },
+                {
+                    "symptom": "skin swelling",
+                    "severity": "moderate",
+                    "status": "unchanged"
+                }
+            ]
+        },
+        {
+            "timestamp": "2026-04-02T22:34:14.995922",
+            "entries": [
+                {
+                    "symptom": "sharp chest pain",
+                    "severity": "moderate",
+                    "status": "unchanged"
+                }
+            ]
+        },
+        {
+            "timestamp": "2026-04-02T22:52:05.803865",
+            "entries": [
+                {
+                    "symptom": "headache",
+                    "severity": "moderate",
+                    "status": "unchanged"
+                },
+                {
+                    "symptom": "fever",
+                    "severity": "severe",
+                    "status": "unchanged"
+                }
+            ]
+        },
+        {
+            "timestamp": "2026-04-02T23:01:27.243156",
+            "entries": [
+                {
+                    "symptom": "headache",
+                    "severity": "severe",
+                    "status": "unchanged"
+                },
+                {
+                    "symptom": "nausea",
+                    "severity": "moderate",
+                    "status": "unchanged"
+                }
+            ]
+        },
+        {
+            "timestamp": "2026-04-02T23:02:28.159529",
+            "entries": [
+                {
+                    "symptom": "fatigue",
+                    "severity": "severe",
+                    "status": "unchanged"
+                },
+                {
+                    "symptom": "muscle weakness",
+                    "severity": "severe",
+                    "status": "unchanged"
+                }
+            ]
         }
     ]
 }

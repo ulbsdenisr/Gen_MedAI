@@ -192,11 +192,12 @@ class ChatManager:
                 json.dump(convo_data, f, indent=2, ensure_ascii=False)
 
         conn.close()
-    def export_current_conversation(self, output_dir="chat_exports"):
-        if self.current_conversation_id is None:
-            return  # nothing to export
+    def export_current_conversation(self, user_id, base_dir="chats"):
+        if self.current_conversation_id is None or user_id is None:
+            return
 
-        os.makedirs(output_dir, exist_ok=True)
+        user_dir = os.path.join(base_dir, str(user_id))
+        os.makedirs(user_dir, exist_ok=True)
 
         conn = self._connect()
         cursor = conn.cursor()
@@ -204,9 +205,9 @@ class ChatManager:
         cursor.execute("""
         SELECT timestamp, role, message
         FROM chat_history
-        WHERE conversation_id = ?
+        WHERE conversation_id = ? AND user_id = ?
         ORDER BY id ASC
-        """, (self.current_conversation_id,))
+        """, (self.current_conversation_id, user_id))
 
         rows = cursor.fetchall()
         conn.close()
@@ -227,10 +228,8 @@ class ChatManager:
             "messages": messages
         }
 
-        file_path = os.path.join(output_dir, f"{self.current_conversation_id}.json")
+        file_path = os.path.join(user_dir, f"{self.current_conversation_id}.json")
 
         with open(file_path, "w", encoding="utf-8") as f:
             json.dump(convo_data, f, indent=2, ensure_ascii=False)
-
-
 
