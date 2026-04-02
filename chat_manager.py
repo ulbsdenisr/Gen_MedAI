@@ -128,25 +128,6 @@ class ChatManager:
             })
 
         return conversations
-
-    # 📚 Get all conversations (useful later)///can be replaced by the get_user_conversations
-    def get_all_conversations(self):
-        conn = self._connect()
-        cursor = conn.cursor()
-
-        cursor.execute("""
-        SELECT DISTINCT conversation_id
-        FROM chat_history
-        ORDER BY conversation_id DESC
-        """)
-
-        rows = cursor.fetchall()
-        conn.close()
-
-        return [r[0] for r in rows] #
-
-
-
     def export_all_conversations_to_json(self, output_dir="chats"):
         os.makedirs(output_dir, exist_ok=True)
 

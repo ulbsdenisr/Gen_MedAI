@@ -669,6 +669,21 @@
                     "status": "unchanged"
                 }
             ]
+        },
+        {
+            "timestamp": "2026-04-02T23:06:31.035765",
+            "entries": [
+                {
+                    "symptom": "pain in eye",
+                    "severity": "moderate",
+                    "status": "unchanged"
+                },
+                {
+                    "symptom": "painful sinuses",
+                    "severity": "moderate",
+                    "status": "unchanged"
+                }
+            ]
         }
     ]
 }
