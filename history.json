@@ -684,6 +684,76 @@
                     "status": "unchanged"
                 }
             ]
+        },
+        {
+            "timestamp": "2026-04-02T23:11:48.565452",
+            "entries": [
+                {
+                    "symptom": "headache",
+                    "severity": "severe",
+                    "status": "unchanged"
+                }
+            ]
+        },
+        {
+            "timestamp": "2026-04-02T23:12:13.279720",
+            "entries": [
+                {
+                    "symptom": "fatigue",
+                    "severity": "severe",
+                    "status": "unchanged"
+                },
+                {
+                    "symptom": "headache",
+                    "severity": "moderate",
+                    "status": "unchanged"
+                }
+            ]
+        },
+        {
+            "timestamp": "2026-04-02T23:13:02.283391",
+            "entries": [
+                {
+                    "symptom": "fatigue",
+                    "severity": "moderate",
+                    "status": "unchanged"
+                }
+            ]
+        },
+        {
+            "timestamp": "2026-04-02T23:13:38.340059",
+            "entries": [
+                {
+                    "symptom": "headache",
+                    "severity": "moderate",
+                    "status": "unchanged"
+                },
+                {
+                    "symptom": "nausea",
+                    "severity": "moderate",
+                    "status": "unchanged"
+                },
+                {
+                    "symptom": "nasal congestion",
+                    "severity": "moderate",
+                    "status": "unchanged"
+                }
+            ]
+        },
+        {
+            "timestamp": "2026-04-02T23:13:59.277498",
+            "entries": [
+                {
+                    "symptom": "foot or toe pain",
+                    "severity": "moderate",
+                    "status": "unchanged"
+                },
+                {
+                    "symptom": "skin swelling",
+                    "severity": "moderate",
+                    "status": "unchanged"
+                }
+            ]
         }
     ]
 }

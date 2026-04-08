@@ -7,7 +7,9 @@ from user_manager import UserManager
 from pathlib import Path
 import sys
 import os
-from history_manager import HistoryManager
+from flask import send_file
+#from history_manager import HistoryManager
+from medical_history_manager import MedicalHistoryManager
 from symptom_normalizer import SymptomNormalizer
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
@@ -27,9 +29,14 @@ user_manager = UserManager()
 def write_to_history(nlp,text):
     doc=nlp(text)
     history_list=predict_attributes(nlp,doc)
-    history_manager = HistoryManager()
-    warnings=history_manager.append_to_history(history_list)
-    history_manager.export_to_pdf()
+    history_manager = MedicalHistoryManager() #HistoryManager()
+    warnings = history_manager.append_to_history(
+        history_list,
+        user_id=current_user_id,
+        conversation_id=chat_manager.current_conversation_id
+    )
+    #warnings=history_manager.append_to_history(history_list)
+    #history_manager.export_to_pdf()
     symptom_nor = SymptomNormalizer()
     symptom_list = []
     for result in history_list:
@@ -85,6 +92,7 @@ def chat():
             return jsonify({'error': 'NER model not available. Please check model training.'}), 503
 
         # Extract symptoms using NER
+        warnings_str = ""
         try:
             from rag_ner_pipeline import extract_symptoms_ner
             ####THIS IS WHERE EVERYTHING GOES####
@@ -94,9 +102,9 @@ def chat():
             print(warnings)
             # warnings could be list of strings or other types
             warnings_str = (
-                ", ".join(warnings) if isinstance(warnings, list)
-                else str(warnings) if warnings
-                else ""
+                    ", ".join(warnings) if isinstance(warnings, list)
+                    else str(warnings) if warnings
+                    else ""
             )
             #I have a severe fever and a pounding headache
             #['severe fever', 'pounding headache']
@@ -293,6 +301,49 @@ def logout():
     current_user_id = None
     chat_manager.current_conversation_id = None
     return jsonify({"status": "logged_out"})
+
+@app.route('/api/export_history_json', methods=['POST'])
+def export_history_json():
+    if current_user_id is None:
+        return jsonify({"error": "Not logged in"}), 401
+
+    conversation_id = chat_manager.current_conversation_id
+
+    history_manager = MedicalHistoryManager()
+
+    path = history_manager.export_chat_history_json(
+        current_user_id,
+        conversation_id
+    )
+
+    return jsonify({"file": path})
+
+@app.route('/api/export_history_pdf', methods=['POST'])
+def export_history_pdf():
+    if current_user_id is None:
+        return jsonify({"error": "Not logged in"}), 401
+
+    conversation_id = chat_manager.current_conversation_id
+    history_manager = MedicalHistoryManager()
+
+    # Generate JSON first
+    json_path = history_manager.export_chat_history_json(
+        current_user_id,
+        conversation_id
+    )
+
+    # Generate PDF
+    pdf_path = f"medical_exports/{current_user_id}_{conversation_id}.pdf"
+
+    history_manager.export_json_to_pdf(json_path, pdf_path)
+
+    # 🔥 THIS is the important part
+    return send_file(
+        pdf_path,
+        as_attachment=True,  # forces download
+        download_name=f"medical_history_{conversation_id}.pdf",
+        mimetype='application/pdf'
+    )
 
 if __name__ == '__main__':
     print("\n🚀 Starting Medical AI Chat Interface...")
