@@ -54,7 +54,7 @@
                     </div>
                 </div>
             </div>
-
+            <button id="timelineBtn" style="display:none;">📈 Timeline</button>
             <!-- Chat Input Area -->
             <div class="chat-input-area">
                 <div class="input-wrapper">
@@ -87,6 +87,15 @@
         <input type="password" id="authPassword" placeholder="Password"><br><br>
         <button id="authSubmitBtn">Submit</button>
         <button onclick="closeAuthModal()">Cancel</button>
+    </div>
+</div>
+<div id="timelineModal" class="loading-modal hidden">
+    <div style="background:white; padding:20px; border-radius:10px; max-height:80vh; overflow:auto;">
+        <h3>Medical Timeline</h3>
+        <div id="timelineContent"></div>
+        <br>
+        <button id="downloadPdfBtn">Download PDF</button>
+        <button onclick="closeTimeline()">Close</button>
     </div>
 </div>
 </body>

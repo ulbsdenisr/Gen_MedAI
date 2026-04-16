@@ -384,3 +384,34 @@ class MedicalHistoryManager:
         doc.build(elements)
 
         return output_path
+
+    def get_chat_history(self, user_id, conversation_id):
+        conn = self._connect()
+        cursor = conn.cursor()
+
+        cursor.execute("""
+            SELECT timestamp, symptom, severity, status
+            FROM medical_history
+            WHERE user_id = ? AND conversation_id = ?
+            ORDER BY timestamp ASC
+        """, (user_id, conversation_id))
+
+        rows = cursor.fetchall()
+        conn.close()
+
+        # group by timestamp (visits)
+        history = {}
+        for ts, symptom, severity, status in rows:
+            if ts not in history:
+                history[ts] = []
+            history[ts].append({
+                "symptom": symptom,
+                "severity": severity,
+                "status": status
+            })
+
+        # convert to list format
+        return [
+            {"timestamp": ts, "entries": entries}
+            for ts, entries in history.items()
+        ]

@@ -528,6 +528,56 @@ def normalize_disease_name_for_search(disease_name: str) -> str:
     }
 
     return mapping.get(disease_name, disease_name)
+def deliver_details(results,symptoms):
+    if not results:
+        print("No results. Provide more symptoms.\n")
+    output = {
+        "matches": [],
+        "top_disease": None,
+        "articles": [],
+        "summary": {}
+    }
+    print("\nTop matches:")
+    for rank, (final, emb, ov, miss, m) in enumerate(results, start=1):
+        info = explain(symptoms, m)
+        match_entry = {
+            "rank": rank,
+            "disease": m["disease"],
+            "overlap_symptoms": info["overlap"],
+            "missing_from_profile": info.get("missing_from_disease_profile", [])
+        }
+        output["matches"].append(match_entry)
+
+        print(f"\n{rank}. {m['disease']} | final={final:.3f} emb={emb:.3f} ov_idf={ov:.3f} miss_idf={miss:.3f}")
+        print("   overlap:", info["overlap"])
+        if info["missing_from_disease_profile"]:
+            print("   query-not-in-profile:", info["missing_from_disease_profile"])
+
+    top_disease = results[0][4]["disease"]
+    top_disease_clean = normalize_disease_name_for_search(top_disease)
+    output["top_disease"] = {
+        "clean": top_disease_clean
+    }
+
+    print(f"\nTop 1 disease selected for summary: {top_disease_clean}")
+
+    articles = search_medical_articles(top_disease_clean, page_size=ARTICLE_PAGE_SIZE)
+    if len(articles) < 2:
+        articles = search_medical_articles_fallback(top_disease_clean, page_size=ARTICLE_PAGE_SIZE)
+    output["articles"] = articles if articles else []
+    if not articles:
+        print("\nNo real medical articles were found for this disease.\n")
+
+    summary = build_summary_from_articles(top_disease_clean, articles)
+    output["summary"] = summary
+    formatted_summary = format_summary_as_text(top_disease_clean, summary)
+    print(formatted_summary)
+
+    print("Sources:")
+    for src in summary.get("sources", []):
+        print("-", src.get("title", ""), "|", src.get("year", ""))
+    return output
+
 
 def main():
     nlp = spacy.load(MODEL_PATH)

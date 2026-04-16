@@ -94,9 +94,11 @@ def chat():
         # Extract symptoms using NER
         warnings_str = ""
         try:
-            from rag_ner_pipeline import extract_symptoms_ner
+            from rag_ner_pipeline import extract_symptoms_ner, deliver_details
             ####THIS IS WHERE EVERYTHING GOES####
             #symptoms = extract_symptoms_ner(nlp, user_message) #extracts and normalizes them
+            #print("FIRST SYMPTOMS")
+            #print(symptoms)
             symptoms,warnings=write_to_history(nlp,user_message)
             print(symptoms)
             print(warnings)
@@ -123,8 +125,14 @@ def chat():
                 print(f"Error retrieving documents: {e}")
                 retrieved = []
 
+        ####TRY####
+        details=deliver_details(retrieved,symptoms)
+        print(details)
+        ####
+
         # Format retrieved diseases
         diseases = []
+        '''
         if retrieved:
             for doc in retrieved[:3]:  # Top 3 results
                 try:
@@ -147,12 +155,28 @@ def chat():
                 except Exception as e:
                     print(f"Error parsing document: {e}")
                     continue
+        '''
         # Format response
+        possible_diseases = [
+            {
+                "rank": match["rank"],
+                "disease": match["disease"],
+                "overlap_symptoms": match["overlap_symptoms"]
+            }
+            for match in details["matches"]
+        ]
+
+        top_disease_data = {
+            "name": details["top_disease"]["clean"],
+            "articles": details["articles"],
+            "summary": details["summary"]
+        }
         response = {
             'user_message': user_message,
             'extracted_symptoms': symptoms,
-            'possible_diseases': diseases,
+            'possible_diseases': possible_diseases,
             'warnings':warnings_str,
+            "top_disease": top_disease_data,
             'status': 'success'
         }
         if current_user_id is not None:
@@ -345,6 +369,24 @@ def export_history_pdf():
         mimetype='application/pdf'
     )
 
+@app.route('/api/get_history_timeline', methods=['GET'])
+def get_history_timeline():
+    if current_user_id is None:
+        return jsonify({"error": "Not logged in"}), 401
+
+    conversation_id = chat_manager.current_conversation_id
+
+    history_manager = MedicalHistoryManager()
+
+    data = history_manager.get_chat_history(
+        current_user_id,
+        conversation_id
+    )
+    print("DATA")
+    print(data)
+    return jsonify({"history": data})
+
+
 if __name__ == '__main__':
     print("\n🚀 Starting Medical AI Chat Interface...")
     print("📍 Open http://localhost:5000 in your browser")
@@ -352,3 +394,4 @@ if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
 
 ##My head hurts, I'm feeling nauseous and I have a congested nose
+##I have fever, cough, difficulty breathing,fatigue,sore throat,runny nose, muscle pain
