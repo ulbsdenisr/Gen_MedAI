@@ -2,7 +2,7 @@ import json
 import re
 from pathlib import Path
 from typing import List, Dict, Any, Tuple
-
+import requests
 import numpy as np
 import faiss
 import spacy
@@ -11,7 +11,8 @@ from sentence_transformers import SentenceTransformer
 from symptom_utils import normalize_and_split_symptoms
 from symptom_mapper import canonicalize_list
 
-
+EUROPE_PMC_URL = "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
+ARTICLE_PAGE_SIZE = 5
 RAG_DIR = Path("rag_index")
 MODEL_PATH = "model/model-best"
 LABEL = "SYMPTOM"
@@ -172,6 +173,133 @@ def explain(query_symptoms: List[str], disease_meta: dict) -> dict:
         "other_common_symptoms_for_disease": extra,
     }
 
+def clean_article_text(text: str) -> str:
+    text = str(text or "")
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = re.sub(r"\s+", " ", text)
+    return text.strip()
+
+
+def split_sentences(text: str) -> List[str]:
+    text = clean_article_text(text)
+    if not text:
+        return []
+    return [s.strip() for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
+
+
+def search_medical_articles(disease_name: str, page_size: int = ARTICLE_PAGE_SIZE) -> List[Dict[str, Any]]:
+    query = f'"{disease_name}" AND (causes OR treatment OR prevention OR symptoms)'
+
+    params = {
+        "query": query,
+        "format": "json",
+        "pageSize": page_size,
+        "resultType": "core"
+    }
+
+    try:
+        response = requests.get(EUROPE_PMC_URL, params=params, timeout=20)
+        response.raise_for_status()
+        data = response.json()
+
+        results = data.get("resultList", {}).get("result", [])
+        articles = []
+
+        for item in results:
+            articles.append({
+                "title": item.get("title", ""),
+                "abstract": clean_article_text(item.get("abstractText", "")),
+                "journal": item.get("journalTitle", ""),
+                "year": item.get("pubYear", ""),
+                "authors": item.get("authorString", ""),
+                "doi": item.get("doi", ""),
+                "pmid": item.get("pmid", ""),
+            })
+
+        return articles
+
+    except Exception as e:
+        print(f"Error searching medical articles: {e}")
+        return []
+
+
+def pick_sentences(sentences: List[str], keywords: List[str], max_sentences: int = 2) -> List[str]:
+    selected = []
+    keywords = [k.lower() for k in keywords]
+
+    for sent in sentences:
+        sent_l = sent.lower()
+        if any(k in sent_l for k in keywords):
+            selected.append(sent)
+        if len(selected) >= max_sentences:
+            break
+
+    return selected
+
+
+def build_summary_from_articles(disease_name: str, articles: List[Dict[str, Any]]) -> Dict[str, Any]:
+    if not articles:
+        return {
+            "overview": [f"No article summary found for {disease_name}."],
+            "causes": [],
+            "treatment": [],
+            "prevention": [],
+            "when_to_see_a_doctor": [],
+            "sources": []
+        }
+
+    all_sentences = []
+    for article in articles:
+        all_sentences.extend(split_sentences(article.get("abstract", "")))
+
+    overview = pick_sentences(
+        all_sentences,
+        ["is a", "characterized by", "defined as", "condition", "disorder", "syndrome"],
+        max_sentences=2
+    )
+
+    causes = pick_sentences(
+        all_sentences,
+        ["cause", "causes", "risk factor", "associated with", "etiology", "trigger"],
+        max_sentences=3
+    )
+
+    treatment = pick_sentences(
+        all_sentences,
+        ["treatment", "treated", "therapy", "management", "medication", "drug", "intervention"],
+        max_sentences=3
+    )
+
+    prevention = pick_sentences(
+        all_sentences,
+        ["prevention", "prevent", "reduce risk", "protective", "screening", "lifestyle"],
+        max_sentences=3
+    )
+
+    when_to_see_a_doctor = pick_sentences(
+        all_sentences,
+        ["seek medical", "consult", "doctor", "emergency", "urgent", "clinical evaluation"],
+        max_sentences=2
+    )
+
+    sources = []
+    for article in articles[:3]:
+        sources.append({
+            "title": article.get("title", ""),
+            "journal": article.get("journal", ""),
+            "year": article.get("year", ""),
+            "pmid": article.get("pmid", ""),
+            "doi": article.get("doi", "")
+        })
+
+    return {
+        "overview": overview,
+        "causes": causes,
+        "treatment": treatment,
+        "prevention": prevention,
+        "when_to_see_a_doctor": when_to_see_a_doctor,
+        "sources": sources
+    }
 
 def main():
     nlp = spacy.load(MODEL_PATH)
@@ -185,8 +313,6 @@ def main():
             break
 
         symptoms = extract_symptoms_ner(nlp, text)
-
-        # IMPORTANT: enable semantic mapper fallback
         symptoms = canonicalize_list(symptoms, semantic=True)
 
         print("\nDetected symptoms (canonical):", symptoms if symptoms else "(none)")
@@ -204,8 +330,39 @@ def main():
             if info["missing_from_disease_profile"]:
                 print("   query-not-in-profile:", info["missing_from_disease_profile"])
 
-        print()
+        top_disease = results[0][4]["disease"]
+        print(f"\nTop 1 disease selected for summary: {top_disease}")
 
+        articles = search_medical_articles(top_disease, page_size=ARTICLE_PAGE_SIZE)
+        summary = build_summary_from_articles(top_disease, articles)
+
+        print("\n===== SUMMARY FROM REAL MEDICAL ARTICLES =====")
+
+        print("\nOverview:")
+        for s in summary.get("overview", []):
+            print("-", s)
+
+        print("\nCauses:")
+        for s in summary.get("causes", []):
+            print("-", s)
+
+        print("\nTreatment:")
+        for s in summary.get("treatment", []):
+            print("-", s)
+
+        print("\nPrevention:")
+        for s in summary.get("prevention", []):
+            print("-", s)
+
+        print("\nWhen to see a doctor:")
+        for s in summary.get("when_to_see_a_doctor", []):
+            print("-", s)
+
+        print("\nSources:")
+        for src in summary.get("sources", []):
+            print("-", src.get("title", ""), "|", src.get("year", ""))
+
+        print()
 
 if __name__ == "__main__":
     main()
