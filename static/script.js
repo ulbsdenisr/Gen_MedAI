@@ -602,7 +602,7 @@ function displayAIResponse(data) {
     if (data.warnings) {
         html += '<div class="retrieved-docs" style="border-left:4px solid #e74c3c;">';
         html += '<div class="retrieved-docs-title">Warnings: </div>';
-        html += '<div class="doc-item">${escapeHtml(data.warnings)}</div>';
+        html += `<div class="doc-item">${escapeHtml(data.warnings)}</div>`;
         html += '</div>';
     }
 if (data.top_disease) {

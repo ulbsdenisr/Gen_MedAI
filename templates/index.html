@@ -36,10 +36,10 @@
                     <span id="statusText">Checking connection...</span>
                 </div>
                 <div class="auth-controls" id="authControls">
-                    <button id="loginBtn">Login</button>
-                    <button id="signupBtn">Sign Up</button>
+                    <button id="loginBtn" class="primary-btn">Login</button>
+                    <button id="signupBtn" class="primary-btn">Sign Up</button>
                     <span id="userDisplay" style="display:none;"></span>
-                    <button id="logoutBtn" style="display:none;">Logout</button>
+                    <button id="logoutBtn" class="secondary-btn" style="display:none;">Logout</button>
                 </div>
             </div>
 
@@ -54,7 +54,6 @@
                     </div>
                 </div>
             </div>
-            <button id="timelineBtn" style="display:none;">📈 Timeline</button>
             <!-- Chat Input Area -->
             <div class="chat-input-area">
                 <div class="input-wrapper">
@@ -67,6 +66,7 @@
                     <button id="sendBtn" class="send-btn" title="Send message">
                         <span class="send-icon">➤</span>
                     </button>
+                    <button id="timelineBtn" class="primary-btn" style="display:none;">📈 Timeline</button>
                 </div>
                 <p class="input-hint">Press Shift+Enter for new line, or Enter to send</p>
             </div>
@@ -80,22 +80,26 @@
     </div>
 
     <script src="{{ url_for('static', filename='script.js') }}?v=3"></script>
-    <div id="authModal" class="loading-modal hidden">
-    <div style="background:white; padding:20px; border-radius:10px;">
+  <div id="authModal" class="loading-modal hidden">
+    <div class="modal-box">
         <h3 id="authTitle">Login</h3>
-        <input type="text" id="authUsername" placeholder="Username"><br><br>
-        <input type="password" id="authPassword" placeholder="Password"><br><br>
-        <button id="authSubmitBtn">Submit</button>
-        <button onclick="closeAuthModal()">Cancel</button>
+        <input type="text" id="authUsername" placeholder="Username">
+        <input type="password" id="authPassword" placeholder="Password">
+        <div class="modal-actions">
+            <button id="authSubmitBtn" class="primary-btn">Submit</button>
+            <button onclick="closeAuthModal()" class="secondary-btn">Cancel</button>
+        </div>
     </div>
 </div>
 <div id="timelineModal" class="loading-modal hidden">
-    <div style="background:white; padding:20px; border-radius:10px; max-height:80vh; overflow:auto;">
+    <div class="modal-box large">
         <h3>Medical Timeline</h3>
         <div id="timelineContent"></div>
-        <br>
-        <button id="downloadPdfBtn">Download PDF</button>
-        <button onclick="closeTimeline()">Close</button>
+
+        <div class="modal-actions">
+            <button id="downloadPdfBtn" class="primary-btn">Download PDF</button>
+            <button onclick="closeTimeline()" class="secondary-btn">Close</button>
+        </div>
     </div>
 </div>
 </body>

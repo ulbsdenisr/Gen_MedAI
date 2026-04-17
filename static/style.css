@@ -589,3 +589,84 @@ body {
         transform: translateX(0);
     }
 }
+
+
+/* ============ Shared Buttons ============ */
+.primary-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.secondary-btn {
+    background: #f3f4f6;
+    color: #333;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.secondary-btn:hover {
+    background: #e5e7eb;
+}
+
+/* ============ Timeline Button Position ============ */
+#timelineBtn {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ============ Modal Box ============ */
+.modal-box {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    min-width: 300px;
+    max-width: 400px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.modal-box.large {
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* ============ Modal Inputs ============ */
+.modal-box input {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    font-size: 14px;
+}
+
+.modal-box input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* ============ Modal Actions ============ */
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
