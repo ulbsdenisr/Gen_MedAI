@@ -1,0 +1,15 @@
+{
+  "conversation_id": "20260416224507",
+  "messages": [
+    {
+      "timestamp": "2026-04-16 22:45:22",
+      "role": "user",
+      "message": "My head hurts very badly and my stomach is bloated"
+    },
+    {
+      "timestamp": "2026-04-16 22:45:30",
+      "role": "assistant",
+      "message": "{\"user_message\": \"My head hurts very badly and my stomach is bloated\", \"extracted_symptoms\": [\"headache\", \"stomach bloating\"], \"possible_diseases\": [\"indigestion\", \"intestinal obstruction\", \"appendicitis\"], \"warnings\": \"\", \"status\": \"success\"}"
+    }
+  ]
+}

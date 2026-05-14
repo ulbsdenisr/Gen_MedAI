@@ -26,22 +26,49 @@ current_user_id = None
 chat_manager=ChatManager()
 user_manager = UserManager()
 
-def write_to_history(nlp,text):
-    doc=nlp(text)
-    history_list=predict_attributes(nlp,doc)
-    history_manager = MedicalHistoryManager() #HistoryManager()
-    warnings = history_manager.append_to_history(
-        history_list,
-        user_id=current_user_id,
-        conversation_id=chat_manager.current_conversation_id
-    )
-    #warnings=history_manager.append_to_history(history_list)
-    #history_manager.export_to_pdf()
-    symptom_nor = SymptomNormalizer()
+def write_to_history(nlp, text):
+    doc = nlp(text)
+
     symptom_list = []
-    for result in history_list:
-        symptom_list.append(symptom_nor.normalize_if_certain(result['symptom'])['normalized'])
-    return symptom_list,warnings
+    warnings = []
+
+    # 1. Incearca varianta veche cu predict_attributes,
+    # doar daca modelul are componentele textcat necesare
+    if "textcat_severity" in nlp.pipe_names and "textcat_status" in nlp.pipe_names:
+        try:
+            history_list = predict_attributes(nlp, doc)
+
+            history_manager = MedicalHistoryManager()
+            warnings = history_manager.append_to_history(
+                history_list,
+                user_id=current_user_id,
+                conversation_id=chat_manager.current_conversation_id
+            )
+
+            symptom_nor = SymptomNormalizer()
+
+            for result in history_list:
+                raw_symptom = result.get("symptom", "")
+
+                normalized = symptom_nor.normalize_if_certain(raw_symptom)
+
+                if isinstance(normalized, dict) and normalized.get("normalized"):
+                    symptom_list.append(normalized["normalized"])
+                elif raw_symptom:
+                    symptom_list.append(raw_symptom)
+
+        except Exception as e:
+            print("History prediction failed:", e)
+
+    # 2. Fallback nou: daca modelul are doar NER
+    if not symptom_list:
+        for ent in doc.ents:
+            if ent.label_ == "SYMPTOM":
+                symptom_list.append(ent.text)
+
+    symptom_list = list(dict.fromkeys(symptom_list))
+
+    return symptom_list, warnings
 
 def load_models():
     """Load models on demand"""
@@ -100,6 +127,8 @@ def chat():
             #print("FIRST SYMPTOMS")
             #print(symptoms)
             symptoms,warnings=write_to_history(nlp,user_message)
+            from symptom_mapper import canonicalize_list
+            symptoms = canonicalize_list(symptoms, semantic=True)
             print(symptoms)
             print(warnings)
             # warnings could be list of strings or other types
@@ -126,58 +155,69 @@ def chat():
                 retrieved = []
 
         ####TRY####
-        details=deliver_details(retrieved,symptoms)
+        details = deliver_details(retrieved, symptoms)
         print(details)
-        ####
 
-        # Format retrieved diseases
-        diseases = []
-        '''
-        if retrieved:
-            for doc in retrieved[:3]:  # Top 3 results
-                try:
-                    # Handle the tuple format: (score1, score2, score3, score4, disease_data)
-                    if isinstance(doc, tuple) and len(doc) >= 5:
-                        disease_data = doc[4]  # The 5th element contains the disease info
-                        if isinstance(disease_data, dict) and 'disease' in disease_data:
-                            diseases.append(disease_data['disease'])
-                    # Handle dict format as fallback
-                    elif isinstance(doc, dict) and 'disease' in doc:
-                        diseases.append(doc['disease'])
-                    # Handle string format as fallback
-                    elif isinstance(doc, str):
-                        try:
-                            doc_data = json.loads(doc)
-                            if isinstance(doc_data, dict) and 'disease' in doc_data:
-                                diseases.append(doc_data['disease'])
-                        except:
-                            pass
-                except Exception as e:
-                    print(f"Error parsing document: {e}")
-                    continue
-        '''
-        # Format response
+        if not details or not details.get("matches"):
+            response = {
+                "user_message": user_message,
+                "extracted_symptoms": symptoms,
+                "possible_diseases": [],
+                "warnings": warnings_str,
+                "top_disease": None,
+                "status": "no_results"
+            }
+
+            if current_user_id is not None:
+                chat_manager.save_message("assistant", json.dumps(response), current_user_id)
+
+            return jsonify(response)
+
+        finals = [match["final"] for match in details["matches"]]
+
+        # Normalizare robusta: shiftam scorurile la pozitiv inainte de %
+        min_score = min(finals)
+        shift = max(0, -min_score) + 1e-6
+        shifted = [f + shift for f in finals]
+        total = sum(shifted)
+
         possible_diseases = [
             {
                 "rank": match["rank"],
+                "percentage": (shifted[i] / total) * 100 if total > 0 else 0,
                 "disease": match["disease"],
-                "overlap_symptoms": match["overlap_symptoms"]
+                "overlap_symptoms": match.get("overlap_symptoms", [])
             }
-            for match in details["matches"]
+            for i, match in enumerate(details["matches"])
         ]
 
         top_disease_data = {
-            "name": details["top_disease"]["clean"],
-            "articles": details["articles"],
-            "summary": details["summary"]
+            "name": details["top_disease"]["clean"] if details.get("top_disease") else "",
+            "articles": details.get("articles", []),
+            "summary": details.get("summary", {})
         }
+
+        # --- Follow-up logic ---
+        followup_questions = []
+        needs_fu = False
+        try:
+            from rag_ner_pipeline import needs_followup, get_discriminating_questions
+            if needs_followup(retrieved):
+                needs_fu = True
+                followup_questions = get_discriminating_questions(retrieved, symptoms)
+        except Exception as e:
+            print(f"Follow-up generation failed: {e}")
+
         response = {
             'user_message': user_message,
             'extracted_symptoms': symptoms,
             'possible_diseases': possible_diseases,
-            'warnings':warnings_str,
+            'warnings': warnings_str,
             "top_disease": top_disease_data,
-            'status': 'success'
+            'status': 'success',
+            # follow-up fields
+            'needs_followup': needs_fu,
+            'followup_questions': followup_questions,
         }
         if current_user_id is not None:
             chat_manager.save_message("assistant", json.dumps(response),current_user_id)
@@ -196,6 +236,99 @@ def health():
         'rag_index': rag_loaded,
         'ready': nlp is not None
     })
+
+
+@app.route('/api/followup', methods=['POST'])
+def followup():
+    """
+    Re-score diseases after the user answers yes/no follow-up questions.
+
+    Request body:
+    {
+        "symptoms": ["sore throat", "dizziness"],      # original symptoms
+        "answers": {"fever": true, "ear pain": false}  # follow-up answers
+    }
+    """
+    try:
+        data = request.json
+        symptoms = data.get('symptoms', [])
+        answers = data.get('answers', {})   # {symptom: true/false}
+
+        if not symptoms:
+            return jsonify({'error': 'No symptoms provided'}), 400
+
+        load_models()
+        if not rag_loaded or index is None:
+            return jsonify({'error': 'RAG index not available'}), 503
+
+        from rag_ner_pipeline import (
+            retrieve, deliver_details, apply_followup_answers,
+            needs_followup, get_discriminating_questions
+        )
+
+        # Re-retrieve with original symptoms
+        retrieved = retrieve(index, meta, embedder, idf, symptoms)
+
+        # Apply yes/no answers to re-score
+        if answers:
+            retrieved = apply_followup_answers(retrieved, answers, idf)
+
+        details = deliver_details(retrieved, symptoms)
+
+        if not details or not details.get("matches"):
+            return jsonify({'status': 'no_results', 'possible_diseases': []}), 200
+
+        finals = [m["final"] for m in details["matches"]]
+
+        # Scorurile pot fi negative dupa apply_followup_answers
+        # Folosim min-max normalization: shiftam toate la pozitiv, apoi calculam %
+        min_score = min(finals)
+        shift = max(0, -min_score) + 1e-6   # shift astfel incat cel mai mic sa fie > 0
+        shifted = [f + shift for f in finals]
+        total = sum(shifted)
+
+        possible_diseases = [
+            {
+                "rank": m["rank"],
+                "percentage": (shifted[i] / total) * 100 if total > 0 else 0,
+                "disease": m["disease"],
+                "overlap_symptoms": m.get("overlap_symptoms", []),
+            }
+            for i, m in enumerate(details["matches"])
+        ]
+
+        top_disease_data = {
+            "name": details["top_disease"]["clean"] if details.get("top_disease") else "",
+            "articles": details.get("articles", []),
+            "summary": details.get("summary", {}),
+        }
+
+        # Check if still ambiguous after answers → offer more questions
+        still_ambiguous = needs_followup(retrieved)
+        more_questions = []
+        if still_ambiguous:
+            already_answered = set(answers.keys())
+            all_known = set(symptoms) | already_answered
+            more_questions = get_discriminating_questions(retrieved, list(all_known))
+
+        response = {
+            'status': 'success',
+            'extracted_symptoms': symptoms,
+            'answered_symptoms': answers,
+            'possible_diseases': possible_diseases,
+            'top_disease': top_disease_data,
+            'needs_followup': still_ambiguous,
+            'followup_questions': more_questions,
+        }
+
+        if current_user_id is not None:
+            chat_manager.save_message("assistant", json.dumps(response), current_user_id)
+
+        return jsonify(response)
+
+    except Exception as e:
+        print(f"Error in followup endpoint: {e}")
+        return jsonify({'error': str(e)}), 500
 
 @app.route('/api/new_chat', methods=['POST'])
 def new_chat():
@@ -393,5 +526,3 @@ if __name__ == '__main__':
     chat_manager.export_all_conversations_to_json()
     app.run(debug=True, host='0.0.0.0', port=5000)
 
-##My head hurts, I'm feeling nauseous and I have a congested nose
-##I have fever, cough, difficulty breathing,fatigue,sore throat,runny nose, muscle pain

@@ -1,0 +1,15 @@
+{
+  "conversation_id": "20260416214316",
+  "messages": [
+    {
+      "timestamp": "2026-04-16 21:43:44",
+      "role": "user",
+      "message": "I have horrible back pain and my shoulders are really stiff. My neck also hurts a lot"
+    },
+    {
+      "timestamp": "2026-04-16 21:43:53",
+      "role": "assistant",
+      "message": "{\"user_message\": \"I have horrible back pain and my shoulders are really stiff. My neck also hurts a lot\", \"extracted_symptoms\": [\"back pain\", \"shoulder stiffness or tightness\", \"neck pain\"], \"possible_diseases\": [\"injury to the shoulder\", \"nerve impingement near the shoulder\", \"adhesive capsulitis of the shoulder\"], \"warnings\": \"A new severe symptom was reported: 'shoulder stiffness or tightness'., A new severe symptom was reported: 'neck pain'., Please consider checking in with a professional!\", \"status\": \"success\"}"
+    }
+  ]
+}

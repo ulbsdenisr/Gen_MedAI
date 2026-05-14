@@ -1,0 +1,35 @@
+{
+  "conversation_id": "20260416214632",
+  "messages": [
+    {
+      "timestamp": "2026-04-16 21:46:53",
+      "role": "user",
+      "message": "My back hurts really badly and my shoulders are stiff. My neck also hurts a lot"
+    },
+    {
+      "timestamp": "2026-04-16 21:47:00",
+      "role": "assistant",
+      "message": "{\"user_message\": \"My back hurts really badly and my shoulders are stiff. My neck also hurts a lot\", \"extracted_symptoms\": [\"back pain\", \"shoulder stiffness or tightness\", \"neck pain\"], \"possible_diseases\": [\"injury to the shoulder\", \"nerve impingement near the shoulder\", \"adhesive capsulitis of the shoulder\"], \"warnings\": \"A new severe symptom was reported: 'back pain'., A new severe symptom was reported: 'neck pain'., Please consider checking in with a professional!\", \"status\": \"success\"}"
+    },
+    {
+      "timestamp": "2026-04-16 21:48:13",
+      "role": "user",
+      "message": "My throat is itchy, my sinuses are congested and my eyes are watery"
+    },
+    {
+      "timestamp": "2026-04-16 21:48:20",
+      "role": "assistant",
+      "message": "{\"user_message\": \"My throat is itchy, my sinuses are congested and my eyes are watery\", \"extracted_symptoms\": [\"throat irritation\", \"sinus congestion\", \"swollen eye\"], \"possible_diseases\": [\"chronic sinusitis\", \"acute sinusitis\", \"nose disorder\"], \"warnings\": \"\", \"status\": \"success\"}"
+    },
+    {
+      "timestamp": "2026-04-17 11:52:21",
+      "role": "user",
+      "message": "My throat is itchy, my sinuses are congested and my eyes are watery"
+    },
+    {
+      "timestamp": "2026-04-17 11:52:28",
+      "role": "assistant",
+      "message": "{\"user_message\": \"My throat is itchy, my sinuses are congested and my eyes are watery\", \"extracted_symptoms\": [\"throat irritation\", \"sinus congestion\", \"swollen eye\"], \"possible_diseases\": [{\"rank\": 1, \"disease\": \"chronic sinusitis\", \"overlap_symptoms\": [\"sinus congestion\"]}, {\"rank\": 2, \"disease\": \"acute sinusitis\", \"overlap_symptoms\": [\"sinus congestion\"]}, {\"rank\": 3, \"disease\": \"nose disorder\", \"overlap_symptoms\": [\"sinus congestion\"]}, {\"rank\": 4, \"disease\": \"abscess of nose\", \"overlap_symptoms\": [\"sinus congestion\"]}, {\"rank\": 5, \"disease\": \"conjunctivitis due to allergy\", \"overlap_symptoms\": [\"swollen eye\"]}], \"warnings\": \"\", \"top_disease\": {\"name\": \"chronic sinusitis\", \"articles\": [], \"summary\": {\"overview\": [\"No article summary found for chronic sinusitis.\"], \"causes\": [], \"treatment\": [], \"prevention\": [], \"when_to_see_a_doctor\": [], \"sources\": []}}, \"status\": \"success\"}"
+    }
+  ]
+}

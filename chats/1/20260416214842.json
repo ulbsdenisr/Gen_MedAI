@@ -1,0 +1,15 @@
+{
+  "conversation_id": "20260416214842",
+  "messages": [
+    {
+      "timestamp": "2026-04-16 21:48:53",
+      "role": "user",
+      "message": "I have a severe headache and a fever"
+    },
+    {
+      "timestamp": "2026-04-16 21:49:00",
+      "role": "assistant",
+      "message": "{\"user_message\": \"I have a severe headache and a fever\", \"extracted_symptoms\": [\"headache\", \"fever\"], \"possible_diseases\": [\"meningitis\", \"flu\", \"chronic sinusitis\"], \"warnings\": \"A new severe symptom was reported: 'headache'., Please consider checking in with a professional!\", \"status\": \"success\"}"
+    }
+  ]
+}

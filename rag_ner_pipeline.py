@@ -2,7 +2,9 @@ import json
 import re
 from pathlib import Path
 from typing import List, Dict, Any, Tuple
+import time
 import requests
+from urllib.parse import urlencode
 import numpy as np
 import faiss
 import spacy
@@ -25,6 +27,76 @@ W_EMB = 0.30
 CAND_MULT = 12
 CAND_MIN = 80
 
+
+OFFLINE_DISEASES_PATH = Path("diseases.json")
+
+
+def load_offline_disease_json():
+    if not OFFLINE_DISEASES_PATH.exists():
+        return []
+
+    with open(OFFLINE_DISEASES_PATH, "r", encoding="utf8") as f:
+        return json.load(f)
+
+
+def normalize_name_for_match(name: str) -> str:
+    name = str(name or "").lower().strip()
+    name = re.sub(r"\s*\(.*?\)\s*", " ", name)
+    name = re.sub(r"[^a-z0-9\s]", " ", name)
+    name = re.sub(r"\s+", " ", name).strip()
+    return name
+
+
+def get_offline_disease_info(disease_name: str) -> Dict[str, Any]:
+    diseases = load_offline_disease_json()
+
+    if not diseases:
+        return {}
+
+    target = normalize_name_for_match(disease_name)
+
+    for item in diseases:
+        current = normalize_name_for_match(item.get("disease_name", ""))
+        if current == target:
+            return item
+
+    for item in diseases:
+        current = normalize_name_for_match(item.get("disease_name", ""))
+        if target in current or current in target:
+            return item
+
+    return {}
+
+
+def build_offline_summary(disease_name: str) -> Dict[str, Any]:
+    info = get_offline_disease_info(disease_name)
+
+    if not info:
+        return {
+            "overview": [f"No offline information found for {disease_name}."],
+            "causes": [],
+            "treatment": [],
+            "prevention": [],
+            "when_to_see_a_doctor": [],
+            "sources": []
+        }
+
+    return {
+        "overview": [info.get("Overview", "N/A")],
+        "causes": [info.get("Causes", "N/A")],
+        "treatment": [info.get("Treatment", "N/A")],
+        "prevention": [info.get("Prevention", "N/A")],
+        "when_to_see_a_doctor": [info.get("When to see a doctor", "N/A")],
+        "sources": [
+            {
+                "title": info.get("Sources", "N/A"),
+                "journal": "Offline JSON medical knowledge base",
+                "year": "",
+                "pmid": "",
+                "doi": ""
+            }
+        ]
+    }
 
 def clean_piece(s: str) -> str:
     s = str(s).strip().lower()
@@ -111,10 +183,10 @@ def retrieve(index, meta, embedder, idf, query_symptoms: List[str], top_k: int =
     qs_set = set(qs)
 
     qs_in_vocab = {s for s in qs_set if s in idf}
-    oov_count = len(qs_set) - len(qs_in_vocab)
 
     use_overlap = len(qs_in_vocab) > 0
 
+    # IDF-weighted denominator for recall calculation
     den = sum(float(idf.get(s, 1.0)) for s in qs_in_vocab) if use_overlap else 1.0
     if den <= 0:
         den = 1.0
@@ -124,6 +196,12 @@ def retrieve(index, meta, embedder, idf, query_symptoms: List[str], top_k: int =
         disease = meta[idx]
         ds = set(disease.get("symptoms_canon", disease.get("symptoms", [])))
 
+        # FIX 1: always initialise overlap/missing before use
+        overlap = set()
+        missing = set()
+        ov = 0.0
+        miss = 0.0
+
         if use_overlap:
             overlap = qs_in_vocab.intersection(ds)
             missing = qs_in_vocab.difference(ds)
@@ -131,18 +209,46 @@ def retrieve(index, meta, embedder, idf, query_symptoms: List[str], top_k: int =
             ov_num = sum(float(idf.get(s, 1.0)) for s in overlap)
             miss_num = sum(float(idf.get(s, 1.0)) for s in missing)
 
-            ov = ov_num / den
-            miss = miss_num / den
-
-            ov = max(0.0, min(1.0, float(ov)))
-            miss = max(0.0, min(1.0, float(miss)))
-        else:
-            ov, miss = 0.0, 0.0
+            # recall: how many of the query symptoms does this disease cover
+            ov = max(0.0, min(1.0, ov_num / den))
+            miss = max(0.0, min(1.0, miss_num / den))
 
         emb01 = float(norm_emb(raw_emb))
-        oov_boost = min(0.05, 0.01 * oov_count)
 
-        final = (0.75 * ov) - (0.45 * miss) + (0.20 * emb01) + oov_boost
+        # FIX 2: specificity_boost is now safe (overlap always defined above)
+        # Penalise diseases whose profile is much larger than the overlap
+        # e.g. atelectasis has 30 symptoms but only 2 match → precision = 2/30
+        # strep throat has 8 symptoms and 2 match → precision = 2/8 (much better)
+        disease_profile_size = max(len(ds), 1)
+        precision = len(overlap) / disease_profile_size
+        recall = len(overlap) / max(len(qs_in_vocab), 1)
+
+        # F1-like harmonic mean of precision and recall
+        if precision + recall > 0:
+            f1 = 2 * precision * recall / (precision + recall)
+        else:
+            f1 = 0.0
+
+        # Tie-breaker: when multiple diseases have identical symptom overlap,
+        # prefer diseases with smaller profiles (more specific / focused diseases).
+        # e.g. gastroenteritis (8 symptoms) beats ulcerative colitis (25 symptoms)
+        # when both match the same 4 query symptoms.
+        # We add a small inverse-size bonus so it only matters during ties.
+        specificity_tiebreak = 1.0 / (1.0 + disease_profile_size)
+
+        # FIX 3: rebalanced formula
+        # - F1 is the primary signal (precision × recall): catches the atelectasis problem
+        # - ov (IDF-weighted recall) is secondary: rewards rare-symptom matches
+        # - embedding is tertiary and capped: prevents semantic drift from dominating
+        # - miss penalises diseases that require symptoms the user doesn't have
+        # - specificity_tiebreak breaks ties between equally-matching diseases
+        final = (
+            (0.50 * f1)
+            + (0.30 * ov)
+            - (0.25 * miss)
+            + (0.10 * emb01)
+            + (0.05 * specificity_tiebreak)
+        )
         results.append((final, float(raw_emb), float(ov), float(miss), disease))
 
     results.sort(key=lambda x: x[0], reverse=True)
@@ -164,6 +270,150 @@ def explain(query_symptoms: List[str], disease_meta: dict) -> dict:
     }
 
 
+FOLLOWUP_MARGIN = 0.15   # dacă diferența dintre locul 1 și locul 2 e sub 15%, cerem follow-up
+MAX_QUESTIONS = 3        # maxim 3 întrebări odată
+
+
+def needs_followup(results) -> bool:
+    """Returnează True dacă primele 2 rezultate sunt prea apropiate."""
+    if len(results) < 2:
+        return False
+    score1 = results[0][0]
+    score2 = results[1][0]
+    # Normalizare: dacă ambele scoruri sunt pozitive, comparam relativ
+    if score1 <= 0:
+        return False
+    gap = (score1 - score2) / max(abs(score1), 1e-6)
+    return gap < FOLLOWUP_MARGIN
+
+
+def get_discriminating_questions(results, known_symptoms: List[str]) -> List[Dict[str, Any]]:
+    """
+    Găsește simptomele care separă cel mai bine bolile din top rezultate.
+
+    Strategia:
+    - Luăm top 3 boli candidate
+    - Pentru fiecare simptom din profilele lor, calculăm un scor de discriminare:
+        * simptomul există la boala #1 dar NU la #2 și #3 → întrebare valoroasă
+        * simptomul există la TOATE bolile → nu ajută
+        * simptomul pe care utilizatorul l-a menționat deja → sărim peste el
+    - Returnăm top MAX_QUESTIONS simptome ca întrebări yes/no
+    """
+    if not results:
+        return []
+
+    known = set(s.lower().strip() for s in known_symptoms)
+
+    # Luăm profilurile pentru top 3 (sau câte sunt)
+    candidates = results[:min(3, len(results))]
+    profiles = []
+    for _, _, _, _, m in candidates:
+        syms = set(m.get("symptoms_canon", m.get("symptoms", [])))
+        profiles.append(syms)
+
+    if not profiles:
+        return []
+
+    # Toate simptomele din toate profilurile candidate
+    all_symptoms = set()
+    for p in profiles:
+        all_symptoms.update(p)
+
+    # Eliminăm simptomele deja cunoscute
+    candidates_syms = all_symptoms - known
+
+    if not candidates_syms:
+        return []
+
+    questions = []
+    top_profile = profiles[0]
+    disease_names = [r[4].get("disease", "") for r in candidates]
+
+    for sym in candidates_syms:
+        # În câte boli candidate apare simptomul
+        present_in = [i for i, p in enumerate(profiles) if sym in p]
+
+        # Simptomele prezente în TOATE bolile nu discriminează
+        if len(present_in) == len(profiles):
+            continue
+
+        # Simptomele prezente în NICIO boală nu sunt relevante
+        if len(present_in) == 0:
+            continue
+
+        # Scor de discriminare:
+        # +2 dacă e în boala #1 dar nu în #2
+        # +1 dacă e în boala #1 dar nu în #3
+        # -1 dacă e în bolile concurente dar nu în #1 (ajută la excludere)
+        disc_score = 0
+        in_top = sym in top_profile
+
+        if in_top:
+            for i in range(1, len(profiles)):
+                if sym not in profiles[i]:
+                    disc_score += (2 if i == 1 else 1)
+        else:
+            # Simptomul e în competitori dar nu în top → dacă răspunde yes, eliminăm top
+            disc_score = 1
+
+        if disc_score > 0:
+            # Care boli ar fi confirmate / excluse de acest simptom
+            confirms = [disease_names[i] for i, p in enumerate(profiles) if sym in p]
+            excludes = [disease_names[i] for i, p in enumerate(profiles) if sym not in p]
+
+            questions.append({
+                "symptom": sym,
+                "question": f"Do you also have {sym}?",
+                "disc_score": disc_score,
+                "confirms_diseases": confirms,
+                "excludes_diseases": excludes,
+            })
+
+    # Sortăm după scor discriminare descrescător, luăm top MAX_QUESTIONS
+    questions.sort(key=lambda x: x["disc_score"], reverse=True)
+    return questions[:MAX_QUESTIONS]
+
+
+def apply_followup_answers(
+    results,
+    answers: Dict[str, bool],
+    idf: Dict[str, float],
+) -> list:
+    """
+    Re-scorează rezultatele după răspunsurile yes/no ale utilizatorului.
+
+    answers = {"fever": True, "ear pain": False, ...}
+
+    Logica:
+    - Simptom confirmat (yes) + prezent în profil → bonus
+    - Simptom confirmat (yes) + absent din profil → penalizare
+    - Simptom negat (no) + prezent în profil → penalizare (boala necesită simptomul dar pacientul nu îl are)
+    """
+    if not answers or not results:
+        return results
+
+    updated = []
+    for final, emb, ov, miss, m in results:
+        ds = set(m.get("symptoms_canon", m.get("symptoms", [])))
+        bonus = 0.0
+
+        for sym, has_it in answers.items():
+            sym_idf = float(idf.get(sym, 1.0))
+            weight = sym_idf / 10.0  # normalizat să nu domine
+
+            if has_it and sym in ds:
+                bonus += weight        # confirmare → boost
+            elif has_it and sym not in ds:
+                bonus -= weight * 1.5  # are simptomul dar boala nu îl include → penalizare
+            elif not has_it and sym in ds:
+                bonus -= weight * 0.8  # nu are simptomul dar boala îl necesită → penalizare mică
+
+        updated.append((final + bonus, emb, ov, miss, m))
+
+    updated.sort(key=lambda x: x[0], reverse=True)
+    return updated
+
+
 def clean_article_text(text: str) -> str:
     text = str(text or "")
     text = re.sub(r"<[^>]+>", " ", text)
@@ -177,36 +427,47 @@ def split_sentences(text: str) -> List[str]:
         return []
     return [s.strip() for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
 
+def safe_request(url, headers, retries=3):
+    for attempt in range(retries):
+        response = requests.get(url, headers=headers)
+
+        if response.status_code == 200:
+            return response
+
+        print(f"Retry {attempt+1}... status:", response.status_code)
+        time.sleep(2 * (attempt + 1))  # backoff
+    return response
 
 def search_medical_articles(disease_name: str, page_size: int = ARTICLE_PAGE_SIZE) -> List[Dict[str, Any]]:
     disease_name = str(disease_name or "").strip()
     if not disease_name:
         return []
-
-    query = (
-        f'(TITLE:"{disease_name}" OR ABSTRACT:"{disease_name}") '
-        f'AND (TITLE:review OR ABSTRACT:review '
-        f'OR TITLE:guideline OR ABSTRACT:guideline '
-        f'OR TITLE:management OR ABSTRACT:management '
-        f'OR TITLE:treatment OR ABSTRACT:treatment '
-        f'OR TITLE:diagnosis OR ABSTRACT:diagnosis '
-        f'OR TITLE:prevention OR ABSTRACT:prevention '
-        f'OR TITLE:symptoms OR ABSTRACT:symptoms '
-        f'OR TITLE:clinical OR ABSTRACT:clinical)'
-    )
-
-    params = {
-        "query": query,
-        "format": "json",
-        "pageSize": max(page_size * 3, 15),
-        "resultType": "core",
-        "sort": "RELEVANCE"
-    }
-
+    #query = f"{disease_name} review treatment diagnosis"
+    query = f'{disease_name} (review OR guideline OR treatment OR diagnosis OR prevention)'
     try:
-        response = requests.get(EUROPE_PMC_URL, params=params, timeout=20)
-        response.raise_for_status()
+
+        headers = {"User-Agent": "Mozilla/5.0",
+                   "Accept": "application/json"
+                   }
+        base_url = "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
+
+        params = {
+            "query": query,
+            "format": "json",
+            "pageSize":max(page_size * 5, 35),
+            "resultType": "core"
+        }
+
+        url = f"{base_url}?{urlencode(params)}"
+
+        response = safe_request(url, headers)#response = requests.get(url, headers={"User-Agent": "Mozilla/5.0"})
+
+        if "application/json" not in response.headers.get("Content-Type", ""):
+            print("Non-JSON response:", response.text[:200])
+            return []
+
         data = response.json()
+
 
         raw_results = data.get("resultList", {}).get("result", [])
         articles = []
@@ -241,12 +502,12 @@ def search_medical_articles(disease_name: str, page_size: int = ARTICLE_PAGE_SIZ
             "symptoms",
             "prevention"
         ]
-
         for item in raw_results:
             title = clean_article_text(item.get("title", ""))
             abstract = clean_article_text(item.get("abstractText", ""))
-            if len(abstract.split()) < 40:
+            if len(title) == 0:
                 continue
+
             journal = item.get("journalTitle", "")
             year = item.get("pubYear", "")
             authors = item.get("authorString", "")
@@ -257,8 +518,7 @@ def search_medical_articles(disease_name: str, page_size: int = ARTICLE_PAGE_SIZ
 
             title_l = title.lower()
 
-
-            if disease_l not in title_l:
+            if disease_l not in combined and disease_l not in title_l:
                 continue
 
             if any(term in combined for term in bad_terms):
@@ -310,6 +570,7 @@ def search_medical_articles(disease_name: str, page_size: int = ARTICLE_PAGE_SIZ
         print(f"Error searching medical articles: {e}")
         return []
 
+
 def search_medical_articles_fallback(disease_name: str, page_size: int = ARTICLE_PAGE_SIZE) -> List[Dict[str, Any]]:
     disease_name = str(disease_name or "").strip()
     if not disease_name:
@@ -323,7 +584,7 @@ def search_medical_articles_fallback(disease_name: str, page_size: int = ARTICLE
         "query": query,
         "format": "json",
         "pageSize": page_size,
-        "resultType": "core",
+        "resultType": "lite", #"core",
         "sort": "RELEVANCE"
     }
 
@@ -345,6 +606,7 @@ def search_medical_articles_fallback(disease_name: str, page_size: int = ARTICLE
             if disease_l not in combined:
                 continue
 
+
             articles.append({
                 "title": title,
                 "abstract": abstract,
@@ -360,7 +622,8 @@ def search_medical_articles_fallback(disease_name: str, page_size: int = ARTICLE
     except Exception as e:
         print(f"Error in fallback article search: {e}")
         return []
-    
+
+
 def pick_sentences(sentences: List[str], keywords: List[str], max_sentences: int = 2) -> List[str]:
     selected = []
     keywords = [k.lower() for k in keywords]
@@ -508,11 +771,13 @@ def format_summary_as_text(disease_name: str, summary: Dict[str, Any]) -> str:
 
     return final_text
 
-def normalize_disease_name(disease_name: str) -> str:   
+
+def normalize_disease_name(disease_name: str) -> str:
     disease_name = str(disease_name or "").strip().lower()
     disease_name = re.sub(r"\s*\(.*?\)\s*", " ", disease_name)
     disease_name = re.sub(r"\s+", " ", disease_name).strip()
     return disease_name
+
 
 def normalize_disease_name_for_search(disease_name: str) -> str:
     disease_name = str(disease_name or "").strip().lower()
@@ -528,65 +793,76 @@ def normalize_disease_name_for_search(disease_name: str) -> str:
     }
 
     return mapping.get(disease_name, disease_name)
-def deliver_details(results,symptoms):
-    if not results:
-        print("No results. Provide more symptoms.\n")
+
+
+
+def deliver_details(results, symptoms):
     output = {
         "matches": [],
         "top_disease": None,
         "articles": [],
         "summary": {}
     }
+
+    if not results:
+        print("No results. Provide more symptoms.\n")
+        return output
+
     print("\nTop matches:")
+
     for rank, (final, emb, ov, miss, m) in enumerate(results, start=1):
         info = explain(symptoms, m)
+
         match_entry = {
             "rank": rank,
-            "disease": m["disease"],
-            "overlap_symptoms": info["overlap"],
+            "final": float(final),
+            "disease": m.get("disease", ""),
+            "overlap_symptoms": info.get("overlap", []),
             "missing_from_profile": info.get("missing_from_disease_profile", [])
         }
+
         output["matches"].append(match_entry)
 
-        print(f"\n{rank}. {m['disease']} | final={final:.3f} emb={emb:.3f} ov_idf={ov:.3f} miss_idf={miss:.3f}")
-        print("   overlap:", info["overlap"])
-        if info["missing_from_disease_profile"]:
+        print(f"\n{rank}. {m.get('disease', '')} | final={final:.3f} emb={emb:.3f} ov_idf={ov:.3f} miss_idf={miss:.3f}")
+        print("   overlap:", info.get("overlap", []))
+
+        if info.get("missing_from_disease_profile"):
             print("   query-not-in-profile:", info["missing_from_disease_profile"])
 
-    top_disease = results[0][4]["disease"]
+    if not output["matches"]:
+        return output
+
+    top_disease = results[0][4].get("disease", "")
     top_disease_clean = normalize_disease_name_for_search(top_disease)
+
     output["top_disease"] = {
         "clean": top_disease_clean
     }
 
     print(f"\nTop 1 disease selected for summary: {top_disease_clean}")
 
-    articles = search_medical_articles(top_disease_clean, page_size=ARTICLE_PAGE_SIZE)
-    if len(articles) < 2:
-        articles = search_medical_articles_fallback(top_disease_clean, page_size=ARTICLE_PAGE_SIZE)
-    output["articles"] = articles if articles else []
-    if not articles:
-        print("\nNo real medical articles were found for this disease.\n")
-
-    summary = build_summary_from_articles(top_disease_clean, articles)
+    summary = build_offline_summary(top_disease_clean)
     output["summary"] = summary
+    output["articles"] = summary.get("sources", [])
+
     formatted_summary = format_summary_as_text(top_disease_clean, summary)
     print(formatted_summary)
 
     print("Sources:")
     for src in summary.get("sources", []):
         print("-", src.get("title", ""), "|", src.get("year", ""))
+
     return output
 
 
-def main():
+def main(text):
     nlp = spacy.load(MODEL_PATH)
     index, meta, embedder, idf = load_rag()
 
     print("Write symptom description (or 'exit').\n")
 
     while True:
-        text = input("> ").strip()
+        #text = input("> ").strip()
         if not text or text.lower() in {"exit", "quit"}:
             break
 
@@ -629,6 +905,5 @@ def main():
             print("-", src.get("title", ""), "|", src.get("year", ""))
         print()
 
-
 if __name__ == "__main__":
-    main()
+    pass

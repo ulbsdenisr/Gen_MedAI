@@ -1,0 +1,15 @@
+{
+  "conversation_id": "20260416213543",
+  "messages": [
+    {
+      "timestamp": "2026-04-16 21:35:59",
+      "role": "user",
+      "message": "My back hurts and my shoulders are sore. My head is hurting a lot too"
+    },
+    {
+      "timestamp": "2026-04-16 21:36:02",
+      "role": "assistant",
+      "message": "{\"user_message\": \"My back hurts and my shoulders are sore. My head is hurting a lot too\", \"extracted_symptoms\": [], \"possible_diseases\": [], \"warnings\": \"\", \"status\": \"success\"}"
+    }
+  ]
+}

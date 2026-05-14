@@ -1,0 +1,893 @@
+[
+    {
+    "disease_name": "Panic disorder",
+    "Overview": "A mental health condition characterized by recurrent, unexpected panic attacks—sudden periods of intense fear that may include heart palpitations, sweating, shortness of breath, or feelings of impending doom.",
+    "Causes": "Exact cause is not fully understood. Likely involves a combination of genetic factors, brain chemistry, stress, and environmental influences.",
+    "Prevention": "I don't know",
+    "Treatment": "Common treatments include cognitive behavioral therapy (CBT), medications such as selective serotonin reuptake inhibitors (SSRIs), and lifestyle changes like stress management.",
+    "When to see a doctor": "If experiencing frequent panic attacks, persistent fear of future attacks, or symptoms that interfere with daily life.",
+    "Sources": "Centers for Disease Control and Prevention (CDC), National Institute of Mental Health (NIMH), Mayo Clinic"
+  },
+  {
+    "disease_name": "Vocal cord polyp",
+    "Overview": "A noncancerous growth on a vocal cord that can affect voice quality, often causing hoarseness.",
+    "Causes": "Usually caused by vocal strain or trauma (such as excessive talking, shouting, or singing), irritation from smoking, or acid reflux.",
+    "Prevention": "Avoid vocal strain, stay hydrated, avoid smoking, and manage acid reflux.",
+    "Treatment": "Voice therapy, lifestyle changes, and in some cases surgical removal.",
+    "When to see a doctor": "If hoarseness or voice changes last longer than 2–3 weeks.",
+    "Sources": "American Academy of Otolaryngology–Head and Neck Surgery, Mayo Clinic"
+  },
+  {
+    "disease_name": "Turner syndrome",
+    "Overview": "A genetic condition affecting females in which one of the X chromosomes is missing or partially missing, leading to developmental and medical challenges.",
+    "Causes": "Caused by complete or partial absence of one X chromosome (monosomy X).",
+    "Prevention": "I don't know",
+    "Treatment": "Growth hormone therapy, estrogen replacement therapy, and management of associated health issues (such as heart or kidney problems).",
+    "When to see a doctor": "Typically diagnosed in childhood; evaluation is needed if there is short stature, delayed puberty, or characteristic physical features.",
+    "Sources": "National Institutes of Health (NIH), Mayo Clinic, Genetic and Rare Diseases Information Center (GARD)"
+  },
+  {
+    "disease_name": "Cryptorchidism",
+    "Overview": "A condition in which one or both testicles fail to descend into the scrotum before birth.",
+    "Causes": "Exact cause is unclear; may involve hormonal, genetic, and environmental factors affecting fetal development.",
+    "Prevention": "I don't know",
+    "Treatment": "Often resolves on its own in infancy; if not, surgery (orchiopexy) is typically performed.",
+    "When to see a doctor": "If a testicle is not in the scrotum by 6 months of age.",
+    "Sources": "American Urological Association, Mayo Clinic"
+  },
+  {
+    "disease_name": "Poisoning due to ethylene glycol",
+    "Overview": "A toxic condition caused by ingestion of ethylene glycol, a chemical found in antifreeze, leading to metabolic acidosis and organ damage, especially the kidneys.",
+    "Causes": "Ingestion of substances containing ethylene glycol.",
+    "Prevention": "Store chemicals safely, use child-proof containers, and avoid ingestion of unknown liquids.",
+    "Treatment": "Emergency treatment includes administration of antidotes (such as fomepizole), supportive care, and possibly dialysis.",
+    "When to see a doctor": "Immediately after suspected ingestion or symptoms such as confusion, vomiting, or difficulty breathing.",
+    "Sources": "Centers for Disease Control and Prevention (CDC), National Poison Control Center, Mayo Clinic"
+  },
+  {
+    "disease_name": "Atrophic vaginitis",
+    "Overview": "A condition involving thinning, drying, and inflammation of the vaginal walls due to decreased estrogen levels, most commonly after menopause.",
+    "Causes": "Reduced estrogen levels, typically due to menopause, but can also occur after childbirth, during breastfeeding, or as a result of certain medications or cancer treatments.",
+    "Prevention": "Regular sexual activity, use of vaginal moisturizers, and in some cases estrogen therapy may help reduce risk.",
+    "Treatment": "Vaginal moisturizers and lubricants, local or systemic estrogen therapy, and other prescribed medications depending on severity.",
+    "When to see a doctor": "If experiencing vaginal dryness, itching, burning, pain during intercourse, or unusual discharge that affects quality of life.",
+    "Sources": "Mayo Clinic, National Institutes of Health (NIH)"
+  },
+  {
+    "disease_name": "Fracture of the hand",
+    "Overview": "A break in one or more of the bones in the hand, including the metacarpals or phalanges, often caused by trauma.",
+    "Causes": "Direct impact, falls, sports injuries, or accidents that apply force to the hand.",
+    "Prevention": "Using protective gear during activities, practicing safety measures, and maintaining bone health.",
+    "Treatment": "Immobilization with splints or casts, pain management, and in some cases surgical repair.",
+    "When to see a doctor": "If there is severe pain, swelling, deformity, inability to move the hand, or suspected fracture after injury.",
+    "Sources": "American Academy of Orthopaedic Surgeons, Mayo Clinic"
+  },
+  {
+    "disease_name": "Cellulitis or abscess of mouth",
+    "Overview": "A bacterial infection in the tissues of the mouth that can cause swelling, redness, pain, and sometimes pus formation (abscess).",
+    "Causes": "Bacterial infection often resulting from untreated dental decay, gum disease, or injury to oral tissues.",
+    "Prevention": "Good oral hygiene, regular dental check-ups, and prompt treatment of dental issues.",
+    "Treatment": "Antibiotics, drainage of abscess if present, and dental treatment of the underlying cause.",
+    "When to see a doctor": "If there is swelling, severe pain, fever, difficulty swallowing, or spreading infection.",
+    "Sources": "American Dental Association, Mayo Clinic"
+  },
+  {
+    "disease_name": "Eye alignment disorder",
+    "Overview": "A condition in which the eyes do not align properly with each other, often referred to as strabismus, which can affect vision and depth perception.",
+    "Causes": "Problems with eye muscles, nerve signals, or brain control of eye movement; may be congenital or acquired.",
+    "Prevention": "I don't know",
+    "Treatment": "Eyeglasses, vision therapy, eye patches, or surgery depending on severity and cause.",
+    "When to see a doctor": "If there is noticeable eye misalignment, double vision, or difficulty focusing.",
+    "Sources": "American Academy of Ophthalmology, Mayo Clinic"
+  },
+  {
+    "disease_name": "Headache after lumbar puncture",
+    "Overview": "A common complication following a lumbar puncture (spinal tap), characterized by a headache that worsens when sitting or standing and improves when lying down.",
+    "Causes": "Leakage of cerebrospinal fluid from the puncture site, leading to decreased pressure around the brain.",
+    "Prevention": "Using proper needle technique and smaller needles may reduce risk, but it cannot always be prevented.",
+    "Treatment": "Rest, hydration, caffeine, pain relievers, and in persistent cases, an epidural blood patch.",
+    "When to see a doctor": "If the headache is severe, persistent, or accompanied by symptoms like nausea, vomiting, or neurological changes.",
+    "Sources": "Mayo Clinic, National Institutes of Health (NIH)"
+  },
+  {
+    "disease_name": "Pyloric stenosis",
+    "Overview": "A condition in infants where the pylorus (the passage from the stomach to the small intestine) becomes abnormally thickened, blocking food from entering the intestine.",
+    "Causes": "Exact cause is not fully understood; likely involves a combination of genetic and environmental factors.",
+    "Prevention": "I don't know",
+    "Treatment": "Surgical procedure called pyloromyotomy to relieve the obstruction, along with fluid and electrolyte correction.",
+    "When to see a doctor": "If an infant has forceful (projectile) vomiting, persistent hunger, dehydration, or weight loss.",
+    "Sources": "Mayo Clinic, National Institutes of Health (NIH)"
+  },
+  {
+    "disease_name": "Salivary gland disorder",
+    "Overview": "A group of conditions affecting the salivary glands, including infections, blockages, tumors, or autoimmune diseases that impact saliva production.",
+    "Causes": "May include infections, salivary stones, autoimmune conditions (such as Sjögren’s syndrome), or tumors.",
+    "Prevention": "Good oral hygiene and staying hydrated may help reduce risk of some types.",
+    "Treatment": "Depends on cause; may include antibiotics, hydration, gland massage, removal of stones, or surgery.",
+    "When to see a doctor": "If there is persistent swelling, pain, dry mouth, difficulty swallowing, or signs of infection.",
+    "Sources": "Mayo Clinic, American Dental Association"
+  },
+  {
+    "disease_name": "Osteochondrosis",
+    "Overview": "A group of disorders that affect bone growth in children and adolescents, involving the degeneration and subsequent regeneration of bone and cartilage.",
+    "Causes": "Not fully understood; may involve repetitive stress, reduced blood supply to bone, and genetic factors.",
+    "Prevention": "I don't know",
+    "Treatment": "Rest, physical therapy, pain management, and in some cases bracing or surgery.",
+    "When to see a doctor": "If a child or adolescent has persistent joint pain, swelling, or limited movement.",
+    "Sources": "Mayo Clinic, American Academy of Orthopaedic Surgeons"
+  },
+  {
+    "disease_name": "Injury to the knee",
+    "Overview": "Damage to structures of the knee such as ligaments, tendons, cartilage, or bones, often due to trauma or overuse.",
+    "Causes": "Sports injuries, falls, sudden twisting motions, or direct impact.",
+    "Prevention": "Proper training, strengthening exercises, protective gear, and avoiding overuse.",
+    "Treatment": "Rest, ice, compression, elevation (RICE), physical therapy, medications, and sometimes surgery.",
+    "When to see a doctor": "If there is severe pain, swelling, instability, inability to bear weight, or deformity.",
+    "Sources": "Mayo Clinic, American Academy of Orthopaedic Surgeons"
+  },
+  {
+    "disease_name": "Metabolic disorder",
+    "Overview": "A broad group of conditions that disrupt normal metabolism, affecting how the body converts food into energy or processes specific substances.",
+    "Causes": "May be genetic (inherited enzyme deficiencies) or acquired due to disease, lifestyle, or environmental factors.",
+    "Prevention": "I don't know",
+    "Treatment": "Varies widely depending on the specific disorder; may include dietary management, medications, or enzyme replacement therapy.",
+    "When to see a doctor": "If there are unexplained symptoms such as fatigue, weight changes, developmental issues, or abnormal lab results.",
+    "Sources": "National Institutes of Health (NIH), Mayo Clinic"
+  },
+  {
+    "disease_name": "Vaginitis",
+    "Overview": "Inflammation of the vagina that can result in discharge, itching, pain, or odor, often caused by infection or imbalance of vaginal flora.",
+    "Causes": "Bacterial infections (bacterial vaginosis), yeast infections (Candida), parasites (such as Trichomonas), hormonal changes, or irritants.",
+    "Prevention": "Good hygiene, avoiding irritants (such as scented products), safe sexual practices, and wearing breathable clothing.",
+    "Treatment": "Depends on cause; may include antifungal medications, antibiotics, or antiparasitic drugs.",
+    "When to see a doctor": "If there is unusual discharge, strong odor, itching, burning, or discomfort.",
+    "Sources": "Mayo Clinic, Centers for Disease Control and Prevention (CDC)"
+  },
+  {
+    "disease_name": "Sick sinus syndrome",
+    "Overview": "A group of heart rhythm disorders caused by malfunction of the sinus node, leading to irregular heartbeats such as bradycardia, pauses, or alternating fast and slow rhythms.",
+    "Causes": "Age-related degeneration of the sinus node, heart disease, or damage to heart tissue; sometimes medication-related.",
+    "Prevention": "I don't know",
+    "Treatment": "May include medications or implantation of a pacemaker to regulate heart rhythm.",
+    "When to see a doctor": "If experiencing dizziness, fainting, fatigue, palpitations, or shortness of breath.",
+    "Sources": "Mayo Clinic, American Heart Association"
+  },
+  {
+    "disease_name": "Tinnitus of unknown cause",
+    "Overview": "A condition characterized by the perception of ringing or other noises in the ears without an external sound source, with no clearly identifiable underlying cause.",
+    "Causes": "I don't know",
+    "Prevention": "I don't know",
+    "Treatment": "Management strategies may include sound therapy, hearing aids, counseling, and coping techniques.",
+    "When to see a doctor": "If tinnitus is persistent, worsening, or associated with hearing loss, dizziness, or other symptoms.",
+    "Sources": "Mayo Clinic, National Institute on Deafness and Other Communication Disorders (NIDCD)"
+  },
+  {
+    "disease_name": "Glaucoma",
+    "Overview": "A group of eye conditions that damage the optic nerve, often associated with increased intraocular pressure, potentially leading to vision loss.",
+    "Causes": "Often related to increased pressure in the eye due to fluid buildup; can also occur with normal pressure (normal-tension glaucoma).",
+    "Prevention": "Regular eye exams may help detect it early; other preventive measures are limited.",
+    "Treatment": "Eye drops, oral medications, laser therapy, or surgery to reduce intraocular pressure.",
+    "When to see a doctor": "Regular eye exams are important; immediate care is needed for sudden vision changes, severe eye pain, or halos around lights.",
+    "Sources": "Mayo Clinic, American Academy of Ophthalmology"
+  },
+  {
+    "disease_name": "Eating disorder",
+    "Overview": "Eating disorders are mental health conditions involving persistent disturbances in eating behavior, body image, weight concerns and emotional regulation. They may include restrictive eating, binge eating, purging, fear of weight gain, avoidance of food or excessive concern about body shape. These disorders can affect physical health, mood, social relationships and daily functioning.",
+    "Causes": "Possible causes include genetic vulnerability, anxiety, depression, perfectionism, low self-esteem, traumatic experiences, social pressure related to body image, extreme dieting, family factors and cultural pressure around weight and appearance.",
+    "Prevention": "Prevention may include promoting healthy body image, avoiding extreme diets, encouraging balanced eating habits, reducing weight-related teasing, addressing anxiety or depression early, supporting self-esteem and educating families about warning signs.",
+    "Treatment": "Treatment may include psychotherapy, nutritional counseling, medical monitoring, family support and sometimes medication for associated anxiety or depression. Care is often multidisciplinary and may involve a doctor, psychologist, psychiatrist and dietitian.",
+    "When to see a doctor": "Seek medical help if there is rapid weight loss, fainting, frequent vomiting, severe restriction of food, dehydration, irregular heartbeat, chest pain, suicidal thoughts, loss of menstrual periods or if eating behaviors interfere with daily life.",
+    "Sources": "National Institute of Mental Health (NIMH), Mayo Clinic"
+  },
+  {
+    "disease_name": "Transient ischemic attack",
+    "Overview": "A temporary period of neurological symptoms caused by reduced blood flow to part of the brain, often called a 'mini-stroke', without permanent damage.",
+    "Causes": "Temporary blockage of blood flow to the brain, often due to a blood clot or narrowed arteries.",
+    "Prevention": "Managing risk factors such as high blood pressure, cholesterol, diabetes, and avoiding smoking.",
+    "Treatment": "Medications to prevent blood clots (such as antiplatelets), lifestyle changes, and sometimes surgical procedures.",
+    "When to see a doctor": "Immediately if experiencing stroke-like symptoms such as weakness, speech difficulty, or vision problems, even if they resolve quickly.",
+    "Sources": "Mayo Clinic, American Stroke Association"
+  },
+  {
+    "disease_name": "Pyelonephritis",
+    "Overview": "A type of urinary tract infection that affects the kidneys, potentially causing serious illness if untreated.",
+    "Causes": "Bacterial infection, often spreading from the lower urinary tract (bladder) to the kidneys.",
+    "Prevention": "Staying hydrated, practicing good hygiene, and treating urinary tract infections promptly.",
+    "Treatment": "Antibiotics, and in severe cases hospitalization with intravenous fluids and medications.",
+    "When to see a doctor": "If experiencing fever, back or side pain, nausea, vomiting, or urinary symptoms such as burning or frequent urination.",
+    "Sources": "Mayo Clinic, National Institutes of Health (NIH)"
+  },
+  {
+    "disease_name": "Rotator cuff injury",
+    "Overview": "Damage to the group of muscles and tendons that stabilize the shoulder joint, often causing pain and limited movement.",
+    "Causes": "Acute injury, repetitive overhead motions, or age-related degeneration.",
+    "Prevention": "Strengthening shoulder muscles, proper technique during activities, and avoiding repetitive strain.",
+    "Treatment": "Rest, physical therapy, medications, corticosteroid injections, and sometimes surgery.",
+    "When to see a doctor": "If shoulder pain persists, limits movement, or worsens over time.",
+    "Sources": "Mayo Clinic, American Academy of Orthopaedic Surgeons"
+  },
+  {
+    "disease_name": "Chronic pain disorder",
+    "Overview": "A condition characterized by persistent pain lasting longer than expected healing time, often affecting physical and psychological well-being.",
+    "Causes": "May result from injury, illness, or unknown factors; can involve nervous system sensitization.",
+    "Prevention": "I don't know",
+    "Treatment": "Multimodal approach including medications, physical therapy, psychological therapy, and lifestyle changes.",
+    "When to see a doctor": "If pain persists for months, interferes with daily activities, or is associated with emotional distress.",
+    "Sources": "National Institutes of Health (NIH), Mayo Clinic"
+  },
+  {
+    "disease_name": "Problem during pregnancy",
+    "Overview": "A broad category referring to complications that may occur during pregnancy, affecting the health of the mother, fetus, or both.",
+    "Causes": "I don't know",
+    "Prevention": "Regular prenatal care, healthy lifestyle, and managing existing medical conditions.",
+    "Treatment": "Varies widely depending on the specific condition or complication.",
+    "When to see a doctor": "Regular prenatal visits are essential; immediate care is needed for symptoms like severe pain, bleeding, decreased fetal movement, or high blood pressure symptoms.",
+    "Sources": "Centers for Disease Control and Prevention (CDC), Mayo Clinic"
+  },
+  {
+    "disease_name": "Liver cancer",
+    "Overview": "A type of cancer that begins in the cells of the liver, most commonly hepatocellular carcinoma.",
+    "Causes": "Chronic liver diseases such as hepatitis B or C infection, cirrhosis, alcohol-related liver disease, and nonalcoholic fatty liver disease.",
+    "Prevention": "Vaccination against hepatitis B, reducing alcohol consumption, maintaining a healthy weight, and avoiding exposure to hepatitis viruses.",
+    "Treatment": "Depends on stage; may include surgery, liver transplant, ablation therapies, chemotherapy, targeted therapy, or immunotherapy.",
+    "When to see a doctor": "If experiencing unexplained weight loss, loss of appetite, upper abdominal pain, jaundice, or fatigue.",
+    "Sources": "Mayo Clinic, National Cancer Institute"
+  },
+  {
+    "disease_name": "Atelectasis",
+    "Overview": "A condition in which part or all of a lung collapses or does not fully inflate, leading to reduced oxygen exchange.",
+    "Causes": "Blockage of airways (such as mucus plugs or tumors) or pressure from outside the lung (such as fluid, air, or tumors).",
+    "Prevention": "Deep breathing exercises after surgery, avoiding prolonged immobility, and managing underlying lung conditions.",
+    "Treatment": "Depends on cause; may include breathing exercises, chest physiotherapy, medications, or procedures to remove blockage.",
+    "When to see a doctor": "If experiencing difficulty breathing, rapid breathing, or low oxygen levels.",
+    "Sources": "Mayo Clinic, National Institutes of Health (NIH)"
+  },
+  {
+    "disease_name": "Injury to the hand",
+    "Overview": "Damage to the structures of the hand, including bones, ligaments, tendons, or soft tissues, often due to trauma.",
+    "Causes": "Falls, direct impact, cuts, crush injuries, or repetitive strain.",
+    "Prevention": "Using protective equipment, practicing safety measures, and avoiding hazardous activities.",
+    "Treatment": "Rest, ice, compression, elevation (RICE), wound care, immobilization, and in some cases surgery.",
+    "When to see a doctor": "If there is severe pain, swelling, deformity, loss of function, numbness, or deep wounds.",
+    "Sources": "Mayo Clinic, American Academy of Orthopaedic Surgeons"
+  },
+  {
+    "disease_name": "Choledocholithiasis",
+    "Overview": "The presence of gallstones in the common bile duct, which can block the flow of bile.",
+    "Causes": "Gallstones formed in the gallbladder that migrate into the bile duct.",
+    "Prevention": "Maintaining a healthy weight, balanced diet, and managing risk factors for gallstones.",
+    "Treatment": "Endoscopic removal of stones (ERCP), surgery, or other procedures to restore bile flow.",
+    "When to see a doctor": "If experiencing jaundice, abdominal pain, fever, or signs of infection.",
+    "Sources": "Mayo Clinic, National Institutes of Health (NIH)"
+  },
+  {
+    "disease_name": "Injury to the hip",
+    "Overview": "Damage to the hip joint or surrounding structures, including bones, muscles, ligaments, or tendons.",
+    "Causes": "Falls, accidents, sports injuries, or overuse.",
+    "Prevention": "Strengthening exercises, balance training, and using protective measures to prevent falls.",
+    "Treatment": "Rest, physical therapy, medications, and in severe cases surgery.",
+    "When to see a doctor": "If there is severe pain, inability to move or bear weight, swelling, or deformity.",
+    "Sources": "Mayo Clinic, American Academy of Orthopaedic Surgeons"
+  },
+  {
+    "disease_name": "Ischemia of the bowel",
+    "Overview": "A condition where blood flow to the intestines is reduced, leading to tissue damage and potential necrosis.",
+    "Causes": "Blocked or narrowed blood vessels due to clots, atherosclerosis, or low blood flow states.",
+    "Prevention": "Managing cardiovascular risk factors such as high blood pressure, cholesterol, and avoiding smoking.",
+    "Treatment": "Emergency treatment may include medications, procedures to restore blood flow, or surgery to remove damaged tissue.",
+    "When to see a doctor": "Immediate medical attention is needed for sudden severe abdominal pain, bloody stools, or signs of shock.",
+    "Sources": "Mayo Clinic, National Institutes of Health (NIH)"
+  },
+  {
+    "disease_name": "Fetal alcohol syndrome",
+    "Overview": "A condition in a child resulting from alcohol exposure during pregnancy, leading to physical, behavioral, and learning problems.",
+    "Causes": "Alcohol consumption during pregnancy.",
+    "Prevention": "Avoiding alcohol during pregnancy.",
+    "Treatment": "No cure; management includes supportive care, educational support, and therapy.",
+    "When to see a doctor": "If developmental delays, learning difficulties, or characteristic facial features are noticed in a child.",
+    "Sources": "Centers for Disease Control and Prevention (CDC), National Institute on Alcohol Abuse and Alcoholism (NIAAA)"
+  },
+  {
+    "disease_name": "Peritonitis",
+    "Overview": "Inflammation of the peritoneum, the tissue lining the inner wall of the abdomen and covering abdominal organs, often due to infection.",
+    "Causes": "Bacterial or fungal infection, commonly from a ruptured organ such as the appendix, stomach, or intestines.",
+    "Prevention": "Prompt treatment of abdominal infections and medical conditions.",
+    "Treatment": "Emergency treatment with antibiotics and often surgery to treat the underlying cause.",
+    "When to see a doctor": "Immediate care is needed for severe abdominal pain, fever, nausea, or abdominal tenderness.",
+    "Sources": "Mayo Clinic, National Institutes of Health (NIH)"
+  },
+  {
+    "disease_name": "Injury to the abdomen",
+    "Overview": "Damage to the abdominal area involving organs, muscles, or blood vessels, often due to trauma.",
+    "Causes": "Blunt force trauma, accidents, falls, or penetrating injuries.",
+    "Prevention": "Using seatbelts, protective gear, and practicing safety measures.",
+    "Treatment": "Depends on severity; may include monitoring, medications, or surgery.",
+    "When to see a doctor": "If there is severe pain, bruising, bleeding, vomiting, or signs of internal injury.",
+    "Sources": "Mayo Clinic, American College of Surgeons"
+  },
+  {
+    "disease_name": "Acute pancreatitis",
+    "Overview": "A sudden inflammation of the pancreas that can range from mild discomfort to a life-threatening illness.",
+    "Causes": "Gallstones, heavy alcohol use, high triglycerides, certain medications, or infections.",
+    "Prevention": "Limiting alcohol intake, maintaining a healthy diet, and managing risk factors such as gallstones.",
+    "Treatment": "Hospital care with fluids, pain control, and treatment of the underlying cause.",
+    "When to see a doctor": "If experiencing severe abdominal pain, nausea, vomiting, or fever.",
+    "Sources": "Mayo Clinic, National Institutes of Health (NIH)"
+  },
+  {
+    "disease_name": "Thrombophlebitis",
+    "Overview": "Inflammation of a vein caused by a blood clot, commonly occurring in the legs.",
+    "Causes": "Blood clots due to prolonged immobility, injury to a vein, or clotting disorders.",
+    "Prevention": "Staying active, avoiding prolonged immobility, and using compression stockings if at risk.",
+    "Treatment": "Warm compresses, anti-inflammatory medications, blood thinners, and compression therapy.",
+    "When to see a doctor": "If there is pain, swelling, redness along a vein, or symptoms suggesting a deep vein clot.",
+    "Sources": "Mayo Clinic, National Institutes of Health (NIH)"
+  },
+  {
+    "disease_name": "Asthma",
+    "Overview": "A chronic respiratory condition characterized by inflammation and narrowing of the airways, leading to difficulty breathing.",
+    "Causes": "Combination of genetic and environmental factors, including allergens, infections, and irritants.",
+    "Prevention": "Avoiding known triggers, using preventive medications, and managing allergies.",
+    "Treatment": "Inhaled medications such as bronchodilators and corticosteroids, along with long-term control therapy.",
+    "When to see a doctor": "If experiencing frequent wheezing, shortness of breath, chest tightness, or asthma attacks.",
+    "Sources": "Mayo Clinic, Centers for Disease Control and Prevention (CDC)"
+  },
+  {
+    "disease_name": "Foreign body in the vagina",
+    "Overview": "A condition where an object is present inside the vagina, which may cause irritation, infection, or discharge.",
+    "Causes": "Insertion of objects such as tampons, contraceptive devices, or other items that are retained or forgotten.",
+    "Prevention": "Proper use and timely removal of vaginal products and avoiding insertion of inappropriate objects.",
+    "Treatment": "Removal of the foreign body by a healthcare professional and treatment of any resulting infection.",
+    "When to see a doctor": "If there is unusual discharge, foul odor, pain, bleeding, or suspicion of a retained object.",
+    "Sources": "Mayo Clinic, American College of Obstetricians and Gynecologists"
+  },
+  {
+    "disease_name": "Restless leg syndrome",
+    "Overview": "A neurological disorder characterized by an uncontrollable urge to move the legs, usually due to uncomfortable sensations, often worsening at night.",
+    "Causes": "Not fully understood; may involve genetic factors, iron deficiency, or underlying medical conditions.",
+    "Prevention": "I don't know",
+    "Treatment": "Lifestyle changes, iron supplementation if deficient, and medications to manage symptoms.",
+    "When to see a doctor": "If symptoms interfere with sleep or daily activities.",
+    "Sources": "Mayo Clinic, National Institute of Neurological Disorders and Stroke (NINDS)"
+  },
+  {
+    "disease_name": "Emphysema",
+    "Overview": "A chronic lung condition in which the air sacs (alveoli) are damaged, leading to shortness of breath.",
+    "Causes": "Long-term exposure to airborne irritants, especially cigarette smoke.",
+    "Prevention": "Avoid smoking and exposure to air pollutants and occupational irritants.",
+    "Treatment": "Medications, pulmonary rehabilitation, oxygen therapy, and in some cases surgery.",
+    "When to see a doctor": "If experiencing persistent shortness of breath, chronic cough, or wheezing.",
+    "Sources": "Mayo Clinic, Centers for Disease Control and Prevention (CDC)"
+  },
+  {
+    "disease_name": "Cysticercosis",
+    "Overview": "A parasitic infection caused by the larval form of the pork tapeworm, which can affect tissues such as muscles, eyes, and the brain.",
+    "Causes": "Ingestion of eggs of the parasite (Taenia solium), typically through contaminated food or water.",
+    "Prevention": "Proper hygiene, safe food handling, and avoiding contaminated food and water.",
+    "Treatment": "Antiparasitic medications, anti-inflammatory drugs, and sometimes surgery depending on location and severity.",
+    "When to see a doctor": "If experiencing seizures, headaches, or neurological symptoms.",
+    "Sources": "Centers for Disease Control and Prevention (CDC), World Health Organization (WHO)"
+  },
+  {
+    "disease_name": "Induced abortion",
+    "Overview": "A medical or surgical procedure to end a pregnancy.",
+    "Causes": "I don't know",
+    "Prevention": "I don't know",
+    "Treatment": "I don't know",
+    "When to see a doctor": "Follow-up care is typically recommended after the procedure or if complications such as heavy bleeding, severe pain, or fever occur.",
+    "Sources": "World Health Organization (WHO), Mayo Clinic"
+  },
+  {
+    "disease_name": "Teething syndrome",
+    "Overview": "A condition associated with the eruption of primary teeth in infants, sometimes linked to mild discomfort, irritability, and gum swelling.",
+    "Causes": "Eruption of teeth through the gums.",
+    "Prevention": "I don't know",
+    "Treatment": "Teething rings, gentle gum massage, and in some cases mild pain relief as recommended by a healthcare provider.",
+    "When to see a doctor": "If there is high fever, severe symptoms, or concerns beyond typical teething discomfort.",
+    "Sources": "American Academy of Pediatrics, Mayo Clinic"
+  },
+  {
+    "disease_name": "Infectious gastroenteritis",
+    "Overview": "Inflammation of the stomach and intestines caused by infection, leading to symptoms such as diarrhea, vomiting, and abdominal cramps.",
+    "Causes": "Viruses (such as norovirus or rotavirus), bacteria, or parasites.",
+    "Prevention": "Good hygiene, safe food handling, clean water, and vaccination (e.g., rotavirus vaccine in children).",
+    "Treatment": "Hydration, rest, and in some cases medications depending on the cause.",
+    "When to see a doctor": "If there is severe dehydration, persistent vomiting, high fever, or blood in stool.",
+    "Sources": "Centers for Disease Control and Prevention (CDC), Mayo Clinic"
+  },
+  {
+    "disease_name": "Acute sinusitis",
+    "Overview": "A short-term inflammation of the sinuses, often following a cold, causing nasal congestion, facial pain, and discharge.",
+    "Causes": "Usually viral infections; sometimes bacterial infections.",
+    "Prevention": "Hand hygiene, avoiding upper respiratory infections, and managing allergies.",
+    "Treatment": "Symptomatic relief (decongestants, pain relievers), and in some cases antibiotics if bacterial.",
+    "When to see a doctor": "If symptoms last more than 10 days, worsen, or include high fever or severe facial pain.",
+    "Sources": "Mayo Clinic, Centers for Disease Control and Prevention (CDC)"
+  },
+  {
+    "disease_name": "Substance-related mental disorder",
+    "Overview": "A group of mental health conditions related to the misuse of substances such as alcohol or drugs, affecting mood, behavior, and cognition.",
+    "Causes": "Use or withdrawal of substances, along with genetic, psychological, and environmental factors.",
+    "Prevention": "I don't know",
+    "Treatment": "Behavioral therapy, medications, detoxification programs, and support groups.",
+    "When to see a doctor": "If substance use is causing problems in daily life, health, or relationships.",
+    "Sources": "National Institute of Mental Health (NIMH), Mayo Clinic"
+  },
+  {
+    "disease_name": "Postpartum depression",
+    "Overview": "A type of depression that occurs after childbirth, affecting mood, energy, and ability to care for the baby.",
+    "Causes": "Hormonal changes, emotional factors, sleep deprivation, and personal or family history of depression.",
+    "Prevention": "I don't know",
+    "Treatment": "Psychotherapy, medications such as antidepressants, and support from healthcare providers and family.",
+    "When to see a doctor": "If feelings of sadness, hopelessness, or anxiety persist, worsen, or interfere with daily functioning.",
+    "Sources": "Mayo Clinic, National Institute of Mental Health (NIMH)"
+  },
+  {
+    "disease_name": "Coronary atherosclerosis",
+    "Overview": "A condition where plaque builds up in the coronary arteries, reducing blood flow to the heart muscle.",
+    "Causes": "Accumulation of cholesterol and other substances in artery walls, often linked to high cholesterol, smoking, high blood pressure, and diabetes.",
+    "Prevention": "Healthy diet, regular exercise, avoiding smoking, and managing blood pressure and cholesterol.",
+    "Treatment": "Lifestyle changes, medications, and procedures such as angioplasty or bypass surgery.",
+    "When to see a doctor": "If experiencing chest pain, shortness of breath, or other signs of heart disease.",
+    "Sources": "Mayo Clinic, American Heart Association"
+  },
+  {
+    "disease_name": "Spondylitis",
+    "Overview": "Inflammation of the vertebrae in the spine, which can lead to pain and stiffness; may be part of conditions such as ankylosing spondylitis.",
+    "Causes": "Inflammatory conditions, autoimmune factors, or infections.",
+    "Prevention": "I don't know",
+    "Treatment": "Medications to reduce inflammation, physical therapy, and lifestyle management.",
+    "When to see a doctor": "If there is persistent back pain, stiffness, or reduced mobility.",
+    "Sources": "Mayo Clinic, National Institutes of Health (NIH)"
+  },
+  {
+    "disease_name": "Pituitary adenoma",
+    "Overview": "A usually benign tumor of the pituitary gland that can affect hormone production.",
+    "Causes": "Exact cause is not well understood; may involve genetic factors in some cases.",
+    "Prevention": "I don't know",
+    "Treatment": "Observation, medications, surgery, or radiation therapy depending on type and size.",
+    "When to see a doctor": "If experiencing vision problems, headaches, or symptoms of hormone imbalance.",
+    "Sources": "Mayo Clinic, National Institutes of Health (NIH)"
+  },
+  {
+    "disease_name": "Uterine fibroids",
+    "Overview": "Noncancerous growths of the uterus that often appear during childbearing years.",
+    "Causes": "Exact cause is not known; influenced by hormones (estrogen and progesterone) and possibly genetic factors.",
+    "Prevention": "I don't know",
+    "Treatment": "Medications to manage symptoms, hormonal therapy, noninvasive procedures, or surgery depending on severity.",
+    "When to see a doctor": "If experiencing heavy menstrual bleeding, pelvic pain, frequent urination, or difficulty emptying the bladder.",
+    "Sources": "Mayo Clinic, National Institutes of Health (NIH)"
+  },
+  {
+    "disease_name": "Idiopathic nonmenstrual bleeding",
+    "Overview": "Abnormal vaginal bleeding that occurs outside of regular menstrual periods with no identified cause.",
+    "Causes": "I don't know",
+    "Prevention": "I don't know",
+    "Treatment": "Depends on evaluation findings; may include hormonal therapy or monitoring.",
+    "When to see a doctor": "If experiencing unexpected or persistent vaginal bleeding outside of normal periods.",
+    "Sources": "Mayo Clinic, American College of Obstetricians and Gynecologists"
+  },
+  {
+    "disease_name": "Chalazion",
+    "Overview": "A small, painless lump or swelling on the eyelid caused by a blocked oil gland.",
+    "Causes": "Blockage of a meibomian gland in the eyelid, sometimes associated with inflammation.",
+    "Prevention": "Good eyelid hygiene and managing conditions like blepharitis.",
+    "Treatment": "Warm compresses, gentle massage, and in some cases minor surgery or medication.",
+    "When to see a doctor": "If the lump persists, grows, affects vision, or becomes painful.",
+    "Sources": "Mayo Clinic, American Academy of Ophthalmology"
+  },
+  {
+    "disease_name": "Ovarian torsion",
+    "Overview": "A medical emergency in which an ovary twists around the ligaments that support it, cutting off blood supply.",
+    "Causes": "Often associated with ovarian cysts or masses that make the ovary more likely to twist.",
+    "Prevention": "I don't know",
+    "Treatment": "Emergency surgery to untwist or remove the affected ovary.",
+    "When to see a doctor": "Immediate care is needed for sudden, severe lower abdominal pain, nausea, or vomiting.",
+    "Sources": "Mayo Clinic, American College of Obstetricians and Gynecologists"
+  },
+  {
+    "disease_name": "Retinopathy due to high blood pressure",
+    "Overview": "Damage to the blood vessels of the retina caused by chronic high blood pressure.",
+    "Causes": "Long-standing hypertension damaging retinal vessels.",
+    "Prevention": "Controlling blood pressure through lifestyle changes and medication.",
+    "Treatment": "Managing blood pressure and treating complications as needed.",
+    "When to see a doctor": "Regular eye exams are important; seek care if vision changes occur.",
+    "Sources": "Mayo Clinic, National Eye Institute"
+  },
+  {
+    "disease_name": "Vaginal yeast infection",
+    "Overview": "A common fungal infection of the vagina that causes itching, irritation, and discharge.",
+    "Causes": "Overgrowth of Candida fungus, often due to antibiotic use, hormonal changes, or weakened immune system.",
+    "Prevention": "Keeping the genital area dry, avoiding irritants, and wearing breathable clothing.",
+    "Treatment": "Antifungal medications (topical or oral).",
+    "When to see a doctor": "If symptoms are severe, recurrent, or unclear.",
+    "Sources": "Mayo Clinic, Centers for Disease Control and Prevention (CDC)"
+  },
+  {
+    "disease_name": "Mastoiditis",
+    "Overview": "A serious bacterial infection of the mastoid bone located behind the ear, often resulting from untreated ear infections.",
+    "Causes": "Spread of middle ear infection to the mastoid bone.",
+    "Prevention": "Prompt treatment of ear infections.",
+    "Treatment": "Antibiotics and sometimes surgery.",
+    "When to see a doctor": "If there is ear pain, swelling behind the ear, fever, or drainage from the ear.",
+    "Sources": "Mayo Clinic, National Institutes of Health (NIH)"
+  },
+  {
+    "disease_name": "Lung contusion",
+    "Overview": "A bruise of the lung tissue caused by chest trauma, leading to bleeding and swelling that can impair oxygen exchange.",
+    "Causes": "Blunt chest trauma such as car accidents, falls, or sports injuries.",
+    "Prevention": "Using seatbelts, protective gear, and following safety precautions.",
+    "Treatment": "Supportive care including oxygen therapy, pain management, and monitoring; severe cases may require ventilation.",
+    "When to see a doctor": "Immediately after chest injury or if experiencing difficulty breathing, chest pain, or coughing up blood.",
+    "Sources": "Mayo Clinic, American College of Surgeons"
+  },
+  {
+    "disease_name": "Hypertrophic obstructive cardiomyopathy (HOCM)",
+    "Overview": "A genetic heart condition in which the heart muscle becomes abnormally thickened, obstructing blood flow out of the heart.",
+    "Causes": "Genetic mutations affecting heart muscle proteins.",
+    "Prevention": "I don't know",
+    "Treatment": "Medications, lifestyle adjustments, procedures to reduce obstruction, or implantable devices.",
+    "When to see a doctor": "If experiencing chest pain, shortness of breath, fainting, or palpitations.",
+    "Sources": "Mayo Clinic, American Heart Association"
+  },
+  {
+    "disease_name": "Ingrown toe nail",
+    "Overview": "A condition where the edge of a toenail grows into the surrounding skin, causing pain, redness, and swelling.",
+    "Causes": "Improper nail trimming, tight footwear, injury, or genetic factors.",
+    "Prevention": "Proper nail trimming, wearing comfortable shoes, and maintaining foot hygiene.",
+    "Treatment": "Warm soaks, proper nail care, antibiotics if infected, and in severe cases minor surgery.",
+    "When to see a doctor": "If there is severe pain, infection, or if the condition recurs.",
+    "Sources": "Mayo Clinic, American Podiatric Medical Association"
+  },
+  {
+    "disease_name": "Pulmonary eosinophilia",
+    "Overview": "A group of conditions characterized by increased eosinophils (a type of white blood cell) in the lungs, leading to inflammation.",
+    "Causes": "Allergic reactions, infections (especially parasitic), medications, or unknown causes.",
+    "Prevention": "I don't know",
+    "Treatment": "Corticosteroids and treatment of the underlying cause.",
+    "When to see a doctor": "If experiencing cough, fever, shortness of breath, or unexplained respiratory symptoms.",
+    "Sources": "Mayo Clinic, National Institutes of Health (NIH)"
+  },
+  {
+    "disease_name": "Corneal disorder",
+    "Overview": "A broad category of conditions affecting the cornea, the clear front surface of the eye, which can impact vision.",
+    "Causes": "Infections, injuries, genetic conditions, or degenerative diseases.",
+    "Prevention": "Protecting the eyes, proper contact lens hygiene, and regular eye care.",
+    "Treatment": "Depends on cause; may include medications, corrective lenses, or surgery.",
+    "When to see a doctor": "If experiencing eye pain, redness, blurred vision, or sensitivity to light.",
+    "Sources": "Mayo Clinic, American Academy of Ophthalmology"
+  },
+  {
+    "disease_name": "Foreign body in the gastrointestinal tract",
+    "Overview": "A condition where an object is swallowed and becomes lodged somewhere in the digestive tract.",
+    "Causes": "Accidental or intentional ingestion of objects.",
+    "Prevention": "Keeping small objects out of reach of children and avoiding ingestion of non-food items.",
+    "Treatment": "Observation if the object passes naturally, or endoscopic or surgical removal if needed.",
+    "When to see a doctor": "If there is difficulty swallowing, abdominal pain, vomiting, or suspected ingestion of a dangerous object.",
+    "Sources": "Mayo Clinic, American Society for Gastrointestinal Endoscopy"
+  },
+  {
+    "disease_name": "Endophthalmitis",
+    "Overview": "A severe inflammation of the interior of the eye, usually due to infection, which can threaten vision.",
+    "Causes": "Infection following eye surgery, injury, or spread from another part of the body.",
+    "Prevention": "Proper sterile techniques during eye procedures and prompt treatment of eye injuries.",
+    "Treatment": "Emergency treatment with antibiotics or antifungal medications, sometimes surgery.",
+    "When to see a doctor": "Immediate care is needed for eye pain, vision loss, redness, or sensitivity to light.",
+    "Sources": "Mayo Clinic, American Academy of Ophthalmology"
+  },
+  {
+    "disease_name": "Intestinal malabsorption",
+    "Overview": "A condition where the small intestine cannot properly absorb nutrients from food.",
+    "Causes": "Various conditions such as celiac disease, infections, pancreatic insufficiency, or inflammatory bowel disease.",
+    "Prevention": "I don't know",
+    "Treatment": "Depends on cause; may include dietary changes, supplements, or medications.",
+    "When to see a doctor": "If experiencing chronic diarrhea, weight loss, or nutritional deficiencies.",
+    "Sources": "Mayo Clinic, National Institutes of Health (NIH)"
+  },
+  {
+    "disease_name": "Viral warts",
+    "Overview": "Noncancerous skin growths caused by infection with human papillomavirus (HPV).",
+    "Causes": "Infection with HPV through direct contact or contaminated surfaces.",
+    "Prevention": "Avoiding direct contact with warts, maintaining good hygiene, and protecting skin from cuts.",
+    "Treatment": "Topical treatments, cryotherapy, or other removal methods.",
+    "When to see a doctor": "If warts are painful, spreading, or do not respond to treatment.",
+    "Sources": "Mayo Clinic, Centers for Disease Control and Prevention (CDC)"
+  },
+  {
+    "disease_name": "Hyperhidrosis",
+    "Overview": "A condition characterized by excessive sweating beyond what is necessary for normal temperature regulation. It commonly affects areas such as the palms, soles, underarms, and face, and can significantly impact daily activities and social interactions.",
+    "Causes": "Primary hyperhidrosis has no clear cause and is thought to involve overactivity of sweat glands, possibly influenced by genetics. Secondary hyperhidrosis can result from medical conditions such as endocrine disorders, infections, or medication side effects.",
+    "Prevention": "I don't know",
+    "Treatment": "Treatment options include prescription-strength antiperspirants, medications that reduce sweating, iontophoresis, botulinum toxin injections, and in severe cases surgical procedures.",
+    "When to see a doctor": "If sweating disrupts daily life, occurs during sleep, or is accompanied by symptoms such as weight loss, fever, or chest pain.",
+    "Sources": "International Hyperhidrosis Society, National Health Service (NHS), Cleveland Clinic"
+  },
+  {
+    "disease_name": "Stroke",
+    "Overview": "A serious medical condition that occurs when blood supply to part of the brain is interrupted or reduced, preventing brain tissue from receiving oxygen and nutrients, leading to cell death.",
+    "Causes": "Ischemic stroke is caused by blocked blood vessels (often due to clots), while hemorrhagic stroke results from bleeding in the brain. Risk factors include high blood pressure, smoking, diabetes, and heart disease.",
+    "Prevention": "Managing blood pressure, maintaining a healthy lifestyle, controlling diabetes and cholesterol, avoiding smoking, and regular medical checkups.",
+    "Treatment": "Emergency treatment includes clot-dissolving medications or procedures to restore blood flow in ischemic stroke, and surgical or medical management for hemorrhagic stroke.",
+    "When to see a doctor": "Immediately if symptoms such as sudden weakness, confusion, difficulty speaking, vision problems, or severe headache occur.",
+    "Sources": "World Health Organization (WHO), American Stroke Association, Centers for Disease Control and Prevention (CDC)"
+  },
+  {
+    "disease_name": "Pilonidal cyst",
+    "Overview": "A fluid-filled sac that forms near the tailbone, often containing hair and skin debris. It can become infected, leading to pain, swelling, and drainage.",
+    "Causes": "Believed to result from hair penetrating the skin, leading to a foreign body reaction. Risk factors include prolonged sitting, friction, and excess body hair.",
+    "Prevention": "Maintaining good hygiene, avoiding prolonged sitting, and keeping the area clean and hair-free may reduce risk.",
+    "Treatment": "Treatment may include drainage of the cyst, antibiotics if infected, and surgical removal in recurrent or severe cases.",
+    "When to see a doctor": "If there is pain, swelling, redness, or discharge near the tailbone area.",
+    "Sources": "National Health Service (NHS), Cleveland Clinic, American Society of Colon and Rectal Surgeons"
+  },
+  {
+    "disease_name": "Crushing injury",
+    "Overview": "A severe injury caused by prolonged pressure on the body or a body part, potentially leading to muscle damage, tissue death, and systemic complications such as crush syndrome.",
+    "Causes": "Heavy objects compressing the body during accidents, disasters, or industrial incidents.",
+    "Prevention": "Following safety protocols in high-risk environments and using protective equipment.",
+    "Treatment": "Emergency care including fluid resuscitation, monitoring for complications, surgical intervention, and supportive treatment.",
+    "When to see a doctor": "Immediately after any significant crushing injury, especially if there is severe pain, swelling, or signs of shock.",
+    "Sources": "World Health Organization (WHO), American College of Emergency Physicians, MedlinePlus"
+  },
+  {
+    "disease_name": "Normal pressure hydrocephalus",
+    "Overview": "A neurological disorder characterized by the accumulation of cerebrospinal fluid in the brain's ventricles, leading to symptoms such as walking difficulties, cognitive decline, and urinary incontinence.",
+    "Causes": "Often idiopathic (unknown cause), but may be associated with prior brain injury, bleeding, infection, or surgery.",
+    "Prevention": "I don't know",
+    "Treatment": "Placement of a shunt to drain excess fluid from the brain is the most common treatment.",
+    "When to see a doctor": "If there are symptoms such as difficulty walking, memory problems, or loss of bladder control, especially in older adults.",
+    "Sources": "National Institute of Neurological Disorders and Stroke (NINDS), NHS, Cleveland Clinic"
+  },
+  {
+    "disease_name": "Alopecia",
+    "Overview": "A condition involving hair loss from the scalp or other parts of the body, which can be temporary or permanent depending on the type.",
+    "Causes": "May include autoimmune conditions (such as alopecia areata), genetics, hormonal changes, medications, or stress.",
+    "Prevention": "I don't know",
+    "Treatment": "Treatment depends on type and may include topical or oral medications, corticosteroids, or other therapies.",
+    "When to see a doctor": "If experiencing sudden or patchy hair loss, or hair loss associated with other symptoms.",
+    "Sources": "National Alopecia Areata Foundation, NHS, Cleveland Clinic"
+  },
+  {
+    "disease_name": "Hashimoto thyroiditis",
+    "Overview": "An autoimmune disorder in which the immune system attacks the thyroid gland, often leading to hypothyroidism (underactive thyroid).",
+    "Causes": "Autoimmune reaction influenced by genetic and environmental factors.",
+    "Prevention": "I don't know",
+    "Treatment": "Thyroid hormone replacement therapy to normalize hormone levels.",
+    "When to see a doctor": "If experiencing fatigue, weight gain, sensitivity to cold, or other symptoms of thyroid dysfunction.",
+    "Sources": "American Thyroid Association, National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK), NHS"
+  },
+  {
+    "disease_name": "Flat feet",
+    "Overview": "A condition in which the arches of the feet are flattened, allowing the entire sole to touch the ground when standing.",
+    "Causes": "Can be due to genetics, injury, aging, or conditions affecting tendons or ligaments.",
+    "Prevention": "I don't know",
+    "Treatment": "Supportive footwear, orthotic devices, physical therapy, and in severe cases surgery.",
+    "When to see a doctor": "If foot pain, swelling, or difficulty walking occurs.",
+    "Sources": "American Academy of Orthopaedic Surgeons, NHS, Cleveland Clinic"
+  },
+  {
+    "disease_name": "Nonalcoholic steatohepatitis (NASH)",
+    "Overview": "A form of nonalcoholic fatty liver disease characterized by fat accumulation in the liver along with inflammation and liver cell damage.",
+    "Causes": "Associated with obesity, insulin resistance, type 2 diabetes, and metabolic syndrome.",
+    "Prevention": "Maintaining a healthy weight, balanced diet, and regular exercise may reduce risk.",
+    "Treatment": "Lifestyle changes such as weight loss and management of underlying conditions; no specific medication is universally approved.",
+    "When to see a doctor": "If there are risk factors for liver disease or abnormal liver tests.",
+    "Sources": "National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK), American Liver Foundation, NHS"
+  },
+  {
+    "disease_name": "Hemarthrosis",
+    "Overview": "Bleeding into a joint space, most commonly affecting the knees, which can cause pain, swelling, and limited movement.",
+    "Causes": "Injury, bleeding disorders such as hemophilia, or complications from surgery.",
+    "Prevention": "Managing underlying bleeding disorders and avoiding joint injuries.",
+    "Treatment": "Rest, ice, joint aspiration, treatment of underlying cause, and physical therapy.",
+    "When to see a doctor": "If there is sudden joint swelling, pain, or reduced movement.",
+    "Sources": "National Hemophilia Foundation, Cleveland Clinic, NHS"
+  },
+  {
+    "disease_name": "Pelvic organ prolapse",
+    "Overview": "A condition in which pelvic organs such as the bladder, uterus, or rectum descend from their normal position due to weakened supporting muscles.",
+    "Causes": "Childbirth, aging, menopause, chronic straining, or obesity.",
+    "Prevention": "Pelvic floor exercises, maintaining a healthy weight, and avoiding heavy lifting.",
+    "Treatment": "Pelvic floor therapy, pessary devices, or surgery depending on severity.",
+    "When to see a doctor": "If experiencing a feeling of pressure, bulging in the vagina, or urinary or bowel issues.",
+    "Sources": "American College of Obstetricians and Gynecologists, NHS, Cleveland Clinic"
+  },
+  {
+    "disease_name": "Fracture of the arm",
+    "Overview": "A break in one or more bones of the arm, including the humerus, radius, or ulna, often resulting from trauma.",
+    "Causes": "Falls, direct impact, or accidents.",
+    "Prevention": "Using protective gear and preventing falls.",
+    "Treatment": "Immobilization with casts or splints, pain management, and sometimes surgery.",
+    "When to see a doctor": "If there is severe pain, deformity, swelling, or inability to move the arm.",
+    "Sources": "American Academy of Orthopaedic Surgeons, NHS, Cleveland Clinic"
+  },
+  {
+    "disease_name": "Coagulation (bleeding) disorder",
+    "Overview": "A group of conditions in which the blood’s ability to clot is impaired, leading to excessive bleeding or bruising.",
+    "Causes": "Genetic conditions such as hemophilia, vitamin deficiencies, liver disease, or use of certain medications.",
+    "Prevention": "I don't know",
+    "Treatment": "Depends on cause; may include clotting factor replacement, medications, or treating underlying conditions.",
+    "When to see a doctor": "If experiencing frequent or prolonged bleeding, easy bruising, or unexplained bleeding.",
+    "Sources": "National Heart, Lung, and Blood Institute (NHLBI), NHS, Cleveland Clinic"
+  },
+  {
+    "disease_name": "Intracranial hemorrhage",
+    "Overview": "Bleeding within the skull, which can occur in brain tissue or surrounding spaces, potentially causing serious neurological damage.",
+    "Causes": "Head trauma, high blood pressure, aneurysm rupture, or bleeding disorders.",
+    "Prevention": "Managing blood pressure, preventing head injuries, and addressing clotting disorders.",
+    "Treatment": "Emergency care, blood pressure control, surgery in some cases, and supportive management.",
+    "When to see a doctor": "Immediately if symptoms such as severe headache, confusion, weakness, or loss of consciousness occur.",
+    "Sources": "World Health Organization (WHO), National Institute of Neurological Disorders and Stroke (NINDS), Cleveland Clinic"
+  },
+  {
+    "disease_name": "Hyperkalemia",
+    "Overview": "A condition where there is an abnormally high level of potassium in the blood, which can affect heart function.",
+    "Causes": "Kidney disease, medications, excessive potassium intake, or conditions causing cell breakdown.",
+    "Prevention": "Monitoring potassium levels in at-risk individuals and managing kidney health.",
+    "Treatment": "Medications to lower potassium, dietary changes, and emergency treatment if severe.",
+    "When to see a doctor": "If experiencing muscle weakness, abnormal heart rhythms, or if diagnosed through lab tests.",
+    "Sources": "National Kidney Foundation, NHS, Cleveland Clinic"
+  },
+  {
+    "disease_name": "Cornea infection",
+    "Overview": "An infection of the cornea (keratitis) that can lead to pain, redness, and vision problems.",
+    "Causes": "Bacteria, viruses, fungi, or parasites, often associated with contact lens use or eye injury.",
+    "Prevention": "Proper contact lens hygiene and eye protection.",
+    "Treatment": "Antimicrobial eye drops or medications depending on the cause.",
+    "When to see a doctor": "If experiencing eye pain, redness, blurred vision, or sensitivity to light.",
+    "Sources": "American Academy of Ophthalmology, NHS, Cleveland Clinic"
+  },
+  {
+    "disease_name": "Abscess of the lung",
+    "Overview": "A localized collection of pus within the lung tissue, usually resulting from infection.",
+    "Causes": "Bacterial infections, often due to aspiration of material into the lungs.",
+    "Prevention": "Reducing aspiration risk and treating respiratory infections promptly.",
+    "Treatment": "Antibiotics and sometimes drainage procedures.",
+    "When to see a doctor": "If experiencing persistent cough, fever, chest pain, or foul-smelling sputum.",
+    "Sources": "Cleveland Clinic, NHS, MedlinePlus"
+  },
+  {
+    "disease_name": "Dengue fever",
+    "Overview": "A mosquito-borne viral infection causing fever, headache, muscle and joint pain, and rash.",
+    "Causes": "Infection with dengue virus transmitted by Aedes mosquitoes.",
+    "Prevention": "Avoiding mosquito bites, using repellents, and eliminating breeding sites.",
+    "Treatment": "Supportive care including hydration and pain relief; no specific antiviral treatment.",
+    "When to see a doctor": "If high fever, severe pain, bleeding, or warning signs of severe dengue occur.",
+    "Sources": "World Health Organization (WHO), Centers for Disease Control and Prevention (CDC)"
+  },
+  {
+    "disease_name": "Chronic sinusitis",
+    "Overview": "Long-lasting inflammation of the sinuses lasting more than 12 weeks, causing congestion, facial pain, and reduced sense of smell.",
+    "Causes": "Infections, nasal polyps, allergies, or structural issues in the nasal passages.",
+    "Prevention": "Managing allergies, avoiding infections, and maintaining nasal hygiene.",
+    "Treatment": "Medications, nasal sprays, and sometimes surgery.",
+    "When to see a doctor": "If symptoms persist despite treatment or worsen over time.",
+    "Sources": "NHS, American Academy of Otolaryngology, Cleveland Clinic"
+  },
+  {
+    "disease_name": "Cholesteatoma",
+    "Overview": "An abnormal growth of skin cells in the middle ear that can damage surrounding structures.",
+    "Causes": "Repeated ear infections or poor Eustachian tube function.",
+    "Prevention": "Prompt treatment of ear infections.",
+    "Treatment": "Surgical removal is usually required.",
+    "When to see a doctor": "If experiencing persistent ear discharge, hearing loss, or ear fullness.",
+    "Sources": "NHS, Cleveland Clinic, American Academy of Otolaryngology"
+  },
+  {
+    "disease_name": "Volvulus",
+    "Overview": "A condition where a part of the intestine twists around itself, causing obstruction and reduced blood flow.",
+    "Causes": "Abnormal intestinal anatomy, chronic constipation, or previous surgery.",
+    "Prevention": "I don't know",
+    "Treatment": "Emergency treatment including decompression or surgery.",
+    "When to see a doctor": "Immediate care for severe abdominal pain, vomiting, or inability to pass stool.",
+    "Sources": "NHS, Cleveland Clinic, MedlinePlus"
+  },
+  {
+    "disease_name": "Injury to the finger",
+    "Overview": "Damage to bones, ligaments, tendons, or soft tissues of a finger due to trauma.",
+    "Causes": "Cuts, crush injuries, fractures, or sports-related accidents.",
+    "Prevention": "Using protective equipment and practicing safety.",
+    "Treatment": "Cleaning wounds, splinting, medications, or surgery depending on severity.",
+    "When to see a doctor": "If there is severe pain, deformity, bleeding, or loss of function.",
+    "Sources": "American Academy of Orthopaedic Surgeons, NHS, Cleveland Clinic"
+  },
+  {
+    "disease_name": "Poisoning due to analgesics",
+    "Overview": "Toxic effects resulting from excessive intake of pain-relief medications such as acetaminophen or nonsteroidal anti-inflammatory drugs.",
+    "Causes": "Overdose, accidental ingestion, or misuse of medications.",
+    "Prevention": "Following dosage instructions and storing medications safely.",
+    "Treatment": "Emergency care, antidotes (if available), and supportive treatment.",
+    "When to see a doctor": "Immediately if overdose is suspected or symptoms such as nausea, confusion, or abdominal pain occur.",
+    "Sources": "National Poison Control Center, FDA, MedlinePlus"
+  },
+  {
+    "disease_name": "Atrial fibrillation",
+    "Overview": "An irregular and often rapid heart rhythm that can lead to blood clots, stroke, and other heart-related complications.",
+    "Causes": "Heart disease, high blood pressure, thyroid disorders, or age-related changes.",
+    "Prevention": "Managing risk factors such as blood pressure and heart disease.",
+    "Treatment": "Medications, cardioversion, ablation procedures, or anticoagulation therapy.",
+    "When to see a doctor": "If experiencing palpitations, shortness of breath, fatigue, or dizziness.",
+    "Sources": "American Heart Association, NHS, Cleveland Clinic"
+  },
+  {
+    "disease_name": "Pinworm infection",
+    "Overview": "A common intestinal infection caused by small parasitic worms, especially in children.",
+    "Causes": "Ingestion of pinworm eggs through contaminated hands, surfaces, or food.",
+    "Prevention": "Good hygiene, frequent handwashing, and cleaning of living spaces.",
+    "Treatment": "Antiparasitic medications and hygiene measures.",
+    "When to see a doctor": "If there is persistent itching around the anus or signs of infection.",
+    "Sources": "Centers for Disease Control and Prevention (CDC), NHS"
+  },
+  {
+    "disease_name": "Urethral valves",
+    "Overview": "A congenital condition in males where abnormal flaps of tissue in the urethra obstruct urine flow.",
+    "Causes": "Developmental abnormality before birth.",
+    "Prevention": "I don't know",
+    "Treatment": "Surgical removal of the obstruction and management of urinary function.",
+    "When to see a doctor": "If there are urinary difficulties, poor urine stream, or recurrent infections in infants or children.",
+    "Sources": "National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK), NHS"
+  },
+  {
+    "disease_name": "Open wound of the neck",
+    "Overview": "A break in the skin of the neck that may involve underlying structures such as blood vessels, muscles, or airway.",
+    "Causes": "Trauma such as cuts, accidents, or penetrating injuries.",
+    "Prevention": "Using safety precautions and protective equipment.",
+    "Treatment": "Immediate wound care, possible surgery, and infection prevention.",
+    "When to see a doctor": "Immediately for any deep or bleeding wound in the neck area.",
+    "Sources": "American College of Surgeons, MedlinePlus"
+  },
+  {
+    "disease_name": "Achalasia",
+    "Overview": "A rare disorder of the esophagus where the lower esophageal sphincter fails to relax, making it difficult to swallow food.",
+    "Causes": "Damage to nerves in the esophagus; exact cause often unknown.",
+    "Prevention": "I don't know",
+    "Treatment": "Procedures to relax or open the sphincter, such as dilation, surgery, or botulinum toxin injection.",
+    "When to see a doctor": "If experiencing difficulty swallowing, regurgitation, or chest pain.",
+    "Sources": "NHS, Cleveland Clinic, National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK)"
+  },
+  {
+    "disease_name": "Conductive hearing loss",
+    "Overview": "Hearing loss caused by problems in the outer or middle ear that prevent sound from reaching the inner ear.",
+    "Causes": "Ear infections, fluid buildup, earwax blockage, or structural abnormalities.",
+    "Prevention": "Protecting ears, treating infections promptly, and avoiding insertion of objects into the ear.",
+    "Treatment": "Depends on cause; may include medications, removal of blockage, or surgery.",
+    "When to see a doctor": "If experiencing hearing loss, ear pain, or persistent ear symptoms.",
+    "Sources": "National Institute on Deafness and Other Communication Disorders (NIDCD), NHS"
+  },
+  {
+    "disease_name": "Abdominal hernia",
+    "Overview": "A condition where an internal organ or tissue protrudes through a weak spot in the abdominal wall.",
+    "Causes": "Weakness in the abdominal muscles combined with strain such as heavy lifting or chronic coughing.",
+    "Prevention": "Maintaining a healthy weight and avoiding excessive strain.",
+    "Treatment": "Surgical repair is often required.",
+    "When to see a doctor": "If there is a noticeable bulge, pain, or signs of complications such as nausea or vomiting.",
+    "Sources": "American College of Surgeons, NHS, Cleveland Clinic"
+  },
+  {
+    "disease_name": "Cerebral palsy",
+    "Overview": "A group of neurological disorders affecting movement, muscle tone, and posture due to damage to the developing brain.",
+    "Causes": "Brain injury or abnormal development before, during, or shortly after birth.",
+    "Prevention": "I don't know",
+    "Treatment": "Therapies, medications, assistive devices, and sometimes surgery.",
+    "When to see a doctor": "If developmental delays, abnormal muscle tone, or movement difficulties are observed in a child.",
+    "Sources": "Centers for Disease Control and Prevention (CDC), NHS, National Institute of Neurological Disorders and Stroke (NINDS)"
+  },
+  {
+    "disease_name": "Marijuana abuse",
+    "Overview": "A pattern of cannabis use that leads to significant impairment or distress, affecting mental, physical, or social functioning.",
+    "Causes": "Repeated use of marijuana influenced by psychological, social, and biological factors.",
+    "Prevention": "I don't know",
+    "Treatment": "Behavioral therapies, counseling, and support programs.",
+    "When to see a doctor": "If substance use interferes with daily life, health, or responsibilities.",
+    "Sources": "National Institute on Drug Abuse (NIDA), NHS"
+  },
+  {
+    "disease_name": "Cryptococcosis",
+    "Overview": "A fungal infection caused by Cryptococcus species, often affecting the lungs or central nervous system, particularly in immunocompromised individuals.",
+    "Causes": "Inhalation of fungal spores found in the environment, especially in soil contaminated with bird droppings.",
+    "Prevention": "Avoiding exposure in high-risk environments and managing immune health.",
+    "Treatment": "Antifungal medications, often for extended periods.",
+    "When to see a doctor": "If experiencing persistent cough, fever, headache, or neurological symptoms.",
+    "Sources": "Centers for Disease Control and Prevention (CDC), World Health Organization (WHO)"
+  }
+]

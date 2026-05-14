@@ -16,6 +16,19 @@ from symptom_mapper import canonicalize_list
 CSV_PATH = "Disease and symptoms dataset.csv"
 OUT_DIR = Path("rag_index")
 EMBED_MODEL = "all-MiniLM-L6-v2"
+OVERRIDES_PATH = Path("disease_overrides.json")
+
+
+def load_overrides() -> dict:
+    """Incarca profiluri corecte clinic care suprascriu datele din CSV."""
+    if not OVERRIDES_PATH.exists():
+        print("No disease_overrides.json found — using CSV only.")
+        return {}
+    with open(OVERRIDES_PATH, "r", encoding="utf8") as f:
+        data = json.load(f)
+    # Elimina comentariile
+    return {k: v for k, v in data.items() if not k.startswith("_")}
+
 
 
 def clean_text(s: str) -> str:
@@ -83,6 +96,22 @@ def main():
 
     if not grouped:
         raise ValueError("No disease profiles built. Check CSV formatting.")
+
+    # Aplica override-urile clinice
+    overrides = load_overrides()
+    applied = 0
+    for disease_name, correct_symptoms in overrides.items():
+        key = disease_name.strip().lower()
+        # Cauta in grouped (care are cheile lowercase deja)
+        if key in grouped:
+            grouped[key] = set(correct_symptoms)
+            applied += 1
+        else:
+            # Adauga boala daca nu exista deloc in CSV
+            grouped[key] = set(correct_symptoms)
+            applied += 1
+
+    print(f"Applied {applied} disease overrides from {OVERRIDES_PATH}")
 
     symptom_df = Counter()
     for sym_set in grouped.values():

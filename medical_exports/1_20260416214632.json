@@ -1,0 +1,46 @@
+{
+  "user_id": 1,
+  "conversation_id": "20260416214632",
+  "history": [
+    {
+      "timestamp": "2026-04-16T21:46:56.792383",
+      "entries": [
+        {
+          "symptom": "back pain",
+          "severity": "severe",
+          "status": "unchanged"
+        },
+        {
+          "symptom": "shoulder stiffness or tightness",
+          "severity": "moderate",
+          "status": "unchanged"
+        },
+        {
+          "symptom": "neck pain",
+          "severity": "severe",
+          "status": "unchanged"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-04-16T21:48:17.112866",
+      "entries": [
+        {
+          "symptom": "throat irritation",
+          "severity": "moderate",
+          "status": "unchanged"
+        },
+        {
+          "symptom": "sinus congestion",
+          "severity": "moderate",
+          "status": "unchanged"
+        },
+        {
+          "symptom": "swollen eye",
+          "severity": "moderate",
+          "status": "unchanged"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "conversation_id": "20260508115105",
+  "messages": [
+    {
+      "timestamp": "2026-05-08 11:51:24",
+      "role": "user",
+      "message": "i have inattention, hyperactivity, and impulsivity, including difficulty focusing, disorganization, fidgeting, excessive talking, blurting answers, trouble waiting turns, restlessness, and poor time management"
+    },
+    {
+      "timestamp": "2026-05-08 11:51:48",
+      "role": "assistant",
+      "message": "{\"user_message\": \"i have inattention, hyperactivity, and impulsivity, including difficulty focusing, disorganization, fidgeting, excessive talking, blurting answers, trouble waiting turns, restlessness, and poor time management\", \"extracted_symptoms\": [\"lack of concentration\", \"restlessness\", \"impulsivity\", \"focal muscle muscle muscle weakness\", \"excessive anger\", \"trouble waiting\"], \"possible_diseases\": [{\"rank\": 1, \"percentage\": 25.814078508885085, \"disease\": \"adjustment reaction\", \"overlap_symptoms\": [\"excessive anger\", \"restlessness\"]}, {\"rank\": 2, \"percentage\": 25.62924326122641, \"disease\": \"oppositional disorder\", \"overlap_symptoms\": [\"excessive anger\", \"restlessness\"]}, {\"rank\": 3, \"percentage\": 25.324992040095733, \"disease\": \"drug abuse (opioids\", \"overlap_symptoms\": [\"excessive anger\", \"restlessness\"]}, {\"rank\": 4, \"percentage\": 11.91325129679997, \"disease\": \"attention deficit hyperactivity disorder (adhd\", \"overlap_symptoms\": [\"restlessness\"]}, {\"rank\": 5, \"percentage\": 11.318434892992796, \"disease\": \"extrapyramidal effect of drugs\", \"overlap_symptoms\": [\"restlessness\"]}], \"warnings\": \"A new severe symptom was reported: 'excessive anger'., Please consider checking in with a professional!\", \"top_disease\": {\"name\": \"adjustment reaction\", \"articles\": [], \"summary\": {\"overview\": [\"No offline information found for adjustment reaction.\"], \"causes\": [], \"treatment\": [], \"prevention\": [], \"when_to_see_a_doctor\": [], \"sources\": []}}, \"status\": \"success\"}"
+    }
+  ]
+}

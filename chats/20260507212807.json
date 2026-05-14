@@ -1,0 +1,15 @@
+{
+  "conversation_id": "20260507212807",
+  "messages": [
+    {
+      "timestamp": "2026-05-07 21:28:33",
+      "role": "user",
+      "message": "I have loss of appetite, fear of weight gain and I skip meals"
+    },
+    {
+      "timestamp": "2026-05-07 21:28:42",
+      "role": "assistant",
+      "message": "{\"user_message\": \"I have loss of appetite, fear of weight gain and I skip meals\", \"extracted_symptoms\": [\"decreased appetite\", \"skipping meals\"], \"possible_diseases\": [{\"rank\": 1, \"percentage\": 20.36028406735207, \"disease\": \"autonomic nervous system disorder\", \"overlap_symptoms\": [\"decreased appetite\"]}, {\"rank\": 2, \"percentage\": 20.059613462902593, \"disease\": \"eating disorder\", \"overlap_symptoms\": [\"decreased appetite\"]}, {\"rank\": 3, \"percentage\": 19.93149795280356, \"disease\": \"noninfectious gastroenteritis\", \"overlap_symptoms\": [\"decreased appetite\"]}, {\"rank\": 4, \"percentage\": 19.86320384894922, \"disease\": \"indigestion\", \"overlap_symptoms\": [\"decreased appetite\"]}, {\"rank\": 5, \"percentage\": 19.785400667992555, \"disease\": \"liver cancer\", \"overlap_symptoms\": [\"decreased appetite\"]}], \"warnings\": \"\", \"top_disease\": {\"name\": \"autonomic nervous system disorder\", \"articles\": [], \"summary\": {\"overview\": [\"No offline information found for autonomic nervous system disorder.\"], \"causes\": [], \"treatment\": [], \"prevention\": [], \"when_to_see_a_doctor\": [], \"sources\": []}}, \"status\": \"success\"}"
+    }
+  ]
+}

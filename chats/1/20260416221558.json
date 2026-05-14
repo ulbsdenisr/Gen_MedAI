@@ -1,0 +1,25 @@
+{
+  "conversation_id": "20260416221558",
+  "messages": [
+    {
+      "timestamp": "2026-04-16 22:16:11",
+      "role": "user",
+      "message": "My stomach hurts and I burp a lot"
+    },
+    {
+      "timestamp": "2026-04-16 22:16:19",
+      "role": "assistant",
+      "message": "{\"user_message\": \"My stomach hurts and I burp a lot\", \"extracted_symptoms\": [], \"possible_diseases\": [], \"warnings\": \"\", \"status\": \"success\"}"
+    },
+    {
+      "timestamp": "2026-04-16 22:17:00",
+      "role": "user",
+      "message": "My stomach hurts really badly"
+    },
+    {
+      "timestamp": "2026-04-16 22:17:08",
+      "role": "assistant",
+      "message": "{\"user_message\": \"My stomach hurts really badly\", \"extracted_symptoms\": [\"stomach bloating\"], \"possible_diseases\": [\"indigestion\", \"intestinal obstruction\", \"appendicitis\"], \"warnings\": \"The severity of 'stomach bloating' appears to be worsening., Please consider checking in with a professional!\", \"status\": \"success\"}"
+    }
+  ]
+}

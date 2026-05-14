@@ -1,0 +1,21 @@
+{
+  "user_id": 1,
+  "conversation_id": "20260416214842",
+  "history": [
+    {
+      "timestamp": "2026-04-16T21:48:57.116439",
+      "entries": [
+        {
+          "symptom": "headache",
+          "severity": "severe",
+          "status": "unchanged"
+        },
+        {
+          "symptom": "fever",
+          "severity": "moderate",
+          "status": "unchanged"
+        }
+      ]
+    }
+  ]
+}
