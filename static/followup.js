@@ -20,7 +20,7 @@ const FollowUp = (() => {
 
     // --- Config ---
     const FOLLOWUP_CONTAINER_ID = 'followup-container';
-    const CHAT_MESSAGES_ID = 'chatMessages';
+    const CHAT_MESSAGES_ID = 'chat-messages';   // ajustează dacă containerul tău are alt id
 
     // ---------------------------------------------------------------
     // Public API
@@ -88,9 +88,13 @@ const FollowUp = (() => {
         const chatMessages = document.getElementById(CHAT_MESSAGES_ID);
         if (chatMessages) {
             chatMessages.appendChild(container);
-            container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            // Scroll după un mic delay ca să fie randat complet
+            setTimeout(() => {
+                container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                // Extra scroll ca sa fie vizibil sub grafic
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }, 100);
         } else {
-            // Fallback: adaugă în body dacă nu găsim containerul
             document.body.appendChild(container);
         }
     }
@@ -191,13 +195,17 @@ const FollowUp = (() => {
             // Dacă mai sunt întrebări (încă ambiguu), le afișăm
             if (data.needs_followup && data.followup_questions?.length > 0) {
                 _pendingQuestions = data.followup_questions;
-                // Actualizăm simptomele cunoscute cu ce a confirmat utilizatorul
                 const confirmed = Object.entries(_collectedAnswers)
                     .filter(([_, v]) => v === true)
                     .map(([k]) => k);
                 _currentSymptoms = [...new Set([..._currentSymptoms, ...confirmed])];
                 _collectedAnswers = {};
                 _renderQuestions(_pendingQuestions);
+                // Scroll suplimentar după render
+                setTimeout(() => {
+                    const chatMessages = document.getElementById(CHAT_MESSAGES_ID);
+                    if (chatMessages) chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 200);
             }
 
             // Apelăm callback-ul cu noul răspuns
