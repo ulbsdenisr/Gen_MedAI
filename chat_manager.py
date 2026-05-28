@@ -116,17 +116,26 @@ class ChatManager:
         """, (user_id,))
 
         rows = cursor.fetchall()
-        conn.close()
 
         conversations = []
 
         for convo_id, timestamp in rows:
+            # Obtine primul mesaj user pentru preview
+            cursor.execute("""
+            SELECT message FROM chat_history
+            WHERE conversation_id = ? AND user_id = ? AND role = 'user'
+            ORDER BY id ASC LIMIT 1
+            """, (convo_id, user_id))
+            preview_row = cursor.fetchone()
+            preview = preview_row[0][:80] if preview_row else f"Chat {convo_id}"
+
             conversations.append({
                 "id": convo_id,
                 "timestamp": int(datetime.strptime(timestamp, "%Y-%m-%d %H:%M:%S").timestamp()),
-                "preview": f"Chat {convo_id}"
+                "preview": preview
             })
 
+        conn.close()
         return conversations
     def export_all_conversations_to_json(self, output_dir="chats"):
         os.makedirs(output_dir, exist_ok=True)

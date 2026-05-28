@@ -1,0 +1,20 @@
+{
+  "overview": "A migraine is a headache that can cause intense throbbing pain or a pulsing feeling, usually on one side of the head. It often happens with nausea, vomiting, and extreme sensitivity to light and sound. Migraine attacks can last for hours to days, and the pain can be so bad that it interferes with your daily activities. For some people, a warning symptom known as an aura occurs before or with a migraine. An aura can include visual changes, such as flashes of light or blind spots. The aura also can cause tingling on one side of the face or in an arm or leg and trouble speaking.",
+  "causes": "Though migraine causes aren't fully understood, genetics and environmental factors appear to play a role. Changes in the brainstem and its interactions with the trigeminal nerve, a major pain pathway, might be involved. Imbalances in brain chemicals also might be involved — including serotonin, which helps regulate pain in your nervous system. Researchers are studying the role of serotonin in migraines. Other chemical messengers play a role in migraine pain, including calcitonin gene-related peptide, also known as CGRP.",
+  "treatment": "No information found.",
+  "prevention": "No information found.",
+  "when_to_see_a_doctor": "Migraines are often not diagnosed or treated. If you regularly have symptoms of migraines, keep a record of your attacks and how you treated them. Then make an appointment with your healthcare professional to discuss your headaches. If you have a history of headaches, see your healthcare professional if the pattern changes or your headaches suddenly feel different. See your healthcare professional right away or go to the emergency room if you have any of the following symptoms. They could be caused by a more serious medical issue.",
+  "sources": [
+    {
+      "title": "Wikipedia: Migraine",
+      "url": "https://en.wikipedia.org/wiki/Migraine",
+      "journal": "Wikipedia"
+    },
+    {
+      "title": "Mayo Clinic: Migraine",
+      "url": "https://www.mayoclinic.org/diseases-conditions/migraine-headache/symptoms-causes/syc-20360201",
+      "journal": "Mayo Clinic"
+    }
+  ],
+  "_fetched_from": "wikipedia+mayo_clinic"
+}

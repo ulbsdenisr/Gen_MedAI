@@ -1,0 +1,20 @@
+{
+  "overview": "No information found.",
+  "causes": "No information found.",
+  "treatment": "No information found.",
+  "prevention": "No information found.",
+  "when_to_see_a_doctor": "No information found.",
+  "sources": [
+    {
+      "title": "Wikipedia: Streptococcal pharyngitis",
+      "url": "https://en.wikipedia.org/wiki/Streptococcal_pharyngitis",
+      "journal": "Wikipedia"
+    },
+    {
+      "title": "Mayo Clinic: Streptococcal Pharyngitis",
+      "url": "https://www.mayoclinic.org/diseases-conditions/strep-throat/symptoms-causes/syc-20350338",
+      "journal": "Mayo Clinic"
+    }
+  ],
+  "_fetched_from": "wikipedia+mayo_clinic"
+}

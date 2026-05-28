@@ -1,0 +1,20 @@
+{
+  "overview": "No information found.",
+  "causes": "No information found.",
+  "treatment": "No information found.",
+  "prevention": "No information found.",
+  "when_to_see_a_doctor": "If you've been experiencing the above symptoms, you may have mononucleosis. If your symptoms don't get better on their own in a week or two, see your doctor.",
+  "sources": [
+    {
+      "title": "Wikipedia: Infectious mononucleosis",
+      "url": "https://en.wikipedia.org/wiki/Infectious_mononucleosis",
+      "journal": "Wikipedia"
+    },
+    {
+      "title": "Mayo Clinic: Mononucleosis",
+      "url": "https://www.mayoclinic.org/diseases-conditions/mononucleosis/symptoms-causes/syc-20350328",
+      "journal": "Mayo Clinic"
+    }
+  ],
+  "_fetched_from": "wikipedia+mayo_clinic"
+}

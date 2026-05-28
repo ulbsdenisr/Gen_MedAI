@@ -1,0 +1,20 @@
+{
+  "overview": "Bronchitis is an inflammation of the lining of your bronchial tubes. These tubes carry air to and from your lungs. People who have bronchitis often cough up thickened mucus, which can be discolored. Bronchitis may start suddenly and be short term (acute) or start gradually and become long term (chronic). Acute bronchitis, which often develops from a cold or other respiratory infection, is very common. Also called a chest cold, acute bronchitis usually improves within a week to 10 days without lasting effects, although the cough may linger for weeks.",
+  "causes": "Acute bronchitis is usually caused by viruses, typically the same viruses that cause colds and flu (influenza). Many different viruses — all of which are very contagious — can cause acute bronchitis. Antibiotics don't kill viruses, so this type of medication isn't useful in most cases of bronchitis. Viruses spread mainly from person to person by droplets produced when an ill person coughs, sneezes or talks and you inhale the droplets. Viruses may also spread through contact with an infected object.",
+  "treatment": "No information found.",
+  "prevention": "To reduce your risk of bronchitis, follow these tips:",
+  "when_to_see_a_doctor": "Contact your doctor or clinic for advice if your cough: Before you go in, your doctor or clinic can give you guidance on how to prepare for your appointment.",
+  "sources": [
+    {
+      "title": "Wikipedia: Bronchitis",
+      "url": "https://en.wikipedia.org/wiki/Bronchitis",
+      "journal": "Wikipedia"
+    },
+    {
+      "title": "Mayo Clinic: Bronchitis",
+      "url": "https://www.mayoclinic.org/diseases-conditions/bronchitis/symptoms-causes/syc-20355566",
+      "journal": "Mayo Clinic"
+    }
+  ],
+  "_fetched_from": "wikipedia+mayo_clinic"
+}

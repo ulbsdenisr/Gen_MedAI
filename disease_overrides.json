@@ -1,249 +1,453 @@
 {
   "_comment": "Profiluri corecte clinic pentru bolile frecvente. Suprascriu datele din CSV care sunt incomplete/gresite. Simptomele folosesc EXACT numele coloanelor din CSV.",
-
   "strep throat": [
-    "sore throat", "fever", "headache", "swollen lymph nodes",
-    "difficulty in swallowing", "chills", "nausea", "throat redness",
-    "swollen or red tonsils", "feeling ill"
+    "sore throat",
+    "fever",
+    "headache",
+    "swollen lymph nodes",
+    "difficulty in swallowing",
+    "chills",
+    "nausea",
+    "throat redness",
+    "swollen or red tonsils",
+    "feeling ill"
   ],
-
   "tonsillitis": [
-    "sore throat", "fever", "headache", "swollen lymph nodes",
-    "difficulty in swallowing", "swollen or red tonsils",
-    "throat redness", "feeling ill", "chills"
+    "sore throat",
+    "fever",
+    "headache",
+    "swollen lymph nodes",
+    "difficulty in swallowing",
+    "swollen or red tonsils",
+    "throat redness",
+    "feeling ill",
+    "chills"
   ],
-
   "pharyngitis": [
-    "sore throat", "fever", "hoarse voice", "cough",
-    "nasal congestion", "headache", "feeling ill", "chills",
-    "swollen lymph nodes", "throat redness"
+    "sore throat",
+    "fever",
+    "hoarse voice",
+    "cough",
+    "nasal congestion",
+    "headache",
+    "feeling ill",
+    "chills",
+    "swollen lymph nodes",
+    "throat redness"
   ],
-
   "mononucleosis": [
-    "fever", "sore throat", "swollen lymph nodes", "fatigue",
-    "headache", "muscle pain", "skin rash", "feeling ill",
-    "decreased appetite", "chills"
+    "fever",
+    "sore throat",
+    "swollen lymph nodes",
+    "fatigue",
+    "headache",
+    "muscle pain",
+    "skin rash",
+    "feeling ill",
+    "decreased appetite",
+    "chills"
   ],
-
   "common cold": [
-    "nasal congestion", "coryza", "sore throat", "cough",
-    "headache", "sneezing", "feeling cold", "fatigue",
-    "hoarse voice", "chills"
+    "nasal congestion",
+    "coryza",
+    "runny nose",
+    "sore throat",
+    "cough",
+    "headache",
+    "sneezing",
+    "feeling cold",
+    "fatigue",
+    "hoarse voice",
+    "chills"
   ],
-
   "influenza": [
-    "fever", "cough", "fatigue", "muscle pain", "headache",
-    "chills", "sore throat", "nasal congestion", "feeling ill",
-    "sweating", "decreased appetite"
+    "fever",
+    "cough",
+    "fatigue",
+    "muscle pain",
+    "headache",
+    "chills",
+    "sore throat",
+    "nasal congestion",
+    "runny nose",
+    "feeling ill",
+    "sweating",
+    "decreased appetite"
   ],
-
-  "flu": [
-    "fever", "cough", "fatigue", "muscle pain", "headache",
-    "chills", "sore throat", "nasal congestion", "feeling ill",
-    "sweating"
-  ],
-
   "covid-19": [
-    "fever", "cough", "fatigue", "difficulty breathing", "headache",
-    "muscle pain", "sore throat", "nasal congestion", "chills",
-    "disturbance of smell or taste", "feeling ill"
+    "fever",
+    "cough",
+    "fatigue",
+    "difficulty breathing",
+    "headache",
+    "muscle pain",
+    "sore throat",
+    "nasal congestion",
+    "chills",
+    "disturbance of smell or taste",
+    "feeling ill"
   ],
-
   "pneumonia": [
-    "fever", "cough", "difficulty breathing", "chills", "fatigue",
-    "chest tightness", "muscle pain", "headache", "sweating",
-    "decreased appetite", "coughing up sputum", "feeling ill"
+    "fever",
+    "cough",
+    "difficulty breathing",
+    "chills",
+    "fatigue",
+    "chest tightness",
+    "chest pain",
+    "muscle pain",
+    "headache",
+    "sweating",
+    "decreased appetite",
+    "coughing up sputum",
+    "feeling ill"
   ],
-
   "bronchitis": [
-    "cough", "coughing up sputum", "fatigue", "difficulty breathing",
-    "chest tightness", "fever", "chills", "wheezing",
-    "sore throat", "hoarse voice"
+    "cough",
+    "coughing up sputum",
+    "fatigue",
+    "difficulty breathing",
+    "chest tightness",
+    "fever",
+    "chills",
+    "wheezing",
+    "sore throat",
+    "hoarse voice"
   ],
-
   "sinusitis": [
-    "sinus congestion", "painful sinuses", "headache", "nasal congestion",
-    "fever", "fatigue", "hoarse voice", "cough",
-    "facial pain", "drainage in throat"
+    "sinus congestion",
+    "painful sinuses",
+    "headache",
+    "nasal congestion",
+    "fever",
+    "fatigue",
+    "hoarse voice",
+    "cough",
+    "facial pain",
+    "drainage in throat"
   ],
-
   "otitis media": [
-    "ear pain", "fever", "headache", "dizziness",
-    "fluid in ear", "diminished hearing", "feeling ill",
-    "nasal congestion", "sore throat"
+    "ear pain",
+    "fever",
+    "headache",
+    "dizziness",
+    "fluid in ear",
+    "diminished hearing",
+    "feeling ill",
+    "nasal congestion",
+    "sore throat"
   ],
-
   "eustachian tube dysfunction": [
-    "ear pain", "plugged feeling in ear", "fluid in ear",
-    "diminished hearing", "dizziness", "ringing in ear",
+    "ear pain",
+    "plugged feeling in ear",
+    "fluid in ear",
+    "diminished hearing",
+    "dizziness",
+    "ringing in ear",
     "nasal congestion"
   ],
-
   "eustachian tube dysfunction (ear disorder)": [
-    "ear pain", "plugged feeling in ear", "fluid in ear",
-    "diminished hearing", "dizziness", "ringing in ear",
+    "ear pain",
+    "plugged feeling in ear",
+    "fluid in ear",
+    "diminished hearing",
+    "dizziness",
+    "ringing in ear",
     "nasal congestion"
   ],
-
   "atelectasis": [
-    "difficulty breathing", "shortness of breath",
-    "chest tightness", "hurts to breath",
-    "congestion in chest", "rapid breathing", "low oxygen"
+    "difficulty breathing",
+    "shortness of breath",
+    "chest tightness",
+    "hurts to breath",
+    "congestion in chest",
+    "rapid breathing",
+    "low oxygen"
   ],
-
-  "common cold": [
-    "nasal congestion", "coryza", "runny nose", "sore throat", "cough",
-    "headache", "sneezing", "feeling cold", "fatigue",
-    "hoarse voice", "chills"
-  ],
-
-  "influenza": [
-    "fever", "cough", "fatigue", "muscle pain", "headache",
-    "chills", "sore throat", "nasal congestion", "runny nose",
-    "feeling ill", "sweating", "decreased appetite"
-  ],
-
-  "flu": [
-    "fever", "cough", "fatigue", "muscle pain", "headache",
-    "chills", "sore throat", "nasal congestion", "runny nose",
-    "feeling ill", "sweating"
-  ],
-
   "white blood cell disease": [
-    "pallor", "weakness", "fatigue", "frequent infections",
-    "swollen lymph nodes", "fever", "bruising easily",
-    "decreased appetite", "night sweats"
+    "pallor",
+    "weakness",
+    "fatigue",
+    "frequent infections",
+    "swollen lymph nodes",
+    "fever",
+    "bruising easily",
+    "decreased appetite",
+    "night sweats"
   ],
-
   "gastroenteritis": [
-    "nausea", "vomiting", "diarrhea", "abdominal pain",
-    "sharp abdominal pain", "abdominal distention",
-    "fever", "fatigue", "muscle pain", "decreased appetite",
-    "stomach bloating", "feeling ill", "cramps"
+    "nausea",
+    "vomiting",
+    "diarrhea",
+    "abdominal pain",
+    "sharp abdominal pain",
+    "abdominal distention",
+    "fever",
+    "fatigue",
+    "muscle pain",
+    "decreased appetite",
+    "stomach bloating",
+    "feeling ill",
+    "cramps"
   ],
-
   "food poisoning": [
-    "nausea", "vomiting", "diarrhea", "abdominal pain",
-    "sharp abdominal pain", "fever", "fatigue", "muscle pain", "feeling ill"
+    "nausea",
+    "vomiting",
+    "diarrhea",
+    "abdominal pain",
+    "sharp abdominal pain",
+    "fever",
+    "fatigue",
+    "muscle pain",
+    "feeling ill"
   ],
-
   "appendicitis": [
-    "sharp abdominal pain", "nausea", "vomiting", "fever",
-    "decreased appetite", "feeling ill", "restlessness"
+    "sharp abdominal pain",
+    "abdominal pain",
+    "nausea",
+    "vomiting",
+    "fever",
+    "decreased appetite",
+    "feeling ill",
+    "restlessness"
   ],
-
   "irritable bowel syndrome": [
-    "diarrhea", "constipation", "stomach bloating", "sharp abdominal pain",
-    "flatulence", "nausea", "fatigue"
+    "diarrhea",
+    "constipation",
+    "stomach bloating",
+    "bloating",
+    "abdominal pain",
+    "sharp abdominal pain",
+    "flatulence",
+    "nausea",
+    "fatigue"
   ],
-
   "ulcerative colitis": [
-    "diarrhea", "blood in stool", "sharp abdominal pain", "fatigue",
-    "fever", "nausea", "decreased appetite", "stomach bloating",
-    "rectal bleeding", "joint pain"
+    "diarrhea",
+    "blood in stool",
+    "sharp abdominal pain",
+    "fatigue",
+    "fever",
+    "nausea",
+    "decreased appetite",
+    "stomach bloating",
+    "rectal bleeding",
+    "joint pain"
   ],
-
   "urinary tract infection": [
-    "painful urination", "frequent urination", "lower abdominal pain",
-    "blood in urine", "fever", "fatigue", "feeling ill",
-    "pus in urine", "unusual color or odor to urine"
+    "painful urination",
+    "frequent urination",
+    "abdominal pain",
+    "lower abdominal pain",
+    "blood in urine",
+    "fever",
+    "fatigue",
+    "feeling ill",
+    "pus in urine",
+    "unusual color or odor to urine"
   ],
-
   "hypertension": [
-    "headache", "dizziness", "shortness of breath", "chest pain",
-    "palpitations", "fatigue", "nausea"
+    "headache",
+    "dizziness",
+    "shortness of breath",
+    "chest pain",
+    "palpitations",
+    "fatigue",
+    "nausea"
   ],
-
   "migraine": [
-    "headache", "nausea", "vomiting", "dizziness",
-    "diminished vision", "fatigue", "feeling ill"
+    "headache",
+    "nausea",
+    "vomiting",
+    "dizziness",
+    "photophobia",
+    "diminished vision",
+    "fatigue",
+    "feeling ill"
   ],
-
   "anxiety": [
-    "anxiety and nervousness", "palpitations", "shortness of breath",
-    "chest tightness", "restlessness", "insomnia", "fatigue",
-    "dizziness", "sweating", "fears and phobias"
+    "anxiety and nervousness",
+    "palpitations",
+    "shortness of breath",
+    "chest tightness",
+    "restlessness",
+    "insomnia",
+    "fatigue",
+    "dizziness",
+    "sweating",
+    "fears and phobias"
   ],
-
   "depression": [
-    "depression", "fatigue", "insomnia", "decreased appetite",
-    "disturbance of memory", "low self-esteem", "weakness",
-    "excessive anger", "loss of sex drive"
+    "depression",
+    "fatigue",
+    "insomnia",
+    "decreased appetite",
+    "disturbance of memory",
+    "lack of concentration",
+    "low self-esteem",
+    "weakness",
+    "excessive anger",
+    "loss of sex drive"
   ],
-
   "diabetes": [
-    "thirst", "frequent urination", "polyuria", "fatigue",
-    "recent weight loss", "diminished vision", "weakness",
-    "excessive appetite", "unusual color or odor to urine"
+    "thirst",
+    "frequent urination",
+    "polyuria",
+    "fatigue",
+    "recent weight loss",
+    "diminished vision",
+    "weakness",
+    "excessive appetite",
+    "unusual color or odor to urine"
   ],
-
   "anemia": [
-    "fatigue", "weakness", "pallor", "dizziness",
-    "shortness of breath", "headache", "feeling cold",
-    "decreased appetite", "palpitations"
+    "fatigue",
+    "weakness",
+    "pallor",
+    "dizziness",
+    "shortness of breath",
+    "headache",
+    "feeling cold",
+    "decreased appetite",
+    "palpitations"
   ],
-
   "asthma": [
-    "wheezing", "difficulty breathing", "cough", "chest tightness",
-    "shortness of breath", "breathing fast", "fatigue"
+    "wheezing",
+    "difficulty breathing",
+    "cough",
+    "chest tightness",
+    "shortness of breath",
+    "breathing fast",
+    "fatigue"
   ],
-
   "allergic reaction": [
-    "allergic reaction", "skin rash", "itching of skin", "sneezing",
-    "nasal congestion", "coryza", "eye redness", "lacrimation",
-    "wheezing", "throat swelling"
+    "allergic reaction",
+    "skin rash",
+    "itching of skin",
+    "sneezing",
+    "nasal congestion",
+    "coryza",
+    "eye redness",
+    "lacrimation",
+    "wheezing",
+    "throat swelling"
   ],
-
   "chickenpox": [
-    "skin rash", "fever", "itching of skin", "fatigue",
-    "headache", "decreased appetite", "feeling ill", "chills"
+    "skin rash",
+    "fever",
+    "itching of skin",
+    "fatigue",
+    "headache",
+    "decreased appetite",
+    "feeling ill",
+    "chills"
   ],
-
   "measles": [
-    "fever", "skin rash", "cough", "nasal congestion",
-    "eye redness", "feeling ill", "swollen lymph nodes",
-    "headache", "fatigue"
+    "fever",
+    "skin rash",
+    "cough",
+    "nasal congestion",
+    "eye redness",
+    "feeling ill",
+    "swollen lymph nodes",
+    "headache",
+    "fatigue"
   ],
-
   "mumps": [
-    "jaw swelling", "fever", "headache", "muscle pain",
-    "fatigue", "decreased appetite", "swollen lymph nodes",
+    "jaw swelling",
+    "fever",
+    "headache",
+    "muscle pain",
+    "fatigue",
+    "decreased appetite",
+    "swollen lymph nodes",
     "difficulty in swallowing"
   ],
-
   "dengue fever": [
-    "fever", "headache", "muscle pain", "joint pain",
-    "skin rash", "fatigue", "nausea", "vomiting",
-    "eye pain", "chills"
+    "fever",
+    "headache",
+    "muscle pain",
+    "joint pain",
+    "skin rash",
+    "fatigue",
+    "nausea",
+    "vomiting",
+    "eye pain",
+    "chills"
   ],
-
   "malaria": [
-    "fever", "chills", "sweating", "headache",
-    "muscle pain", "fatigue", "nausea", "vomiting",
-    "feeling ill", "diarrhea"
+    "fever",
+    "chills",
+    "sweating",
+    "headache",
+    "muscle pain",
+    "fatigue",
+    "nausea",
+    "vomiting",
+    "feeling ill",
+    "diarrhea"
   ],
-
   "tuberculosis": [
-    "cough", "fever", "fatigue", "recent weight loss",
-    "sweating", "chills", "hemoptysis", "coughing up sputum",
-    "chest tightness", "decreased appetite"
+    "cough",
+    "fever",
+    "fatigue",
+    "recent weight loss",
+    "sweating",
+    "chills",
+    "hemoptysis",
+    "coughing up sputum",
+    "chest tightness",
+    "decreased appetite"
   ],
-
   "meningitis": [
-    "headache", "fever", "neck stiffness or tightness", "nausea",
-    "vomiting", "dizziness", "seizures", "photophobia",
-    "feeling ill", "chills"
+    "headache",
+    "fever",
+    "neck stiffness or tightness",
+    "nausea",
+    "vomiting",
+    "dizziness",
+    "seizures",
+    "photophobia",
+    "feeling ill",
+    "chills"
   ],
-
   "heart attack": [
-    "sharp chest pain", "chest tightness", "shortness of breath",
-    "nausea", "sweating", "dizziness", "palpitations",
-    "jaw pain", "arm pain", "fatigue"
+    "sharp chest pain",
+    "chest tightness",
+    "chest pain",
+    "shortness of breath",
+    "palpitations",
+    "dizziness",
+    "restlessness",
+    "nausea",
+    "sweating",
+    "jaw pain",
+    "arm pain",
+    "fatigue",
+    "feeling ill"
   ],
-
   "stroke": [
-    "dizziness", "headache", "focal weakness", "slurring words",
-    "difficulty speaking", "loss of sensation", "diminished vision",
-    "nausea", "problems with movement", "disturbance of memory"
+    "dizziness",
+    "headache",
+    "focal weakness",
+    "slurring words",
+    "difficulty speaking",
+    "speech difficulty",
+    "loss of sensation",
+    "diminished vision",
+    "nausea",
+    "problems with movement",
+    "disturbance of memory"
+  ],
+  "panic disorder": [
+    "palpitations",
+    "shortness of breath",
+    "chest tightness",
+    "sweating",
+    "dizziness",
+    "restlessness",
+    "fears and phobias",
+    "anxiety and nervousness",
+    "feeling ill"
   ]
 }

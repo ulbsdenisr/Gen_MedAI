@@ -6,8 +6,16 @@ SPLIT_PATTERN = r",|\band\b|\bwith\b|\bplus\b|\baccompanied by\b"
 def clean_piece(text: str) -> str:
     text = str(text).strip().lower()
 
-    # elimina inceputuri inutile
-    text = re.sub(r"^(i have|i am having|i'm having|ive got|i got)\s+", "", text)
+    # elimina inceputuri inutile (extins cu variante comune)
+    text = re.sub(
+        r"^(i have|i am having|i'm having|ive got|i got"
+        r"|i feel|i am feeling|i've been having|i've been feeling"
+        r"|i am|i'm|i experience|i notice|i noticed"
+        r"|also have|also feel|also having|also feeling"
+        r"|also experience|as well as|along with"
+        r"|there is|there's|there are)\s+",
+        "", text
+    )
 
     # normalizeaza spatii
     text = re.sub(r"\s+", " ", text)

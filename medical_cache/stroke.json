@@ -1,0 +1,20 @@
+{
+  "overview": "An ischemic stroke occurs when the blood supply to part of the brain is blocked or reduced. This prevents brain tissue from getting oxygen and nutrients. Brain cells begin to die in minutes. Another type of stroke is a hemorrhagic stroke. It occurs when a blood vessel in the brain leaks or bursts and causes bleeding in the brain. The blood increases pressure on brain cells and damages them. A stroke is a medical emergency. It's crucial to get medical treatment right away. Getting emergency medical help quickly can reduce brain damage and other stroke complications.",
+  "causes": "There are two main causes of stroke. An ischemic stroke is caused by a blocked artery in the brain. A hemorrhagic stroke is caused by leaking or bursting of a blood vessel in the brain. Some people may have only a temporary disruption of blood flow to the brain, known as a transient ischemic attack (TIA). A TIA doesn't cause lasting symptoms.",
+  "treatment": "No information found.",
+  "prevention": "You can take steps to prevent a stroke. It's important to know your stroke risk factors and follow the advice of your healthcare professional about healthy lifestyle strategies. If you've had a stroke, these measures might help prevent another stroke. If you have had a transient ischemic attack (TIA), these steps can help lower your risk of a stroke. The follow-up care you receive in the hospital and afterward also may play a role. Many stroke prevention strategies are the same as strategies to prevent heart disease. In general, healthy lifestyle recommendations include:",
+  "when_to_see_a_doctor": "Seek immediate medical attention if you notice any symptoms of a stroke, even if they seem to come and go or they disappear completely. Think \"FAST\" and do the following: Call 911 or your local emergency number immediately. Don't wait to see if symptoms stop. Every minute counts. The longer a stroke goes untreated, the greater the potential for brain damage and disability. If you're with someone you suspect is having a stroke, watch the person carefully while waiting for emergency assistance.",
+  "sources": [
+    {
+      "title": "Wikipedia: Stroke",
+      "url": "https://en.wikipedia.org/wiki/Stroke",
+      "journal": "Wikipedia"
+    },
+    {
+      "title": "Mayo Clinic: Stroke",
+      "url": "https://www.mayoclinic.org/diseases-conditions/stroke/symptoms-causes/syc-20350113",
+      "journal": "Mayo Clinic"
+    }
+  ],
+  "_fetched_from": "wikipedia+mayo_clinic"
+}

@@ -126,9 +126,18 @@ def chat():
             #symptoms = extract_symptoms_ner(nlp, user_message) #extracts and normalizes them
             #print("FIRST SYMPTOMS")
             #print(symptoms)
-            symptoms,warnings=write_to_history(nlp,user_message)
+            symptoms, warnings = write_to_history(nlp, user_message)
             from symptom_mapper import canonicalize_list
+            from symptom_utils import normalize_and_split_symptoms
+            # Re-split inainte de canonicalize — NER poate extrage "thirst, frequent urination" ca una
+            symptoms = normalize_and_split_symptoms(symptoms)
             symptoms = canonicalize_list(symptoms, semantic=True)
+            # Re-split dupa canonicalize — canonicalize poate produce "thirst, frequent urination"
+            final_symptoms = []
+            for s in symptoms:
+                parts = [p.strip() for p in s.split(',') if p.strip() and len(p.strip()) > 2]
+                final_symptoms.extend(parts)
+            symptoms = list(dict.fromkeys(final_symptoms))
             print(symptoms)
             print(warnings)
             # warnings could be list of strings or other types
@@ -359,23 +368,52 @@ def load_chat():
 def get_chat(conversation_id):
     """Get messages from a specific conversation"""
     try:
-        from pathlib import Path
+        if current_user_id is None:
+            return jsonify({"error": "Not logged in"}), 401
+
+        # Incearca mai intai din fisierul JSON exportat
         chat_file = Path('chats') / str(current_user_id) / f"{conversation_id}.json"
-        
-        if not chat_file.exists():
-            return jsonify({"error": "Chat not found"}), 404
-        
-        with open(chat_file, 'r') as f:
-            chat_data = json.load(f)
-        
-        # Handle both formats: list of messages and dict with messages key
-        if isinstance(chat_data, dict) and 'messages' in chat_data:
-            messages = chat_data['messages']
-        elif isinstance(chat_data, list):
-            messages = chat_data
+
+        if chat_file.exists():
+            with open(chat_file, 'r', encoding='utf-8') as f:
+                chat_data = json.load(f)
+            raw_messages = chat_data.get('messages', chat_data) if isinstance(chat_data, dict) else chat_data
         else:
-            messages = []
-        
+            # Fallback: citeste direct din SQLite
+            raw_messages = chat_manager.get_chat_by_conversation(conversation_id, current_user_id)
+
+        # Parseaza mesajele assistant care sunt JSON strings
+        messages = []
+        for msg in raw_messages:
+            role = msg.get('role', '')
+            message_content = msg.get('message', msg.get('content', ''))
+            timestamp = msg.get('timestamp', '')
+
+            if role == 'assistant' and isinstance(message_content, str):
+                # Incearca sa parseze JSON-ul din mesajul assistant
+                try:
+                    parsed = json.loads(message_content)
+                    messages.append({
+                        "role": role,
+                        "timestamp": timestamp,
+                        "parsed": parsed,  # datele structurate pentru displayAIResponse
+                        "message": message_content
+                    })
+                except (json.JSONDecodeError, TypeError):
+                    messages.append({
+                        "role": role,
+                        "timestamp": timestamp,
+                        "message": message_content,
+                        "parsed": None
+                    })
+            else:
+                messages.append({
+                    "role": role,
+                    "timestamp": timestamp,
+                    "message": message_content,
+                    "parsed": None
+                })
+
         return jsonify({"messages": messages})
     except Exception as e:
         print(f"Error retrieving chat: {e}")
@@ -399,20 +437,24 @@ def chat_history():
             try:
                 with open(chat_file, 'r') as f:
                     chat_data = json.load(f)
-                    # Extract the conversation ID (filename without extension)
-                    conv_id = chat_file.stem
-                    # Get first message as preview
-                    preview = ""
-                    if isinstance(chat_data, list) and len(chat_data) > 0:
-                        first_msg = chat_data[0]
-                        if isinstance(first_msg, dict) and 'content' in first_msg:
-                            preview = first_msg['content'][:100]
-                    
-                    chats.append({
-                        "id": conv_id,
-                        "timestamp": chat_file.stat().st_mtime,
-                        "preview": preview
-                    })
+                conv_id = chat_file.stem
+                preview = ""
+                messages = []
+                if isinstance(chat_data, dict) and 'messages' in chat_data:
+                    messages = chat_data['messages']
+                elif isinstance(chat_data, list):
+                    messages = chat_data
+                # Cauta primul mesaj de tip "user" pentru preview
+                for msg in messages:
+                    if isinstance(msg, dict) and msg.get('role') == 'user':
+                        preview = msg.get('message', msg.get('content', ''))[:100]
+                        break
+                import datetime
+                chats.append({
+                    "id": conv_id,
+                    "timestamp": chat_file.stat().st_mtime,
+                    "preview": preview or f"Chat {conv_id}"
+                })
             except Exception as e:
                 print(f"Error reading chat file {chat_file}: {e}")
                 continue
@@ -526,3 +568,5 @@ if __name__ == '__main__':
     chat_manager.export_all_conversations_to_json()
     app.run(debug=True, host='0.0.0.0', port=5000)
 
+##My head hurts, I'm feeling nauseous and I have a congested nose
+##I have fever, cough, difficulty breathing,fatigue,sore throat,runny nose, muscle pain

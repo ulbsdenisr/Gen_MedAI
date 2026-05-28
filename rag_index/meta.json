@@ -14,7 +14,7 @@
     "disease": "abdominal hernia",
     "symptoms_canon": [
       "abdominal pain",
-      "ache all over",
+      "ache",
       "groin mass",
       "irregular belly button",
       "regurgitation",
@@ -73,15 +73,15 @@
     "disease": "acariasis",
     "symptoms_canon": [
       "emotional symptoms",
-      "itching of skin of skin",
-      "skin skin rash",
+      "itching of skin",
+      "skin rash",
       "swelling of scrotum"
     ]
   },
   {
     "disease": "achalasia",
     "symptoms_canon": [
-      "chest pain",
+      "chest tightness",
       "cough",
       "difficulty in swallowing",
       "sharp chest pain",
@@ -101,7 +101,7 @@
       "skin growth",
       "skin lesions or skin lesions",
       "skin moles",
-      "skin skin rash",
+      "skin rash",
       "skin swelling"
     ]
   },
@@ -110,7 +110,7 @@
     "symptoms_canon": [
       "abnormal appearing skin",
       "irregular appearing scalp",
-      "itching of skin of skin",
+      "itching of skin",
       "or roughness",
       "peeling",
       "scaliness",
@@ -119,7 +119,7 @@
       "skin irritation",
       "skin lesion",
       "skin moles",
-      "skin skin rash",
+      "skin rash",
       "skin swelling",
       "symptoms of the face"
     ]
@@ -161,7 +161,7 @@
   {
     "disease": "acute bronchospasm",
     "symptoms_canon": [
-      "chest pain",
+      "chest tightness",
       "coryza",
       "cough",
       "difficulty breathing",
@@ -199,7 +199,6 @@
     "symptoms_canon": [
       "dizziness",
       "kidney mass",
-      "muscle weakness",
       "nausea",
       "peripheral edema",
       "retention of urine",
@@ -207,7 +206,8 @@
       "sharp chest pain",
       "shortness of breath",
       "symptoms of the kidneys",
-      "vomiting"
+      "vomiting",
+      "weakness"
     ]
   },
   {
@@ -245,7 +245,7 @@
   {
     "disease": "acute respiratory distress syndrome (ards",
     "symptoms_canon": [
-      "chest pain",
+      "chest tightness",
       "chills",
       "cough",
       "depressive or psychotic symptoms",
@@ -292,7 +292,7 @@
   {
     "disease": "adhesive capsulitis of the shoulder",
     "symptoms_canon": [
-      "ache all over",
+      "ache",
       "arm pain",
       "muscle pain",
       "neck pain",
@@ -320,7 +320,7 @@
     "disease": "adrenal adenoma",
     "symptoms_canon": [
       "anxiety",
-      "back muscle weakness",
+      "back weakness",
       "nervousness",
       "sharp abdominal pain",
       "shortness of breath"
@@ -413,10 +413,10 @@
       "cough",
       "fluid retention",
       "itchiness of eye",
-      "itching of skin of skin",
+      "itching of skin",
       "lip swelling",
       "peripheral edema",
-      "skin skin rash",
+      "skin rash",
       "skin swelling",
       "swollen eye"
     ]
@@ -434,12 +434,12 @@
   {
     "disease": "alopecia",
     "symptoms_canon": [
-      "ill",
+      "feeling ill",
       "irregular appearing scalp",
-      "itching of skin of skin",
+      "itching of skin",
       "skin growth",
       "skin lesions or skin lesions",
-      "skin skin rash",
+      "skin rash",
       "skin swelling",
       "too little hair"
     ]
@@ -473,7 +473,7 @@
       "anxiety",
       "nervousness",
       "shortness of breath",
-      "wrist muscle weakness"
+      "wrist weakness"
     ]
   },
   {
@@ -482,8 +482,8 @@
       "abnormal involuntary movements",
       "difficulty in swallowing",
       "leg abdominal pain or spasms",
-      "muscle weakness",
-      "speech difficulty"
+      "speech difficulty",
+      "weakness"
     ]
   },
   {
@@ -526,10 +526,10 @@
     "disease": "anemia due to chronic kidney disease",
     "symptoms_canon": [
       "fatigue",
-      "muscle weakness",
       "peripheral edema",
-      "recent recent weight loss",
-      "shortness of breath"
+      "recent weight loss",
+      "shortness of breath",
+      "weakness"
     ]
   },
   {
@@ -546,15 +546,15 @@
     "symptoms_canon": [
       "dizziness",
       "emotional symptoms",
-      "ill",
-      "muscle weakness"
+      "feeling ill",
+      "weakness"
     ]
   },
   {
     "disease": "angina",
     "symptoms_canon": [
       "arm pain",
-      "chest pain",
+      "chest tightness",
       "dizziness",
       "hot flashes",
       "increased heart rate",
@@ -568,7 +568,7 @@
   {
     "disease": "ankylosing spondylitis",
     "symptoms_canon": [
-      "ache all over",
+      "ache",
       "back pain",
       "elbow pain",
       "hip pain",
@@ -576,7 +576,7 @@
       "leg pain",
       "lower body pain",
       "paresthesia",
-      "stiffness all over"
+      "stiffness"
     ]
   },
   {
@@ -635,14 +635,15 @@
       "fatigue",
       "fever",
       "lack of growth",
-      "muscle weakness",
       "nausea",
-      "slurring words"
+      "slurring words",
+      "weakness"
     ]
   },
   {
     "disease": "appendicitis",
     "symptoms_canon": [
+      "abdominal pain",
       "decreased appetite",
       "feeling ill",
       "fever",
@@ -655,7 +656,7 @@
   {
     "disease": "arrhythmia",
     "symptoms_canon": [
-      "chest pain",
+      "chest tightness",
       "dizziness",
       "fainting",
       "fatigue",
@@ -668,7 +669,7 @@
   {
     "disease": "arthritis of the hip",
     "symptoms_canon": [
-      "ache all over",
+      "ache",
       "arthralgia",
       "back pain",
       "groin pain",
@@ -762,7 +763,7 @@
       "scaliness",
       "skin dryness",
       "skin lesion",
-      "skin skin rash",
+      "skin rash",
       "skin swelling"
     ]
   },
@@ -791,13 +792,13 @@
   {
     "disease": "atrial flutter",
     "symptoms_canon": [
-      "chest pain",
+      "chest tightness",
       "frequent urination",
       "increased heart rate",
-      "lymph node enlargement",
       "palpitations",
       "sharp chest pain",
-      "shortness of breath"
+      "shortness of breath",
+      "swollen lymph nodes"
     ]
   },
   {
@@ -891,11 +892,11 @@
       "abnormal appearing skin",
       "cough",
       "diaper skin rash",
-      "itching of skin of skin",
+      "itching of skin",
       "painful urination",
       "penis pain",
       "penis redness",
-      "skin skin rash",
+      "skin rash",
       "suprapubic pain"
     ]
   },
@@ -905,13 +906,13 @@
       "abnormal involuntary movements",
       "diminished vision",
       "facial pain",
-      "focal muscle weakness",
+      "focal weakness",
       "headache",
       "loss of sensation",
-      "muscle weakness",
       "peripheral edema",
       "symptoms of eye",
-      "symptoms of the face"
+      "symptoms of the face",
+      "weakness"
     ]
   },
   {
@@ -934,11 +935,11 @@
       "frontal headache",
       "headache",
       "movement",
-      "muscle weakness",
       "nausea",
       "palpitations",
       "problems",
-      "vomiting"
+      "vomiting",
+      "weakness"
     ]
   },
   {
@@ -1058,7 +1059,7 @@
     "disease": "blepharospasm",
     "symptoms_canon": [
       "abnormal movement of eyelid",
-      "back muscle weakness",
+      "back weakness",
       "diminished vision",
       "headache"
     ]
@@ -1102,8 +1103,8 @@
       "arm pain",
       "back pain",
       "elbow pain",
-      "hand or finger muscle weakness",
       "hand or finger pain",
+      "hand or finger weakness",
       "headache",
       "loss of sensation",
       "neck pain",
@@ -1116,12 +1117,12 @@
     "symptoms_canon": [
       "decreased appetite",
       "disturbance of memory",
-      "focal muscle weakness",
+      "focal weakness",
       "headache",
-      "muscle weakness",
       "seizures",
       "slurring words",
-      "speech difficulty"
+      "speech difficulty",
+      "weakness"
     ]
   },
   {
@@ -1231,7 +1232,7 @@
       "skin growth",
       "skin lesion",
       "skin lesions or skin lesions",
-      "skin skin rash",
+      "skin rash",
       "skin swelling"
     ]
   },
@@ -1259,16 +1260,16 @@
       "arm swelling",
       "decreased heart rate",
       "difficulty breathing",
-      "muscle weakness",
       "palpitations",
       "sharp chest pain",
-      "shortness of breath"
+      "shortness of breath",
+      "weakness"
     ]
   },
   {
     "disease": "cardiomyopathy",
     "symptoms_canon": [
-      "chest pain",
+      "chest tightness",
       "decreased heart rate",
       "fatigue",
       "heartburn",
@@ -1281,8 +1282,8 @@
   {
     "disease": "carpal tunnel syndrome",
     "symptoms_canon": [
-      "arm muscle weakness",
       "arm pain",
+      "arm weakness",
       "elbow pain",
       "hand or finger pain",
       "hand or finger stiffness or tightness",
@@ -1365,7 +1366,7 @@
     "symptoms_canon": [
       "arm pain",
       "dizziness",
-      "focal muscle weakness",
+      "focal weakness",
       "headache",
       "neck pain",
       "vomiting"
@@ -1500,9 +1501,9 @@
     "disease": "chondromalacia of the patella",
     "symptoms_canon": [
       "bones are painful",
-      "knee muscle weakness",
       "knee pain",
       "knee swelling",
+      "knee weakness",
       "leg pain",
       "movement",
       "problems"
@@ -1570,15 +1571,15 @@
       "dizziness",
       "loss of sensation",
       "movement",
-      "muscle weakness",
-      "problems"
+      "problems",
+      "weakness"
     ]
   },
   {
     "disease": "chronic kidney disease",
     "symptoms_canon": [
-      "cold",
       "fatigue",
+      "feeling cold",
       "peripheral edema",
       "shortness of breath",
       "symptoms of the kidneys"
@@ -1590,10 +1591,10 @@
       "arthralgia",
       "back pain",
       "hip pain",
-      "knee muscle weakness",
       "knee pain",
       "knee stiffness or tightness",
       "knee swelling",
+      "knee weakness",
       "leg pain",
       "peripheral edema"
     ]
@@ -1601,7 +1602,7 @@
   {
     "disease": "chronic obstructive pulmonary disease (copd",
     "symptoms_canon": [
-      "chest pain",
+      "chest tightness",
       "congestion in chest",
       "coryza",
       "cough",
@@ -1632,7 +1633,7 @@
   {
     "disease": "chronic pain disorder",
     "symptoms_canon": [
-      "ache all over",
+      "ache",
       "back pain",
       "headache",
       "hip pain",
@@ -1647,7 +1648,7 @@
     "disease": "chronic pancreatitis",
     "symptoms_canon": [
       "abusing alcohol",
-      "ache all over",
+      "ache",
       "back pain",
       "diarrhea",
       "nausea",
@@ -1659,7 +1660,7 @@
   {
     "disease": "chronic rheumatic fever",
     "symptoms_canon": [
-      "chest pain",
+      "chest tightness",
       "dizziness",
       "increased heart rate",
       "palpitations",
@@ -1720,7 +1721,7 @@
       "lip sore",
       "lip swelling",
       "mouth ulcer",
-      "skin skin rash",
+      "skin rash",
       "skin swelling",
       "sore throat",
       "vaginal itching of skin"
@@ -1770,7 +1771,7 @@
     "disease": "complex regional pain syndrome",
     "symptoms_canon": [
       "abnormal involuntary movements",
-      "ache all over",
+      "ache",
       "arm pain",
       "back pain",
       "foot or toe pain",
@@ -1912,7 +1913,7 @@
     "symptoms_canon": [
       "arthralgia",
       "difficulty in swallowing",
-      "ill"
+      "feeling ill"
     ]
   },
   {
@@ -1920,7 +1921,7 @@
     "symptoms_canon": [
       "abnormal appearing skin",
       "allergic reaction",
-      "itching of skin of skin",
+      "itching of skin",
       "or roughness",
       "peeling",
       "scaliness",
@@ -1929,7 +1930,7 @@
       "skin lesion",
       "skin lesions or skin lesions",
       "skin moles",
-      "skin skin rash",
+      "skin rash",
       "skin swelling",
       "swollen eye"
     ]
@@ -1993,7 +1994,7 @@
     "disease": "coronary atherosclerosis",
     "symptoms_canon": [
       "burning chest pain",
-      "chest pain",
+      "chest tightness",
       "fatigue",
       "leg abdominal pain or spasms",
       "palpitations",
@@ -2110,14 +2111,14 @@
     "symptoms_canon": [
       "cough",
       "decreased appetite",
-      "ill",
+      "feeling ill",
       "intermenstrual bleeding"
     ]
   },
   {
     "disease": "cysticercosis",
     "symptoms_canon": [
-      "elbow muscle weakness",
+      "elbow weakness",
       "headache",
       "seizures",
       "shortness of breath"
@@ -2196,7 +2197,7 @@
       "depression",
       "depressive or psychotic symptoms",
       "disturbance of memory",
-      "focal muscle weakness",
+      "focal weakness",
       "hostile behavior",
       "movement",
       "problems",
@@ -2211,7 +2212,7 @@
       "delusions or hallucinations",
       "depressive or psychotic symptoms",
       "disturbance of memory",
-      "focal muscle weakness",
+      "focal weakness",
       "hostile behavior",
       "insomnia",
       "movement",
@@ -2259,6 +2260,7 @@
       "excessive anger",
       "fatigue",
       "insomnia",
+      "lack of concentration",
       "loss of sex drive",
       "low self-esteem",
       "weakness"
@@ -2277,7 +2279,7 @@
       "skin lesion",
       "skin lesions or skin lesions",
       "skin moles",
-      "skin skin rash",
+      "skin rash",
       "skin swelling"
     ]
   },
@@ -2343,11 +2345,11 @@
       "diarrhea",
       "fluid retention",
       "frequent urination",
-      "muscle weakness",
       "nausea",
       "sharp abdominal pain",
       "sharp chest pain",
-      "vomiting"
+      "vomiting",
+      "weakness"
     ]
   },
   {
@@ -2397,7 +2399,7 @@
       "irritable infant",
       "nasal congestion",
       "pulling at ears",
-      "skin skin rash",
+      "skin rash",
       "temper problems",
       "vomiting"
     ]
@@ -2436,7 +2438,7 @@
   {
     "disease": "dislocation of the foot",
     "symptoms_canon": [
-      "elbow muscle weakness",
+      "elbow weakness",
       "foot or toe pain",
       "vomiting"
     ]
@@ -2480,7 +2482,7 @@
     "disease": "dislocation of the vertebra",
     "symptoms_canon": [
       "back pain",
-      "elbow muscle weakness",
+      "elbow weakness",
       "leg pain",
       "neck pain"
     ]
@@ -2490,7 +2492,7 @@
     "symptoms_canon": [
       "arm pain",
       "depression",
-      "elbow muscle weakness",
+      "elbow weakness",
       "hand or finger pain"
     ]
   },
@@ -2498,7 +2500,7 @@
     "disease": "dissociative disorder",
     "symptoms_canon": [
       "anxiety",
-      "back muscle weakness",
+      "back weakness",
       "depressive or psychotic symptoms",
       "disturbance of memory",
       "excessive anger",
@@ -2596,8 +2598,8 @@
       "anxiety",
       "depressive or psychotic symptoms",
       "drug abuse",
+      "feeling ill",
       "hostile behavior",
-      "ill",
       "nervousness",
       "palpitations",
       "shortness of breath"
@@ -2638,11 +2640,11 @@
       "allergic reaction",
       "dizziness",
       "headache",
-      "itching of skin of skin",
+      "itching of skin",
       "nausea",
       "peripheral edema",
       "shortness of breath",
-      "skin skin rash",
+      "skin rash",
       "throat swelling",
       "vomiting"
     ]
@@ -2691,7 +2693,7 @@
       "frequent urination",
       "skin lesion",
       "skin lesions or skin lesions",
-      "skin skin rash"
+      "skin rash"
     ]
   },
   {
@@ -2785,7 +2787,7 @@
       "allergic reaction",
       "cough",
       "irregular appearing scalp",
-      "itching of skin of skin",
+      "itching of skin",
       "or roughness",
       "peeling",
       "scaliness",
@@ -2793,7 +2795,7 @@
       "skin irritation",
       "skin lesion",
       "skin lesions or skin lesions",
-      "skin skin rash",
+      "skin rash",
       "skin swelling",
       "warts"
     ]
@@ -2856,7 +2858,7 @@
   {
     "disease": "endometrial hyperplasia",
     "symptoms_canon": [
-      "back muscle weakness",
+      "back weakness",
       "heavy menstrual flow",
       "involuntary urination",
       "unpredictable menstruation",
@@ -2897,7 +2899,7 @@
       "fluid retention",
       "foot or toe swelling",
       "hand or finger swelling",
-      "itching of skin of skin",
+      "itching of skin",
       "paresthesia",
       "skin swelling"
     ]
@@ -2940,9 +2942,9 @@
       "disturbance of memory",
       "headache",
       "lack of growth",
-      "muscle muscle weakness",
       "seizures",
-      "speech difficulty"
+      "speech difficulty",
+      "weakness"
     ]
   },
   {
@@ -2966,7 +2968,7 @@
       "difficulty in swallowing",
       "fever",
       "mouth ulcer",
-      "skin skin rash",
+      "skin rash",
       "vomiting"
     ]
   },
@@ -2992,7 +2994,7 @@
     "symptoms_canon": [
       "abdominal pain",
       "burning abdominal pain",
-      "chest pain",
+      "chest tightness",
       "cough",
       "difficulty in swallowing",
       "heartburn",
@@ -3089,7 +3091,7 @@
       "depression",
       "depressive or psychotic symptoms",
       "disturbance of memory",
-      "elbow muscle weakness"
+      "elbow weakness"
     ]
   },
   {
@@ -3145,7 +3147,7 @@
   {
     "disease": "fibromyalgia",
     "symptoms_canon": [
-      "ache all over",
+      "ache",
       "arm pain",
       "back pain",
       "headache",
@@ -3180,17 +3182,16 @@
   {
     "disease": "flu",
     "symptoms_canon": [
+      "ache",
       "chills",
+      "coryza",
       "cough",
-      "fatigue",
-      "feeling ill",
+      "diarrhea",
       "fever",
       "headache",
-      "muscle pain",
-      "nasal congestion",
-      "runny nose",
+      "nausea",
       "sore throat",
-      "sweating"
+      "vomiting"
     ]
   },
   {
@@ -3223,10 +3224,10 @@
       "allergic reaction",
       "cough",
       "hand or finger swelling",
-      "itching of skin of skin",
+      "itching of skin",
       "lip swelling",
       "nasal congestion",
-      "skin skin rash",
+      "skin rash",
       "vomiting"
     ]
   },
@@ -3272,7 +3273,7 @@
     "symptoms_canon": [
       "difficulty in swallowing",
       "lump in throat",
-      "recent recent weight loss",
+      "recent weight loss",
       "sharp abdominal pain",
       "vomiting",
       "vomiting blood"
@@ -3308,11 +3309,11 @@
   {
     "disease": "fracture of the ankle",
     "symptoms_canon": [
-      "ankle muscle weakness",
       "ankle pain",
+      "ankle weakness",
       "foot or toe pain",
       "foot or toe swelling",
-      "knee muscle weakness",
+      "knee weakness",
       "leg pain",
       "peripheral edema"
     ]
@@ -3360,10 +3361,10 @@
     "disease": "fracture of the foot",
     "symptoms_canon": [
       "ankle pain",
-      "foot or toe muscle weakness",
       "foot or toe pain",
       "foot or toe stiffness or tightness",
       "foot or toe swelling",
+      "foot or toe weakness",
       "peripheral edema"
     ]
   },
@@ -3396,9 +3397,9 @@
     "symptoms_canon": [
       "ankle pain",
       "hip pain",
-      "knee muscle weakness",
       "knee pain",
       "knee swelling",
+      "knee weakness",
       "leg pain",
       "leg stiffness or tightness",
       "movement",
@@ -3423,14 +3424,14 @@
       "hip pain",
       "knee pain",
       "knee swelling",
-      "leg muscle weakness",
-      "leg pain"
+      "leg pain",
+      "leg weakness"
     ]
   },
   {
     "disease": "fracture of the pelvis",
     "symptoms_canon": [
-      "ache all over",
+      "ache",
       "back pain",
       "groin pain",
       "hip pain",
@@ -3442,7 +3443,7 @@
   {
     "disease": "fracture of the rib",
     "symptoms_canon": [
-      "ache all over",
+      "ache",
       "back mass or lump",
       "back pain",
       "bones are painful",
@@ -3500,7 +3501,7 @@
   {
     "disease": "frostbite",
     "symptoms_canon": [
-      "elbow muscle weakness",
+      "elbow weakness",
       "foot or toe pain",
       "sharp chest pain"
     ]
@@ -3510,7 +3511,7 @@
     "symptoms_canon": [
       "abnormal appearing skin",
       "irregular appearing scalp",
-      "itching of skin of skin",
+      "itching of skin",
       "itchy scalp",
       "or roughness",
       "peeling",
@@ -3521,7 +3522,7 @@
       "skin irritation",
       "skin lesion",
       "skin lesions or skin lesions",
-      "skin skin rash",
+      "skin rash",
       "skin swelling"
     ]
   },
@@ -3530,7 +3531,7 @@
     "symptoms_canon": [
       "abnormal appearing skin",
       "irregular appearing scalp",
-      "itching of skin of skin",
+      "itching of skin",
       "itchy scalp",
       "or roughness",
       "peeling",
@@ -3538,7 +3539,7 @@
       "skin dryness",
       "skin lesion",
       "skin lesions or skin lesions",
-      "skin skin rash",
+      "skin rash",
       "skin swelling",
       "too little hair"
     ]
@@ -3650,7 +3651,7 @@
     "disease": "gastroesophageal reflux disease (gerd",
     "symptoms_canon": [
       "burning abdominal pain",
-      "chest pain",
+      "chest tightness",
       "cough",
       "difficulty in swallowing",
       "hoarse voice",
@@ -3670,12 +3671,12 @@
       "dizziness",
       "fainting",
       "melena",
-      "muscle weakness",
       "nausea",
       "rectal bleeding",
       "sharp abdominal pain",
       "vomiting",
-      "vomiting blood"
+      "vomiting blood",
+      "weakness"
     ]
   },
   {
@@ -3697,7 +3698,7 @@
       "painful urination",
       "recent pregnancy",
       "skin lesion",
-      "skin skin rash",
+      "skin rash",
       "suprapubic pain",
       "vaginal discharge",
       "vaginal itching of skin"
@@ -3888,12 +3889,15 @@
     "disease": "heart attack",
     "symptoms_canon": [
       "arm pain",
+      "chest pain",
       "chest tightness",
       "dizziness",
       "fatigue",
+      "feeling ill",
       "jaw pain",
       "nausea",
       "palpitations",
+      "restlessness",
       "sharp chest pain",
       "shortness of breath",
       "sweating"
@@ -3902,14 +3906,14 @@
   {
     "disease": "heart block",
     "symptoms_canon": [
-      "chest pain",
+      "chest tightness",
       "dizziness",
       "fainting",
-      "muscle weakness",
       "palpitations",
       "peripheral edema",
       "sharp chest pain",
       "shortness of breath",
+      "weakness",
       "weight gain"
     ]
   },
@@ -3917,22 +3921,22 @@
     "disease": "heart contusion",
     "symptoms_canon": [
       "depression",
-      "elbow muscle weakness"
+      "elbow weakness"
     ]
   },
   {
     "disease": "heart failure",
     "symptoms_canon": [
-      "chest pain",
+      "chest tightness",
       "cough",
       "difficulty breathing",
       "fluid retention",
       "hurts to breath",
-      "muscle weakness",
       "palpitations",
       "peripheral edema",
       "sharp chest pain",
       "shortness of breath",
+      "weakness",
       "weight gain"
     ]
   },
@@ -3943,17 +3947,17 @@
       "fainting",
       "fluid retention",
       "headache",
-      "muscle weakness",
       "sharp chest pain",
       "shortness of breath",
-      "vomiting"
+      "vomiting",
+      "weakness"
     ]
   },
   {
     "disease": "heat stroke",
     "symptoms_canon": [
       "dizziness",
-      "hot"
+      "feeling hot"
     ]
   },
   {
@@ -3977,7 +3981,7 @@
   {
     "disease": "hemarthrosis",
     "symptoms_canon": [
-      "elbow muscle weakness",
+      "elbow weakness",
       "frequent urination",
       "knee pain",
       "knee swelling"
@@ -3986,7 +3990,7 @@
   {
     "disease": "hematoma",
     "symptoms_canon": [
-      "ache all over",
+      "ache",
       "arm swelling",
       "sharp abdominal pain",
       "skin swelling",
@@ -4001,18 +4005,18 @@
       "headache",
       "loss of sensation",
       "movement",
-      "muscle weakness",
       "problems",
       "seizures",
       "slurring words",
-      "speech difficulty"
+      "speech difficulty",
+      "weakness"
     ]
   },
   {
     "disease": "hemochromatosis",
     "symptoms_canon": [
       "abnormal appearing skin",
-      "ache all over",
+      "ache",
       "speech difficulty"
     ]
   },
@@ -4065,8 +4069,8 @@
     "disease": "hepatitis due to a toxin",
     "symptoms_canon": [
       "depression",
-      "ill",
-      "itching of skin of skin",
+      "feeling ill",
+      "itching of skin",
       "jaundice",
       "nausea",
       "rectal bleeding",
@@ -4077,12 +4081,12 @@
   {
     "disease": "herniated disk",
     "symptoms_canon": [
-      "arm muscle weakness",
       "arm pain",
+      "arm weakness",
       "back pain",
       "hip pain",
-      "leg muscle weakness",
       "leg pain",
+      "leg weakness",
       "loss of sensation",
       "neck pain",
       "paresthesia",
@@ -4096,10 +4100,10 @@
       "decreased appetite",
       "fever",
       "insomnia",
-      "lymph node enlargement",
       "mouth ulcer",
-      "skin skin rash",
+      "skin rash",
       "sore throat",
+      "swollen lymph nodes",
       "vomiting"
     ]
   },
@@ -4127,7 +4131,7 @@
       "groin mass",
       "skin growth",
       "skin lesion",
-      "skin skin rash",
+      "skin rash",
       "skin swelling"
     ]
   },
@@ -4159,7 +4163,7 @@
     "disease": "histoplasmosis",
     "symptoms_canon": [
       "cough",
-      "elbow muscle weakness",
+      "elbow weakness",
       "lacrimation"
     ]
   },
@@ -4194,7 +4198,7 @@
     "disease": "huntington disease",
     "symptoms_canon": [
       "anxiety",
-      "elbow muscle weakness",
+      "elbow weakness",
       "nervousness"
     ]
   },
@@ -4253,8 +4257,8 @@
     "symptoms_canon": [
       "dizziness",
       "loss of sensation",
-      "muscle weakness",
-      "retention of urine"
+      "retention of urine",
+      "weakness"
     ]
   },
   {
@@ -4274,13 +4278,13 @@
       "diarrhea",
       "dizziness",
       "headache",
-      "muscle weakness",
       "nausea",
       "pain during pregnancy",
       "problems during pregnancy",
       "sharp abdominal pain",
       "vomiting",
-      "vomiting blood"
+      "vomiting blood",
+      "weakness"
     ]
   },
   {
@@ -4307,12 +4311,12 @@
       "depressive or psychotic symptoms",
       "difficulty in swallowing",
       "dizziness",
-      "ill",
-      "muscle weakness",
+      "feeling ill",
       "nausea",
       "sharp chest pain",
       "shortness of breath",
-      "vomiting"
+      "vomiting",
+      "weakness"
     ]
   },
   {
@@ -4329,8 +4333,8 @@
       "difficulty breathing",
       "fainting",
       "fever",
-      "muscle weakness",
-      "shortness of breath"
+      "shortness of breath",
+      "weakness"
     ]
   },
   {
@@ -4349,7 +4353,7 @@
     "symptoms_canon": [
       "cough",
       "frequent urination",
-      "muscle weakness"
+      "weakness"
     ]
   },
   {
@@ -4378,17 +4382,17 @@
   {
     "disease": "hypertensive heart disease",
     "symptoms_canon": [
-      "chest pain",
+      "chest tightness",
       "difficulty breathing",
       "fatigue",
       "heartburn",
       "insomnia",
-      "muscle weakness",
       "palpitations",
       "peripheral edema",
       "recent pregnancy",
       "sharp chest pain",
-      "shortness of breath"
+      "shortness of breath",
+      "weakness"
     ]
   },
   {
@@ -4405,7 +4409,7 @@
     "symptoms_canon": [
       "abnormal involuntary movements",
       "constipation",
-      "leg muscle weakness",
+      "leg weakness",
       "sharp chest pain",
       "shortness of breath"
     ]
@@ -4418,14 +4422,14 @@
       "depressive or psychotic symptoms",
       "dizziness",
       "fainting",
-      "ill",
+      "feeling ill",
       "movement",
-      "muscle weakness",
       "nausea",
       "problems",
       "seizures",
       "sleepiness",
-      "sweating"
+      "sweating",
+      "weakness"
     ]
   },
   {
@@ -4448,13 +4452,13 @@
     "symptoms_canon": [
       "back pain",
       "fainting",
-      "muscle weakness",
       "nausea",
       "seizures",
       "sharp abdominal pain",
       "sharp chest pain",
       "shortness of breath",
-      "vomiting"
+      "vomiting",
+      "weakness"
     ]
   },
   {
@@ -4463,7 +4467,7 @@
       "depressive or psychotic symptoms",
       "emotional symptoms",
       "fainting",
-      "muscle weakness"
+      "weakness"
     ]
   },
   {
@@ -4484,8 +4488,8 @@
       "diarrhea",
       "dizziness",
       "fainting",
+      "feeling ill",
       "fever",
-      "ill",
       "nausea",
       "sharp abdominal pain",
       "vomiting"
@@ -4594,11 +4598,11 @@
       "abnormal appearing skin",
       "cough",
       "fever",
-      "itching of skin of skin",
+      "itching of skin",
       "mouth ulcer",
       "nasal congestion",
       "skin lesion",
-      "skin skin rash",
+      "skin rash",
       "skin swelling",
       "sore in nose"
     ]
@@ -4709,7 +4713,7 @@
     "disease": "inguinal hernia",
     "symptoms_canon": [
       "abdominal pain",
-      "ache all over",
+      "ache",
       "groin mass",
       "groin pain",
       "mass in scrotum",
@@ -4726,9 +4730,9 @@
     "symptoms_canon": [
       "ankle pain",
       "arthralgia",
-      "foot or toe muscle weakness",
       "foot or toe pain",
       "foot or toe swelling",
+      "foot or toe weakness",
       "leg pain",
       "peripheral edema",
       "wrist swelling"
@@ -4820,8 +4824,8 @@
     "disease": "injury to the knee",
     "symptoms_canon": [
       "foot or toe swelling",
-      "knee muscle weakness",
       "knee pain",
+      "knee weakness",
       "leg pain",
       "movement",
       "problems"
@@ -4891,11 +4895,11 @@
       "abnormal appearing skin",
       "fluid retention",
       "hand or finger swelling",
-      "itching of skin of skin",
+      "itching of skin",
       "lip swelling",
       "peripheral edema",
       "skin lesion",
-      "skin skin rash",
+      "skin rash",
       "skin swelling"
     ]
   },
@@ -4930,7 +4934,7 @@
       "skin dryness",
       "skin lesion",
       "skin lesions or skin lesions",
-      "skin skin rash",
+      "skin rash",
       "skin swelling"
     ]
   },
@@ -4991,12 +4995,12 @@
       "depressive or psychotic symptoms",
       "diminished vision",
       "dizziness",
-      "focal muscle weakness",
+      "focal weakness",
       "headache",
-      "muscle weakness",
       "nausea",
       "seizures",
-      "vomiting"
+      "vomiting",
+      "weakness"
     ]
   },
   {
@@ -5051,16 +5055,18 @@
       "heartburn",
       "heavy menstrual flow",
       "intermenstrual bleeding",
-      "muscle weakness",
       "rectal bleeding",
       "regurgitation",
       "regurgitation.1",
+      "weakness",
       "weight gain"
     ]
   },
   {
     "disease": "irritable bowel syndrome",
     "symptoms_canon": [
+      "abdominal pain",
+      "bloating",
       "constipation",
       "diarrhea",
       "fatigue",
@@ -5085,7 +5091,7 @@
   {
     "disease": "ischemic heart disease",
     "symptoms_canon": [
-      "chest pain",
+      "chest tightness",
       "difficulty breathing",
       "dizziness",
       "fatigue",
@@ -5104,14 +5110,14 @@
       "abnormal appearing skin",
       "allergic reaction",
       "fluid retention",
-      "itching of skin of skin",
+      "itching of skin",
       "itchy scalp",
       "or roughness",
       "peeling",
       "problems during pregnancy",
       "scaliness",
       "skin dryness",
-      "skin skin rash",
+      "skin rash",
       "vaginal itching of skin"
     ]
   },
@@ -5157,7 +5163,7 @@
     "disease": "kaposi sarcoma",
     "symptoms_canon": [
       "depression",
-      "elbow muscle weakness"
+      "elbow weakness"
     ]
   },
   {
@@ -5173,7 +5179,7 @@
   {
     "disease": "kidney disease due to longstanding hypertension",
     "symptoms_canon": [
-      "cold",
+      "feeling cold",
       "shortness of breath",
       "speech difficulty",
       "symptoms of the kidneys"
@@ -5211,12 +5217,12 @@
     "disease": "knee ligament or meniscus tear",
     "symptoms_canon": [
       "knee lump or mass",
-      "knee muscle weakness",
       "knee pain",
       "knee stiffness or tightness",
       "knee swelling",
-      "leg muscle weakness",
-      "leg stiffness or tightness"
+      "knee weakness",
+      "leg stiffness or tightness",
+      "leg weakness"
     ]
   },
   {
@@ -5296,7 +5302,7 @@
     "disease": "lice",
     "symptoms_canon": [
       "cough",
-      "itching of skin of skin",
+      "itching of skin",
       "itchy scalp",
       "leg lump or mass",
       "nasal congestion"
@@ -5313,9 +5319,9 @@
   {
     "disease": "lichen simplex",
     "symptoms_canon": [
-      "itching of skin of skin",
+      "itching of skin",
       "skin lesion",
-      "skin skin rash",
+      "skin rash",
       "speech difficulty",
       "vaginal itching of skin"
     ]
@@ -5354,12 +5360,12 @@
       "flank pain",
       "heartburn",
       "jaundice",
-      "muscle weakness",
       "nausea",
       "peripheral edema",
       "sharp abdominal pain",
       "shortness of breath",
-      "unusual color or odor to urine"
+      "unusual color or odor to urine",
+      "weakness"
     ]
   },
   {
@@ -5380,7 +5386,7 @@
       "decreased appetite",
       "fatigue",
       "hemoptysis",
-      "leg muscle weakness",
+      "leg weakness",
       "shortness of breath",
       "smoking problems"
     ]
@@ -5388,7 +5394,7 @@
   {
     "disease": "lung contusion",
     "symptoms_canon": [
-      "ache all over",
+      "ache",
       "back pain",
       "sharp chest pain",
       "shortness of breath"
@@ -5588,11 +5594,11 @@
       "abnormal appearing skin",
       "irregular appearing scalp",
       "itchy eyelid",
-      "lymph node enlargement",
       "skin growth",
       "skin lesion",
       "skin moles",
-      "skin swelling"
+      "skin swelling",
+      "swollen lymph nodes"
     ]
   },
   {
@@ -5615,7 +5621,7 @@
       "disturbance of memory",
       "dizziness",
       "headache",
-      "muscle weakness"
+      "weakness"
     ]
   },
   {
@@ -5658,7 +5664,7 @@
     "symptoms_canon": [
       "decreased appetite",
       "fatigue",
-      "focal muscle weakness",
+      "focal weakness",
       "neck mass",
       "vaginal dryness"
     ]
@@ -5672,6 +5678,7 @@
       "feeling ill",
       "headache",
       "nausea",
+      "photophobia",
       "vomiting"
     ]
   },
@@ -5692,7 +5699,7 @@
   {
     "disease": "mitral valve disease",
     "symptoms_canon": [
-      "chest pain",
+      "chest tightness",
       "dizziness",
       "fatigue",
       "increased heart rate",
@@ -5718,7 +5725,7 @@
     "disease": "molluscum contagiosum",
     "symptoms_canon": [
       "abnormal appearing skin",
-      "itching of skin of skin",
+      "itching of skin",
       "knee lump or mass",
       "or roughness",
       "peeling",
@@ -5726,7 +5733,7 @@
       "skin dryness",
       "skin lesion",
       "skin lesions or skin lesions",
-      "skin skin rash",
+      "skin rash",
       "skin swelling",
       "warts"
     ]
@@ -5738,8 +5745,8 @@
       "arm pain",
       "elbow pain",
       "foot or toe pain",
-      "hand or finger muscle weakness",
       "hand or finger pain",
+      "hand or finger weakness",
       "leg pain",
       "loss of sensation",
       "shoulder pain",
@@ -5765,7 +5772,7 @@
     "disease": "moyamoya disease",
     "symptoms_canon": [
       "depressive or psychotic symptoms",
-      "elbow muscle weakness"
+      "elbow weakness"
     ]
   },
   {
@@ -5788,8 +5795,8 @@
       "fatigue",
       "lip swelling",
       "movement",
-      "muscle weakness",
-      "problems"
+      "problems",
+      "weakness"
     ]
   },
   {
@@ -5799,14 +5806,14 @@
       "disturbance of memory",
       "dizziness",
       "fatigue",
-      "focal muscle weakness",
+      "focal weakness",
       "headache",
-      "leg muscle weakness",
+      "leg weakness",
       "loss of sensation",
       "movement",
-      "muscle weakness",
       "paresthesia",
-      "problems"
+      "problems",
+      "weakness"
     ]
   },
   {
@@ -5841,9 +5848,9 @@
   {
     "disease": "muscular dystrophy",
     "symptoms_canon": [
-      "cold",
       "cough",
       "fatigue",
+      "feeling cold",
       "hip pain",
       "nasal congestion"
     ]
@@ -5855,9 +5862,9 @@
       "dizziness",
       "double vision",
       "fatigue",
-      "muscle weakness",
       "shortness of breath",
-      "slurring words"
+      "slurring words",
+      "weakness"
     ]
   },
   {
@@ -5939,7 +5946,7 @@
   {
     "disease": "necrotizing fasciitis",
     "symptoms_canon": [
-      "elbow muscle weakness",
+      "elbow weakness",
       "hip pain",
       "leg pain"
     ]
@@ -5963,15 +5970,15 @@
       "movement",
       "neck pain",
       "problems",
-      "shoulder muscle weakness",
       "shoulder pain",
-      "shoulder stiffness or tightness"
+      "shoulder stiffness or tightness",
+      "shoulder weakness"
     ]
   },
   {
     "disease": "neuralgia",
     "symptoms_canon": [
-      "ache all over",
+      "ache",
       "arm pain",
       "back pain",
       "headache",
@@ -6089,8 +6096,8 @@
       "compulsions",
       "depression",
       "depressive or psychotic symptoms",
+      "feeling ill",
       "hostile behavior",
-      "ill",
       "lack of growth",
       "nervousness",
       "obsessions",
@@ -6135,7 +6142,7 @@
       "skin dryness",
       "skin growth",
       "skin on leg or foot looks infected",
-      "skin skin rash",
+      "skin rash",
       "skin swelling",
       "too little hair"
     ]
@@ -6168,7 +6175,7 @@
     "symptoms_canon": [
       "arm pain",
       "elbow pain",
-      "knee muscle weakness",
+      "knee weakness",
       "redness in or around nose"
     ]
   },
@@ -6297,7 +6304,7 @@
     "disease": "open wound of the neck",
     "symptoms_canon": [
       "abnormal appearing skin",
-      "ache all over",
+      "ache",
       "peripheral edema",
       "skin lesion",
       "skin swelling"
@@ -6348,7 +6355,7 @@
   {
     "disease": "oral leukoplakia",
     "symptoms_canon": [
-      "elbow muscle weakness",
+      "elbow weakness",
       "skin swelling",
       "tongue lesions"
     ]
@@ -6378,7 +6385,7 @@
       "mouth pain",
       "mouth ulcer",
       "nasal congestion",
-      "skin skin rash",
+      "skin rash",
       "sore throat",
       "tongue lesions"
     ]
@@ -6401,11 +6408,11 @@
       "abnormal involuntary movements",
       "dizziness",
       "fainting",
+      "feeling ill",
       "headache",
-      "ill",
-      "muscle weakness",
       "palpitations",
-      "sharp chest pain"
+      "sharp chest pain",
+      "weakness"
     ]
   },
   {
@@ -6417,9 +6424,9 @@
       "elbow pain",
       "hand or finger pain",
       "hip pain",
-      "knee muscle weakness",
       "knee pain",
       "knee swelling",
+      "knee weakness",
       "leg pain",
       "muscle pain"
     ]
@@ -6540,7 +6547,7 @@
     "disease": "ovarian torsion",
     "symptoms_canon": [
       "abdominal pain",
-      "ache all over",
+      "ache",
       "groin mass",
       "pelvic pain",
       "sharp abdominal pain",
@@ -6590,7 +6597,7 @@
   {
     "disease": "pancreatic cancer",
     "symptoms_canon": [
-      "ache all over",
+      "ache",
       "arm swelling",
       "diarrhea",
       "jaundice",
@@ -6603,29 +6610,27 @@
     "disease": "panic attack",
     "symptoms_canon": [
       "anxiety",
-      "chest pain",
+      "chest tightness",
       "loss of sensation",
-      "muscle weakness",
       "nervousness",
       "palpitations",
       "sharp chest pain",
-      "shortness of breath"
+      "shortness of breath",
+      "weakness"
     ]
   },
   {
     "disease": "panic disorder",
     "symptoms_canon": [
-      "abnormal involuntary movements",
-      "anxiety",
-      "breathing fast",
-      "chest pain",
-      "depression",
-      "depressive or psychotic symptoms",
+      "anxiety and nervousness",
+      "chest tightness",
       "dizziness",
-      "insomnia",
-      "nervousness",
+      "fears and phobias",
+      "feeling ill",
       "palpitations",
-      "shortness of breath"
+      "restlessness",
+      "shortness of breath",
+      "sweating"
     ]
   },
   {
@@ -6636,7 +6641,7 @@
       "hand or finger swelling",
       "retention of urine",
       "sharp abdominal pain",
-      "skin skin rash"
+      "skin rash"
     ]
   },
   {
@@ -6655,13 +6660,13 @@
       "abnormal involuntary movements",
       "disturbance of memory",
       "dizziness",
-      "focal muscle weakness",
+      "focal weakness",
       "leg stiffness or tightness",
       "movement",
-      "muscle weakness",
       "problems",
       "speech difficulty",
-      "stiffness all over"
+      "stiffness",
+      "weakness"
     ]
   },
   {
@@ -6681,20 +6686,20 @@
   {
     "disease": "paroxysmal supraventricular tachycardia",
     "symptoms_canon": [
-      "chest pain",
+      "chest tightness",
       "dizziness",
       "increased heart rate",
       "involuntary urination",
-      "muscle weakness",
       "palpitations",
       "sharp chest pain",
-      "shortness of breath"
+      "shortness of breath",
+      "weakness"
     ]
   },
   {
     "disease": "paroxysmal ventricular tachycardia",
     "symptoms_canon": [
-      "chest pain",
+      "chest tightness",
       "decreased heart rate",
       "dizziness",
       "fainting",
@@ -6710,7 +6715,7 @@
     "disease": "pelvic fistula",
     "symptoms_canon": [
       "dizziness",
-      "elbow muscle weakness",
+      "elbow weakness",
       "vaginal discharge"
     ]
   },
@@ -6755,7 +6760,7 @@
   {
     "disease": "pericarditis",
     "symptoms_canon": [
-      "chest pain",
+      "chest tightness",
       "lower body pain",
       "palpitations",
       "sharp abdominal pain",
@@ -6766,7 +6771,7 @@
   {
     "disease": "peripheral arterial disease",
     "symptoms_canon": [
-      "cold",
+      "feeling cold",
       "foot or toe pain",
       "leg abdominal pain or spasms",
       "leg pain",
@@ -6791,14 +6796,14 @@
     "disease": "peripheral nerve disorder",
     "symptoms_canon": [
       "abnormal involuntary movements",
-      "arm muscle weakness",
       "arm pain",
+      "arm weakness",
       "back pain",
       "disturbance of memory",
       "dizziness",
       "foot or toe pain",
-      "leg muscle weakness",
       "leg pain",
+      "leg weakness",
       "loss of sensation",
       "movement",
       "paresthesia",
@@ -6835,8 +6840,8 @@
       "difficulty in swallowing",
       "ear pain",
       "headache",
-      "lymph node enlargement",
       "sore throat",
+      "swollen lymph nodes",
       "throat feels tight",
       "throat swelling"
     ]
@@ -6911,7 +6916,7 @@
   {
     "disease": "pilonidal cyst",
     "symptoms_canon": [
-      "ache all over",
+      "ache",
       "bones are painful",
       "irregular appearing scalp",
       "lower body pain",
@@ -6963,8 +6968,8 @@
     "disease": "pityriasis rosea",
     "symptoms_canon": [
       "abnormal appearing skin",
-      "itching of skin of skin",
-      "skin skin rash",
+      "itching of skin",
+      "skin rash",
       "skin swelling",
       "vaginal itching of skin",
       "warts"
@@ -7010,11 +7015,11 @@
       "difficulty breathing",
       "flank pain",
       "hurts to breath",
-      "muscle weakness",
       "rib pain",
       "sharp abdominal pain",
       "sharp chest pain",
-      "shortness of breath"
+      "shortness of breath",
+      "weakness"
     ]
   },
   {
@@ -7029,6 +7034,7 @@
   {
     "disease": "pneumonia",
     "symptoms_canon": [
+      "chest pain",
       "chest tightness",
       "chills",
       "cough",
@@ -7090,8 +7096,8 @@
     "disease": "poisoning due to antihypertensives",
     "symptoms_canon": [
       "depressive or psychotic symptoms",
-      "muscle weakness",
-      "sharp abdominal pain"
+      "sharp abdominal pain",
+      "weakness"
     ]
   },
   {
@@ -7103,7 +7109,7 @@
       "peripheral edema",
       "problems",
       "shortness of breath",
-      "skin skin rash"
+      "skin rash"
     ]
   },
   {
@@ -7294,7 +7300,7 @@
   {
     "disease": "premature rupture of amniotic membrane",
     "symptoms_canon": [
-      "elbow muscle weakness",
+      "elbow weakness",
       "sharp abdominal pain",
       "uterine contractions"
     ]
@@ -7302,7 +7308,7 @@
   {
     "disease": "premature ventricular contractions (pvcs",
     "symptoms_canon": [
-      "chest pain",
+      "chest tightness",
       "fainting",
       "impotence",
       "palpitations",
@@ -7348,7 +7354,7 @@
     "disease": "priapism",
     "symptoms_canon": [
       "abusing alcohol",
-      "elbow muscle weakness",
+      "elbow weakness",
       "painful urination",
       "penis pain"
     ]
@@ -7442,16 +7448,16 @@
     "disease": "protein deficiency",
     "symptoms_canon": [
       "depression",
-      "muscle weakness",
       "nausea",
       "smoking problems",
-      "vomiting"
+      "vomiting",
+      "weakness"
     ]
   },
   {
     "disease": "pseudohypoparathyroidism",
     "symptoms_canon": [
-      "elbow muscle weakness",
+      "elbow weakness",
       "knee pain",
       "leg pain",
       "wrist pain"
@@ -7473,7 +7479,7 @@
       "abnormal appearing skin",
       "arthralgia",
       "irregular appearing scalp",
-      "itching of skin of skin",
+      "itching of skin",
       "itchy scalp",
       "or roughness",
       "peeling",
@@ -7482,7 +7488,7 @@
       "skin growth",
       "skin lesion",
       "skin moles",
-      "skin skin rash",
+      "skin rash",
       "skin swelling"
     ]
   },
@@ -7531,31 +7537,31 @@
   {
     "disease": "pulmonary congestion",
     "symptoms_canon": [
-      "chest pain",
+      "chest tightness",
       "cough",
       "decreased heart rate",
       "fever",
-      "muscle weakness",
       "nasal congestion",
       "peripheral edema",
       "sharp chest pain",
-      "shortness of breath"
+      "shortness of breath",
+      "weakness"
     ]
   },
   {
     "disease": "pulmonary embolism",
     "symptoms_canon": [
-      "chest pain",
+      "chest tightness",
       "cough",
       "difficulty breathing",
       "flank pain",
       "hemoptysis",
       "leg pain",
-      "muscle weakness",
       "peripheral edema",
       "sharp chest pain",
       "shortness of breath",
-      "sweating"
+      "sweating",
+      "weakness"
     ]
   },
   {
@@ -7573,7 +7579,7 @@
   {
     "disease": "pulmonary fibrosis",
     "symptoms_canon": [
-      "chest pain",
+      "chest tightness",
       "cough",
       "difficulty breathing",
       "fainting",
@@ -7589,8 +7595,8 @@
       "cough",
       "difficulty breathing",
       "fatigue",
+      "feeling ill",
       "hemoptysis",
-      "ill",
       "palpitations",
       "sharp chest pain",
       "shortness of breath"
@@ -7637,7 +7643,7 @@
       "leg pain",
       "peripheral edema",
       "skin lesion",
-      "skin skin rash",
+      "skin rash",
       "skin swelling"
     ]
   },
@@ -7730,7 +7736,7 @@
   {
     "disease": "rheumatoid arthritis",
     "symptoms_canon": [
-      "ache all over",
+      "ache",
       "arthralgia",
       "elbow swelling",
       "hand or finger pain",
@@ -7753,7 +7759,7 @@
     "disease": "rosacea",
     "symptoms_canon": [
       "abnormal appearing skin",
-      "itching of skin of skin",
+      "itching of skin",
       "lymphedema",
       "or roughness",
       "peeling",
@@ -7773,24 +7779,24 @@
       "arm pain",
       "arm stiffness or tightness",
       "hand or finger stiffness or tightness",
-      "shoulder muscle weakness",
       "shoulder pain",
-      "shoulder stiffness or tightness"
+      "shoulder stiffness or tightness",
+      "shoulder weakness"
     ]
   },
   {
     "disease": "salivary gland disorder",
     "symptoms_canon": [
       "cough",
-      "lymph node enlargement",
       "sore throat",
+      "swollen lymph nodes",
       "throat feels tight"
     ]
   },
   {
     "disease": "sarcoidosis",
     "symptoms_canon": [
-      "chest pain",
+      "chest tightness",
       "cough",
       "facial pain",
       "headache",
@@ -7805,9 +7811,9 @@
     "symptoms_canon": [
       "abnormal appearing skin",
       "foot or toe swelling",
-      "itching of skin of skin",
+      "itching of skin",
       "problems during pregnancy",
-      "skin skin rash",
+      "skin rash",
       "skin swelling",
       "unpredictable menstruation"
     ]
@@ -7816,7 +7822,7 @@
     "disease": "scar",
     "symptoms_canon": [
       "abnormal appearing skin",
-      "itching of skin of skin",
+      "itching of skin",
       "lip swelling",
       "skin growth",
       "skin lesion",
@@ -7829,7 +7835,7 @@
     "symptoms_canon": [
       "cough",
       "fever",
-      "skin skin rash",
+      "skin rash",
       "skin swelling",
       "sore throat",
       "throat swelling"
@@ -7860,8 +7866,8 @@
       "back pain",
       "hip pain",
       "leg abdominal pain or spasms",
-      "leg muscle weakness",
       "leg pain",
+      "leg weakness",
       "loss of sensation",
       "lower body pain",
       "movement",
@@ -7883,8 +7889,8 @@
     "disease": "scleroderma",
     "symptoms_canon": [
       "abnormal appearing skin",
-      "ill",
-      "itching of skin of skin",
+      "feeling ill",
+      "itching of skin",
       "lip swelling",
       "or roughness",
       "peeling",
@@ -7952,7 +7958,7 @@
       "abnormal appearing skin",
       "dry or flaky scalp",
       "irregular appearing scalp",
-      "itching of skin of skin",
+      "itching of skin",
       "or roughness",
       "peeling",
       "scaliness",
@@ -7960,7 +7966,7 @@
       "skin growth",
       "skin lesion",
       "skin lesions or skin lesions",
-      "skin skin rash",
+      "skin rash",
       "symptoms of the face",
       "too little hair"
     ]
@@ -7970,13 +7976,13 @@
     "symptoms_canon": [
       "abnormal appearing skin",
       "irregular appearing scalp",
-      "itching of skin of skin",
+      "itching of skin",
       "skin growth",
       "skin irritation",
       "skin lesion",
       "skin lesions or skin lesions",
       "skin moles",
-      "skin skin rash",
+      "skin rash",
       "skin swelling",
       "warts"
     ]
@@ -8003,13 +8009,13 @@
       "cough",
       "decreased appetite",
       "difficulty breathing",
+      "feeling ill",
       "fever",
-      "ill",
-      "muscle weakness",
       "sharp abdominal pain",
       "shortness of breath",
       "suprapubic pain",
-      "vomiting"
+      "vomiting",
+      "weakness"
     ]
   },
   {
@@ -8029,11 +8035,11 @@
       "back pain",
       "facial pain",
       "headache",
-      "itching of skin of skin",
+      "itching of skin",
       "pain in eye",
       "sharp chest pain",
       "skin lesion",
-      "skin skin rash"
+      "skin rash"
     ]
   },
   {
@@ -8042,12 +8048,12 @@
       "cough",
       "facial pain",
       "jaw swelling",
-      "lymph node enlargement",
       "nasal congestion",
       "neck mass",
       "neck swelling",
       "peripheral edema",
-      "sore throat"
+      "sore throat",
+      "swollen lymph nodes"
     ]
   },
   {
@@ -8057,15 +8063,15 @@
       "dizziness",
       "fainting",
       "increased heart rate",
-      "muscle weakness",
       "palpitations",
-      "shortness of breath"
+      "shortness of breath",
+      "weakness"
     ]
   },
   {
     "disease": "sickle cell anemia",
     "symptoms_canon": [
-      "ache all over",
+      "ache",
       "arthralgia",
       "back pain",
       "dry lips",
@@ -8078,7 +8084,7 @@
   {
     "disease": "sickle cell crisis",
     "symptoms_canon": [
-      "ache all over",
+      "ache",
       "arm pain",
       "back pain",
       "burning abdominal pain",
@@ -8093,16 +8099,16 @@
   {
     "disease": "sinus bradycardia",
     "symptoms_canon": [
-      "chest pain",
+      "chest tightness",
       "decreased heart rate",
       "dizziness",
       "fainting",
-      "ill",
+      "feeling ill",
       "increased heart rate",
-      "muscle weakness",
       "palpitations",
       "sharp chest pain",
-      "shortness of breath"
+      "shortness of breath",
+      "weakness"
     ]
   },
   {
@@ -8123,7 +8129,7 @@
   {
     "disease": "sjogren syndrome",
     "symptoms_canon": [
-      "ache all over",
+      "ache",
       "arthralgia",
       "difficulty in swallowing",
       "diminished vision",
@@ -8154,7 +8160,7 @@
     "symptoms_canon": [
       "abnormal appearing skin",
       "irregular appearing scalp",
-      "itching of skin of skin",
+      "itching of skin",
       "or roughness",
       "peeling",
       "scaliness",
@@ -8172,7 +8178,7 @@
     "symptoms_canon": [
       "abnormal appearing skin",
       "irregular appearing scalp",
-      "itching of skin of skin",
+      "itching of skin",
       "or roughness",
       "peeling",
       "scaliness",
@@ -8181,7 +8187,7 @@
       "skin lesion",
       "skin lesions or skin lesions",
       "skin moles",
-      "skin skin rash",
+      "skin rash",
       "skin swelling",
       "warts"
     ]
@@ -8191,7 +8197,7 @@
     "symptoms_canon": [
       "abnormal appearing skin",
       "irregular appearing scalp",
-      "itching of skin of skin",
+      "itching of skin",
       "or roughness",
       "peeling",
       "scaliness",
@@ -8242,7 +8248,7 @@
     "symptoms_canon": [
       "abnormal appearing skin",
       "groin mass",
-      "itching of skin of skin",
+      "itching of skin",
       "or roughness",
       "peeling",
       "scaliness",
@@ -8255,7 +8261,7 @@
   {
     "disease": "somatization disorder",
     "symptoms_canon": [
-      "ache all over",
+      "ache",
       "anxiety",
       "depression",
       "dizziness",
@@ -8266,7 +8272,7 @@
   {
     "disease": "spermatocele",
     "symptoms_canon": [
-      "elbow muscle weakness",
+      "elbow weakness",
       "frequent urination",
       "mass in scrotum",
       "pain in testicles",
@@ -8277,8 +8283,8 @@
     "disease": "spherocytosis",
     "symptoms_canon": [
       "cough",
-      "elbow muscle weakness",
-      "skin skin rash"
+      "elbow weakness",
+      "skin rash"
     ]
   },
   {
@@ -8330,7 +8336,7 @@
       "leg pain",
       "lower body pain",
       "neck pain",
-      "stiffness all over"
+      "stiffness"
     ]
   },
   {
@@ -8339,8 +8345,8 @@
       "back pain",
       "hip pain",
       "leg abdominal pain or spasms",
-      "leg muscle weakness",
       "leg pain",
+      "leg weakness",
       "loss of sensation",
       "movement",
       "neck pain",
@@ -8351,7 +8357,7 @@
   {
     "disease": "spondylosis",
     "symptoms_canon": [
-      "ache all over",
+      "ache",
       "arm pain",
       "back pain",
       "hip pain",
@@ -8477,7 +8483,8 @@
       "loss of sensation",
       "nausea",
       "problems with movement",
-      "slurring words"
+      "slurring words",
+      "speech difficulty"
     ]
   },
   {
@@ -8548,8 +8555,8 @@
       "delusions or hallucinations",
       "depressive or psychotic symptoms",
       "drug abuse",
+      "feeling ill",
       "hostile behavior",
-      "ill",
       "insomnia",
       "nervousness"
     ]
@@ -8559,7 +8566,7 @@
     "symptoms_canon": [
       "cross-eyed",
       "dizziness",
-      "ill"
+      "feeling ill"
     ]
   },
   {
@@ -8567,7 +8574,7 @@
     "symptoms_canon": [
       "headache",
       "muscle pain",
-      "skin skin rash",
+      "skin rash",
       "vaginal discharge"
     ]
   },
@@ -8583,7 +8590,7 @@
   {
     "disease": "systemic lupus erythematosis (sle",
     "symptoms_canon": [
-      "ache all over",
+      "ache",
       "bones are painful",
       "hand or finger stiffness or tightness",
       "knee pain",
@@ -8699,14 +8706,14 @@
   {
     "disease": "thalassemia",
     "symptoms_canon": [
-      "elbow muscle weakness",
+      "elbow weakness",
       "insomnia"
     ]
   },
   {
     "disease": "thoracic aortic aneurysm",
     "symptoms_canon": [
-      "chest pain",
+      "chest tightness",
       "dizziness",
       "fatigue",
       "jaundice",
@@ -8757,7 +8764,7 @@
   {
     "disease": "thrombophlebitis",
     "symptoms_canon": [
-      "ache all over",
+      "ache",
       "arm pain",
       "arm swelling",
       "foot or toe pain",
@@ -8773,8 +8780,8 @@
     "symptoms_canon": [
       "difficulty in swallowing",
       "fatigue",
-      "lymph node enlargement",
-      "neck mass"
+      "neck mass",
+      "swollen lymph nodes"
     ]
   },
   {
@@ -8789,7 +8796,7 @@
   {
     "disease": "thyroid nodule",
     "symptoms_canon": [
-      "back muscle weakness",
+      "back weakness",
       "difficulty in swallowing",
       "diminished hearing",
       "fatigue",
@@ -8813,7 +8820,7 @@
   {
     "disease": "tietze syndrome",
     "symptoms_canon": [
-      "chest pain",
+      "chest tightness",
       "cough",
       "difficulty breathing",
       "loss of sensation",
@@ -8951,13 +8958,13 @@
       "depressive or psychotic symptoms",
       "disturbance of memory",
       "dizziness",
-      "focal muscle weakness",
+      "focal weakness",
       "headache",
       "loss of sensation",
-      "muscle weakness",
       "paresthesia",
       "speech difficulty",
-      "symptoms of the face"
+      "symptoms of the face",
+      "weakness"
     ]
   },
   {
@@ -9040,7 +9047,7 @@
     "disease": "tuberous sclerosis",
     "symptoms_canon": [
       "depressive or psychotic symptoms",
-      "elbow muscle weakness",
+      "elbow weakness",
       "seizures"
     ]
   },
@@ -9104,7 +9111,7 @@
     "disease": "urethral valves",
     "symptoms_canon": [
       "abdominal pain",
-      "elbow muscle weakness",
+      "elbow weakness",
       "flank pain",
       "sharp abdominal pain",
       "suprapubic pain"
@@ -9141,6 +9148,7 @@
   {
     "disease": "urinary tract infection",
     "symptoms_canon": [
+      "abdominal pain",
       "blood in urine",
       "fatigue",
       "feeling ill",
@@ -9207,7 +9215,7 @@
     "disease": "uveitis",
     "symptoms_canon": [
       "diminished vision",
-      "elbow muscle weakness",
+      "elbow weakness",
       "symptoms of eye"
     ]
   },
@@ -9239,7 +9247,7 @@
     "disease": "vaginal yeast infection",
     "symptoms_canon": [
       "abdominal pain",
-      "itching of skin of skin",
+      "itching of skin",
       "painful urination",
       "sharp abdominal pain",
       "suprapubic pain",
@@ -9305,7 +9313,7 @@
   {
     "disease": "varicose veins",
     "symptoms_canon": [
-      "ache all over",
+      "ache",
       "leg abdominal pain or spasms",
       "leg lump or mass",
       "leg pain",
@@ -9324,7 +9332,7 @@
       "leg stiffness or tightness",
       "lymphedema",
       "skin lesion",
-      "skin skin rash"
+      "skin rash"
     ]
   },
   {
@@ -9365,10 +9373,10 @@
       "cough",
       "decreased appetite",
       "fever",
-      "itching of skin of skin",
+      "itching of skin",
       "nasal congestion",
       "pulling at ears",
-      "skin skin rash",
+      "skin rash",
       "skin swelling",
       "vomiting"
     ]
@@ -9461,7 +9469,7 @@
     "disease": "volvulus",
     "symptoms_canon": [
       "depressive or psychotic symptoms",
-      "elbow muscle weakness",
+      "elbow weakness",
       "sharp abdominal pain",
       "vomiting"
     ]
@@ -9561,7 +9569,7 @@
       "frequent urination",
       "pelvic pain",
       "sharp abdominal pain",
-      "skin skin rash",
+      "skin rash",
       "suprapubic pain",
       "vaginal discharge",
       "vaginal itching of skin",
@@ -9571,7 +9579,7 @@
   {
     "disease": "zenker diverticulum",
     "symptoms_canon": [
-      "elbow muscle weakness",
+      "elbow weakness",
       "sharp chest pain",
       "sore throat"
     ]

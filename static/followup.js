@@ -20,7 +20,7 @@ const FollowUp = (() => {
 
     // --- Config ---
     const FOLLOWUP_CONTAINER_ID = 'followup-container';
-    const CHAT_MESSAGES_ID = 'chat-messages';   // ajustează dacă containerul tău are alt id
+    const CHAT_MESSAGES_ID = 'chatMessages';   // ajustează dacă containerul tău are alt id
 
     // ---------------------------------------------------------------
     // Public API
@@ -192,7 +192,12 @@ const FollowUp = (() => {
             // Îndepărtăm containerul curent
             _removeExistingContainer();
 
-            // Dacă mai sunt întrebări (încă ambiguu), le afișăm
+            // 1. Apelăm ÎNTÂI callback-ul — randează graficul și rezultatele actualizate
+            if (_onResultCallback) {
+                _onResultCallback(data);
+            }
+
+            // 2. Dacă mai sunt întrebări (încă ambiguu), le afișăm DUPĂ grafic
             if (data.needs_followup && data.followup_questions?.length > 0) {
                 _pendingQuestions = data.followup_questions;
                 const confirmed = Object.entries(_collectedAnswers)
@@ -200,17 +205,13 @@ const FollowUp = (() => {
                     .map(([k]) => k);
                 _currentSymptoms = [...new Set([..._currentSymptoms, ...confirmed])];
                 _collectedAnswers = {};
-                _renderQuestions(_pendingQuestions);
-                // Scroll suplimentar după render
+
+                // Mică întârziere ca graficul să fie randat complet înainte de follow-up
                 setTimeout(() => {
+                    _renderQuestions(_pendingQuestions);
                     const chatMessages = document.getElementById(CHAT_MESSAGES_ID);
                     if (chatMessages) chatMessages.scrollTop = chatMessages.scrollHeight;
-                }, 200);
-            }
-
-            // Apelăm callback-ul cu noul răspuns
-            if (_onResultCallback) {
-                _onResultCallback(data);
+                }, 150);
             }
 
         } catch (err) {

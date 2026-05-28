@@ -1,0 +1,20 @@
+{
+  "overview": "A heart arrhythmia (uh-RITH-me-uh) is an irregular heartbeat. A heart arrhythmia happens when the electrical signals that tell the heart to beat don't work as they should. The heart may beat too fast or too slow. Or the pattern of the heartbeat may be inconsistent. A heart arrhythmia may feel like a fluttering, pounding or racing heartbeat. Some heart arrhythmias are harmless. Others may cause life-threatening symptoms. There are times when it is OK to have a fast or slow heartbeat. For example, the heart may beat faster with exercise or slow down during sleep.",
+  "causes": "To understand the cause of heart arrhythmias, it may help to know how the heart works.",
+  "treatment": "No information found.",
+  "prevention": "Lifestyle changes used to manage heart disease may help prevent heart arrhythmias. Try these heart-healthy tips:",
+  "when_to_see_a_doctor": "If you feel like your heart is beating too fast or too slow, or it's skipping a beat, make an appointment for a health checkup. You may be told to see a doctor trained in heart diseases, called a cardiologist. Get emergency medical care if you have these symptoms: Always call 911 or your local emergency number if you think you might be having a heart attack. A type of arrhythmia called ventricular fibrillation can cause a dramatic drop in blood pressure. It can cause the person to fall to the ground within seconds. This is called collapse. Soon the person's breathing and pulse will stop.",
+  "sources": [
+    {
+      "title": "Wikipedia: Arrhythmia",
+      "url": "https://en.wikipedia.org/wiki/Arrhythmia",
+      "journal": "Wikipedia"
+    },
+    {
+      "title": "Mayo Clinic: Arrhythmia",
+      "url": "https://www.mayoclinic.org/diseases-conditions/heart-arrhythmia/symptoms-causes/syc-20350668",
+      "journal": "Mayo Clinic"
+    }
+  ],
+  "_fetched_from": "wikipedia+mayo_clinic"
+}

@@ -1,0 +1,20 @@
+{
+  "overview": "No information found.",
+  "causes": "No information found.",
+  "treatment": "No information found.",
+  "prevention": "No information found.",
+  "when_to_see_a_doctor": "No information found.",
+  "sources": [
+    {
+      "title": "Wikipedia: Tonsillitis",
+      "url": "https://en.wikipedia.org/wiki/Tonsillitis",
+      "journal": "Wikipedia"
+    },
+    {
+      "title": "Mayo Clinic: Tonsillitis",
+      "url": "https://www.mayoclinic.org/diseases-conditions/tonsillitis/symptoms-causes/syc-20378479",
+      "journal": "Mayo Clinic"
+    }
+  ],
+  "_fetched_from": "wikipedia+mayo_clinic"
+}

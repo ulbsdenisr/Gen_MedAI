@@ -1,0 +1,20 @@
+{
+  "overview": "Rheumatic fever is an inflammatory disease that can develop when strep throat or scarlet fever isn't properly treated. Strep throat and scarlet fever are caused by an infection with streptococcus (strep-toe-KOK-us) bacteria. Rheumatic fever most often affects children ages 5 to 15. But younger children and adults can get it too. Rheumatic fever is rare in the United States and other developed countries. Rheumatic fever can cause long-lasting heart damage, including heart valve problems and heart failure. Treatment includes medicines to kill the strep bacteria.",
+  "causes": "Rheumatic fever can happen after a throat infection from group A streptococcus bacteria, also called strep bacteria. The bacteria cause strep throat and scarlet fever. Improperly treated strep throat or scarlet fever infections cause rheumatic fever. There's little chance of getting rheumatic fever when strep throat is treated right away with antibiotics. It's important to finish all of the medicine. Group A strep infections of the skin or other parts of the body rarely cause rheumatic fever. How a strep infection causes rheumatic fever isn't clear.",
+  "treatment": "No information found.",
+  "prevention": "The best way to prevent rheumatic fever is to treat strep throat infections or scarlet fever right away. It's also important to finish all of the prescribed antibiotics as directed.",
+  "when_to_see_a_doctor": "Properly treating strep throat can prevent rheumatic fever. Make an appointment with a healthcare professional if any of these symptoms of strep throat occur:",
+  "sources": [
+    {
+      "title": "Wikipedia: Rheumatic fever",
+      "url": "https://en.wikipedia.org/wiki/Rheumatic_fever",
+      "journal": "Wikipedia"
+    },
+    {
+      "title": "Mayo Clinic: Chronic Rheumatic Fever",
+      "url": "https://www.mayoclinic.org/diseases-conditions/rheumatic-fever/symptoms-causes/syc-20354588",
+      "journal": "Mayo Clinic"
+    }
+  ],
+  "_fetched_from": "wikipedia+mayo_clinic"
+}

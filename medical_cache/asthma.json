@@ -1,0 +1,20 @@
+{
+  "overview": "Asthma is a condition in which your airways narrow and swell and may produce extra mucus. This can make breathing difficult and trigger coughing, a whistling sound (wheezing) when you breathe out and shortness of breath. For some people, asthma is a minor nuisance. For others, it can be a major problem that interferes with daily activities and may lead to a life-threatening asthma attack. Asthma can't be cured, but its symptoms can be controlled.",
+  "causes": "It isn't clear why some people get asthma and others don't, but it's probably due to a combination of environmental and inherited (genetic) factors.",
+  "treatment": "No information found.",
+  "prevention": "While there's no way to prevent asthma, you and your doctor can design a step-by-step plan for living with your condition and preventing asthma attacks.",
+  "when_to_see_a_doctor": "Severe asthma attacks can be life-threatening. Work with your doctor to determine what to do when your signs and symptoms worsen — and when you need emergency treatment. Signs of an asthma emergency include:",
+  "sources": [
+    {
+      "title": "Wikipedia: Asthma",
+      "url": "https://en.wikipedia.org/wiki/Asthma",
+      "journal": "Wikipedia"
+    },
+    {
+      "title": "Mayo Clinic: Asthma",
+      "url": "https://www.mayoclinic.org/diseases-conditions/asthma/symptoms-causes/syc-20369653",
+      "journal": "Mayo Clinic"
+    }
+  ],
+  "_fetched_from": "wikipedia+mayo_clinic"
+}

@@ -1,5 +1,5 @@
 [
-    {
+  {
     "disease_name": "Panic disorder",
     "Overview": "A mental health condition characterized by recurrent, unexpected panic attacks—sudden periods of intense fear that may include heart palpitations, sweating, shortness of breath, or feelings of impending doom.",
     "Causes": "Exact cause is not fully understood. Likely involves a combination of genetic factors, brain chemistry, stress, and environmental influences.",
@@ -889,5 +889,383 @@
     "Treatment": "Antifungal medications, often for extended periods.",
     "When to see a doctor": "If experiencing persistent cough, fever, headache, or neurological symptoms.",
     "Sources": "Centers for Disease Control and Prevention (CDC), World Health Organization (WHO)"
+  },
+  {
+    "disease_name": "Strep Throat",
+    "Overview": "Strep throat is a bacterial infection caused by Streptococcus pyogenes (Group A streptococcus). It causes throat pain and inflammation and is highly contagious.",
+    "Causes": "Caused by Group A Streptococcus bacteria, spread through respiratory droplets from coughing or sneezing, or contact with infected surfaces.",
+    "Treatment": "Antibiotics (penicillin or amoxicillin) are the standard treatment. Pain relievers such as ibuprofen or acetaminophen help manage symptoms. Rest and hydration are important.",
+    "Prevention": "Wash hands frequently, avoid sharing utensils or drinks, cover mouth when coughing or sneezing, and avoid contact with infected individuals.",
+    "When to see a doctor": "See a doctor if you have a severe sore throat, difficulty swallowing, high fever above 38.3°C, or if symptoms do not improve within a few days.",
+    "Sources": "Mayo Clinic, CDC, American Academy of Pediatrics"
+  },
+  {
+    "disease_name": "Tonsillitis",
+    "Overview": "Tonsillitis is inflammation of the tonsils, typically caused by viral or bacterial infection. It causes sore throat, swollen tonsils and difficulty swallowing.",
+    "Causes": "Most commonly caused by viruses (adenovirus, rhinovirus) or bacteria (Group A Streptococcus). Spread through respiratory droplets.",
+    "Treatment": "Viral tonsillitis resolves on its own with rest and fluids. Bacterial tonsillitis is treated with antibiotics. Severe or recurrent cases may require tonsillectomy.",
+    "Prevention": "Good hand hygiene, avoiding close contact with infected individuals, and not sharing personal items.",
+    "When to see a doctor": "Seek care for severe throat pain, difficulty breathing or swallowing, high fever, or symptoms lasting more than a week.",
+    "Sources": "NHS, Mayo Clinic, WebMD"
+  },
+  {
+    "disease_name": "Pharyngitis",
+    "Overview": "Pharyngitis is inflammation of the pharynx (back of the throat), most commonly caused by viral infections. It is one of the most frequent reasons for doctor visits.",
+    "Causes": "Viruses (rhinovirus, influenza, EBV) cause most cases. Bacterial causes include Group A Streptococcus. Environmental irritants can also contribute.",
+    "Treatment": "Viral pharyngitis is managed with rest, fluids and analgesics. Bacterial pharyngitis requires antibiotics. Throat lozenges and warm liquids provide symptomatic relief.",
+    "Prevention": "Hand washing, avoiding contact with sick individuals, and not sharing drinks or utensils.",
+    "When to see a doctor": "See a doctor if symptoms are severe, persist beyond a week, or are accompanied by high fever, rash or difficulty breathing.",
+    "Sources": "Mayo Clinic, UpToDate, CDC"
+  },
+  {
+    "disease_name": "Mononucleosis",
+    "Overview": "Infectious mononucleosis (mono) is caused by the Epstein-Barr virus (EBV). Known as the 'kissing disease', it causes extreme fatigue, sore throat and swollen lymph nodes.",
+    "Causes": "Caused by Epstein-Barr virus, transmitted through saliva, shared drinks, coughing or sneezing. Most people are infected at some point in their life.",
+    "Treatment": "No specific antiviral treatment. Rest, adequate hydration, analgesics for pain and fever. Avoid contact sports due to risk of spleen enlargement.",
+    "Prevention": "Avoid sharing food, drinks or kissing infected individuals. No vaccine is currently available.",
+    "When to see a doctor": "Seek immediate care for severe abdominal pain (possible spleen rupture), difficulty breathing, extreme weakness, or jaundice.",
+    "Sources": "CDC, Mayo Clinic, American Family Physician"
+  },
+  {
+    "disease_name": "Common Cold",
+    "Overview": "The common cold is a viral infection of the upper respiratory tract, primarily affecting the nose and throat. It is the most frequent infectious disease in humans.",
+    "Causes": "Over 200 different viruses can cause a cold; rhinoviruses are responsible for 30–50% of cases. Spread through respiratory droplets and contact with contaminated surfaces.",
+    "Treatment": "No cure exists. Treatment is symptomatic: rest, hydration, decongestants, antihistamines, and pain relievers. Antibiotics are ineffective against viral infections.",
+    "Prevention": "Frequent hand washing, avoiding touching the face, avoiding close contact with sick individuals, and disinfecting frequently touched surfaces.",
+    "When to see a doctor": "See a doctor if symptoms are severe, persist beyond 10 days, or are accompanied by high fever, difficulty breathing, or chest pain.",
+    "Sources": "CDC, Mayo Clinic, NHS"
+  },
+  {
+    "disease_name": "Influenza",
+    "Overview": "Influenza (flu) is a contagious respiratory illness caused by influenza viruses. It can cause mild to severe illness and can lead to hospitalization or death in vulnerable populations.",
+    "Causes": "Influenza A and B viruses are the main causes of seasonal flu epidemics. Spread through respiratory droplets when infected people cough, sneeze or talk.",
+    "Treatment": "Antiviral drugs (oseltamivir/Tamiflu, zanamivir) are effective when started within 48 hours. Rest, hydration and fever reducers help manage symptoms.",
+    "Prevention": "Annual flu vaccination is the best prevention. Hand hygiene, wearing masks and avoiding crowded places during outbreaks are also effective.",
+    "When to see a doctor": "Seek immediate care for difficulty breathing, persistent chest pain, confusion, severe vomiting, or symptoms that improve then return with fever.",
+    "Sources": "CDC, WHO, ECDC"
+  },
+  {
+    "disease_name": "Covid-19",
+    "Overview": "COVID-19 is a respiratory illness caused by SARS-CoV-2 coronavirus, first identified in 2019. Symptoms range from mild to severe and can affect multiple organ systems.",
+    "Causes": "Caused by SARS-CoV-2 virus, spread primarily through respiratory droplets and aerosols from infected individuals, including asymptomatic carriers.",
+    "Treatment": "Antiviral medications (nirmatrelvir/ritonavir, remdesivir) for high-risk patients. Supportive care includes rest, hydration and fever management. Severe cases require hospitalization.",
+    "Prevention": "Vaccination is the most effective prevention. Additionally: wearing masks, hand hygiene, ventilation of indoor spaces and avoiding crowded areas.",
+    "When to see a doctor": "Seek emergency care for difficulty breathing, persistent chest pain, confusion, inability to stay awake, or bluish lips or face.",
+    "Sources": "WHO, CDC, ECDC, NIH"
+  },
+  {
+    "disease_name": "Pneumonia",
+    "Overview": "Pneumonia is an infection that inflames the air sacs in one or both lungs, which may fill with fluid or pus. It can range from mild to life-threatening.",
+    "Causes": "Bacteria (Streptococcus pneumoniae most common), viruses (influenza, COVID-19, RSV), and fungi. Community-acquired and hospital-acquired forms exist.",
+    "Treatment": "Bacterial pneumonia: antibiotics. Viral pneumonia: antiviral medications and supportive care. Severe cases require hospitalization and oxygen therapy.",
+    "Prevention": "Pneumococcal and flu vaccines reduce risk. Good hand hygiene, not smoking, and maintaining a healthy immune system are also important.",
+    "When to see a doctor": "Seek immediate care for difficulty breathing, chest pain, persistent high fever, coughing up blood, or confusion especially in elderly patients.",
+    "Sources": "American Lung Association, WHO, Mayo Clinic"
+  },
+  {
+    "disease_name": "Bronchitis",
+    "Overview": "Bronchitis is inflammation of the bronchial tubes that carry air to the lungs. Acute bronchitis is usually caused by infection; chronic bronchitis is related to smoking.",
+    "Causes": "Acute bronchitis is usually caused by viruses (same as those causing colds and flu). Chronic bronchitis is primarily caused by smoking and air pollution.",
+    "Treatment": "Acute bronchitis: rest, fluids, honey and ginger tea, cough suppressants. Bronchodilators may help. Antibiotics only if bacterial cause is confirmed.",
+    "Prevention": "Don't smoke, avoid secondhand smoke and air pollutants. Annual flu vaccination reduces risk of viral bronchitis.",
+    "When to see a doctor": "See a doctor if cough lasts more than 3 weeks, produces bloody mucus, is accompanied by high fever, or if you have difficulty breathing.",
+    "Sources": "Mayo Clinic, NHS, American Lung Association"
+  },
+  {
+    "disease_name": "Sinusitis",
+    "Overview": "Sinusitis is inflammation of the sinuses, usually due to infection. It causes facial pain, nasal congestion and discharge. Acute sinusitis lasts up to 4 weeks.",
+    "Causes": "Viral infections (common cold) are the most common cause. Bacteria, allergies, nasal polyps and deviated septum can also cause sinusitis.",
+    "Treatment": "Nasal saline irrigation, decongestants, pain relievers. Bacterial sinusitis may require antibiotics. Chronic cases may need corticosteroids or surgery.",
+    "Prevention": "Treat colds promptly, manage allergies, avoid smoking, use a humidifier, and wash hands frequently to prevent infections.",
+    "When to see a doctor": "See a doctor for severe headache, high fever, swelling around eyes, stiff neck, or symptoms lasting more than 10 days without improvement.",
+    "Sources": "Mayo Clinic, AAO-HNS, WebMD"
+  },
+  {
+    "disease_name": "Otitis Media",
+    "Overview": "Otitis media is a middle ear infection, most common in children but can affect adults. It often follows a cold or upper respiratory infection.",
+    "Causes": "Bacteria (Streptococcus pneumoniae, Haemophilus influenzae) and viruses. Eustachian tube dysfunction allows pathogens to reach the middle ear.",
+    "Treatment": "Pain management with ibuprofen or acetaminophen. Antibiotics if bacterial, or watchful waiting. Ear drops for pain relief. Drainage tubes for recurrent cases.",
+    "Prevention": "Vaccination (pneumococcal, Hib, flu vaccines), breastfeeding in infants, avoiding secondhand smoke, and prompt treatment of colds.",
+    "When to see a doctor": "See a doctor for severe ear pain, hearing loss, discharge from ear, fever, or symptoms persisting beyond 2-3 days.",
+    "Sources": "AAP, Mayo Clinic, NHS"
+  },
+  {
+    "disease_name": "Eustachian Tube Dysfunction",
+    "Overview": "Eustachian tube dysfunction (ETD) occurs when the tube connecting the middle ear to the back of the throat fails to open and close properly, causing pressure and hearing problems.",
+    "Causes": "Allergies, colds, sinus infections, altitude changes, and enlarged adenoids. Swelling and mucus can block the eustachian tube.",
+    "Treatment": "Swallowing, yawning, or the Valsalva maneuver to equalize pressure. Decongestants, antihistamines, nasal steroids. Severe cases may need ear tubes.",
+    "Prevention": "Treat allergies and upper respiratory infections promptly. Avoid flying with active congestion if possible.",
+    "When to see a doctor": "See a doctor for symptoms lasting more than 2 weeks, significant hearing loss, severe pain, or recurrent episodes.",
+    "Sources": "Mayo Clinic, ENT Health, WebMD"
+  },
+  {
+    "disease_name": "Eustachian Tube Dysfunction (Ear Disorder)",
+    "Overview": "Eustachian tube dysfunction (ETD) occurs when the tube connecting the middle ear to the back of the throat fails to open and close properly, causing pressure and hearing problems.",
+    "Causes": "Allergies, colds, sinus infections, altitude changes, and enlarged adenoids. Swelling and mucus can block the eustachian tube.",
+    "Treatment": "Swallowing, yawning, or the Valsalva maneuver to equalize pressure. Decongestants, antihistamines, nasal steroids. Severe cases may need ear tubes.",
+    "Prevention": "Treat allergies and upper respiratory infections promptly. Avoid flying with active congestion if possible.",
+    "When to see a doctor": "See a doctor for symptoms lasting more than 2 weeks, significant hearing loss, severe pain, or recurrent episodes.",
+    "Sources": "Mayo Clinic, ENT Health, WebMD"
+  },
+  {
+    "disease_name": "White Blood Cell Disease",
+    "Overview": "White blood cell diseases include conditions like leukemia, lymphoma, and leukopenia that affect the production or function of white blood cells, impairing the immune system.",
+    "Causes": "Genetic mutations, viral infections (HIV, EBV), radiation exposure, certain medications, and autoimmune conditions can affect white blood cell production.",
+    "Treatment": "Depends on the specific condition: chemotherapy, immunotherapy, bone marrow transplant, or medications to stimulate white blood cell production.",
+    "Prevention": "Avoid known carcinogens, maintain a healthy lifestyle, and seek prompt treatment for infections. Regular blood tests for high-risk individuals.",
+    "When to see a doctor": "Seek immediate care for recurrent infections, unexplained fatigue, easy bruising, swollen lymph nodes, or night sweats.",
+    "Sources": "National Cancer Institute, Leukemia & Lymphoma Society, Mayo Clinic"
+  },
+  {
+    "disease_name": "Gastroenteritis",
+    "Overview": "Gastroenteritis is inflammation of the stomach and intestines, typically caused by viral or bacterial infection. Often called 'stomach flu', though not related to influenza.",
+    "Causes": "Norovirus and rotavirus are the most common causes. Bacteria (Salmonella, E. coli, Campylobacter) and parasites can also cause gastroenteritis.",
+    "Treatment": "Oral rehydration is the cornerstone of treatment. Clear fluids, electrolyte solutions, gradual return to solid foods. Antibiotics for bacterial causes in severe cases.",
+    "Prevention": "Hand washing, safe food handling and preparation, drinking clean water, and rotavirus vaccination for infants.",
+    "When to see a doctor": "Seek care for signs of dehydration, bloody diarrhea, fever above 39°C, symptoms lasting more than 3 days, or inability to keep fluids down.",
+    "Sources": "WHO, CDC, Mayo Clinic"
+  },
+  {
+    "disease_name": "Food Poisoning",
+    "Overview": "Food poisoning results from eating contaminated food. Symptoms appear within hours to days and usually resolve within a few days without treatment.",
+    "Causes": "Bacteria (Salmonella, E. coli, Listeria, Staphylococcus aureus), viruses, and toxins in contaminated food. Improper food storage and preparation are main risk factors.",
+    "Treatment": "Rest and rehydration are the primary treatments. Oral rehydration solutions replace lost fluids and electrolytes. Antibiotics for severe bacterial cases.",
+    "Prevention": "Cook food to safe temperatures, refrigerate perishables promptly, wash hands and surfaces often, separate raw meats from other foods.",
+    "When to see a doctor": "Seek care for bloody diarrhea, fever above 38.6°C, severe dehydration, neurological symptoms, or symptoms in elderly, pregnant or immunocompromised individuals.",
+    "Sources": "FDA, CDC, Mayo Clinic"
+  },
+  {
+    "disease_name": "Appendicitis",
+    "Overview": "Appendicitis is inflammation of the appendix, a small pouch attached to the large intestine. It requires prompt medical treatment, as a ruptured appendix can be life-threatening.",
+    "Causes": "Blockage of the appendix opening by fecal matter, mucus, or a foreign body leads to bacterial overgrowth, swelling and infection.",
+    "Treatment": "Surgical removal of the appendix (appendectomy) is the standard treatment. Antibiotics are given before and after surgery. Laparoscopic surgery is preferred when possible.",
+    "Prevention": "No reliable prevention exists, but a high-fiber diet may reduce risk according to some studies.",
+    "When to see a doctor": "Seek EMERGENCY care immediately for severe pain in the lower right abdomen, especially with fever, nausea and vomiting. This is a medical emergency.",
+    "Sources": "Mayo Clinic, American College of Surgeons, NHS"
+  },
+  {
+    "disease_name": "Irritable Bowel Syndrome",
+    "Overview": "Irritable bowel syndrome (IBS) is a common disorder affecting the large intestine. It is a chronic condition that requires long-term management.",
+    "Causes": "Exact cause unknown. Factors include abnormal gut motility, heightened pain sensitivity, gut-brain interaction changes, microbiome imbalances, and psychological stress.",
+    "Treatment": "Dietary changes (low-FODMAP diet), fiber supplements, antispasmodics, laxatives or antidiarrheal medications. Psychological therapies (CBT) are effective for many patients.",
+    "Prevention": "Manage stress, identify and avoid food triggers, maintain regular meal times, exercise regularly, and ensure adequate sleep.",
+    "When to see a doctor": "See a doctor for rectal bleeding, unintentional weight loss, persistent vomiting, difficulty swallowing, or symptoms that wake you from sleep.",
+    "Sources": "International Foundation for GI Disorders, Mayo Clinic, ACG"
+  },
+  {
+    "disease_name": "Ulcerative Colitis",
+    "Overview": "Ulcerative colitis is a chronic inflammatory bowel disease causing long-lasting inflammation and ulcers in the digestive tract, primarily the colon and rectum.",
+    "Causes": "Exact cause unknown. Involves an abnormal immune response to gut bacteria. Genetic, environmental and microbiome factors contribute.",
+    "Treatment": "Anti-inflammatory drugs (5-ASA compounds, corticosteroids), immunosuppressants, biologics (anti-TNF therapy). Surgery (colectomy) may be needed in severe cases.",
+    "Prevention": "No known prevention. Regular medical follow-up, medication adherence, and avoiding triggers (stress, NSAIDs, certain foods) help manage the condition.",
+    "When to see a doctor": "Seek urgent care for severe abdominal pain, significant rectal bleeding, high fever, or signs of dehydration.",
+    "Sources": "Crohn's and Colitis Foundation, Mayo Clinic, British Society of Gastroenterology"
+  },
+  {
+    "disease_name": "Urinary Tract Infection",
+    "Overview": "A urinary tract infection (UTI) is an infection in any part of the urinary system. Most infections involve the lower urinary tract (bladder and urethra) and are more common in women.",
+    "Causes": "Bacteria (primarily E. coli from the digestive tract) enter the urethra and multiply in the urinary tract. Sexual activity, urinary catheters and immune suppression increase risk.",
+    "Treatment": "Antibiotics are the primary treatment. Commonly used antibiotics include trimethoprim-sulfamethoxazole, nitrofurantoin and fosfomycin. Increase fluid intake.",
+    "Prevention": "Drink plenty of water, urinate after sexual intercourse, wipe front to back, avoid irritating feminine products, and don't hold urine for long periods.",
+    "When to see a doctor": "See a doctor promptly for burning urination, frequent urge to urinate, blood in urine, or pelvic pain. Seek urgent care for fever, chills, back pain or nausea.",
+    "Sources": "Mayo Clinic, NICE, European Association of Urology"
+  },
+  {
+    "disease_name": "Hypertension",
+    "Overview": "Hypertension (high blood pressure) is a common condition in which the force of blood against artery walls is consistently too high. It is often called the 'silent killer'.",
+    "Causes": "Primary hypertension: no identifiable cause, develops gradually. Secondary hypertension: caused by underlying conditions (kidney disease, thyroid problems, sleep apnea) or medications.",
+    "Treatment": "Lifestyle changes (DASH diet, exercise, weight loss, reducing sodium and alcohol). Medications: ACE inhibitors, ARBs, calcium channel blockers, diuretics, beta-blockers.",
+    "Prevention": "Healthy diet, regular physical activity, maintaining healthy weight, limiting alcohol, not smoking, and reducing stress.",
+    "When to see a doctor": "See a doctor regularly for blood pressure checks. Seek immediate care for a hypertensive crisis: BP above 180/120 with symptoms like severe headache, chest pain or vision changes.",
+    "Sources": "American Heart Association, ESC/ESH Guidelines, WHO"
+  },
+  {
+    "disease_name": "Migraine",
+    "Overview": "Migraine is a neurological condition characterized by recurrent intense headaches, usually on one side of the head, often accompanied by nausea, vomiting and sensitivity to light and sound.",
+    "Causes": "Exact cause unknown. Genetic factors play a role. Triggers include hormonal changes, certain foods and drinks, stress, sensory stimuli, sleep changes and physical exertion.",
+    "Treatment": "Acute: triptans, ergotamines, NSAIDs, antiemetics. Preventive: beta-blockers, topiramate, valproate, CGRP antagonists, antidepressants. Lifestyle trigger management.",
+    "Prevention": "Identify and avoid personal triggers, maintain regular sleep and meal schedules, stay hydrated, manage stress, and consider preventive medication if attacks are frequent.",
+    "When to see a doctor": "Seek immediate care for 'thunderclap' headache (worst of your life), headache with fever and stiff neck, headache after head injury, or new headache after age 50.",
+    "Sources": "American Migraine Foundation, International Headache Society, Mayo Clinic"
+  },
+  {
+    "disease_name": "Anxiety",
+    "Overview": "Anxiety disorders are the most common mental health conditions, characterized by persistent, excessive worry or fear that interferes with daily activities.",
+    "Causes": "Complex interaction of genetic, neurobiological, environmental and psychological factors. Stressful life events, trauma, and certain medical conditions can trigger anxiety.",
+    "Treatment": "Cognitive behavioral therapy (CBT) is highly effective. Medications include SSRIs, SNRIs, benzodiazepines (short-term) and buspirone. Lifestyle changes and relaxation techniques.",
+    "Prevention": "Regular exercise, adequate sleep, limiting caffeine and alcohol, stress management techniques, strong social connections, and mindfulness practices.",
+    "When to see a doctor": "See a doctor if anxiety is interfering with daily life, relationships or work, if you are using substances to cope, or if you have thoughts of self-harm.",
+    "Sources": "American Psychological Association, NIMH, NICE"
+  },
+  {
+    "disease_name": "Depression",
+    "Overview": "Depression is a common and serious medical illness that negatively affects how you feel, think and act. It is characterized by persistent sadness and loss of interest.",
+    "Causes": "Combination of genetic, biological, environmental and psychological factors. Brain chemistry imbalances, life events, chronic illness and certain medications can contribute.",
+    "Treatment": "Psychotherapy (CBT, interpersonal therapy), antidepressants (SSRIs, SNRIs), or a combination. Lifestyle changes including exercise, sleep and social connection are important.",
+    "Prevention": "Regular exercise, healthy diet, adequate sleep, social support, stress management and early treatment of depressive episodes to prevent recurrence.",
+    "When to see a doctor": "Seek immediate help for thoughts of suicide or self-harm. See a doctor if symptoms persist for more than 2 weeks and interfere with daily functioning.",
+    "Sources": "WHO, NIMH, American Psychiatric Association"
+  },
+  {
+    "disease_name": "Diabetes",
+    "Overview": "Diabetes mellitus is a chronic metabolic disease characterized by elevated blood sugar levels resulting from defects in insulin secretion, action, or both.",
+    "Causes": "Type 1: autoimmune destruction of insulin-producing cells. Type 2: insulin resistance combined with relative insulin deficiency, associated with obesity and sedentary lifestyle.",
+    "Treatment": "Type 1: insulin therapy. Type 2: lifestyle changes, oral medications (metformin), GLP-1 agonists, SGLT2 inhibitors, and insulin if needed. Regular blood glucose monitoring.",
+    "Prevention": "Type 1 cannot be prevented. Type 2: maintain healthy weight, eat balanced diet, exercise regularly, avoid smoking, and manage blood pressure and cholesterol.",
+    "When to see a doctor": "See a doctor for increased thirst and urination, unexplained weight loss, extreme fatigue, or blurred vision. Seek immediate care for very high or very low blood sugar.",
+    "Sources": "American Diabetes Association, IDF, WHO"
+  },
+  {
+    "disease_name": "Anemia",
+    "Overview": "Anemia is a condition in which you lack enough healthy red blood cells to carry adequate oxygen to your body's tissues, causing fatigue and weakness.",
+    "Causes": "Iron deficiency (most common), vitamin B12 or folate deficiency, chronic disease, blood loss, hemolysis, bone marrow disorders, or inherited conditions like sickle cell disease.",
+    "Treatment": "Depends on cause: iron supplements, B12 injections or supplements, folate supplements, treating underlying conditions, blood transfusions in severe cases.",
+    "Prevention": "Iron-rich diet (red meat, legumes, leafy greens), adequate vitamin C to enhance iron absorption, B12-rich foods or supplements especially for vegetarians.",
+    "When to see a doctor": "See a doctor for persistent fatigue, pale skin, shortness of breath, rapid heartbeat, cold hands and feet, or dizziness.",
+    "Sources": "WHO, National Heart, Lung, and Blood Institute, Mayo Clinic"
+  },
+  {
+    "disease_name": "Allergic Reaction",
+    "Overview": "An allergic reaction occurs when the immune system overreacts to a harmless substance (allergen). Reactions range from mild to severe (anaphylaxis).",
+    "Causes": "Common allergens: pollen, dust mites, pet dander, insect stings, certain foods (nuts, shellfish, eggs), medications (penicillin), and latex.",
+    "Treatment": "Antihistamines, corticosteroids, decongestants for mild reactions. Epinephrine (EpiPen) for anaphylaxis. Allergen immunotherapy for long-term desensitization.",
+    "Prevention": "Identify and avoid known allergens, carry epinephrine if at risk of anaphylaxis, wear medical alert identification, and consider allergen immunotherapy.",
+    "When to see a doctor": "Seek EMERGENCY care for anaphylaxis: difficulty breathing, swelling of throat, rapid pulse, dizziness, or loss of consciousness. This is life-threatening.",
+    "Sources": "AAAAI, Mayo Clinic, NICE"
+  },
+  {
+    "disease_name": "Chickenpox",
+    "Overview": "Chickenpox (varicella) is a highly contagious viral infection causing an itchy blister-like rash. It is now preventable by vaccine.",
+    "Causes": "Caused by the varicella-zoster virus (VZV). Spread through direct contact with the rash or through respiratory droplets. Very contagious before the rash appears.",
+    "Treatment": "Symptomatic: calamine lotion, antihistamines for itching, acetaminophen for fever. Antiviral medication (acyclovir) for severe cases or immunocompromised patients. Avoid aspirin.",
+    "Prevention": "Varicella vaccine is highly effective (2 doses). Avoid contact with infected individuals. Post-exposure prophylaxis with varicella immunoglobulin for high-risk contacts.",
+    "When to see a doctor": "See a doctor for high fever, severe headache, stiff neck, confusion, difficulty walking, shortness of breath, or rash with severe pain or warmth.",
+    "Sources": "CDC, NHS, AAP"
+  },
+  {
+    "disease_name": "Measles",
+    "Overview": "Measles is a highly contagious viral disease causing fever, cough, runny nose, red eyes and a characteristic rash. It was nearly eliminated by vaccination but is resurging.",
+    "Causes": "Caused by the measles virus (morbillivirus). Spread through respiratory droplets. One of the most contagious infections known.",
+    "Treatment": "Supportive care: rest, fluids, fever management. Vitamin A supplementation reduces complications. No specific antiviral treatment. Hospitalization for severe cases.",
+    "Prevention": "MMR vaccination (measles, mumps, rubella) is highly effective. Two doses provide about 97% protection.",
+    "When to see a doctor": "Seek immediate care for difficulty breathing, severe headache, seizures, confusion, or any signs of complications such as pneumonia or encephalitis.",
+    "Sources": "WHO, CDC, ECDC"
+  },
+  {
+    "disease_name": "Mumps",
+    "Overview": "Mumps is a viral infection primarily affecting the salivary glands, causing characteristic swelling of the jaw and cheeks. It is preventable by the MMR vaccine.",
+    "Causes": "Caused by the mumps virus (paramyxovirus). Spread through saliva, mucus, or close contact with an infected person.",
+    "Treatment": "Supportive care: rest, fluids, analgesics for pain and fever, soft foods if chewing is painful. Warm or cold compresses on swollen glands.",
+    "Prevention": "MMR vaccine (two doses). Isolate infected individuals to prevent spread.",
+    "When to see a doctor": "See a doctor for confirmation and to rule out complications. Seek urgent care for severe headache, stiff neck, high fever, testicular pain or loss of hearing.",
+    "Sources": "CDC, NHS, WHO"
+  },
+  {
+    "disease_name": "Malaria",
+    "Overview": "Malaria is a life-threatening disease caused by parasites transmitted to humans through the bites of infected female Anopheles mosquitoes. It is preventable and curable.",
+    "Causes": "Plasmodium parasites (P. falciparum most dangerous) transmitted by infected mosquitoes. Found in tropical and subtropical regions of Africa, Asia and Latin America.",
+    "Treatment": "Antimalarial drugs: artemisinin-based combination therapies (ACTs) for P. falciparum. Chloroquine for sensitive strains. Severe malaria requires IV artesunate and hospitalization.",
+    "Prevention": "Antimalarial prophylaxis when traveling to endemic areas. Mosquito nets treated with insecticide, repellents (DEET), protective clothing, and indoor residual spraying.",
+    "When to see a doctor": "Seek URGENT care for fever after travel to malaria-endemic region. Severe malaria is a medical emergency: altered consciousness, severe anemia, kidney failure.",
+    "Sources": "WHO, CDC, Malaria Consortium"
+  },
+  {
+    "disease_name": "Tuberculosis",
+    "Overview": "Tuberculosis (TB) is a serious infectious disease that mainly affects the lungs, caused by Mycobacterium tuberculosis. It is one of the top 10 causes of death worldwide.",
+    "Causes": "Caused by Mycobacterium tuberculosis, spread through the air when infected people cough, sneeze or spit. Latent TB can become active when immunity is weakened.",
+    "Treatment": "Standard treatment: 6-month regimen of four antibiotics (isoniazid, rifampicin, pyrazinamide, ethambutol). Multidrug-resistant TB (MDR-TB) requires longer and more complex treatment.",
+    "Prevention": "BCG vaccination (partially protective in children). Early identification and treatment of active cases. Improved ventilation and living conditions. Preventive therapy for latent TB.",
+    "When to see a doctor": "See a doctor for persistent cough lasting more than 3 weeks, coughing blood, night sweats, unexplained weight loss, or fever. TB requires mandatory reporting.",
+    "Sources": "WHO, CDC, Stop TB Partnership"
+  },
+  {
+    "disease_name": "Meningitis",
+    "Overview": "Meningitis is inflammation of the membranes (meninges) surrounding the brain and spinal cord. Bacterial meningitis is a medical emergency with high mortality if untreated.",
+    "Causes": "Bacteria (Neisseria meningitidis, Streptococcus pneumoniae most common), viruses (enteroviruses most common), fungi and parasites. Bacterial meningitis is most severe.",
+    "Treatment": "Bacterial meningitis: immediate IV antibiotics and corticosteroids. Viral meningitis: supportive care. Hospitalization required. Early treatment is critical to survival.",
+    "Prevention": "Meningococcal, pneumococcal and Hib vaccines. Chemoprophylaxis for close contacts of bacterial meningitis cases. Good hygiene practices.",
+    "When to see a doctor": "CALL EMERGENCY SERVICES for sudden severe headache, stiff neck, high fever, sensitivity to light, rash that does not fade under pressure, confusion or seizures. This is a MEDICAL EMERGENCY.",
+    "Sources": "WHO, Meningitis Research Foundation, CDC"
+  },
+  {
+    "disease_name": "Heart Attack",
+    "Overview": "A heart attack (myocardial infarction) occurs when blood flow to a part of the heart is blocked, causing heart muscle damage. It is a leading cause of death worldwide.",
+    "Causes": "Usually caused by a blood clot blocking a coronary artery, often at a site of atherosclerotic plaque rupture. Risk factors: hypertension, high cholesterol, smoking, diabetes, obesity.",
+    "Treatment": "Emergency reperfusion: primary PCI (percutaneous coronary intervention) or thrombolysis. Aspirin, P2Y12 inhibitors, anticoagulants, beta-blockers, ACE inhibitors, statins.",
+    "Prevention": "Manage risk factors: control blood pressure and cholesterol, quit smoking, maintain healthy weight, exercise regularly, manage diabetes, eat heart-healthy diet.",
+    "When to see a doctor": "CALL EMERGENCY SERVICES IMMEDIATELY for chest pain or pressure, pain spreading to arm, jaw or back, shortness of breath, cold sweats, nausea or lightheadedness. Every minute counts.",
+    "Sources": "American Heart Association, ESC, WHO"
+  },
+  {
+    "disease_name": "Myocardial Infarction",
+    "Overview": "Myocardial infarction (heart attack) occurs when blood flow to part of the heart muscle is blocked, causing damage or death of heart tissue. It is a medical emergency requiring immediate treatment.",
+    "Causes": "Usually caused by a blood clot blocking a coronary artery at the site of an atherosclerotic plaque rupture. Risk factors: hypertension, high cholesterol, smoking, diabetes, obesity, family history.",
+    "Treatment": "Emergency reperfusion: primary PCI (angioplasty) or thrombolysis. Medications: aspirin, anticoagulants, beta-blockers, ACE inhibitors, statins. Cardiac rehabilitation after recovery.",
+    "Prevention": "Control blood pressure and cholesterol, quit smoking, maintain healthy weight, exercise regularly, manage diabetes, eat a heart-healthy diet.",
+    "When to see a doctor": "CALL EMERGENCY SERVICES IMMEDIATELY for chest pain or pressure, pain spreading to arm, jaw or back, shortness of breath, cold sweats, nausea or lightheadedness. Every minute counts.",
+    "Sources": "American Heart Association, ESC, WHO"
+  },
+  {
+    "disease_name": "Angina",
+    "Overview": "Angina is chest pain or discomfort caused by reduced blood flow to the heart muscle. It is a symptom of coronary artery disease and indicates the heart is not getting enough oxygen.",
+    "Causes": "Coronary artery disease (narrowed arteries due to atherosclerosis). Triggered by physical exertion, emotional stress, cold weather, or heavy meals.",
+    "Treatment": "Nitrates (nitroglycerin) for acute relief. Long-term: beta-blockers, calcium channel blockers, aspirin, statins. Lifestyle changes and risk factor management. Severe cases: angioplasty or bypass surgery.",
+    "Prevention": "Heart-healthy lifestyle, control of risk factors (blood pressure, cholesterol, diabetes), not smoking, regular exercise.",
+    "When to see a doctor": "Seek immediate care for new or worsening chest pain, pain at rest, or pain lasting more than 15 minutes — these may indicate a heart attack.",
+    "Sources": "American Heart Association, NHS, ESC Guidelines"
+  },
+  {
+    "disease_name": "Bladder Disorder",
+    "Overview": "Bladder disorders encompass conditions affecting the bladder including overactive bladder, interstitial cystitis, bladder infections, and bladder stones. They cause urinary symptoms that significantly affect quality of life.",
+    "Causes": "Bacterial infections, nerve damage, muscle dysfunction, bladder stones, anatomical abnormalities, or in some cases unknown causes (as in interstitial cystitis).",
+    "Treatment": "Depends on specific condition: antibiotics for infections, anticholinergics or beta-3 agonists for overactive bladder, physical therapy for pelvic floor dysfunction, surgery for structural problems.",
+    "Prevention": "Stay well hydrated, maintain good hygiene, urinate after intercourse, avoid bladder irritants (caffeine, alcohol, spicy foods), treat infections promptly.",
+    "When to see a doctor": "See a doctor for blood in urine, painful urination, frequent urge to urinate, inability to urinate, or recurrent infections.",
+    "Sources": "Urology Care Foundation, Mayo Clinic, NICE"
+  },
+  {
+    "disease_name": "Kidney Stone",
+    "Overview": "Kidney stones are hard mineral and salt deposits that form in the kidneys. They can cause severe pain when passing through the urinary tract and may lead to complications if left untreated.",
+    "Causes": "Concentrated urine allows minerals to crystallize. Types: calcium oxalate (most common), uric acid, struvite, cystine. Risk factors: dehydration, diet high in protein/salt/oxalate, obesity, family history.",
+    "Treatment": "Small stones: increased fluid intake, pain relievers, alpha-blockers to help passage. Larger stones: shock wave lithotripsy (ESWL), ureteroscopy, or percutaneous nephrolithotomy.",
+    "Prevention": "Drink 2-3 liters of water daily, reduce sodium and animal protein intake, limit oxalate-rich foods (spinach, nuts), maintain healthy weight.",
+    "When to see a doctor": "Seek care for severe flank or groin pain, blood in urine, nausea/vomiting with pain, difficulty urinating, or fever with pain (possible infection).",
+    "Sources": "National Kidney Foundation, Mayo Clinic, EAU Guidelines"
+  },
+  {
+    "disease_name": "Pulmonary Embolism",
+    "Overview": "Pulmonary embolism (PE) is a blockage of one or more arteries in the lungs, usually caused by blood clots that travel from the legs. It can be life-threatening if not treated promptly.",
+    "Causes": "Blood clots (deep vein thrombosis) traveling to the lungs. Risk factors: prolonged immobility, surgery, cancer, pregnancy, oral contraceptives, clotting disorders.",
+    "Treatment": "Anticoagulants (heparin, warfarin, or DOACs like rivaroxaban). Massive PE: thrombolysis or surgical embolectomy. Long-term anticoagulation to prevent recurrence.",
+    "Prevention": "Early mobilization after surgery, compression stockings, anticoagulants in high-risk situations, staying active during long travels.",
+    "When to see a doctor": "SEEK EMERGENCY CARE for sudden shortness of breath, chest pain, rapid heart rate, coughing blood, or loss of consciousness.",
+    "Sources": "ESC Guidelines, American Heart Association, Mayo Clinic"
+  },
+  {
+    "disease_name": "Prostatitis",
+    "Overview": "Prostatitis is inflammation of the prostate gland. It can be bacterial or non-bacterial and affects men of all ages, causing urinary symptoms and pelvic pain.",
+    "Causes": "Bacterial prostatitis: E. coli and other bacteria. Chronic prostatitis/chronic pelvic pain syndrome: unclear, may involve nerve damage, stress, or immune dysfunction.",
+    "Treatment": "Bacterial: antibiotics for 4-6 weeks (fluoroquinolones). Chronic: alpha-blockers, anti-inflammatories, physical therapy, psychosocial support.",
+    "Prevention": "Practice safe sex, stay well hydrated, avoid prolonged sitting, treat urinary tract infections promptly.",
+    "When to see a doctor": "See a doctor for painful or difficult urination, pelvic pain, pain during ejaculation, or fever with urinary symptoms (which may indicate acute bacterial prostatitis — a medical emergency).",
+    "Sources": "European Association of Urology, American Urological Association, Mayo Clinic"
+  },
+  {
+    "disease_name": "Cerebral Edema",
+    "Overview": "Cerebral edema is swelling of the brain caused by excess fluid accumulation. It can be life-threatening as it increases intracranial pressure and can compress brain tissue.",
+    "Causes": "Traumatic brain injury, stroke, infections (meningitis, encephalitis), tumor, metabolic disorders (hyponatremia, liver failure), or high altitude.",
+    "Treatment": "Osmotherapy (mannitol or hypertonic saline), corticosteroids (for vasogenic edema), controlled hyperventilation, surgical decompression (decompressive craniectomy) in severe cases.",
+    "Prevention": "Prevent head injuries (helmets, seatbelts), prompt treatment of infections and stroke, careful fluid management in at-risk patients.",
+    "When to see a doctor": "SEEK EMERGENCY CARE for severe headache, altered consciousness, seizures, vomiting, vision changes, or focal neurological deficits.",
+    "Sources": "Neurocritical Care Society, UpToDate, Mayo Clinic"
+  },
+  {
+    "disease_name": "Intracerebral Hemorrhage",
+    "Overview": "Intracerebral hemorrhage is bleeding within the brain tissue itself, a type of hemorrhagic stroke. It is a medical emergency with high mortality and disability rates.",
+    "Causes": "Hypertension (most common), arteriovenous malformations, anticoagulant medications, trauma, amyloid angiopathy, or bleeding disorders.",
+    "Treatment": "Blood pressure control, reversal of anticoagulation, surgical evacuation in selected cases, intensive monitoring in neurological ICU. Supportive care and rehabilitation.",
+    "Prevention": "Control blood pressure, avoid excessive alcohol, don't smoke, manage anticoagulation carefully, treat vascular abnormalities.",
+    "When to see a doctor": "CALL EMERGENCY SERVICES IMMEDIATELY for sudden severe headache, sudden weakness, speech difficulty, vision changes, or loss of consciousness.",
+    "Sources": "American Stroke Association, ESO, Neurocritical Care Society"
   }
 ]

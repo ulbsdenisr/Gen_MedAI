@@ -1,0 +1,20 @@
+{
+  "overview": "Flu, also called influenza, is an infection of the nose, throat and lungs, which are part of the respiratory system. The flu is caused by a virus. Influenza viruses are different from the \"stomach flu\" viruses that cause diarrhea and vomiting. Most people with the flu get better on their own. But sometimes, influenza and its complications can be deadly. To help protect against seasonal flu, you can get an annual flu shot. Although the vaccine isn't 100% effective, it lowers the chances of having severe complications from the flu.",
+  "causes": "Influenza is caused by viruses. These viruses travel through the air in droplets when someone with the infection coughs, sneezes or talks. You can inhale the droplets directly. Or you can pick up the virus from touching an object, such as a computer keyboard, and then touching your eyes, nose or mouth. It's possible to spread the virus to others from about a day before symptoms appear until about 5 to 7 days after they start. This is called being contagious. Children and people with weakened immune systems may be contagious for a slightly longer time.",
+  "treatment": "Young people on long-term aspirin therapy are at risk of developing Reye's syndrome if infected with the influenza virus.",
+  "prevention": "Annual flu vaccines are available in the U.S. for people age 6 months and older. Seasonal flu vaccines are often recommended for everyone who doesn't have a medical reason to avoid the vaccine. Getting a flu vaccine lowers: The 2025-2026 seasonal flu vaccines in the U.S. provide protection against three influenza viruses that researchers expect to be the most common this flu season. The vaccine is available as a shot, a jet injector and a nasal spray. If you have an egg allergy, you can still get a flu vaccine.",
+  "when_to_see_a_doctor": "Most people who get the flu can manage it at home and often don't need to see a healthcare professional. If you have flu symptoms and are at risk of complications, see your healthcare professional right away. Starting antiviral medicine within two days after your symptoms show up may shorten the length of your illness and help prevent more-serious problems. If you have emergency symptoms of the flu, get medical care right away. For adults, emergency symptoms can include: Emergency symptoms in children include all the symptoms seen in adults, as well as:",
+  "sources": [
+    {
+      "title": "Wikipedia: Influenza",
+      "url": "https://en.wikipedia.org/wiki/Influenza",
+      "journal": "Wikipedia"
+    },
+    {
+      "title": "Mayo Clinic: Influenza",
+      "url": "https://www.mayoclinic.org/diseases-conditions/flu/symptoms-causes/syc-20351719",
+      "journal": "Mayo Clinic"
+    }
+  ],
+  "_fetched_from": "wikipedia+mayo_clinic"
+}

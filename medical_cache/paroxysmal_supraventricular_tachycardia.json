@@ -1,0 +1,20 @@
+{
+  "overview": "Supraventricular tachycardia (SVT) is a type of irregular heartbeat, also called an arrhythmia. It's a very fast or erratic heartbeat that affects the heart's upper chambers. SVT also is called paroxysmal supraventricular tachycardia. The typical heart beats about 60 to 100 times a minute. During SVT, the heart beats about 150 to 220 times a minute. Occasionally it beats faster or slower. Most people with supraventricular tachycardia don't need treatment. When recommended, treatment may include specific actions or movements, medicines, a heart procedure, or a device to control the heartbeat.",
+  "causes": "Supraventricular tachycardia (SVT) is caused by faulty signaling in the heart. Electrical signals in the heart control the heartbeat. In SVT, a change in heart signaling causes the heartbeat to start too early in the heart's upper chambers. When this happens, the heartbeat speeds up. The heart can't fill with blood properly. Symptoms such as lightheadedness or dizziness can occur.",
+  "treatment": "No information found.",
+  "prevention": "The same lifestyle changes used to manage supraventricular tachycardia (SVT) also may help prevent it. Try these tips.",
+  "when_to_see_a_doctor": "Supraventricular tachycardia (SVT) is usually not life-threatening unless you have heart damage or another heart condition. But if SVT is severe, the irregular heartbeat may cause all heart activity to suddenly stop. This is called sudden cardiac arrest. Call a healthcare professional if you have a very fast heartbeat for the first time or if an irregular heartbeat lasts longer than a few seconds. Symptoms of SVT may be related to a serious health condition.",
+  "sources": [
+    {
+      "title": "Wikipedia: Supraventricular tachycardia",
+      "url": "https://en.wikipedia.org/wiki/Supraventricular_tachycardia",
+      "journal": "Wikipedia"
+    },
+    {
+      "title": "Mayo Clinic: Paroxysmal Supraventricular Tachycardia",
+      "url": "https://www.mayoclinic.org/diseases-conditions/supraventricular-tachycardia/symptoms-causes/syc-20355243",
+      "journal": "Mayo Clinic"
+    }
+  ],
+  "_fetched_from": "wikipedia+mayo_clinic"
+}

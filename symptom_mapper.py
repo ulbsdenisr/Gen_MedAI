@@ -16,16 +16,29 @@ REWRITE = [
     (r"\btiredness\b", "fatigue"),
     (r"\bvery tired\b", "fatigue"),
     (r"\bexhaustion\b", "fatigue"),
-    (r"\bweakness\b", "weakness"),
+    (r"\bexhausted\b", "fatigue"),
+    (r"\btired\b", "fatigue"),
+    (r"\bpale skin\b", "pallor"),
+    (r"\bpale\b", "pallor"),
+    (r"\bpallor\b", "pallor"),
+    (r"\bmuscle weakness\b", "weakness"),
     (r"\bfeeling weak\b", "weakness"),
+    (r"\bweak\b", "weakness"),
+    (r"\bvery dizzy\b", "dizziness"),
     (r"\bdizzy\b", "dizziness"),
     (r"\blightheaded\b", "dizziness"),
-    (r"\bfear of weight gain\b", "fear of weight gain"),
+    (r"\bfeeling cold\b", "feeling cold"),
+    (r"\bfeel cold\b", "feeling cold"),
     (r"\bskip meals\b", "skipping meals"),
     (r"\bskipping meals\b", "skipping meals"),
     # =====================
     # PAIN
     # =====================
+    (r"\bsevere pounding headache on one side\b", "headache"),
+    (r"\bpounding headache on one side\b", "headache"),
+    (r"\bheadache on one side\b", "headache"),
+    (r"\bone.sided headache\b", "headache"),
+    (r"\bpounding headache\b", "headache"),
     (r"\bsevere headache\b", "headache"),
     (r"\bhead pain\b", "headache"),
     (r"\bmigraine\b", "headache"),
@@ -34,25 +47,41 @@ REWRITE = [
     (r"\bstomach pain\b", "abdominal pain"),
     (r"\btummy pain\b", "abdominal pain"),
     (r"\bbelly pain\b", "abdominal pain"),
+    (r"\bsharp pain in lower right abdomen\b", "abdominal pain"),
+    (r"\bsharp pain in abdomen\b", "abdominal pain"),
+    (r"\bpain in lower right abdomen\b", "abdominal pain"),
+    (r"\bchest tightness\b", "chest tightness"),
+    (r"\btight chest\b", "chest tightness"),
     (r"\bchest pain\b", "chest pain"),
     (r"\bsharp chest pain\b", "sharp chest pain"),
+    (r"\bcrushing chest pain\b", "sharp chest pain"),
+    (r"\bcrushing pain in chest\b", "sharp chest pain"),
     (r"\bjaw pain\b", "jaw pain"),
     (r"\bneck pain\b", "neck pain"),
     (r"\bback pain\b", "back pain"),
     (r"\bmuscle aches\b", "muscle pain"),
     (r"\bmuscle ache\b", "muscle pain"),
     (r"\bbody aches\b", "muscle pain"),
+    (r"\bbody ache\b", "muscle pain"),
+    (r"\bwhole body aches\b", "muscle pain"),
+    (r"\bwhole body ache\b", "muscle pain"),
 
     (r"\bnumbness\b", "loss of sensation"),
     (r"\bface numbness\b", "facial numbness"),
+    (r"\bsudden weakness on one side\b", "focal weakness"),
+    (r"\bweakness on one side\b", "focal weakness"),
+    (r"\bone.sided weakness\b", "focal weakness"),
+    (r"\bone sided weakness\b", "focal weakness"),
+    (r"\bsudden weakness\b", "focal weakness"),
+    (r"\bsudden paralysis\b", "focal weakness"),
     (r"\bweakness\b", "muscle weakness"),
-    (r"\bone sided weakness\b", "muscle weakness"),
     (r"\bslurred speech\b", "speech difficulty"),
     (r"\bdifficulty speaking\b", "speech difficulty"),
     (r"\btrouble speaking\b", "speech difficulty"),
-    (r"\bblurred vision\b", "vision loss"),
-    (r"\btemporary blurred vision\b", "vision loss"),
-    (r"\bvision problems\b", "vision loss"),
+    (r"\bblurred vision\b", "diminished vision"),
+    (r"\btemporary blurred vision\b", "diminished vision"),
+    (r"\bvision problems\b", "diminished vision"),
+    (r"\btrouble seeing\b", "diminished vision"),
     (r"\bloss of balance\b", "balance disorder"),
     (r"\bdifficulty walking\b", "difficulty walking"),
     (r"\bfacial drooping\b", "facial weakness"),
@@ -67,6 +96,9 @@ REWRITE = [
     (r"\bsore throat\b", "sore throat"),
     (r"\bthroat pain\b", "sore throat"),
     (r"\bthroat is sore\b", "sore throat"),
+    (r"\bthroat is really sore\b", "sore throat"),
+    (r"\bthroat really sore\b", "sore throat"),
+    (r"\breally sore throat\b", "sore throat"),
     (r"\bshortness of breath when walking\b", "shortness of breath"),
     (r"\bshort of breath\b", "shortness of breath"),
     (r"\bbreathlessness\b", "shortness of breath"),
@@ -111,6 +143,13 @@ REWRITE = [
     # =====================
     (r"\bnauseous\b", "nausea"),
     (r"\bfeeling sick\b", "nausea"),
+    (r"\bgenerally feel sick\b", "feeling ill"),
+    (r"\bfeel sick\b", "feeling ill"),
+    (r"\bfeel very ill\b", "feeling ill"),
+    (r"\bfeeling very ill\b", "feeling ill"),
+    (r"\bfeeling ill\b", "feeling ill"),
+    (r"\bmy speech is slurred\b", "speech difficulty"),
+    (r"\bspeech is slurred\b", "speech difficulty"),
     (r"\bthrowing up\b", "vomiting"),
     (r"\bvomiting\b", "vomiting"),
     (r"\bdiarrhoea\b", "diarrhea"),
@@ -129,30 +168,49 @@ REWRITE = [
     (r"\bburning when urinating\b", "painful urination"),
     (r"\bburning urination\b", "painful urination"),
     (r"\bpain when urinating\b", "painful urination"),
-    (r"\bfrequent urination\b", "frequent urination"),
+    (r"\bburns when i urinate\b", "painful urination"),
+    (r"\bit burns when i urinate\b", "painful urination"),
+    (r"\burinate much more than usual\b", "frequent urination"),
+    (r"\burinate more than usual\b", "frequent urination"),
+    (r"\burinate much more\b", "frequent urination"),
+    (r"\burinate a lot\b", "frequent urination"),
+    (r"\burinating much more\b", "frequent urination"),
+    (r"\burinating frequently\b", "frequent urination"),
     (r"\burinating often\b", "frequent urination"),
+    (r"\bfrequent urge to urinate\b", "frequent urination"),
+    (r"\bneed to pee often\b", "frequent urination"),
     (r"\bpeeing a lot\b", "frequent urination"),
+    (r"\bfrequent urination\b", "frequent urination"),
     (r"\bblood in urine\b", "blood in urine"),
     (r"\bflank pain\b", "flank pain"),
+    (r"\blower abdominal pain\b", "abdominal pain"),
 
     # =====================
     # DIABETES / METABOLIC
     # =====================
+    (r"\balways very thirsty\b", "thirst"),
+    (r"\balways thirsty\b", "thirst"),
     (r"\bexcessive thirst\b", "thirst"),
     (r"\bvery thirsty\b", "thirst"),
+    (r"\bthirsty\b", "thirst"),
+    (r"\burinate frequently\b", "frequent urination"),
     (r"\bincreased hunger\b", "hunger"),
     (r"\bextreme hunger\b", "hunger"),
     (r"\bblurred vision\b", "diminished vision"),
     (r"\bvision changes\b", "diminished vision"),
     (r"\bunexplained weight loss\b", "recent weight loss"),
+    (r"\blosing weight without trying\b", "recent weight loss"),
+    (r"\blosing weight\b", "recent weight loss"),
     (r"\bweight loss\b", "recent weight loss"),
     (r"\bweight gain\b", "weight gain"),
+    (r"\bpolyuria\b", "polyuria"),
 
     # =====================
     # SKIN
     # =====================
-    (r"\brash\b", "skin rash"),
     (r"\bskin rash\b", "skin rash"),
+    (r"(?<!\bskin )\brash\b", "skin rash"),
+    (r"\bitching of skin\b", "itching of skin"),
     (r"\bitching\b", "itching of skin"),
     (r"\bitchy skin\b", "itching of skin"),
     (r"\bred skin\b", "skin redness"),
@@ -210,6 +268,9 @@ REWRITE = [
     (r"\btrouble sleeping\b", "insomnia"),
     (r"\bdifficulty focusing\b", "lack of concentration"),
     (r"\btrouble focusing\b", "lack of concentration"),
+    (r"\btrouble concentrating\b", "lack of concentration"),
+    (r"\bpoor concentration\b", "lack of concentration"),
+    (r"\btrouble focusing\b", "lack of concentration"),
     (r"\bpoor concentration\b", "lack of concentration"),
     (r"\binattention\b", "lack of concentration"),
     (r"\bdisorganization\b", "lack of concentration"),
@@ -266,11 +327,6 @@ REWRITE = [
     (r"\bpressure in my chest\b", "chest pain"),
     (r"\bheavy chest\b", "chest pain"),
     (r"\bchest heaviness\b", "chest pain"),
-    (r"\btight chest\b", "chest pain"),
-    (r"\bcrushing pain in chest\b", "sharp chest pain"),
-    (r"\bpain radiating to jaw\b", "jaw pain"),
-    (r"\bpain radiating to arm\b", "arm pain"),
-    (r"\bleft arm pain\b", "arm pain"),
     (r"\bcold sweat\b", "sweating"),
     (r"\bcold sweats\b", "sweating"),
     (r"\bprofuse sweating\b", "sweating"),
@@ -278,10 +334,14 @@ REWRITE = [
     # =====================
     # COVID / FLU
     # =====================
-    (r"\bloss of smell\b", "anosmia"),
-    (r"\bcan.t smell\b", "anosmia"),
-    (r"\bloss of taste\b", "loss of taste"),
-    (r"\bcan.t taste anything\b", "loss of taste"),
+    (r"\bdisturbance of smell or taste\b", "disturbance of smell or taste"),
+    (r"\bloss of smell and taste\b", "disturbance of smell or taste"),
+    (r"\blost sense of smell\b", "disturbance of smell or taste"),
+    (r"\bloss of smell\b", "disturbance of smell or taste"),
+    (r"\bloss of taste\b", "disturbance of smell or taste"),
+    (r"\bcan.t smell\b", "disturbance of smell or taste"),
+    (r"\bcan.t taste anything\b", "disturbance of smell or taste"),
+    (r"\banosmia\b", "disturbance of smell or taste"),
     (r"\bflu like symptoms\b", "fever"),
     (r"\bbody chills\b", "chills"),
 
@@ -324,7 +384,6 @@ REWRITE = [
     (r"\bstiff joints\b", "stiffness"),
     (r"\bswollen joints\b", "joint swelling"),
     (r"\bmuscle stiffness\b", "muscle stiffness"),
-    (r"\bneck stiffness\b", "neck stiffness"),
 
     # =====================
     # MENTAL HEALTH
@@ -458,7 +517,7 @@ REWRITE = [
     # =====================
     # CARDIOVASCULAR EXTRA
     # =====================
-    (r"\bchest tightness\b", "chest pain"),
+    (r"\bchest tightness\b", "chest tightness"),
     (r"\bpounding heartbeat\b", "palpitations"),
     (r"\bskipped heartbeat\b", "palpitations"),
     (r"\bfluttering heart\b", "palpitations"),
@@ -551,9 +610,11 @@ REWRITE = [
     # =====================
     # INFECTIOUS
     # =====================
-    (r"\bswollen glands\b", "lymph node enlargement"),
-    (r"\bswollen lymph nodes\b", "lymph node enlargement"),
-    (r"\benlarged lymph nodes\b", "lymph node enlargement"),
+    (r"\bglands are swollen\b", "swollen lymph nodes"),
+    (r"\bswollen glands\b", "swollen lymph nodes"),
+    (r"\bswollen lymph nodes\b", "swollen lymph nodes"),
+    (r"\benlarged lymph nodes\b", "swollen lymph nodes"),
+    (r"\blymph node enlargement\b", "swollen lymph nodes"),
     (r"\bnight fever\b", "fever"),
     (r"\brecurrent infections\b", "frequent infections"),
     (r"\bflank pain\b", "flank pain"),
@@ -570,10 +631,102 @@ REWRITE = [
     (r"\bnon healing wound\b", "wound"),
     (r"\bchronic cough\b", "cough"),
     (r"\bcough lasting weeks\b", "cough"),
+    # =====================
+    # HEADACHE VARIANTS
+    # =====================
+    (r"\bpounding headache on one side\b", "headache"),
+    (r"\bone.sided headache\b", "headache"),
+    (r"\bheadache on one side\b", "headache"),
+    (r"\bpounding headache\b", "headache"),
+
+    # =====================
+    # LIGHT SENSITIVITY
+    # =====================
+    (r"\bsensitive to light\b", "photophobia"),
+    (r"\blight hurts my eyes\b", "photophobia"),
+    (r"\beyes hurt in light\b", "photophobia"),
+    (r"\blight bothers me\b", "photophobia"),
+    (r"\bpain worsens with light\b", "photophobia"),
+    (r"\bworsens with light\b", "photophobia"),
+    (r"\bphotophobia\b", "photophobia"),
+
+    # =====================
+    # HEART RACING VARIANTS
+    # =====================
+    (r"\bheart is racing\b", "palpitations"),
+    (r"\bmy heart is racing\b", "palpitations"),
+    (r"\bheart pounds\b", "palpitations"),
+    (r"\bheart pounding\b", "palpitations"),
+    (r"\braising heart\b", "palpitations"),
+
+    # =====================
+    # LYMPH NODE VARIANTS
+    # =====================
+    (r"\blymph nodes in my neck are swollen\b", "swollen lymph nodes"),
+    (r"\blymph nodes in neck are swollen\b", "swollen lymph nodes"),
+    (r"\blymph nodes.*are swollen\b", "swollen lymph nodes"),
+    (r"\bswollen lymph nodes in my neck\b", "swollen lymph nodes"),
+    (r"\blymph nodes are swollen\b", "swollen lymph nodes"),
+    (r"\bswollen glands in neck\b", "swollen lymph nodes"),
+    (r"\blymph node enlargement\b", "swollen lymph nodes"),
+
+    # =====================
+    # NECK STIFFNESS VARIANTS
+    # =====================
+    (r"\bneck feels very stiff\b", "neck stiffness or tightness"),
+    (r"\bneck feels stiff\b", "neck stiffness or tightness"),
+    (r"\bneck is very stiff\b", "neck stiffness or tightness"),
+    (r"\bneck is stiff\b", "neck stiffness or tightness"),
+    (r"\bstiff neck\b", "neck stiffness or tightness"),
+    (r"\bneck stiffness\b", "neck stiffness or tightness"),
+
+    # =====================
+    # WEAKNESS / STROKE VARIANTS
+    # =====================
+    (r"\bsudden weakness on one side\b", "focal weakness"),
+    (r"\bweakness on one side\b", "focal weakness"),
+    (r"\bone.sided weakness\b", "focal weakness"),
+
+    # =====================
+    # ARM PAIN VARIANTS
+    # =====================
+    (r"\bpain radiating to left arm\b", "arm pain"),
+    (r"\bpain radiating to right arm\b", "arm pain"),
+    (r"\bpain radiating to arm\b", "arm pain"),
+
+    # =====================
+    # SWALLOWING VARIANTS
+    # =====================
+    (r"\bhurts to swallow\b", "difficulty in swallowing"),
+    (r"\bpain when swallowing\b", "difficulty in swallowing"),
+    (r"\bpainful to swallow\b", "difficulty in swallowing"),
+
+    # =====================
+    # URINARY VARIANTS
+    # =====================
+    (r"\bburns when i urinate\b", "painful urination"),
+    (r"\bit burns when i urinate\b", "painful urination"),
+    (r"\burinate much more\b", "frequent urination"),
+    (r"\burinate a lot\b", "frequent urination"),
+    (r"\burinate more than usual\b", "frequent urination"),
+    (r"\burinating much more\b", "frequent urination"),
+
+    # =====================
+    # WEIGHT / VISION VARIANTS
+    # =====================
+    (r"\blosing weight\b", "recent weight loss"),
+    (r"\bblurry vision\b", "diminished vision"),
+    (r"\bvision has been slightly blurry\b", "diminished vision"),
+
+    # =====================
+    # MISC
+    # =====================
+    (r"\bvery restless\b", "restlessness"),
+
 ]
 
 
-_STOP_PREFIX = r"\b(including|with|having|i have|ive|i've|i am|im|i'm|i feel|feeling|patient has|the patient has)\b\s*"
+_STOP_PREFIX = r"\b(including|with|having|i have|ive|i've|i am|im|i'm|i feel|patient has|the patient has|it|my)\b\s*|(?<!\w)\bfeeling\b(?! cold| ill| sick| hot| weak| tired| nauseous)\s*"
 
 BAD_SEMANTIC_MAPS = {
     "focal weakness",
@@ -592,8 +745,40 @@ def canonicalize(symptom: str) -> str:
     for pat, rep in REWRITE:
         s = re.sub(pat, rep, s)
 
-    s = re.sub(r"\b(severe|mild|moderate|high|low|extreme|persistent|occasional|acute|chronic)\b\s+", "", s)
+    # Protejeaza expresii compuse care incep cu 'feeling'
+    # inainte de a sterge adverbe/prefixe
+    protected_phrases = {
+        "feeling cold", "feeling ill", "feeling sick", "feeling hot",
+        "feeling weak", "feeling tired", "feeling nauseous",
+    }
+    placeholder = None
+    for phrase in protected_phrases:
+        if s == phrase:
+            placeholder = s
+            break
+
+    if placeholder is None:
+        # Elimina adverbe/adjective de intensitate care pot ramane dupa REWRITE
+        s = re.sub(r"\b(severe|mild|moderate|high|low|extreme|extremely|persistent|"
+                   r"occasional|acute|chronic|very|really|quite|rather|slightly|"
+                   r"sudden|suddenly|whole|always|bad|terrible|awful|intense|strong|"
+                   r"constant|total|complete|partial|general)\b\s+", "", s)
+        # Elimina resturi de fraze care pot ramane dupa inlocuire partiala
+        s = re.sub(r"\s+(than usual|without trying|in my neck|in my body|all over"
+                   r"|when i move|of body|of my body|on one side of my body)\b", "", s)
+
     s = re.sub(r"\s+", " ", s).strip()
+
+    # Fix dubluri
+    s = re.sub(r'\b(itching of skin)( of skin)+\b', r'\1', s)
+    s = re.sub(r'\b(skin rash)( rash)+\b', r'\1', s)
+    s = re.sub(r'\b(skin skin)+\b', 'skin', s)
+    s = re.sub(r'\b(muscle )+weakness\b', 'weakness', s)
+    s = re.sub(r'\b(weakness weakness)+\b', 'weakness', s)
+    s = re.sub(r'\b(recent )+weight loss\b', 'recent weight loss', s)
+    s = re.sub(r'\b(frequent )+urination\b', 'frequent urination', s)
+    s = re.sub(r'\bneck stiffness( or tightness)+\b', 'neck stiffness or tightness', s)
+
     return s
 
 
@@ -625,6 +810,12 @@ def _should_try_semantic(s: str) -> bool:
         "wheezing",
         "shortness of breath",
         "difficulty breathing",
+        # skin
+        "skin rash",
+        "itching of skin",
+        "itching",
+        "skin redness",
+        "skin swelling",
         # digestive
         "nausea",
         "vomiting",
@@ -645,6 +836,16 @@ def _should_try_semantic(s: str) -> bool:
         "neck pain",
         "ear pain",
         "eye pain",
+        # cardiovascular
+        "palpitations",
+        "swollen lymph nodes",
+        "photophobia",
+        # metabolic
+        "thirst",
+        "frequent urination",
+        "diminished vision",
+        "recent weight loss",
+        "painful urination",
     }
 
     if s in protected:
